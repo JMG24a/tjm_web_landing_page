@@ -13,31 +13,26 @@ const pageScripts = {
 
 const app = document.getElementById("app");
 
-// 🔹 Protección en reload
-const validRoutes = Object.keys(routes);
-if (!validRoutes.includes(window.location.pathname)) {
-  window.history.replaceState({}, "", "/");
-  navigateTo("/");
+function normalizePath(path) {
+  return path.replace(/\/+$/, "") || "/";
 }
 
-// Navegar con categoría
-function goToCategory(page) {
-  navigateTo(page);
-}
-
-async function navigateTo(url) {
+async function navigateTo(url, addToHistory = true) {
   const parsedUrl = new URL(url, window.location.origin);
-  const path = parsedUrl.pathname;
+  const path = normalizePath(parsedUrl.pathname);
 
   const route = routes[path] || routes["/"];
+
   const res = await fetch(route);
   const html = await res.text();
 
   app.innerHTML = html;
-  window.history.pushState({}, "", url);
 
-  window.scrollTo({ top: 0, behavior: "instant" });
+  if (addToHistory) {
+    window.history.pushState({}, "", url);
+  }
 
+  window.scrollTo({ top: 0 });
   pageScripts[path]?.();
 }
 
@@ -52,9 +47,9 @@ function handleLinks() {
 }
 
 window.addEventListener("popstate", () => {
-  navigateTo(window.location.pathname + window.location.search);
+  navigateTo(window.location.pathname + window.location.search, false);
 });
 
 // INIT
-navigateTo(window.location.pathname + window.location.search);
+navigateTo(window.location.pathname + window.location.search, false);
 handleLinks();
