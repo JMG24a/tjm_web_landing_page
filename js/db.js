@@ -1,36 +1,36 @@
 const WELCOME = {
   sofas: {
-    image4_5: "../public/image/4_5_sofas_products.png",
-    image16_9: "../public/image/slider_sofas_d.png",
-    image21_9: "../public/image/slider_sofas_d.png",
+    image4_5: "/image/4_5_sofas_products.png",
+    image16_9: "/image/slider_sofas_d.png",
+    image21_9: "/image/slider_sofas_d.png",
     slogan_1: "Crea tu espacio",
     slogan_2: "Con los mejores muebles"
   },
   comedores:{
-    image4_5: "../public/image/4_5_comedores_slider.jpg",
-    image16_9: "../public/image/16_9_comedores_slider.jpg",
-    image21_9: "../public/image/21_9_comedores_slider.jpg",
+    image4_5: "/image/4_5_comedores_slider.jpg",
+    image16_9: "/image/16_9_comedores_slider.jpg",
+    image21_9: "/image/21_9_comedores_slider.jpg",
     slogan_1: "Crea tu espacio",
     slogan_2: "Disfruta en familia."
   },
   multimuebles:{
-    image4_5: "../public/image/4_5_multimueble_slider.jpg",
-    image16_9: "../public/image/16_9_multimueble_slider.jpg",
-    image21_9: "../public/image/21_9_multimueble_slider.jpg",
+    image4_5: "/image/4_5_multimueble_slider.jpg",
+    image16_9: "/image/16_9_multimueble_slider.jpg",
+    image21_9: "/image/21_9_multimueble_slider.jpg",
     slogan_1: "Crea tu espacio",
     slogan_2: "Disfruta y comparte en familia."
   },
   dormitorios:{
-    image4_5: "../public/image/4_5_dormitorio_slider.jpg",
-    image16_9: "../public/image/16_9_dormitorio_slider.jpg",
-    image21_9: "../public/image/21_9_dormitorio_slider.jpg",
+    image4_5: "/image/4_5_dormitorio_slider.jpg",
+    image16_9: "/image/16_9_dormitorio_slider.jpg",
+    image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
     slogan_2: "descansa en tu hogar soñado."
   },
   colchones:{
-    image4_5: "../public/image/4_5_dormitorio_slider.jpg",
-    image16_9: "../public/image/16_9_dormitorio_slider.jpg",
-    image21_9: "../public/image/21_9_dormitorio_slider.jpg",
+    image4_5: "/image/4_5_dormitorio_slider.jpg",
+    image16_9: "/image/16_9_dormitorio_slider.jpg",
+    image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
     slogan_2: "descansa en tu hogar soñado."
   }

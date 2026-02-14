@@ -24,7 +24,7 @@ async function loadAdminProducts() {
     const card = document.createElement("article");
     card.className = "furniture-card";
     card.innerHTML = `
-      <img src="../public/image/${product.img}" alt="${product.name}">
+      <img src="/image/${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
     `;
     card.addEventListener("click", () => {
@@ -45,7 +45,7 @@ function loadProduct(category){
     const card = document.createElement("article");
     card.className = "furniture-card";
     card.innerHTML = `
-      <img src="../public/image/${product.img}" alt="${product.name}">
+      <img src="/image/${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
     `;
     card.addEventListener("click", () => {

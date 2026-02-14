@@ -4,7 +4,7 @@ function changeModalImage(img) {
   modalImg.style.opacity = 0;
 
   setTimeout(() => {
-    modalImg.src = `../public/image/${img}`;
+    modalImg.src = `/image/${img}`;
     modalImg.style.opacity = 1;
   }, 200);
 }
@@ -37,7 +37,7 @@ function renderColors(colors, container) {
 }
 
 function setupBaseModal(product) {
-  document.getElementById("modal-img").src = `../public/image/${product.img}`;
+  document.getElementById("modal-img").src = `/image/${product.img}`;
   document.getElementById("modal-name").textContent = product.name;
 
   const desc = document.getElementById("modal-desc");
@@ -167,7 +167,7 @@ function openProductModal(product, category) {
 //   // document.getElementById("product-modal").classList.remove("hidden");
 
 //   // Imagen inicial
-//   modalImg.src = `../public/image/${product.img}`;
+//   modalImg.src = `/image/${product.img}`;
 
 //   document.getElementById("modal-name").textContent = product.name;
 //   const modal_desc = document.getElementById("modal-desc");
@@ -366,7 +366,7 @@ function loadProductsByCategory(category) {
     const card = document.createElement("article");
     card.className = "furniture-card";
     card.innerHTML = `
-      <img src="../public/image/${product.img}" alt="${product.name}">
+      <img src="/image/${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
     `;
     card.addEventListener("click", () => {
