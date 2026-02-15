@@ -37,6 +37,7 @@ async function navigateTo(url, addToHistory = true) {
 }
 
 function handleLinks() {
+  console.log("INIT")
   document.body.addEventListener("click", e => {
     const link = e.target.closest("a[data-link]");
     if (!link) return;
