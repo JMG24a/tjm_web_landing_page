@@ -1,13 +1,13 @@
 const routes = {
   "/": "/pages/home.html",
-  "/home/products": "/pages/products.html",
+  "/pages/products": "/pages/products.html",
   "/about": "/pages/about.html",
   "/admin": "/pages/admin.html",
 };
 
 const pageScripts = {
   "/": initHome,
-  "/home/products": initProducts,
+  "/pages/products": initProducts,
   "/admin": initAdmin
 };
 
