@@ -85,7 +85,7 @@
 
 @media (max-width: 768px) {
   .slogan {
-    left: calc(20% - 70px);
+    left: calc(20% - 60px);
     top: calc(100% - 80px);
   }
 
