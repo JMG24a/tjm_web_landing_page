@@ -390,3 +390,5 @@ function initProducts() {
   loadProductsByCategory(category);
   loadSliderByCategory(category)
 }
+
+initProducts()
