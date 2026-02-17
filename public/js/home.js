@@ -18,6 +18,7 @@ function showTopBar() {
 }
 
 function startWelcomeSlider() {
+  console.log("startWelcomeSlider ejecutado");
   const slides = document.querySelectorAll('.about-slider picture');
   if (!slides.length) return;
 
@@ -36,6 +37,8 @@ function startWelcomeSlider() {
 }
 
 function startPromotionSlider() {
+  console.log("startPromotionSlider ejecutado");
+
   const slides = document.querySelectorAll('.promotion-slider picture');
   if (!slides.length) return;
 
