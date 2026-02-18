@@ -164,7 +164,6 @@ const PRODUCTS = {
       id: 1005,
       name: "Sofa Osman",
       desc: "El sofá Osman destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      // img: "sofa_osman.jpg",
       img: "sofa_osman_white_d.jpg",
       colors: [
         {
@@ -192,7 +191,7 @@ const PRODUCTS = {
     {
       id: 1006,
       name: "Sofa Hielo",
-      desc: "descripcion sofa cairo",
+      desc: "El sofá Hielo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_hielo_gray.jpg",
       colors: [
         {
@@ -212,7 +211,7 @@ const PRODUCTS = {
     {
       id: 1007,
       name: "Sofa Nube",
-      desc: "descripcion sofa cairo",
+      desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nube_1.jpg",
       colors: [
         {
@@ -228,7 +227,6 @@ const PRODUCTS = {
     {
       id: 1008,
       name: "Sofa Cairo",
-      desc: "descripcion sofa cairo",
       // size: "",
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_cairo_beige_d.jpg",
@@ -266,7 +264,7 @@ const PRODUCTS = {
     {
       id: 1010,
       name: "Sofa Domus",
-      desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Domus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_domus_gray2.jpg",
       colors: [
         {
@@ -286,7 +284,7 @@ const PRODUCTS = {
     {
       id: 1011,
       name: "Sofa Normandy",
-      desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Normandy destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_normandy_beige.jpg",
       colors: [
         {
@@ -305,8 +303,8 @@ const PRODUCTS = {
     },
     {
       id: 1012,
-      name: "Sofa Normandy",
-      desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      name: "Sofa Enmaly",
+      desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_enmaly_white.jpg",
       colors: [
         {
