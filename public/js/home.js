@@ -37,8 +37,6 @@ function startWelcomeSlider() {
 }
 
 function startPromotionSlider() {
-  console.log("startPromotionSlider ejecutado");
-
   const slides = document.querySelectorAll('.promotion-slider picture');
   if (!slides.length) return;
 

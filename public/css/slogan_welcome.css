@@ -7,7 +7,7 @@ body {
 }
 
 .video-container{
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .slogan {
@@ -116,6 +116,10 @@ body {
 
   .slogan-sub {
     font-size: 1rem;
+  }
+
+  .video-container{
+    min-height: 30vh;
   }
 }
 
