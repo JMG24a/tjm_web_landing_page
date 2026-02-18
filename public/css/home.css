@@ -111,9 +111,11 @@
 }
 
 /* ABOUT */
+.promotion-slider,
 .about-slider {
   display: flex;
   align-items: center;
+  max-height: none; /* ← Esto sí es válido */
 }
 
 .about-slider button {
@@ -129,10 +131,7 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .promotion-slider {
-    max-height: 65vh;
-  }
-
+  .promotion-slider,
   .about-slider {
     max-height: 65vh;
   }
