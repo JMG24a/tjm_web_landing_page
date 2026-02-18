@@ -16,10 +16,6 @@
 </head>
 <body>
 
-  <div class="top-gradient-bar">
-    <img class="logo" src="/image/logo_tjm.png" alt="logo" onclick="goToCategory('/')">
-  </div>
-
   <div class="video-container">
     <video id="miVideo" src="/video/this.mp4" autoplay muted></video>
     <div class="slogan">
@@ -30,6 +26,10 @@
       </h1>
     </div>
   </div>
+
+  <a href="/" class="top-gradient-bar">
+    <img class="logo" src="/image/logo_tjm.png" alt="logo" onclick="goToCategory('/')">
+  </a>
 
   <!-- 2. CATEGORIES -->
   <section class="categories">
@@ -193,7 +193,6 @@
 
   <script src="/js/db.js"></script>
   <script src="/js/home.js"></script>
-  <script src="/js/products.js"></script>
   <script src="/js/admin.js"></script>
 </body>
 </html>
