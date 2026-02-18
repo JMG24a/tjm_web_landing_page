@@ -6,6 +6,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.video-container{
+  max-height: 50vh;
+}
 
 .slogan {
   position: absolute;
