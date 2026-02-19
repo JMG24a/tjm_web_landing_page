@@ -63,6 +63,12 @@
   box-shadow: 0px 2px 49px #000000c9;
 }
 
+@media (max-width: 1200px) {
+  .modal-info {
+    box-shadow: none;
+  }
+}
+
 /* Colores */
 .modal-colors {
   display: flex;
