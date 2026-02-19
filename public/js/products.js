@@ -378,7 +378,6 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
-  console.log("INIT PRODUCTS??")
   showTopBar()
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
