@@ -120,8 +120,8 @@ body {
   }
 
   .video-container{
-    min-height: 43vh;
-    max-height: 43vh;
+    min-height: 31vh;
+    max-height: 31vh;
   }
 }
 
