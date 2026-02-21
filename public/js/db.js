@@ -85,7 +85,7 @@ const PRODUCTS = {
   sofas: [
     {
       id: 1000,
-      name: "Zultan Barriga",
+      name: "Zultan 2 Barrigas",
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_2_barrigas_beige.png",
@@ -127,7 +127,7 @@ const PRODUCTS = {
     },
     {
       id: 1003,
-      name: "Zultan Chapa",
+      name: "Zultan Cuadrado",
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_chapa_gray.png ",
