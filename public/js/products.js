@@ -79,6 +79,7 @@ function setupMultimuebles(product) {
 }
 
 function setupComedores(product) {
+  console.log("🚀 ~ setupComedores ~ product:", product)
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
   const topContainer = document.getElementById("modal-top");
