@@ -330,6 +330,30 @@ const PRODUCTS = {
     },
     {
       id: 1013,
+      name: "Sofa Zultan 3 puestos",
+      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_zultan_3puestos_gray.jpeg",
+      colors: [
+        {
+          img: "sofa_zultan_3puestos_gray.jpeg",
+          color: "gray"
+        },
+        {
+          img: "sofa_zultan_3puestos_black.jpeg",
+          color: "black",
+        },
+        {
+          img: "sofa_zultan_3puestos_beige.jpeg",
+          color: "beige",
+        },
+        {
+          img: "sofa_zultan_3puestos_white.jpeg",
+          color: "white",
+        },
+      ]
+    },
+    {
+      id: 1014,
       name: "Sofa Roma",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_roma_black.jpg",
