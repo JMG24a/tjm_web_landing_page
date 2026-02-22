@@ -20,6 +20,7 @@ function setActiveColor(activeSpan) {
 function renderColors(colors, container) {
   container.innerHTML = "";
 
+  console.log("🚀 ~ renderColors ~ colors:", colors)
   colors.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
