@@ -6,11 +6,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.video-container{
-  min-height: 93vh;
-  max-height: 93vh;
-}
-
 .slogan {
   position: absolute;
   left: calc(50% - 330px);
@@ -117,11 +112,6 @@ body {
 
   .slogan-sub {
     font-size: 1rem;
-  }
-
-  .video-container{
-    min-height: 31vh;
-    max-height: 31vh;
   }
 }
 
