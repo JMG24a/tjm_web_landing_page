@@ -1,7 +1,7 @@
 /* Video */
 .video-container {
   width: 100%;
-  height: 85vh; /* altura deseada */
+  height: 90vh; /* altura deseada */
   overflow: hidden; /* oculta lo que se salga */
   position: relative;
 }
@@ -11,6 +11,12 @@
   height: 100%;
   object-fit: cover; /* llena el contenedor sin deformarse */
   object-position: center center; /* centra el video vertical y horizontalmente */
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    height: 50vh; /* altura deseada */
+  }
 }
 
 /* SLIDER */
