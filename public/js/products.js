@@ -134,6 +134,7 @@ function setupComedores(product) {
 
 function openProductModal(product, category) {
   const modal = document.getElementById("product-modal");
+  const price = document.getElementById("product-price");
 
   setupBaseModal(product);
 
@@ -153,170 +154,23 @@ function openProductModal(product, category) {
 
   modal.classList.remove("hidden");
 
+  price.innerHTML = ""
+
+  fetch(`https://tjmwebback-production.up.railway.app/${product.id}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Respuesta del backend:', data);
+      price.innerHTML = data.price
+    })
+    .catch(error => {
+      console.error('Error en la petición:', error);
+    });
+
   // reset animación
   modal.classList.remove("show");
   void modal.offsetWidth;
   modal.classList.add("show");
 }
-
-
-// function openProductModal(product, category) {
-//   console.log("🚀 ~ openProductModal ~ product:", product)
-//   const modalImg = document.getElementById("modal-img");
-//   const modal = document.getElementById("product-modal");
-//   const size = document.getElementById("size");
-//   size.innerHTML= `${product.size}`
-//   // document.getElementById("product-modal").classList.remove("hidden");
-
-//   // Imagen inicial
-//   modalImg.src = `/image/${product.img}`;
-
-//   document.getElementById("modal-name").textContent = product.name;
-//   const modal_desc = document.getElementById("modal-desc");
-//   const btn = document.getElementById("toggle");
-
-//   modal_desc.textContent = product.desc;
-//   btn.onclick = () => {
-//     modal_desc.classList.toggle("clamp");
-//     btn.textContent = modal_desc.classList.contains("clamp") ? "Leer más" : "Leer menos";
-//   };
-
-//   if(category == "multimuebles"){
-//     const openContainer = document.getElementById("modal-open");
-//     openContainer.innerHTML = "";
-
-//     const colorsContainer = document.getElementById("modal-colors");
-//     colorsContainer.innerHTML = "";
-
-//     product.colors.forEach((item, index) => {
-//       const span = document.createElement("span");
-//       span.style.background = item.color;
-//       span.classList.add("color-dot");
-
-//       // 🔥 LISTENER CLAVE
-//       span.addEventListener("click", () => {
-//         changeModalImage(item.img);
-//         setActiveColor(span);
-//       });
-
-//       // primer color activo
-//       if (index === 0) {
-//         span.classList.add("active");
-//       }
-
-//       colorsContainer.appendChild(span);
-//     });
-
-//     if(product.open){
-//       openContainer.classList.remove("modal-opens")
-//     }else{
-//       openContainer.classList.add("modal-opens")
-//     }
-
-//     const spanOpen = document.createElement("span");
-//     spanOpen.innerHTML = "Abrir";
-//     spanOpen.classList.add("open-dot");
-
-//     spanOpen.addEventListener("click", () => {
-//       changeModalImage(product.open);
-//     });
-
-//     openContainer.appendChild(spanOpen);
-//   }
-
-//   if(category == "comedores"){
-//     const chairContainer = document.getElementById("modal-chairs");
-//     chairContainer.innerHTML = "";
-//     chairContainer.classList.remove("modal-chairs")
-
-//     const colorsContainer = document.getElementById("modal-colors");
-//     colorsContainer.innerHTML = "";
-
-
-
-//     const spanChair = document.createElement("span");
-//     spanChair.innerHTML = "Cuatro Sillas";
-//     spanChair.classList.add("open-dot");
-
-//     spanChair.addEventListener("click", ()=>{
-//       const colorsContainer = document.getElementById("modal-colors");
-//       colorsContainer.innerHTML = "";
-
-//       spanChair.innerHTML = "Seis Sillas";
-//       spanChair.classList.add("open-dot");
-
-//       product.chairs_4.forEach((item, index) => {
-//         const span = document.createElement("span");
-//         span.style.background = item.color;
-//         span.classList.add("color-dot");
-
-//         // 🔥 LISTENER CLAVE
-//         span.addEventListener("click", () => {
-//           changeModalImage(item.img);
-//           setActiveColor(span);
-//         });
-
-//         // primer color activo
-//         if (index === 0) {
-//           span.classList.add("active");
-//         }
-
-//         colorsContainer.appendChild(span);
-//       });
-//       chairContainer.appendChild(spanChair);
-//     })
-
-//     product.chairs_6.forEach((item, index) => {
-//       const span = document.createElement("span");
-//       span.style.background = item.color;
-//       span.classList.add("color-dot");
-
-//       // 🔥 LISTENER CLAVE
-//       span.addEventListener("click", () => {
-//         changeModalImage(item.img);
-//         setActiveColor(span);
-//       });
-
-//       // primer color activo
-//       if (index === 0) {
-//         span.classList.add("active");
-//       }
-
-//       colorsContainer.appendChild(span);
-//     });
-//     chairContainer.appendChild(spanChair);
-//   }
-
-//   if(category == "sofas"){
-//     const colorsContainer = document.getElementById("modal-colors");
-//     colorsContainer.innerHTML = "";
-
-//     product.colors.forEach((item, index) => {
-//       const span = document.createElement("span");
-//       span.style.background = item.color;
-//       span.classList.add("color-dot");
-
-//       // 🔥 LISTENER CLAVE
-//       span.addEventListener("click", () => {
-//         changeModalImage(item.img);
-//         setActiveColor(span);
-//       });
-
-//       // primer color activo
-//       if (index === 0) {
-//         span.classList.add("active");
-//       }
-
-//       colorsContainer.appendChild(span);
-//     });
-//   }
-
-//   modal.classList.remove("hidden");
-//   // reset animación
-//   modal.classList.remove("show");
-//   void modal.offsetWidth;
-//   modal.classList.add("show");
-// }
 
 function closeModal() {
   const modal = document.getElementById("product-modal");

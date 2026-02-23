@@ -1,16 +1,16 @@
 /* Video */
 .video-container {
-  position: relative;
   width: 100%;
-  max-width: 100%;
-  overflow: hidden; /* evita desbordes */
+  height: 50vh; /* altura deseada */
+  overflow: hidden; /* oculta lo que se salga */
+  position: relative;
 }
 
 .video-container video {
   width: 100%;
-  height: auto; /* mantiene proporción */
-  display: block; /* elimina espacios fantasmas */
-  object-fit: cover; /* opcional: llena el espacio sin deformarse */
+  height: 100%;
+  object-fit: cover; /* llena el contenedor sin deformarse */
+  object-position: center center; /* centra el video vertical y horizontalmente */
 }
 
 /* SLIDER */
