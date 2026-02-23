@@ -160,7 +160,7 @@ function openProductModal(product, category) {
     .then(response => response.json())
     .then(data => {
       console.log('Respuesta del backend:', data);
-      price.innerHTML = data.price
+      price.innerHTML = data.precio
     })
     .catch(error => {
       console.error('Error en la petición:', error);
