@@ -135,7 +135,7 @@ function setupComedores(product) {
 }
 
 // 1. Cargar precio del producto en USD
-async function loadProductPrice() {
+async function loadProductPrice(product) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
     const data = await response.json();
@@ -200,7 +200,7 @@ function openProductModal(product, category) {
   modal.classList.remove("hidden");
 
   price.innerHTML = ""
-  loadProductPrice();
+  loadProductPrice(product);
 
   // reset animación
   modal.classList.remove("show");
