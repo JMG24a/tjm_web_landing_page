@@ -1,3 +1,5 @@
+const priceElement = document.getElementById("product-price")
+
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
 
@@ -132,6 +134,49 @@ function setupComedores(product) {
   updateChairs(0); // inicial
 }
 
+// 1. Cargar precio del producto en USD
+async function loadProductPrice() {
+  try {
+    const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
+    const data = await response.json();
+    const priceUSD = data.precio + data.plus;
+    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+    priceElement.dataset.mode = "usd"; // Estado inicial
+    priceElement.innerHTML = `${priceUSD}$`;
+  } catch (error) {
+    console.error("Error cargando el producto:", error);
+  }
+}
+
+// 2. Obtener precio del dólar
+async function getDollarRate() {
+  try {
+    const response = await fetch("https://dolarapi.com/v1/dolares/oficial");
+    const data = await response.json(); return data.promedio;
+  } catch (error) {
+    console.error("Error obteniendo el dólar:", error); return null;
+  }
+}
+
+// 3. Toggle USD ↔ Bs
+priceElement.addEventListener("click", async () => {
+  const mode = priceElement.dataset.mode;
+  const usdPrice = parseFloat(priceElement.dataset.usd);
+  if (mode === "usd") {
+    // Convertir a Bs
+    const dollarRate = await getDollarRate();
+    if (!dollarRate) return;
+
+    const priceBs = usdPrice * dollarRate;
+    priceElement.innerHTML = `${priceBs.toFixed(2)} Bs`;
+    priceElement.dataset.mode = "bs";
+  }
+  else { // Volver a USD
+    priceElement.innerHTML = `${usdPrice}$`;
+    priceElement.dataset.mode = "usd";
+  }
+});
+
 function openProductModal(product, category) {
   const modal = document.getElementById("product-modal");
   const price = document.getElementById("product-price");
@@ -155,16 +200,7 @@ function openProductModal(product, category) {
   modal.classList.remove("hidden");
 
   price.innerHTML = ""
-
-  fetch(`https://tjmwebback-production.up.railway.app/${product.id}`)
-    .then(response => response.json())
-    .then(data => {
-      console.log('Respuesta del backend:', data);
-      price.innerHTML = `${data.precio}$`
-    })
-    .catch(error => {
-      console.error('Error en la petición:', error);
-    });
+  loadProductPrice();
 
   // reset animación
   modal.classList.remove("show");
