@@ -152,7 +152,7 @@ async function loadProductPrice(product) {
 // 2. Obtener precio del dólar
 async function getDollarRate() {
   try {
-    const response = await fetch("https://dolarapi.com/v1/dolares/oficial");
+    const response = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
     const data = await response.json();
     console.log("🚀 ~ getDollarRate ~ data:", data)
     console.log("🚀 ~ getDollarRate ~ data promedio:", data.promedio)
