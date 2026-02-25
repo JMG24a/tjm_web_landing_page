@@ -158,8 +158,6 @@ async function getDollarRate() {
   try {
     const response = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
     const data = await response.json();
-    console.log("🚀 ~ getDollarRate ~ data:", data)
-    console.log("🚀 ~ getDollarRate ~ data promedio:", data.promedio)
     return data.promedio;
   } catch (error) {
     console.error("Error obteniendo el dólar:", error); return null;
@@ -176,7 +174,7 @@ priceElement.addEventListener("click", async () => {
     if (!dollarRate) return;
 
     const priceBs = usdPrice * dollarRate;
-    priceElement.innerHTML = `${priceBs.toFixed(2)} Bs`;
+    priceElement.innerHTML = `${priceBs.toFixed(2)} BsS`;
     priceElement.dataset.mode = "bs";
   }
   else { // Volver a USD

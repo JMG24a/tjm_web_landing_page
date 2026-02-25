@@ -47,9 +47,9 @@ const PRODUCTS = {
   dormitorios: [
     {
       id: 1,
-      name: "Cama Moises",
+      name: "Cama Hielo",
       desc: "descripcion Cama Moises",
-      img: "4_5_cairo_gris_claro.jpg",
+      img: "no_picture.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -67,9 +67,29 @@ const PRODUCTS = {
     },
     {
       id: 2,
-      name: "Cama Coco",
+      name: "Cama Nube",
+      desc: "descripcion Cama Moises",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "4_5_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "21_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Cama Hielo Medio",
       desc: "descripcion cama coco",
-      img: "4_5_cairo_gris_claro.jpg",
+      img: "no_picture.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -80,7 +100,119 @@ const PRODUCTS = {
           color: "#633e3e",
         },
       ]
-    }
+    },
+  {
+      id: 4,
+      name: "Cama Coco",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+    {
+      id: 5,
+      name: "Cama Princesa",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+    {
+      id: 6,
+      name: "Cama Barco",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+   {
+      id: 7,
+      name: "Cama Sol",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+   {
+      id: 8,
+      name: "Cama Moises",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+    {
+      id: 9,
+      name: "Cama Nene",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
+   {
+      id: 10,
+      name: "Cama Triangular",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
   ],
   sofas: [
     {
@@ -618,9 +750,9 @@ const PRODUCTS = {
   colchones: [
     {
       id: 2001,
-      name: "Colchon Colflex",
+      name: "Serta Foam",
       desc: "descripcion sofa cairo",
-      img: "4_5_cairo_gris_claro.jpg",
+      img: "no_picture.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -631,7 +763,327 @@ const PRODUCTS = {
           color: "#333333"
         }
       ]
-    }
+    },
+    {
+      id: 2002,
+      name: "S&CO",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2003,
+      name: "Las Vegas",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+   {
+      id: 2004,
+      name: "Collection",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2005,
+      name: "Collection 1 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2006,
+      name: "Collection doble pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2007,
+      name: "Las Vegas",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2008,
+      name: "Europillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2009,
+      name: "Therapedic",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2010,
+      name: "Performance",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2011,
+      name: "Lady Best",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2012,
+      name: "San Remo",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2013,
+      name: "San Remo 1 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2014,
+      name: "San Remo 2 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2015,
+      name: "Atlanta",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2016,
+      name: "Nevada 2 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2017,
+      name: "Monte carlo",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2018,
+      name: "Monte Real 1 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 20119,
+      name: "Caroni",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+   {
+      id: 2020,
+      name: "Orinoco 1 pillow",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+   {
+      id: 2021,
+      name: "Ensueño",
+      desc: "descripcion sofa cairo",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
   ],
   comedores: [
     {
@@ -2363,7 +2815,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4008,
+      id: 4006,
       name: "Closet Monaco",
       size: "Alto: 191cm - Ancho: 69cm",
       desc: "El ropero Monaco es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2377,7 +2829,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4009,
+      id: 4007,
       name: "Ropero Berlin",
       size: "Alto: 191cm - Ancho: 106cm",
       desc: "El ropero Berlin elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2395,7 +2847,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4010,
+      id: 4008,
       name: "Ropero Alemania",
       size: "Alto: 191cm - Ancho: 138cm",
       desc: "El ropero Alemania elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2409,7 +2861,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4006,
+      id: 4009,
       name: "Campeche",
       size: "Alto: 65cm - Ancho: 48cm",
       desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2422,7 +2874,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4007,
+      id: 4010,
       name: "Comoda Madrid",
       size: "Alto: 100cm - Ancho: 90cm",
       desc: "La comoda Madrid es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2436,7 +2888,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 4012,
+      id: 4011,
       name: "Ropero Paris",
       size: "Alto: 191cm - Ancho: 106cm",
       desc: "El Ropero Paris es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
@@ -2454,6 +2906,118 @@ const PRODUCTS = {
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_caju_plus.jpg",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4013,
+      name: "Ropero Acai 3 puertas",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4014,
+      name: "Ropero Duetto",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4015,
+      name: "Ropero Barcelona",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4016,
+      name: "Ropero Helio",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4017,
+      name: "Ropero Helio",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4018,
+      name: "Peinadora Helio",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4019,
+      name: "Gavetero Cotino",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
+      open: "multimueble_closet_caju_plus_open.jpg",
+      colors: [
+        {
+          img: "multimueble_closet_caju_plus.jpg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 4020,
+      name: "Peinadora Cotino",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "no_picture.png",
       open: "multimueble_closet_caju_plus_open.jpg",
       colors: [
         {
