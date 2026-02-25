@@ -21,8 +21,23 @@
 
 /* SLIDER */
 .welcome-slider {
-  overflow: hidden;
+  width: 100%;
+  height: 90vh; /* altura deseada */
+  overflow: hidden; /* oculta lo que se salga */
   position: relative;
+}
+
+.sliders picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el contenedor sin deformarse */
+  object-position: center center; /* centra el video vertical y horizontalmente */
+}
+
+@media (max-width: 480px) {
+  .welcome-slider {
+    height: 50vh; /* altura deseada */
+  }
 }
 
 .sliders {
@@ -35,10 +50,10 @@
   transition: transform 0.3s linear;
 }
 
-.sliders img {
+/* .sliders img {
   width: 100vw;
   object-fit: cover;
-}
+} */
 
 
 .about-slider {
