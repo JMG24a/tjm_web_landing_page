@@ -134,13 +134,17 @@ function setupComedores(product) {
   updateChairs(0); // inicial
 }
 
+const calcularAumento = (monto, tasa) => {
+  return Number((monto * (1 + tasa / 100)).toFixed(2));
+};
+
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(product) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
     const data = await response.json();
-    // const priceUSD = data.precio + data.plus;
-    const priceUSD = data.precio + 0;
+    const porcentage = 50;
+    const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
