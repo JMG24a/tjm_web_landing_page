@@ -478,19 +478,23 @@ const PRODUCTS = {
       name: "Sofa Berlin",
       size: "160cm - 240cm",
       desc: "El sofá Domus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "no_picture.png",
+      img: "sofa_berlin_black.jpeg",
       colors: [
         {
-          img: "sofa_domus_gray2.jpg",
-          color: "gray",
+          img: "sofa_berlin_black.jpeg",
+          color: "black",
         },
         {
-          img: "sofa_domus_beige.jpg",
+          img: "sofa_berlin_beige.jpeg",
           color: "beige",
         },
         {
-          img: "sofa_domus_black.jpg",
-          color: "black"
+          img: "sofa_berlin_white.jpeg",
+          color: "white"
+        },
+        {
+          img: "sofa_berlin_gray.jpeg",
+          color: "#949494"
         }
       ]
     },
