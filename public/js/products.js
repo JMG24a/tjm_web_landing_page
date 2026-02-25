@@ -139,7 +139,8 @@ async function loadProductPrice(product) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
     const data = await response.json();
-    const priceUSD = data.precio + data.plus;
+    // const priceUSD = data.precio + data.plus;
+    const priceUSD = data.precio + 0;
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
@@ -152,7 +153,10 @@ async function loadProductPrice(product) {
 async function getDollarRate() {
   try {
     const response = await fetch("https://dolarapi.com/v1/dolares/oficial");
-    const data = await response.json(); return data.promedio;
+    const data = await response.json();
+    console.log("🚀 ~ getDollarRate ~ data:", data)
+    console.log("🚀 ~ getDollarRate ~ data promedio:", data.promedio)
+    return data.promedio;
   } catch (error) {
     console.error("Error obteniendo el dólar:", error); return null;
   }

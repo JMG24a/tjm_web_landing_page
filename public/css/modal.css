@@ -21,6 +21,10 @@
   backdrop-filter: blur(4px);
 }
 
+.product-price {
+  cursor: pointer;
+}
+
 /* Contenedor */
 .modal-content {
   position: relative;
