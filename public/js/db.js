@@ -262,19 +262,23 @@ const PRODUCTS = {
       name: "Zultan Cuadrado",
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "no_picture.png",
+      img: "sofa_zultan_cuadrado_black.jpg",
       colors: [
         {
-          img: "sofa_zultan_chapa_gray.png ",
-          color: "gray",
-        },
-        {
-          img: "sofa_zultan_chapa_black.png",
+          img: "sofa_zultan_cuadrado_black.jpg",
           color: "black",
         },
         {
-          img: "sofa_zultan_chapa_white.png ",
-          color: "white",
+          img: "sofa_zultan_cuadrado_gray.jpg",
+          color: "gray",
+        },
+        {
+          img: "sofa_zultan_cuadrado_white.jpg",
+          color: "#ffffff",
+        },
+        {
+          img: "sofa_zultan_cuadrado_gray_black.jpg",
+          color: "#595959",
         }
       ]
     },
@@ -514,20 +518,24 @@ const PRODUCTS = {
       id: 1014,
       name: "Sofa Damasco",
       desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_enmaly_white.jpg",
+      img: "sofa_damasco_black.jpeg",
       colors: [
         {
-          img: "sofa_enmaly_white.jpg",
+          img: "sofa_damasco_black.jpeg",
           color: "white",
         },
         {
-          img: "sofa_enmaly_beige.jpg",
+          img: "sofa_damasco_beige.jpeg",
           color: "beige",
         },
         {
-          img: "sofa_enmaly_gray.jpg",
+          img: "sofa_damasco_gray.jpeg",
           color: "gray"
-        }
+        },
+        {
+          img: "sofa_damasco_white.jpeg",
+          color: "white"
+        },
       ]
     },
     {
