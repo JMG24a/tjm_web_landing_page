@@ -24,9 +24,9 @@ const calcularAumento = (monto, tasa) => {
 };
 
 // 1. Cargar precio del producto en USD
-async function loadProductPrice(product) {
+async function loadProductPrice(id) {
   try {
-    const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
+    const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
     const porcentage = 50;
     const priceUSD = calcularAumento(data.precio, porcentage);
@@ -91,7 +91,7 @@ function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
   const price = document.getElementById("product-price");
   price.innerHTML = ""
-  loadProductPrice(product);
+  loadProductPrice(product.id);
   renderColors(product.colors, colors);
 }
 
@@ -101,7 +101,7 @@ function setupMultimuebles(product) {
 
   const price = document.getElementById("product-price");
   price.innerHTML = ""
-  loadProductPrice(product);
+  loadProductPrice(product.id);
 
   if(product.open){
     openContainer.classList.remove("modal-opens")
@@ -144,10 +144,22 @@ function setupComedores(product) {
   function updateChairs(position) {
     if (isFour) {
       chairBtn.textContent = "Seis Sillas";
+
+      const price = document.getElementById("product-price");
+      price.innerHTML = `product.id${4}${position}`
+      console.log(`product.id${4}${position}`)
+      // loadProductPrice(`product.id${6}${position}`);
+
       changeModalImage(product.chairs_4[0].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
       chairBtn.textContent = "Cuatro Sillas";
+
+      const price = document.getElementById("product-price");
+      price.innerHTML = `product.id${4}${position}`
+      console.log(`product.id${4}${position}`)
+      // loadProductPrice(`product.id${4}${position}`);
+
       changeModalImage(product.chairs_6[0].img);
       renderColors(product.chairs_6[position].colors, colors);
     }
