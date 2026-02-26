@@ -19,6 +19,36 @@ function setActiveColor(activeSpan) {
   activeSpan.classList.add("active");
 }
 
+const calcularAumento = (monto, tasa) => {
+  return Number((monto * (1 + tasa / 100)).toFixed(2));
+};
+
+// 1. Cargar precio del producto en USD
+async function loadProductPrice(product) {
+  try {
+    const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
+    const data = await response.json();
+    const porcentage = 50;
+    const priceUSD = calcularAumento(data.precio, porcentage);
+    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+    priceElement.dataset.mode = "usd"; // Estado inicial
+    priceElement.innerHTML = `${priceUSD}$`;
+  } catch (error) {
+    console.error("Error cargando el producto:", error);
+  }
+}
+
+// 2. Obtener precio del dólar
+async function getDollarRate() {
+  try {
+    const response = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
+    const data = await response.json();
+    return data.promedio;
+  } catch (error) {
+    console.error("Error obteniendo el dólar:", error); return null;
+  }
+}
+
 function renderColors(colors, container) {
   container.innerHTML = "";
 
@@ -59,12 +89,20 @@ function setupBaseModal(product) {
 
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
+  const price = document.getElementById("product-price");
+  price.innerHTML = ""
+  loadProductPrice(product);
   renderColors(product.colors, colors);
 }
 
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
+
+  const price = document.getElementById("product-price");
+  price.innerHTML = ""
+  loadProductPrice(product);
+
   if(product.open){
     openContainer.classList.remove("modal-opens")
   }else{
@@ -82,7 +120,6 @@ function setupMultimuebles(product) {
 }
 
 function setupComedores(product) {
-  console.log("🚀 ~ setupComedores ~ product:", product)
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
   const topContainer = document.getElementById("modal-top");
@@ -134,36 +171,6 @@ function setupComedores(product) {
   updateChairs(0); // inicial
 }
 
-const calcularAumento = (monto, tasa) => {
-  return Number((monto * (1 + tasa / 100)).toFixed(2));
-};
-
-// 1. Cargar precio del producto en USD
-async function loadProductPrice(product) {
-  try {
-    const response = await fetch(`https://tjmwebback-production.up.railway.app/${product.id}`);
-    const data = await response.json();
-    const porcentage = 50;
-    const priceUSD = calcularAumento(data.precio, porcentage);
-    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
-    priceElement.dataset.mode = "usd"; // Estado inicial
-    priceElement.innerHTML = `${priceUSD}$`;
-  } catch (error) {
-    console.error("Error cargando el producto:", error);
-  }
-}
-
-// 2. Obtener precio del dólar
-async function getDollarRate() {
-  try {
-    const response = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
-    const data = await response.json();
-    return data.promedio;
-  } catch (error) {
-    console.error("Error obteniendo el dólar:", error); return null;
-  }
-}
-
 // 3. Toggle USD ↔ Bs
 priceElement.addEventListener("click", async () => {
   const mode = priceElement.dataset.mode;
@@ -184,9 +191,7 @@ priceElement.addEventListener("click", async () => {
 });
 
 function openProductModal(product, category) {
-  const modal = document.getElementById("product-modal");
-  const price = document.getElementById("product-price");
-
+  const modal = document.getElementById("product-modal")
   setupBaseModal(product);
 
   switch (category) {
@@ -204,10 +209,6 @@ function openProductModal(product, category) {
   }
 
   modal.classList.remove("hidden");
-
-  price.innerHTML = ""
-  loadProductPrice(product);
-
   // reset animación
   modal.classList.remove("show");
   void modal.offsetWidth;
