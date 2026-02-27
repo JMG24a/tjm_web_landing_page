@@ -1118,104 +1118,356 @@ const PRODUCTS = {
       id: 3001,
       name: "Isabel Arteco",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "comedor_isabel_arteco.jpeg",
+      img: "comedor_isabel_v.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
-          img: "comedor_isabel_arteco.jpeg",
-          color: "#121c4d",
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#3f0b0b"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0a134a"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#520131"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_torre.jpeg",
-          color: "#633e3e",
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ea13aa"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#c8c8c8"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#eb0d69"
+            },
+          ],
         },
         {
-          img: "16_9_cairo_gris_claro.jpeg",
-          color: "#333333"
-        }
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+          ],
+        },
       ],
       chairs_4:[
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#ffffff"
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_torre.jpg",
-          color: "#14f5fd",
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#09ff00"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffd500"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#1d1dc4"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_4d.jpg",
-          color: "#ff1111",
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#fdf906"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0037ff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ff0000"
+            },
+          ],
         },
       ]
     },
     {
       id: 3002,
-      name: "Isabel 4D",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "comedor_isabel_4d.jpg",
-      size: "Largo: 190cm - Ancho: 90cm",
-      chairs_6:[
-        {
-          img: "comedor_isabel_4d.jpg",
-          color: "#333",
-        },
-        {
-          img: "comedor_isabel_torre.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ],
-      chairs_4:[
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#ffffff"
-        },
-        {
-          img: "comedor_isabel_torre.jpg",
-          color: "#14f5fd",
-        },
-        {
-          img: "comedor_isabel_4d.jpg",
-          color: "#ff1111",
-        },
-      ]
-    },
-    {
-      id: 3003,
       name: "Isabel Torre",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "comedor_isabel_torre.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
-          img: "comedor_isabel_torre.jpeg",
-          color: "#333",
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#3f0b0b"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0a134a"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#520131"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_torre.jpg",
-          color: "#633e3e",
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ea13aa"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#c8c8c8"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#eb0d69"
+            },
+          ],
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+          ],
+        },
       ],
       chairs_4:[
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#ffffff"
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_torre.jpg",
-          color: "#14f5fd",
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#09ff00"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffd500"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#1d1dc4"
+            },
+          ],
         },
         {
-          img: "comedor_isabel_4d.jpg",
-          color: "#ff1111",
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#fdf906"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0037ff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ff0000"
+            },
+          ],
+        },
+      ]
+    },
+    {
+      id: 3003,
+      name: "Isabel 4D",
+      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "comedor_isabel_v.jpeg",
+      size: "Largo: 190cm - Ancho: 90cm",
+      chairs_6:[
+        {
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#3f0b0b"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0a134a"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#520131"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ea13aa"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#c8c8c8"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#eb0d69"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffffff"
+            },
+          ],
+        },
+      ],
+      chairs_4:[
+        {
+          top: "vidrio",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#333"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#09ff00"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ffd500"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#1d1dc4"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_isabel_v.jpeg",
+          colors: [
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#fdf906"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#0037ff"
+            },
+            {
+              img: "comedor_isabel_v.jpeg",
+              color:"#ff0000"
+            },
+          ],
         },
       ]
     },
@@ -2648,7 +2900,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 3012,
+      id: 3016,
       name: "Lily V",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "no_picture.png",

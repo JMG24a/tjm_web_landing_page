@@ -52,7 +52,6 @@ async function getDollarRate() {
 function renderColors(colors, container) {
   container.innerHTML = "";
 
-  console.log("🚀 ~ renderColors ~ colors:", colors)
   colors.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
@@ -90,7 +89,7 @@ function setupBaseModal(product) {
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
   const price = document.getElementById("product-price");
-  price.innerHTML = ""
+  price.innerHTML = '<span class="loader"></span>'
   loadProductPrice(product.id);
   renderColors(product.colors, colors);
 }
@@ -100,7 +99,7 @@ function setupMultimuebles(product) {
   const openContainer = document.getElementById("modal-open");
 
   const price = document.getElementById("product-price");
-  price.innerHTML = ""
+  price.innerHTML = '<span class="loader"></span>'
   loadProductPrice(product.id);
 
   if(product.open){
@@ -146,7 +145,7 @@ function setupComedores(product) {
       chairBtn.textContent = "Seis Sillas";
 
       const price = document.getElementById("product-price");
-      price.innerHTML = `${product.id}4${position}`
+      price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}4${position}`);
 
       changeModalImage(product.chairs_4[0].img);
@@ -155,7 +154,7 @@ function setupComedores(product) {
       chairBtn.textContent = "Cuatro Sillas";
 
       const price = document.getElementById("product-price");
-      price.innerHTML = `${product.id}6${position}`
+      price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id$}6${position}`);
 
       changeModalImage(product.chairs_6[0].img);
