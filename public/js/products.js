@@ -146,9 +146,8 @@ function setupComedores(product) {
       chairBtn.textContent = "Seis Sillas";
 
       const price = document.getElementById("product-price");
-      price.innerHTML = `product.id${4}${position}`
-      console.log(`product.id${4}${position}`)
-      // loadProductPrice(`product.id${6}${position}`);
+      price.innerHTML = `${product.id}4${position}`
+      loadProductPrice(`${product.id}4${position}`);
 
       changeModalImage(product.chairs_4[0].img);
       renderColors(product.chairs_4[position].colors, colors);
@@ -156,9 +155,8 @@ function setupComedores(product) {
       chairBtn.textContent = "Cuatro Sillas";
 
       const price = document.getElementById("product-price");
-      price.innerHTML = `product.id${4}${position}`
-      console.log(`product.id${4}${position}`)
-      // loadProductPrice(`product.id${4}${position}`);
+      price.innerHTML = `${product.id}6${position}`
+      loadProductPrice(`${product.id$}6${position}`);
 
       changeModalImage(product.chairs_6[0].img);
       renderColors(product.chairs_6[position].colors, colors);
