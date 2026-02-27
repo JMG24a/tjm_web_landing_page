@@ -874,22 +874,6 @@ const PRODUCTS = {
     },
     {
       id: 2007,
-      name: "Las Vegas",
-      desc: "descripcion sofa cairo",
-      img: "no_picture.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ]
-    },
-    {
-      id: 2008,
       name: "Europillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -905,7 +889,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2009,
+      id: 2008,
       name: "Therapedic",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -921,23 +905,31 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2010,
+      id: 2009,
       name: "Performance",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          size: "1",
           color: "#633e3e",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          size: "14",
           color: "#333333"
-        }
+        },
+        {
+          size: "16",
+          color: "#333333"
+        },
+        {
+          size: "2",
+          color: "#333333"
+        },
       ]
     },
     {
-      id: 2011,
+      id: 2010,
       name: "Lady Best",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -953,7 +945,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2012,
+      id: 2011,
       name: "San Remo",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -969,7 +961,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2013,
+      id: 2012,
       name: "San Remo 1 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -985,7 +977,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2014,
+      id: 2013,
       name: "San Remo 2 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1001,7 +993,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2015,
+      id: 2014,
       name: "Atlanta",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1017,7 +1009,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2016,
+      id: 2015,
       name: "Nevada 2 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1033,7 +1025,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2017,
+      id: 2016,
       name: "Monte carlo",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1049,7 +1041,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2018,
+      id: 2017,
       name: "Monte Real 1 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1065,7 +1057,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 20119,
+      id: 20118,
       name: "Caroni",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1081,7 +1073,7 @@ const PRODUCTS = {
       ]
     },
    {
-      id: 2020,
+      id: 2019,
       name: "Orinoco 1 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1097,7 +1089,7 @@ const PRODUCTS = {
       ]
     },
    {
-      id: 2021,
+      id: 2020,
       name: "Ensueño",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",

@@ -156,7 +156,7 @@ function setupComedores(product) {
 
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id$}6${position}`);
+      loadProductPrice(`${product.id}6${position}`);
 
       changeModalImage(product.chairs_6[0].img);
       renderColors(product.chairs_6[position].colors, colors);
