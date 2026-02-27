@@ -25,6 +25,7 @@ const calcularAumento = (monto, tasa) => {
 
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id) {
+  console.log("🚀 ~ loadProductPrice ~ id:", id)
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();

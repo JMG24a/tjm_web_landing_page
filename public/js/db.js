@@ -3236,62 +3236,6 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 4016,
-      name: "Ropero Helio",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
-    {
-      id: 4017,
-      name: "Peinadora Helio",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
-    {
-      id: 4018,
-      name: "Gavetero Cotino",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
-    {
-      id: 4019,
-      name: "Peinadora Cotino",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
   ],
   accesorios: [
     {
