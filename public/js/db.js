@@ -1057,7 +1057,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 20118,
+      id: 2018,
       name: "Caroni",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
@@ -1090,7 +1090,7 @@ const PRODUCTS = {
     },
    {
       id: 2020,
-      name: "Ensueño",
+      name: "Ensueño 2 pillow",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
       colors: [
