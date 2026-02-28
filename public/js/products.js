@@ -158,9 +158,6 @@ function setupDormitorio(product){
     const price = document.getElementById("product-price");
     price.innerHTML = '<span class="loader"></span>'
     loadProductPrice(`${product.id}${position}`);
-
-    changeModalImage(product.chairs_4[0].img);
-    renderColors(product.chairs_4[position].colors, colors);
   }
 
   renderColors(product.colors, colors);
