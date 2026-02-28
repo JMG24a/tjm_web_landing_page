@@ -46,7 +46,7 @@ const WELCOME = {
 const PRODUCTS = {
   dormitorios: [
     {
-      id: 1,
+      id: 7000,
       name: "Cama Hielo",
       desc: "descripcion Cama Moises",
       img: "no_picture.png",
@@ -66,7 +66,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2,
+      id: 7001,
       name: "Cama Nube",
       desc: "descripcion Cama Moises",
       img: "no_picture.png",
@@ -86,7 +86,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 3,
+      id: 7002,
       name: "Cama Hielo Medio",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -102,7 +102,7 @@ const PRODUCTS = {
       ]
     },
   {
-      id: 4,
+      id: 7003,
       name: "Cama Coco",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -118,7 +118,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 5,
+      id: 7004,
       name: "Cama Princesa",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -134,7 +134,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 6,
+      id: 7005,
       name: "Cama Barco",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -150,7 +150,7 @@ const PRODUCTS = {
       ]
     },
    {
-      id: 7,
+      id: 7006,
       name: "Cama Sol",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -165,24 +165,8 @@ const PRODUCTS = {
         },
       ]
     },
-   {
-      id: 8,
-      name: "Cama Moises",
-      desc: "descripcion cama coco",
-      img: "no_picture.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-      ]
-    },
     {
-      id: 9,
+      id: 7007,
       name: "Cama Nene",
       desc: "descripcion cama coco",
       img: "no_picture.png",
@@ -197,8 +181,24 @@ const PRODUCTS = {
         },
       ]
     },
+    {
+      id: 7008,
+      name: "Cama Moises",
+      desc: "descripcion cama coco",
+      img: "no_picture.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+      ]
+    },
    {
-      id: 10,
+      id: 7009,
       name: "Cama Triangular",
       desc: "descripcion cama coco",
       img: "no_picture.png",
