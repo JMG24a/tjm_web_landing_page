@@ -95,6 +95,45 @@ function setupSofas(product) {
   renderColors(product.colors, colors);
 }
 
+function setupColchones(product){
+  const topContainer = document.getElementById("modal-top");
+  topContainer.classList.remove("modal-opens")
+  topContainer.className = "modal-top";
+
+  const topBtn1 = document.createElement("span");
+  topBtn1.className = "span-top";
+  const topBtn2 = document.createElement("span");
+  topBtn2.className = "span-top";
+  const topBtn3 = document.createElement("span");
+  topBtn3.className = "span-top";
+  const topBtn4 = document.createElement("span");
+  topBtn4.className = "span-top";
+
+  topBtn1.textContent = "individual";
+  topBtn2.textContent = "1.40";
+  topBtn3.textContent = "Queen";
+  topBtn4.textContent = "King";
+
+  function updatePrice(position) {
+    const price = document.getElementById("product-price");
+    price.innerHTML = '<span class="loader"></span>'
+    loadProductPrice(`${product.id}${position}`);
+  }
+
+  topBtn1.onclick = () => { updatePrice(1) }
+  topBtn2.onclick = () => { updatePrice(14) }
+  topBtn3.onclick = () => { updatePrice(16) }
+  topBtn4.onclick = () => { updatePrice(2) }
+
+  topContainer.innerHTML = "";
+  topContainer.appendChild(topBtn1);
+  topContainer.appendChild(topBtn2);
+  topContainer.appendChild(topBtn3);
+  topContainer.appendChild(topBtn4);
+
+  updatePrice(1) // inicial
+}
+
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
@@ -211,6 +250,10 @@ function openProductModal(product, category) {
 
     case "comedores":
       setupComedores(product);
+      break;
+
+    case "colchones":
+      setupColchones(product);
       break;
 
     case "sofas":
