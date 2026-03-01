@@ -35,11 +35,13 @@ const closeBtn = document.getElementById('close-modal');
 
 // Abrir modal
 openBtn.addEventListener('click', () => {
+  console.log("CLICK WS")
   modal.style.display = 'flex';
 });
 
 // Cerrar modal
 closeBtn.addEventListener('click', () => {
+  console.log("CLICK cls")
   modal.style.display = 'none';
 });
 
