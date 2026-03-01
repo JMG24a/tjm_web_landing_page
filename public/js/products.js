@@ -298,7 +298,7 @@ function openProductModal(product, category) {
       setupColchones(product);
       break;
 
-    case "Dormitorios":
+    case "dormitorios":
       setupDormitorio(product);
       break;
 
