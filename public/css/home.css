@@ -217,6 +217,7 @@
   color: #cbd5f5;
   text-decoration: none;
   transition: color 0.3s ease;
+  pointer-events: none;
 }
 
 .social:hover {
