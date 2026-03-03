@@ -29,7 +29,7 @@ async function loadProductPrice(id) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    const porcentage = 50;
+    const porcentage = 49;
     const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
@@ -109,8 +109,8 @@ function setupColchones(product){
   const topBtn4 = document.createElement("span");
   topBtn4.className = "span-top";
 
-  topBtn1.textContent = "individual";
-  topBtn2.textContent = "1.40";
+  topBtn1.textContent = "Individual";
+  topBtn2.textContent = "Matrimonial";
   topBtn3.textContent = "Queen";
   topBtn4.textContent = "King";
 
@@ -149,8 +149,8 @@ function setupDormitorio(product){
   const topBtn4 = document.createElement("span");
   topBtn4.className = "span-top";
 
-  topBtn1.textContent = "individual";
-  topBtn2.textContent = "1.40";
+  topBtn1.textContent = "Individual";
+  topBtn2.textContent = "Matrimonial";
   topBtn3.textContent = "Queen";
   topBtn4.textContent = "King";
 

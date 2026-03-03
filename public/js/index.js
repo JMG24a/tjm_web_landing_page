@@ -29,25 +29,29 @@ next.onclick = () => {
   aboutSlides.style.transform = `translateX(-${aboutIndex * 100}vw)`;
 };
 
-const openBtn = document.getElementById('ws-modal');
-const modal = document.getElementById('modal-container');
-const closeBtn = document.getElementById('close-modal');
+// Esperar a que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById('ws-modal');
+  const modal = document.getElementById('modal-container');
+  const closeBtn = document.getElementById('close-modal');
 
-// Abrir modal
-openBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
+  // Abrir modal
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita que el '#' recargue o mueva la página
+    modal.style.display = 'flex';
+  });
 
-// Cerrar modal
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Cerrar si hacen clic fuera de la caja blanca
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
+  // Cerrar modal
+  closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
-  }
+  });
+
+  // Cerrar si hacen clic fuera de la caja blanca
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 });
 
 const promoImages = document.querySelectorAll('.promo-slider img');
