@@ -31,6 +31,8 @@ next.onclick = () => {
 
 // Esperar a que el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
+console.log("Hello? ")
+
   const openBtn = document.getElementById('ws-modal');
   const modal = document.getElementById('modal-container');
   const closeBtn = document.getElementById('close-modal');
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+console.log("TESTSS:ss ")
 
 const promoImages = document.querySelectorAll('.promo-slider img');
 let promoIndex = 0;
