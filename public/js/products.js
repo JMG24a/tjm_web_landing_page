@@ -23,9 +23,20 @@ const calcularAumento = (monto, tasa) => {
   return Number((monto * (1 + tasa / 100)).toFixed(2));
 };
 
+const navigateToHome = (e) => {
+  if (e) e.preventDefault();
+  // Usamos .origin para asegurar que siempre vaya a la raíz absoluta
+  window.location.href = window.location.origin;
+};
+
+const goHomeBtn = document.getElementById('go-home');
+// Verificamos que el botón exista antes de asignarle el evento (evita errores en consola)
+if (goHomeBtn) {
+  goHomeBtn.addEventListener('click', navigateToHome);
+}
+
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id) {
-  console.log("🚀 ~ loadProductPrice ~ id:", id)
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();

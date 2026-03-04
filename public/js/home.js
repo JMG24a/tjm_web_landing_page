@@ -51,8 +51,6 @@ closeBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-console.log("fix ws button")
-
 function startPromotionSlider() {
   const slides = document.querySelectorAll('.promotion-slider picture');
   if (!slides.length) return;
