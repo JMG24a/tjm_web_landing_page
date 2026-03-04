@@ -36,6 +36,23 @@ function startWelcomeSlider() {
   cleanup = () => clearInterval(interval);
 }
 
+const openBtn = document.getElementById('ws-modal');
+const modal = document.getElementById('modal-container');
+const closeBtn = document.getElementById('close-modal');
+
+// Abrir modal
+openBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // Evita que el '#' recargue o mueva la página
+  modal.style.display = 'flex';
+});
+
+// Cerrar modal
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+console.log("fix ws button")
+
 function startPromotionSlider() {
   const slides = document.querySelectorAll('.promotion-slider picture');
   if (!slides.length) return;
