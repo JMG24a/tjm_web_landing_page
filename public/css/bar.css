@@ -15,8 +15,6 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 1.3s ease, transform 1.5s ease;
-
-  pointer-events: none; /* no interfiere con clicks */
   z-index: 999;
 }
 
