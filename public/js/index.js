@@ -30,32 +30,23 @@ next.onclick = () => {
 };
 
 // Esperar a que el DOM esté cargado
-document.addEventListener('DOMContentLoaded', () => {
-console.log("Hello? ")
+console.log("Get DOM?")
 
-  const openBtn = document.getElementById('ws-modal');
-  const modal = document.getElementById('modal-container');
-  const closeBtn = document.getElementById('close-modal');
+const openBtn = document.getElementById('ws-modal');
+const modal = document.getElementById('modal-container');
+const closeBtn = document.getElementById('close-modal');
 
-  // Abrir modal
-  openBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // Evita que el '#' recargue o mueva la página
-    modal.style.display = 'flex';
-  });
-
-  // Cerrar modal
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  // Cerrar si hacen clic fuera de la caja blanca
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+// Abrir modal
+openBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // Evita que el '#' recargue o mueva la página
+  modal.style.display = 'flex';
 });
-console.log("TESTSS:ss ")
+
+// Cerrar modal
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
 
 const promoImages = document.querySelectorAll('.promo-slider img');
 let promoIndex = 0;
