@@ -427,26 +427,26 @@ const PRODUCTS = {
       id: 1009,
       name: "Sofa Richard",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_richard_gray_white.jpg",
+      img: "sofa_richard_gray_white.jpeg",
       colors: [
         {
-          img: "sofa_richard_gray_white.jpg",
+          img: "sofa_richard_gray_white.jpeg",
           color: "#393939",
         },
         {
-          img: "sofa_richard_white",
+          img: "sofa_richard_white.jpeg",
           color: "rgba(255, 255, 255, 0.96)",
         },
         {
-          img: "sofa_richard_black",
+          img: "sofa_richard_black.jpeg",
           color: "black"
         },
         {
-          img: "sofa_richard_red",
+          img: "sofa_richard_red.jpeg",
           color: "red",
         },
         {
-          img: "sofa_richard_gray_white",
+          img: "sofa_richard_gray_white.jpeg",
           color: "#272727"
         },
       ]
