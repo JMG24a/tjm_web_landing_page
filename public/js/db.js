@@ -427,7 +427,7 @@ const PRODUCTS = {
       id: 1009,
       name: "Sofa Richard",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_richard_gray_white",
+      img: "sofa_richard_gray_white.jpg",
       colors: [
         {
           img: "sofa_richard_gray_white.jpg",
@@ -718,22 +718,22 @@ const PRODUCTS = {
       id: 1021,
       name: "Sofa Barco",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "no_picture.png",
+      img: "sofa_barco_beige.jpeg",
       colors: [
         {
-          img: "sofa_zultan_3puestos_gray.jpeg",
-          color: "gray"
+          img: "sofa_barco_beige.jpeg",
+          color: "beige"
         },
         {
-          img: "sofa_zultan_3puestos_gray_white.jpeg",
+          img: "sofa_barco_black.jpeg",
           color: "black",
         },
         {
-          img: "sofa_zultan_3puestos_beige.jpeg",
-          color: "beige",
+          img: "sofa_barco_gray.jpeg",
+          color: "gray",
         },
         {
-          img: "sofa_zultan_3puestos_white.jpeg",
+          img: "sofa_barco_beige.jpeg",
           color: "white",
         },
       ]
