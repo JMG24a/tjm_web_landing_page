@@ -796,7 +796,7 @@ const PRODUCTS = {
       id: 2001,
       name: "Serta Foam",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_serta_foam.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -844,7 +844,7 @@ const PRODUCTS = {
       id: 2004,
       name: "Collection",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_collection-flex-doble-pillow.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -860,7 +860,7 @@ const PRODUCTS = {
       id: 2005,
       name: "Collection 1 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_collection-flex-doble-pillow.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -874,7 +874,7 @@ const PRODUCTS = {
     },
     {
       id: 2006,
-      name: "Collection doble pillow",
+      name: "colchon_collection-flex-doble-pillow.jpg",
       desc: "descripcion sofa cairo",
       img: "no_picture.png",
       colors: [
