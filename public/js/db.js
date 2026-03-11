@@ -812,7 +812,7 @@ const PRODUCTS = {
       id: 2002,
       name: "S&CO",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_Serta-Semiortopedico-Serta-con-box.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
