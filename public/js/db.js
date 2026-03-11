@@ -73,15 +73,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_nube_beige.png",
-          color: "#333",
+          color: "beige",
         },
         {
           img: "dormitorio_cama_nube_black.png",
-          color: "#633e3e",
+          color: "black",
         },
         {
           img: "dormitorio_cama_nube_gray.png",
-          color: "#333333"
+          color: "gray"
         }
       ]
     },
@@ -828,7 +828,7 @@ const PRODUCTS = {
       id: 2003,
       name: "Las Vegas",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_las-vegas-Colflex-con-box.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -874,9 +874,9 @@ const PRODUCTS = {
     },
     {
       id: 2006,
-      name: "colchon_collection-flex-doble-pillow.jpg",
+      name: "collection",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_collection-flex-doble-pillow.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -892,7 +892,7 @@ const PRODUCTS = {
       id: 2007,
       name: "Europillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_Europillow-Serta-con-box.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -908,7 +908,7 @@ const PRODUCTS = {
       id: 2008,
       name: "Therapedic",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_Therapedic-Serta-con-box.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -924,7 +924,7 @@ const PRODUCTS = {
       id: 2009,
       name: "Performance",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_Performance-sleep-Colflex-con-box-y-qr.jpg",
       colors: [
         {
           size: "1",
@@ -948,7 +948,7 @@ const PRODUCTS = {
       id: 2010,
       name: "Lady Best",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_Lady-best-Colflex-con-box.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
