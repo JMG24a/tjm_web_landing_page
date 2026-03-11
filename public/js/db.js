@@ -69,18 +69,18 @@ const PRODUCTS = {
       id: 7001,
       name: "Cama Nube",
       desc: "descripcion Cama Moises",
-      img: "no_picture.png",
+      img: "dormitorio_cama_nube_beige.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_nube_beige.png",
           color: "#333",
         },
         {
-          img: "4_5_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_nube_black.png",
           color: "#633e3e",
         },
         {
-          img: "21_9_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_nube_gray.png",
           color: "#333333"
         }
       ]
