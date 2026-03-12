@@ -964,7 +964,7 @@ const PRODUCTS = {
       id: 2011,
       name: "San Remo",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_imperia.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -980,7 +980,7 @@ const PRODUCTS = {
       id: 2012,
       name: "San Remo 1 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_imperia.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -996,7 +996,7 @@ const PRODUCTS = {
       id: 2013,
       name: "San Remo 2 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_imperia.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1012,7 +1012,7 @@ const PRODUCTS = {
       id: 2014,
       name: "Atlanta",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_eclipse.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1028,7 +1028,7 @@ const PRODUCTS = {
       id: 2015,
       name: "Nevada 2 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_eclipse.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1044,7 +1044,7 @@ const PRODUCTS = {
       id: 2016,
       name: "Monte carlo",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_confort.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1060,7 +1060,7 @@ const PRODUCTS = {
       id: 2017,
       name: "Monte Real 1 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_confort.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1076,7 +1076,7 @@ const PRODUCTS = {
       id: 2018,
       name: "Caroni",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_divenca.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1092,7 +1092,7 @@ const PRODUCTS = {
       id: 2019,
       name: "Orinoco 1 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_divenca.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1108,7 +1108,7 @@ const PRODUCTS = {
       id: 2020,
       name: "Ensueño 2 pillow",
       desc: "descripcion sofa cairo",
-      img: "no_picture.png",
+      img: "colchon_divenca.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
