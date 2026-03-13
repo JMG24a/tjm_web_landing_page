@@ -105,7 +105,7 @@ const PRODUCTS = {
       id: 7003,
       name: "Cama Coco",
       desc: "descripcion cama coco",
-      img: "dormitorio_cama_coco_pick.png",
+      img: "dormitorio_cama_coco_pink.png",
       colors: [
         {
           img: "dormitorio_cama_coco_pink.png",
