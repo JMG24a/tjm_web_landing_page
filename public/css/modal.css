@@ -91,7 +91,7 @@
 .modal-close {
   z-index: 8;
   position: absolute;
-  color: wheat;
+  color: rgb(0, 0, 0);
   top: 20px;
   right: 18px;
   font-size: 28px;

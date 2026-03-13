@@ -3222,12 +3222,15 @@ const PRODUCTS = {
       name: "Ropero Duetto",
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
+      img: "multimueble_closet_duetto_marron.png",
       colors: [
         {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
+          img: "multimueble_closet_duetto_marron.png",
+          color: "#683f05",
+        },
+        {
+          img: "multimueble_closet_duetto_white.png",
+          color: "#683f05",
         }
       ]
     },
