@@ -49,19 +49,19 @@ const PRODUCTS = {
       id: 7000,
       name: "Cama Hielo",
       desc: "descripcion Cama Moises",
-      img: "no_picture.png",
+      img: "dormitorio_cama_hielo_gris.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_hielo_gris.png",
           color: "#333",
         },
         {
-          img: "4_5_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_hielo_black.png",
+          color: "black",
         },
         {
-          img: "21_9_cairo_gris_claro.jpg",
-          color: "#333333"
+          img: "dormitorio_cama_hielo_beige.png",
+          color: "beige"
         }
       ]
     },
@@ -105,15 +105,15 @@ const PRODUCTS = {
       id: 7003,
       name: "Cama Coco",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_coco_pick.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
+          img: "dormitorio_cama_coco_pink.png",
+          color: "pink",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_coco_beige.png",
+          color: "beige",
         },
       ]
     },
@@ -169,15 +169,15 @@ const PRODUCTS = {
       id: 7007,
       name: "Cama Nene",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_nene_blue.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
+          img: "dormitorio_cama_nene_blue.png",
+          color: "#05ac88",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_nene_beige.png",
+          color: "beige",
         },
       ]
     },
