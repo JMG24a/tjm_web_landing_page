@@ -3065,6 +3065,7 @@ const PRODUCTS = {
       size: "Alto: 180cm - Ancho: 200cm",
       desc: "El ropero Caju es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_plus_brown.jpg",
+      open: "multimueble_caju_6_puertas_open.jpeg",
       colors: [
         {
           img: "multimueble_closet_margarita_plus_brown.jpg",
