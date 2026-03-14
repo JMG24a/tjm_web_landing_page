@@ -40,7 +40,7 @@ async function loadProductPrice(id) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    const porcentage = 49;
+    const porcentage = 45;
     const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
