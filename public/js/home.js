@@ -1,9 +1,24 @@
 let cleanup = null;
 
 function showTopBar() {
-  console.log("showTopBar ejecutado");
 
   const bar = document.querySelector('.top-gradient-bar');
+  if (!bar) return;
+
+  // reset
+  bar.classList.remove('visible');
+
+  // fuerza reflow para reiniciar animación
+  bar.offsetHeight;
+
+  setTimeout(() => {
+    bar.classList.add('visible');
+  }, 2000);
+}
+
+function showTopBarProduct() {
+
+  const bar = document.querySelector('.top-gradient-bar_products');
   if (!bar) return;
 
   // reset
@@ -78,6 +93,7 @@ function initHome() {
   video.playbackRate = 0.4; // 0.5 = más lento, 1 = normal, 2 = rápido
 
   showTopBar();
+  showTopBarProduct();
   startWelcomeSlider();
   startPromotionSlider();
 }
