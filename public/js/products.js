@@ -387,7 +387,7 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
-  showTopBar()
+  showTopBarProduct()
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);

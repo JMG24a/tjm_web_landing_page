@@ -1,7 +1,6 @@
 let cleanup = null;
 
 function showTopBar() {
-
   const bar = document.querySelector('.top-gradient-bar');
   if (!bar) return;
 
@@ -17,7 +16,6 @@ function showTopBar() {
 }
 
 function showTopBarProduct() {
-
   const bar = document.querySelector('.top-gradient-bar_products');
   if (!bar) return;
 
