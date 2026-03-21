@@ -165,11 +165,9 @@ function setupColchones(product){
 }
 
 function setupDormitorio(product) {
-  const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
 
-  // Opciones con sus posiciones
   const options = [
     { label: "Individual", position: 1 },
     { label: "Matrimonial", position: 14 },
@@ -179,47 +177,39 @@ function setupDormitorio(product) {
 
   topContainer.innerHTML = "";
 
-  // Crear botones + contenedores de precio
   const btnElements = options.map(opt => {
     const wrapper = document.createElement("div");
-    wrapper.className = "banner";
-    wrapper.appendChild(`
-      <div class="circle-container">
-        <div class="white-circle"></div>
+    wrapper.className = "top-wrapper";
+
+    // 1. Botón superior (Label)
+    const btn = document.createElement("span");
+    btn.className = "span-top";
+    btn.textContent = opt.label;
+
+    // 2. Contenedor del Banner de Precio (El diseño de la imagen)
+    const priceTag = document.createElement("div"); // Cambiado a 'div' para mejor estructura
+    priceTag.className = "banner-price-container";
+
+    // Inyectamos la estructura interna del diseño
+    // Nota: Usamos opt.label para que el texto interno coincida (Matrimonial, King, etc.)
+    priceTag.innerHTML = `
+      <div class="banner-circle-outer">
+        <div class="banner-circle-inner"></div>
       </div>
-      <div class="content-wrapper">
-        <div class="label-box">
-          <span class="text-blue">opt.label</span>
-        </div>
-        <div class="price-box">
-          <span class="price-value">...</span>
-        </div>
+      <div class="banner-label-white">
+        <span>${opt.label.toUpperCase()}</span>
       </div>
-      `);
+      <div class="banner-price-value">
+        <span class="amount">0</span><span class="currency">$</span>
+      </div>
+    `;
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(priceTag);
+    topContainer.appendChild(wrapper);
+
     return { btn, priceTag, position: opt.position };
   });
-
-  // IDs completos para buscar precios
-  const ids = btnElements.map(el => `${product.id}${el.position}`);
-
-  // Cargar todos los precios
-  loadProductPrices(ids).then(prices => {
-    prices.forEach((price, index) => {
-      btnElements[index].priceTag.textContent = `${price}$`;
-    });
-  });
-
-  // // Acción al hacer click
-  // btnElements.forEach((el, index) => {
-  //   el.btn.onclick = () => {
-  //     const price = document.getElementById("product-price");
-  //     price.innerHTML = `${btnElements[index].priceTag.textContent}`;
-  //   };
-  // });
-
-  renderColors(product.colors, colors);
-  // Precio inicial
-  btnElements[0].btn.click();
 }
 // function setupDormitorio(product){
 //   const colors = document.getElementById("modal-colors");
