@@ -198,7 +198,7 @@ function setupDormitorio(product) {
       </div>
     `;
 
-    return { btn, priceTag, position: opt.position };
+    return { position: opt.position };
   });
 
   // IDs completos para buscar precios
