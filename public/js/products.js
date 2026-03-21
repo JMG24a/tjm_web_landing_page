@@ -50,6 +50,25 @@ async function loadProductPrice(id) {
   }
 }
 
+async function loadProductPrices(ids = []) {
+  try {
+    const porcentage = 45;
+
+    const requests = ids.map(id =>
+      fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+        .then(res => res.json())
+    );
+
+    const results = await Promise.all(requests);
+
+    return results.map(data => calcularAumento(data.precio, porcentage));
+  } catch (error) {
+    console.error("Error cargando precios:", error);
+    return [];
+  }
+}
+
+
 // 2. Obtener precio del dólar
 async function getDollarRate() {
   try {
@@ -145,47 +164,104 @@ function setupColchones(product){
   updatePrice(1) // inicial
 }
 
-function setupDormitorio(product){
+function setupDormitorio(product) {
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
-  topContainer.classList.remove("modal-opens")
   topContainer.className = "modal-top";
 
-  const topBtn1 = document.createElement("span");
-  topBtn1.className = "span-top";
-  const topBtn2 = document.createElement("span");
-  topBtn2.className = "span-top";
-  const topBtn3 = document.createElement("span");
-  topBtn3.className = "span-top";
-  const topBtn4 = document.createElement("span");
-  topBtn4.className = "span-top";
-
-  topBtn1.textContent = "Individual";
-  topBtn2.textContent = "Matrimonial";
-  topBtn3.textContent = "Queen";
-  topBtn4.textContent = "King";
-
-  function updatePrice(position) {
-    const price = document.getElementById("product-price");
-    price.innerHTML = '<span class="loader"></span>'
-    loadProductPrice(`${product.id}${position}`);
-  }
-
-  renderColors(product.colors, colors);
-
-  topBtn1.onclick = () => { updatePrice(1) }
-  topBtn2.onclick = () => { updatePrice(14) }
-  topBtn3.onclick = () => { updatePrice(16) }
-  topBtn4.onclick = () => { updatePrice(2) }
+  // Opciones con sus posiciones
+  const options = [
+    { label: "Individual", position: 1 },
+    { label: "Matrimonial", position: 14 },
+    { label: "Queen", position: 16 },
+    { label: "King", position: 2 }
+  ];
 
   topContainer.innerHTML = "";
-  topContainer.appendChild(topBtn1);
-  topContainer.appendChild(topBtn2);
-  topContainer.appendChild(topBtn3);
-  topContainer.appendChild(topBtn4);
 
-  updatePrice(1) // inicial
+  // Crear botones + contenedores de precio
+  const btnElements = options.map(opt => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "top-wrapper";
+
+    const btn = document.createElement("span");
+    btn.className = "span-top";
+    btn.textContent = opt.label;
+
+    const priceTag = document.createElement("p");
+    priceTag.className = "price-tag";
+    priceTag.textContent = "...";
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(priceTag);
+    topContainer.appendChild(wrapper);
+
+    return { btn, priceTag, position: opt.position };
+  });
+
+  // IDs completos para buscar precios
+  const ids = btnElements.map(el => `${product.id}${el.position}`);
+
+  // Cargar todos los precios
+  loadProductPrices(ids).then(prices => {
+    prices.forEach((price, index) => {
+      btnElements[index].priceTag.textContent = `${price}$`;
+    });
+  });
+
+  // // Acción al hacer click
+  // btnElements.forEach((el, index) => {
+  //   el.btn.onclick = () => {
+  //     const price = document.getElementById("product-price");
+  //     price.innerHTML = `${btnElements[index].priceTag.textContent}`;
+  //   };
+  // });
+
+  renderColors(product.colors, colors);
+  // Precio inicial
+  btnElements[0].btn.click();
 }
+// function setupDormitorio(product){
+//   const colors = document.getElementById("modal-colors");
+//   const topContainer = document.getElementById("modal-top");
+//   topContainer.classList.remove("modal-opens")
+//   topContainer.className = "modal-top";
+
+//   const topBtn1 = document.createElement("span");
+//   topBtn1.className = "span-top";
+//   const topBtn2 = document.createElement("span");
+//   topBtn2.className = "span-top";
+//   const topBtn3 = document.createElement("span");
+//   topBtn3.className = "span-top";
+//   const topBtn4 = document.createElement("span");
+//   topBtn4.className = "span-top";
+
+//   topBtn1.textContent = "Individual";
+//   topBtn2.textContent = "Matrimonial";
+//   topBtn3.textContent = "Queen";
+//   topBtn4.textContent = "King";
+
+//   function updatePrice(position) {
+//     const price = document.getElementById("product-price");
+//     price.innerHTML = '<span class="loader"></span>'
+//     loadProductPrice(`${product.id}${position}`);
+//   }
+
+//   renderColors(product.colors, colors);
+
+//   topBtn1.onclick = () => { updatePrice(1) }
+//   topBtn2.onclick = () => { updatePrice(14) }
+//   topBtn3.onclick = () => { updatePrice(16) }
+//   topBtn4.onclick = () => { updatePrice(2) }
+
+//   topContainer.innerHTML = "";
+//   topContainer.appendChild(topBtn1);
+//   topContainer.appendChild(topBtn2);
+//   topContainer.appendChild(topBtn3);
+//   topContainer.appendChild(topBtn4);
+
+//   updatePrice(1) // inicial
+// }
 
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");

@@ -646,19 +646,19 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_paris_white.jpeg",
-          color: "gray"
+          color: "white"
         },
         {
           img: "sofa_paris_gray_white.jpeg",
-          color: "black",
+          color: "#717171",
         },
         {
           img: "sofa_paris_black.jpeg",
-          color: "beige",
+          color: "black",
         },
         {
           img: "sofa_paris_gray.jpeg",
-          color: "white",
+          color: "gray",
         },
       ]
     },
@@ -695,6 +695,7 @@ const PRODUCTS = {
       name: "Sofa Nigeria",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
+      size: "180cm x 180cm",
       colors: [
         {
           img: "sofa_nigeria_beige.jpeg",
@@ -719,6 +720,7 @@ const PRODUCTS = {
       name: "Sofa Barco",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_barco_beige.jpeg",
+      size: "120cm x 140cm",
       colors: [
         {
           img: "sofa_barco_beige.jpeg",
@@ -739,42 +741,19 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 1022,
+      id: 1023,
       name: "Sofa Cama",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "no_picture.png",
-      colors: [
-        {
-          img: "sofa_zultan_3puestos_gray.jpeg",
-          color: "gray"
-        },
-        {
-          img: "sofa_zultan_3puestos_gray_white.jpeg",
-          color: "black",
-        },
-        {
-          img: "sofa_zultan_3puestos_beige.jpeg",
-          color: "beige",
-        },
-        {
-          img: "sofa_zultan_3puestos_white.jpeg",
-          color: "white",
-        },
-      ]
-    },
-    {
-      id: 1023,
-      name: "Sofa Cama Plus",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_sofa_cama_beige.jpeg",
+      size: "180cm x 160cm",
       colors: [
         {
           img: "sofa_sofa_cama_beige.jpeg",
-          color: "gray"
+          color: "beige"
         },
         {
           img: "sofa_sofa_cama_gray.jpeg",
-          color: "black",
+          color: "gray",
         },
         {
           img: "sofa_sofa_cama_gray_black.jpeg",
@@ -782,7 +761,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_sofa_cama_black_gray.jpeg",
-          color: "#525252",
+          color: "#424242",
         },
         {
           img: "sofa_sofa_cama_beige_down.jpeg",
