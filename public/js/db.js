@@ -978,7 +978,7 @@ const PRODUCTS = {
     },
     {
       id: 2012,
-      name: "San Remo 1 pillow",
+      name: "San Remo 1 Pillow",
       desc: "descripcion sofa cairo",
       img: "colchon_imperia.png",
       colors: [
@@ -994,7 +994,7 @@ const PRODUCTS = {
     },
     {
       id: 2013,
-      name: "San Remo 2 pillow",
+      name: "San Remo 2 Pillow",
       desc: "descripcion sofa cairo",
       img: "colchon_imperia.png",
       colors: [
@@ -1026,7 +1026,7 @@ const PRODUCTS = {
     },
     {
       id: 2015,
-      name: "Nevada 2 pillow",
+      name: "Nevada 2 Pillow",
       desc: "descripcion sofa cairo",
       img: "colchon_eclipse.png",
       colors: [
@@ -1042,9 +1042,9 @@ const PRODUCTS = {
     },
     {
       id: 2016,
-      name: "Monte carlo",
+      name: "Damiflex 1 Pillow",
       desc: "descripcion sofa cairo",
-      img: "colchon_confort.png",
+      img: "colchon_lara_damiflex_top_pillow.jpeg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1058,9 +1058,9 @@ const PRODUCTS = {
     },
     {
       id: 2017,
-      name: "Monte Real 1 pillow",
+      name: "Damiflex 1 Pillow",
       desc: "descripcion sofa cairo",
-      img: "colchon_confort.png",
+      img: "colchon_lara_damiflex_top.jpeg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -1074,41 +1074,9 @@ const PRODUCTS = {
     },
     {
       id: 2018,
-      name: "Caroni",
+      name: "Fi-Li",
       desc: "descripcion sofa cairo",
-      img: "colchon_divenca.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ]
-    },
-   {
-      id: 2019,
-      name: "Orinoco 1 pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_divenca.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ]
-    },
-   {
-      id: 2020,
-      name: "Ensueño 2 pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_divenca.png",
+      img: "colchon_lara_fili.jpeg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
