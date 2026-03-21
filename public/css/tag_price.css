@@ -1,0 +1,68 @@
+:root {
+  --blue-main: #1a428a; /* Ajusta el tono de azul aquí */
+  --yellow-price: #f2e088; /* Ajusta el tono de amarillo aquí */
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: var(--blue-main);
+  border-radius: 50px; /* Hace que toda la cápsula sea redondeada */
+  padding: 8px;
+  width: fit-content;
+  font-family: 'Arial Narrow', sans-serif; /* O una fuente Condensed */
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* El círculo de la izquierda */
+.circle-container {
+  background-color: var(--blue-main);
+  border: 4px solid #14356e; /* Un azul un poco más oscuro para el borde */
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: -20px; /* Solapa el círculo sobre el fondo blanco */
+  z-index: 2;
+}
+
+.white-circle {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Contenedor de texto y precio */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding-left: 20px;
+}
+
+/* La caja blanca interna */
+.label-box {
+  background-color: white;
+  padding: 10px 30px 10px 40px;
+  border-radius: 0 50px 50px 0; /* Redondeado solo a la derecha */
+  margin-right: 15px;
+}
+
+.text-blue {
+  color: var(--blue-main);
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+/* El precio amarillo */
+.price-box {
+  padding-right: 20px;
+}
+
+.price-value {
+  color: var(--yellow-price);
+  font-size: 3.5rem;
+  font-weight: bold;
+  /* Efecto de sombra para dar profundidad como en la imagen */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
