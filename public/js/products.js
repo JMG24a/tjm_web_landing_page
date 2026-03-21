@@ -180,26 +180,48 @@ function setupDormitorio(product) {
   topContainer.innerHTML = "";
 
   // Crear botones + contenedores de precio
-  const btnElements = options.map(opt => {
+const btnElements = options.map(opt => {
     const wrapper = document.createElement("div");
-    wrapper.className = "banner";
+    wrapper.className = "banner"; // Clase principal del diseño
 
-    wrapper.innerHTML = `
-      <div class="circle-container">
-        <div class="white-circle"></div>
-      </div>
-      <div class="content-wrapper">
-        <div class="label-box">
-          <span class="text-blue">${opt.label}</span>
-        </div>
-        <div class="price-box">
-          <span class="price-value">...</span>
-        </div>
-      </div>
-    `;
+    // CÍRCULO IZQUIERDA
+    const circleContainer = document.createElement("div");
+    circleContainer.className = "circle-container";
+    const whiteCircle = document.createElement("div");
+    whiteCircle.className = "white-circle";
+    circleContainer.appendChild(whiteCircle);
 
-    return { position: opt.position };
-  });
+    // CONTENEDOR DE CONTENIDO
+    const contentWrapper = document.createElement("div");
+    contentWrapper.className = "content-wrapper";
+
+    // ETIQUETA TEXTO (MATRIMONIAL, ETC)
+    const labelBox = document.createElement("div");
+    labelBox.className = "label-box";
+    const textBlue = document.createElement("span");
+    textBlue.className = "text-blue";
+    textBlue.textContent = opt.label.toUpperCase();
+    labelBox.appendChild(textBlue);
+
+    // PRECIO
+    const priceBox = document.createElement("div");
+    priceBox.className = "price-box";
+    const priceValue = document.createElement("span");
+    priceValue.className = "price-value";
+    priceValue.textContent = "150$"; // O el valor que necesites
+    priceBox.appendChild(priceValue);
+
+    // UNIÓN FINAL
+    contentWrapper.appendChild(labelBox);
+    contentWrapper.appendChild(priceBox);
+
+    wrapper.appendChild(circleContainer);
+    wrapper.appendChild(contentWrapper);
+
+    topContainer.appendChild(wrapper);
+
+    return { btn: textBlue, priceTag: priceValue, position: opt.position };
+});
 
   // IDs completos para buscar precios
   const ids = btnElements.map(el => `${product.id}${el.position}`);
