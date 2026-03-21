@@ -182,19 +182,21 @@ function setupDormitorio(product) {
   // Crear botones + contenedores de precio
   const btnElements = options.map(opt => {
     const wrapper = document.createElement("div");
-    wrapper.className = "top-wrapper";
+    wrapper.className = "banner";
 
-    const btn = document.createElement("span");
-    btn.className = "span-top";
-    btn.textContent = opt.label;
-
-    const priceTag = document.createElement("p");
-    priceTag.className = "price-tag";
-    priceTag.textContent = "...";
-
-    wrapper.appendChild(btn);
-    wrapper.appendChild(priceTag);
-    topContainer.appendChild(wrapper);
+    wrapper.innerHTML = `
+      <div class="circle-container">
+        <div class="white-circle"></div>
+      </div>
+      <div class="content-wrapper">
+        <div class="label-box">
+          <span class="text-blue">${opt.label}</span>
+        </div>
+        <div class="price-box">
+          <span class="price-value">...</span>
+        </div>
+      </div>
+    `;
 
     return { btn, priceTag, position: opt.position };
   });
@@ -208,6 +210,14 @@ function setupDormitorio(product) {
       btnElements[index].priceTag.textContent = `${price}$`;
     });
   });
+
+  // // Acción al hacer click
+  // btnElements.forEach((el, index) => {
+  //   el.btn.onclick = () => {
+  //     const price = document.getElementById("product-price");
+  //     price.innerHTML = `${btnElements[index].priceTag.textContent}`;
+  //   };
+  // });
 
   renderColors(product.colors, colors);
   // Precio inicial
