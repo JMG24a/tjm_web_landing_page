@@ -215,7 +215,7 @@ const btnElements = options.map(opt => {
     contentWrapper.appendChild(labelBox);
     contentWrapper.appendChild(priceBox);
 
-    wrapper.appendChild(circleContainer);
+    // wrapper.appendChild(circleContainer);
     wrapper.appendChild(contentWrapper);
 
     topContainer.appendChild(wrapper);
