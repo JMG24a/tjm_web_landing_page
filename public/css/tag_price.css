@@ -7,8 +7,8 @@
   display: flex;
   align-items: center;
   background-color: var(--blue-main);
-  border-radius: 50px; /* Hace que toda la cápsula sea redondeada */
-  padding: 8px;
+  border-radius: 5px; /* Hace que toda la cápsula sea redondeada */
+  padding: 3px 12px;
   width: fit-content;
   font-family: 'Arial Narrow', sans-serif; /* O una fuente Condensed */
   box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
@@ -37,27 +37,27 @@
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 /* La caja blanca interna */
 .label-box {
   background-color: white;
-  padding: 0px 10px 0px 4px;
-  border-radius: 50px 50px 50px 0; /* Redondeado solo a la derecha */
-  margin-right: 15px;
+  padding: 0px 12px 2px 5px;
+  border-radius: 10px; /* Redondeado solo a la derecha */
+  /* margin-right: 15px; */
 }
 
 .text-blue {
   color: var(--blue-main);
   font-weight: bold;
   font-size: 0.6rem;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
 }
 
 /* El precio amarillo */
 .price-box {
-  padding-right: 5px;
+  padding-right: 0px;
 }
 
 .price-value {
