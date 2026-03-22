@@ -256,7 +256,8 @@
 
 .modal-top{
   display: flex;
-  justify-content: start;
+  justify-content: center;
+  gap: 7px;
 }
 
 .span-top{
