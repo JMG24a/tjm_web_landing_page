@@ -25,8 +25,8 @@
 }
 
 .white-circle {
-  width: 60px;
-  height: 60px;
+  width: 20px;
+  height: 20px;
   background-color: white;
   border-radius: 50%;
 }
@@ -42,26 +42,26 @@
 /* La caja blanca interna */
 .label-box {
   background-color: white;
-  padding: 10px 30px 10px 40px;
-  border-radius: 0 50px 50px 0; /* Redondeado solo a la derecha */
+  padding: 0px 10px 0px 4px;
+  border-radius: 50px 50px 50px 0; /* Redondeado solo a la derecha */
   margin-right: 15px;
 }
 
 .text-blue {
   color: var(--blue-main);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 0.7rem;
   letter-spacing: -1px;
 }
 
 /* El precio amarillo */
 .price-box {
-  padding-right: 20px;
+  padding-right: 5px;
 }
 
 .price-value {
   color: var(--yellow-price);
-  font-size: 3.5rem;
+  font-size: 0.7rem;
   font-weight: bold;
   /* Efecto de sombra para dar profundidad como en la imagen */
   text-shadow: 2px 2px 0px rgba(0,0,0,0.2);

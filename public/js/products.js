@@ -185,11 +185,11 @@ const btnElements = options.map(opt => {
     wrapper.className = "banner"; // Clase principal del diseño
 
     // CÍRCULO IZQUIERDA
-    const circleContainer = document.createElement("div");
-    circleContainer.className = "circle-container";
-    const whiteCircle = document.createElement("div");
-    whiteCircle.className = "white-circle";
-    circleContainer.appendChild(whiteCircle);
+    // const circleContainer = document.createElement("div");
+    // circleContainer.className = "circle-container";
+    // const whiteCircle = document.createElement("div");
+    // whiteCircle.className = "white-circle";
+    // circleContainer.appendChild(whiteCircle);
 
     // CONTENEDOR DE CONTENIDO
     const contentWrapper = document.createElement("div");
