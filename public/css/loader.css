@@ -1,7 +1,6 @@
 #product-price {
-    min-height: 24px; /* Evita que el layout salte cuando cargue el texto */
-    display: flex;
-    align-items: center;
+  min-height: 24px; /* Evita que el layout salte cuando cargue el texto */
+  align-items: center;
 }
 
 /* El Loader circular */

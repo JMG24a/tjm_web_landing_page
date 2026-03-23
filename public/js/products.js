@@ -113,12 +113,15 @@ function setupBaseModal(product) {
     btn.textContent =
       desc.classList.contains("clamp") ? "Leer más" : "Leer menos";
   };
-
-  document.getElementById("size").textContent = product.size || "";
 }
 
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
+
+  const size = document.getElementById("size");
+  size.classList.remove("displayNone");
+  size.textContent = product.size || "";
+
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
@@ -250,51 +253,15 @@ const btnElements = options.map(opt => {
   // Precio inicial
   btnElements[0].btn.click();
 }
-// function setupDormitorio(product){
-//   const colors = document.getElementById("modal-colors");
-//   const topContainer = document.getElementById("modal-top");
-//   topContainer.classList.remove("modal-opens")
-//   topContainer.className = "modal-top";
 
-//   const topBtn1 = document.createElement("span");
-//   topBtn1.className = "span-top";
-//   const topBtn2 = document.createElement("span");
-//   topBtn2.className = "span-top";
-//   const topBtn3 = document.createElement("span");
-//   topBtn3.className = "span-top";
-//   const topBtn4 = document.createElement("span");
-//   topBtn4.className = "span-top";
-
-//   topBtn1.textContent = "Individual";
-//   topBtn2.textContent = "Matrimonial";
-//   topBtn3.textContent = "Queen";
-//   topBtn4.textContent = "King";
-
-//   function updatePrice(position) {
-//     const price = document.getElementById("product-price");
-//     price.innerHTML = '<span class="loader"></span>'
-//     loadProductPrice(`${product.id}${position}`);
-//   }
-
-//   renderColors(product.colors, colors);
-
-//   topBtn1.onclick = () => { updatePrice(1) }
-//   topBtn2.onclick = () => { updatePrice(14) }
-//   topBtn3.onclick = () => { updatePrice(16) }
-//   topBtn4.onclick = () => { updatePrice(2) }
-
-//   topContainer.innerHTML = "";
-//   topContainer.appendChild(topBtn1);
-//   topContainer.appendChild(topBtn2);
-//   topContainer.appendChild(topBtn3);
-//   topContainer.appendChild(topBtn4);
-
-//   updatePrice(1) // inicial
-// }
 
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
+
+  const size = document.getElementById("size");
+  size.classList.remove("displayNone");
+  size.textContent = product.size || "";
 
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
@@ -320,6 +287,11 @@ function setupMultimuebles(product) {
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
+
+  const size = document.getElementById("size");
+  size.classList.remove("displayNone");
+  size.textContent = product.size || "";
+
   const topContainer = document.getElementById("modal-top");
   let isFour = false; // estado toggle
   chairContainer.classList.remove("modal-opens")
@@ -353,6 +325,7 @@ function setupComedores(product) {
       chairBtn.textContent = "Cuatro Sillas";
 
       const price = document.getElementById("product-price");
+      price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}6${position}`);
 
