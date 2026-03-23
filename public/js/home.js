@@ -15,6 +15,21 @@ function showTopBar() {
   }, 2000);
 }
 
+function showTopBarModal() {
+  const bar = document.querySelector('.top-gradient-bar_modal');
+  if (!bar) return;
+
+  // reset
+  bar.classList.remove('visible');
+
+  // fuerza reflow para reiniciar animación
+  bar.offsetHeight;
+
+  setTimeout(() => {
+    bar.classList.add('visible');
+  }, 2000);
+}
+
 function showTopBarProduct() {
   const bar = document.querySelector('.top-gradient-bar_products');
   if (!bar) return;
