@@ -120,6 +120,7 @@ function setupBaseModal(product) {
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
   const price = document.getElementById("product-price");
+  price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
   loadProductPrice(product.id);
   renderColors(product.colors, colors);
@@ -146,6 +147,7 @@ function setupColchones(product){
 
   function updatePrice(position) {
     const price = document.getElementById("product-price");
+    price.classList.remove("displayNone")
     price.innerHTML = '<span class="loader"></span>'
     loadProductPrice(`${product.id}${position}`);
   }
@@ -292,6 +294,7 @@ function setupMultimuebles(product) {
   const openContainer = document.getElementById("modal-open");
 
   const price = document.getElementById("product-price");
+  price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
   loadProductPrice(product.id);
 

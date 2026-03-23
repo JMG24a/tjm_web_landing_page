@@ -8,7 +8,7 @@
   align-items: center;
   background-color: var(--blue-main);
   border-radius: 5px; /* Hace que toda la cápsula sea redondeada */
-  padding: 3px 12px;
+  padding: 3px 10px;
   width: fit-content;
   font-family: 'Arial Narrow', sans-serif; /* O una fuente Condensed */
   box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
