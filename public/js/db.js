@@ -807,7 +807,7 @@ const PRODUCTS = {
       id: 2003,
       name: "Las Vegas",
       desc: "descripcion sofa cairo",
-      img: "colchon_las-vegas-Colflex-con-box.jpg",
+      img: "colchon_las_vegas.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -823,7 +823,7 @@ const PRODUCTS = {
       id: 2004,
       name: "Collection",
       desc: "descripcion sofa cairo",
-      img: "colchon_collection-flex-doble-pillow.jpg",
+      img: "colchon_collection.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -853,7 +853,7 @@ const PRODUCTS = {
     },
     {
       id: 2006,
-      name: "collection",
+      name: "collection 2 pillow",
       desc: "descripcion sofa cairo",
       img: "colchon_collection-flex-doble-pillow.jpg",
       colors: [
@@ -871,7 +871,7 @@ const PRODUCTS = {
       id: 2007,
       name: "Europillow",
       desc: "descripcion sofa cairo",
-      img: "colchon_Europillow-Serta-con-box.jpg",
+      img: "colchon_serta_foam.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
