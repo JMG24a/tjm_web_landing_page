@@ -135,6 +135,14 @@ function setupColchones(product){
   topContainer.classList.remove("modal-opens")
   topContainer.className = "modal-top";
 
+  // Opciones con sus posiciones
+  const options = [
+    { label: "Individual", position: 1 },
+    { label: "Matrimonial", position: 14 },
+    { label: "Queen", position: 16 },
+    { label: "King", position: 2 }
+  ];
+
   const topBtn1 = document.createElement("span");
   topBtn1.className = "span-top";
   const topBtn2 = document.createElement("span");
@@ -390,7 +398,7 @@ function openProductModal(product, category) {
       break;
 
     case "colchones":
-      setupColchones(product);
+      setupDormitorio(product);
       break;
 
     case "dormitorios":
