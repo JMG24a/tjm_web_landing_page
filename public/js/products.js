@@ -171,6 +171,9 @@ function setupDormitorio(product) {
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
 
+  const price = document.getElementById("modal-top");
+  price.removeAttribute("display")
+
   // Opciones con sus posiciones
   const options = [
     { label: "Individual", position: 1 },

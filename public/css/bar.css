@@ -13,7 +13,7 @@
   );
 
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(10px);
   transition: opacity 1.3s ease, transform 1.5s ease;
   z-index: 999;
 }
