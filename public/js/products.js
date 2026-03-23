@@ -117,9 +117,10 @@ function setupBaseModal(product) {
 
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
+  const container_size = document.getElementById("container_size");
+  container_size.classList.remove("displayNone");
 
   const size = document.getElementById("size");
-  size.classList.remove("displayNone");
   size.textContent = product.size || "";
 
   const price = document.getElementById("product-price");
@@ -259,8 +260,9 @@ function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
 
+  const container_size = document.getElementById("container_size");
+  container_size.classList.remove("displayNone");
   const size = document.getElementById("size");
-  size.classList.remove("displayNone");
   size.textContent = product.size || "";
 
   const price = document.getElementById("product-price");
@@ -288,8 +290,9 @@ function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
 
+  const container_size = document.getElementById("container_size");
+  container_size.classList.remove("displayNone");
   const size = document.getElementById("size");
-  size.classList.remove("displayNone");
   size.textContent = product.size || "";
 
   const topContainer = document.getElementById("modal-top");
