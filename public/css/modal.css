@@ -199,12 +199,12 @@
   }
 
   .modal-image{
+    position: relative;
     max-height: 50vh;
     overflow: hidden;
   }
 
-  .modal-image img {
-    position: relative;
+  .img-modal {
     width: 100%;
     height: 100%;
     object-fit: cover;
