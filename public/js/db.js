@@ -775,7 +775,7 @@ const PRODUCTS = {
       id: 2001,
       name: "Serta Foam",
       desc: "descripcion sofa cairo",
-      img: "colchon_serta_foam.jpg",
+      img: "colchon_serta_foam.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -791,7 +791,7 @@ const PRODUCTS = {
       id: 2002,
       name: "S&CO",
       desc: "descripcion sofa cairo",
-      img: "colchon_Serta-Semiortopedico-Serta-con-box.jpg",
+      img: "colchon_serta_syco.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -871,7 +871,7 @@ const PRODUCTS = {
       id: 2007,
       name: "Europillow",
       desc: "descripcion sofa cairo",
-      img: "colchon_serta_foam.png",
+      img: "colchon_colflex_foam.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
