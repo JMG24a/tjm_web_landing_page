@@ -393,6 +393,8 @@ priceElement.addEventListener("click", async () => {
 });
 
 function openProductModal(product, category) {
+  showTopBar()
+
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
 
