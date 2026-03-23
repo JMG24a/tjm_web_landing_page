@@ -21,12 +21,12 @@
   backdrop-filter: blur(4px);
 }
 
-.displayNone{
-  display: none;
-}
-
 .product-price {
   cursor: pointer;
+}
+
+.displayNone{
+  display: none;
 }
 
 /* Contenedor */
