@@ -22,7 +22,7 @@ const WELCOME = {
   },
   dormitorios:{
     // image4_5: "/image/4_5_dormitorio_slider.jpg",
-    image4_5: "/category_dormitorio.jpg",
+    image4_5: "/image/category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
@@ -30,7 +30,7 @@ const WELCOME = {
   },
   colchones:{
     // image4_5: "/image/4_5_dormitorio_slider.jpg",
-    image4_5: "/category_dormitorio.jpg",
+    image4_5: "/image/category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
