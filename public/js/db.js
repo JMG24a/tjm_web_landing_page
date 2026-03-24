@@ -22,7 +22,7 @@ const WELCOME = {
   },
   dormitorios:{
     // image4_5: "/image/4_5_dormitorio_slider.jpg",
-    image4_5: "category_dormitorio.jpg",
+    image4_5: "/category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
@@ -30,7 +30,7 @@ const WELCOME = {
   },
   colchones:{
     // image4_5: "/image/4_5_dormitorio_slider.jpg",
-    image4_5: "category_dormitorio.jpg",
+    image4_5: "/category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
@@ -795,24 +795,64 @@ const PRODUCTS = {
       name: "Serta Foam",
       desc: "El colchón Serta Foam 2 años de garantía es 100% antialérgico lo cual ayudara a dormir mejor durante las noches, su estructura esta compuesta de Poliuretano de alta densidad(HD) donde te sentirás super cómodo al acostarte. ya que posee un polímero al 30% de 20 kg/m³ de densidad que  garantizan una sensación muy suave, además su tela importada de punto  importada te garantiza durabilidad. Además este Modelo es Fácil de transportar ya que puede ser empacado al vacío. quedando envuelto para la facilidad de manejo.",
       img: "colchon_serta_foam.png",
+      colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2002,
       name: "S&CO",
       desc: "descripcion sofa cairo",
       img: "colchon_serta_syco.png",
+      colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2003,
       name: "Las Vegas",
       desc: "El colchón Las Vegas Colflex Semiortopédico ofrece un descanso de calidad con 4 años de garantía. Cuenta con 312 resortes electrónicamente templados que proporcionan un soporte óptimo. Su felpa de mezcla de algodón y polímeros importada brinda comodidad excepcional. Además, las láminas de poliuretano flexible de 20 kg/m³ de densidad garantizan una sensación de suavidad. Acolchado con tela importada de 280 gramos por metro cuadrado, este colchón es una opción ideal para un sueño reparador",
       img: "colchon_las_vegas.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
    {
       id: 2004,
       name: "Collection",
       desc: "El colchón Collection Flex semi ortopédico de Colflex es una elección inigualable para un descanso óptimo y saludable. Con 350 resortes estratégicamente distribuidos, brinda un soporte excepcional y revitalizante. Con garantía de 5 años y altura de 25 cm, asegura durabilidad y comodidad. La tela importada antiácaros favorece tu descanso ya que no sentirás nada al dormir. En resumen, este colchón ofrece calidad, comodidad y durabilidad, siendo ideal para lograr un buen descanso.",
       img: "colchon_collection.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
       // colors: [
       //   {
       //     img: "16_9_cairo_gris_claro.jpg",
@@ -829,54 +869,144 @@ const PRODUCTS = {
       name: "Collection 1 pillow",
       desc: "El colchón Collection Flex pillow top ortopédico de Colflex sobresale como una elección inigualable para aquellos que buscan un descanso óptimo con un enfoque en la salud postural. Sus 350 resortes estratégicamente distribuidos brindan un soporte excepcional, asegurando que cada noche de sueño sea verdaderamente revitalizante. Con una generosa garantía de 6 años y una altura de 26 cm, este colchón garantiza una experiencia duradera y placentera, mientras que la tela importada antiácaros contribuye a un ambiente limpio y saludable para dormir. En resumen, el colchón Collection Flex pillow top ortopédico de Colflex ofrece una combinación única de calidad, comodidad y durabilidad. Es la opción ideal para aquellos que valoran su bienestar y desean disfrutar de un descanso reparador que revitalice cuerpo y mente noche tras noche.",
       img: "colchon_collection.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2006,
       name: "collection 2 pillow",
       desc: "El colchón Collection Flex Doble Pillow ortopédico de Colflex destaca como una excelente alternativa para aquellos que buscan una opción ortopédica de calidad. Equipado con 350 resortes que brindan un soporte óptimo, cuenta con una garantía de 6 años y una altura de 28 cm, asegurando comodidad y estabilidad. Su tela importada anti ácaros garantizan un descanso reparador, que te ayudaran levantar todos días de excelente animo.",
       img: "colchon_collection.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2007,
       name: "Europillow",
       desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
       img: "colchon_colflex_foam.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2008,
       name: "Therapedic",
       desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
       img: "colchon_serta_therapic.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2009,
       name: "Performance",
       desc: "El colchón ortopédico Performance Sleep de la marca Colflex es una magnífica elección para aquellos que buscan un descanso de primera calidad. Este modelo cuenta con una garantía de 12 años y está equipado con 1088 resortes electrónicamente templados y embolsados mediante el sistema Pocket Coils, lo que asegura una mayor firmeza y estabilidad al dormir. ",
       img: "colchon_colfex_performance.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2010,
       name: "Lady Best",
       desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
       img: "colchon_colflex_lady_best.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2011,
       name: "San Remo",
       desc: "Este colchón te permite disfrutar de una superficie acolchada y un soporte firme para un sueño reparador.",
       img: "colchon_imperia_sanremo.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2012,
       name: "San Remo 1 Pillow",
       desc: "Diseñado para ofrecer el equilibrio perfecto entre suavidad y firmeza. Su capa superior acolchada proporciona una sensación acogedora y envolvente.",
       img: "colchon_imperia_sanremo_pillow_top.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2013,
       name: "San Remo 2 Pillow",
       desc: "Experimente la máxima comodidad con nuestro colchón acolchado de doble capa San Remo, diseñado con capas acolchadas en ambos lados.",
       img: "colchon_imperia_sanremo_doblepillow_top.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     // {
     //   id: 2014,
@@ -915,36 +1045,96 @@ const PRODUCTS = {
       name: "Damiflex",
       desc: "descripcion sofa cairo",
       img: "colchon_lara_damiflex_top_pillow.jpeg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2017,
       name: "Damiflex 1 Pillow",
       desc: "descripcion sofa cairo",
       img: "colchon_lara_damiflex_top.jpeg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2018,
       name: "Fi-Li",
       desc: "descripcion sofa cairo",
       img: "colchon_lara_fili.jpeg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2021,
       name: "Dallas",
       desc: "El colchón ortopédico Dallas Pillow de la marca Colflex es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_colflex_dallas.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2022,
       name: "Talamo",
       desc: "El colchón ortopédico Talamo Pillow de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_lara_talamo.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
     {
       id: 2023,
       name: "Maya",
       desc: "El colchón ortopédico Maya Pillow de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_lara_maya.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
     },
   ],
   comedores: [
