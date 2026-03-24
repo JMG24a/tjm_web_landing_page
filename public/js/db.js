@@ -21,14 +21,16 @@ const WELCOME = {
     slogan_2: "Disfruta y comparte en familia."
   },
   dormitorios:{
-    image4_5: "/image/4_5_dormitorio_slider.jpg",
+    // image4_5: "/image/4_5_dormitorio_slider.jpg",
+    image4_5: "category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
     slogan_2: "descansa en tu hogar soñado."
   },
   colchones:{
-    image4_5: "/image/4_5_dormitorio_slider.jpg",
+    // image4_5: "/image/4_5_dormitorio_slider.jpg",
+    image4_5: "category_dormitorio.jpg",
     image16_9: "/image/16_9_dormitorio_slider.jpg",
     image21_9: "/image/21_9_dormitorio_slider.jpg",
     slogan_1: "Crea tu espacio",
@@ -942,8 +944,8 @@ const PRODUCTS = {
     {
       id: 2011,
       name: "San Remo",
-      desc: "descripcion sofa cairo",
-      img: "colchon_imperia.png",
+      desc: "Este colchón te permite disfrutar de una superficie acolchada y un soporte firme para un sueño reparador.",
+      img: "colchon_imperia_sanremo.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -958,8 +960,8 @@ const PRODUCTS = {
     {
       id: 2012,
       name: "San Remo 1 Pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_imperia.png",
+      desc: "Diseñado para ofrecer el equilibrio perfecto entre suavidad y firmeza. Su capa superior acolchada proporciona una sensación acogedora y envolvente.",
+      img: "colchon_imperia_sanremo_pillow_top.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -974,8 +976,8 @@ const PRODUCTS = {
     {
       id: 2013,
       name: "San Remo 2 Pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_imperia.png",
+      desc: "Experimente la máxima comodidad con nuestro colchón acolchado de doble capa San Remo, diseñado con capas acolchadas en ambos lados.",
+      img: "colchon_imperia_sanremo_doblepillow_top.jpg",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -987,41 +989,41 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 2014,
-      name: "Atlanta",
-      desc: "descripcion sofa cairo",
-      img: "colchon_eclipse.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ]
-    },
-    {
-      id: 2015,
-      name: "Nevada 2 Pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_eclipse.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333333"
-        }
-      ]
-    },
+    // {
+    //   id: 2014,
+    //   name: "Atlanta",
+    //   desc: "descripcion sofa cairo",
+    //   img: "colchon_eclipse.png",
+    //   colors: [
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#633e3e",
+    //     },
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#333333"
+    //     }
+    //   ]
+    // },
+    // {
+    //   id: 2015,
+    //   name: "Nevada 2 Pillow",
+    //   desc: "descripcion sofa cairo",
+    //   img: "colchon_eclipse.png",
+    //   colors: [
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#633e3e",
+    //     },
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#333333"
+    //     }
+    //   ]
+    // },
     {
       id: 2016,
-      name: "Damiflex 1 Pillow",
+      name: "Damiflex",
       desc: "descripcion sofa cairo",
       img: "colchon_lara_damiflex_top_pillow.jpeg",
       colors: [
@@ -1068,10 +1070,42 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2019,
+      id: 2021,
       name: "Dallas",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón ortopédico Dallas Pillow de la marca Colflex es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_colflex_dallas.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2022,
+      name: "Talamo",
+      desc: "El colchón ortopédico Talamo Pillow de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
+      img: "colchon_lara_talamo.jpg",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
+    {
+      id: 2023,
+      name: "Maya",
+      desc: "El colchón ortopédico Maya Pillow de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
+      img: "colchon_lara_maya.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
