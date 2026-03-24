@@ -774,7 +774,7 @@ const PRODUCTS = {
     {
       id: 2001,
       name: "Serta Foam",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón Serta Foam 2 años de garantía es 100% antialérgico lo cual ayudara a dormir mejor durante las noches, su estructura esta compuesta de Poliuretano de alta densidad(HD) donde te sentirás super cómodo al acostarte. ya que posee un polímero al 30% de 20 kg/m³ de densidad que  garantizan una sensación muy suave, además su tela importada de punto  importada te garantiza durabilidad. Además este Modelo es Fácil de transportar ya que puede ser empacado al vacío. quedando envuelto para la facilidad de manejo.",
       img: "colchon_serta_foam.png",
       colors: [
         {
@@ -806,7 +806,7 @@ const PRODUCTS = {
     {
       id: 2003,
       name: "Las Vegas",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón Las Vegas Colflex Semiortopédico ofrece un descanso de calidad con 4 años de garantía. Cuenta con 312 resortes electrónicamente templados que proporcionan un soporte óptimo. Su felpa de mezcla de algodón y polímeros importada brinda comodidad excepcional. Además, las láminas de poliuretano flexible de 20 kg/m³ de densidad garantizan una sensación de suavidad. Acolchado con tela importada de 280 gramos por metro cuadrado, este colchón es una opción ideal para un sueño reparador",
       img: "colchon_las_vegas.png",
       colors: [
         {
@@ -822,7 +822,7 @@ const PRODUCTS = {
    {
       id: 2004,
       name: "Collection",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón Collection Flex semi ortopédico de Colflex es una elección inigualable para un descanso óptimo y saludable. Con 350 resortes estratégicamente distribuidos, brinda un soporte excepcional y revitalizante. Con garantía de 5 años y altura de 25 cm, asegura durabilidad y comodidad. La tela importada antiácaros favorece tu descanso ya que no sentirás nada al dormir. En resumen, este colchón ofrece calidad, comodidad y durabilidad, siendo ideal para lograr un buen descanso.",
       img: "colchon_collection.png",
       colors: [
         {
@@ -838,8 +838,8 @@ const PRODUCTS = {
     {
       id: 2005,
       name: "Collection 1 pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_collection-flex-doble-pillow.jpg",
+      desc: "El colchón Collection Flex pillow top ortopédico de Colflex sobresale como una elección inigualable para aquellos que buscan un descanso óptimo con un enfoque en la salud postural. Sus 350 resortes estratégicamente distribuidos brindan un soporte excepcional, asegurando que cada noche de sueño sea verdaderamente revitalizante. Con una generosa garantía de 6 años y una altura de 26 cm, este colchón garantiza una experiencia duradera y placentera, mientras que la tela importada antiácaros contribuye a un ambiente limpio y saludable para dormir. En resumen, el colchón Collection Flex pillow top ortopédico de Colflex ofrece una combinación única de calidad, comodidad y durabilidad. Es la opción ideal para aquellos que valoran su bienestar y desean disfrutar de un descanso reparador que revitalice cuerpo y mente noche tras noche.",
+      img: "colchon_collection.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -854,8 +854,8 @@ const PRODUCTS = {
     {
       id: 2006,
       name: "collection 2 pillow",
-      desc: "descripcion sofa cairo",
-      img: "colchon_collection-flex-doble-pillow.jpg",
+      desc: "El colchón Collection Flex Doble Pillow ortopédico de Colflex destaca como una excelente alternativa para aquellos que buscan una opción ortopédica de calidad. Equipado con 350 resortes que brindan un soporte óptimo, cuenta con una garantía de 6 años y una altura de 28 cm, asegurando comodidad y estabilidad. Su tela importada anti ácaros garantizan un descanso reparador, que te ayudaran levantar todos días de excelente animo.",
+      img: "colchon_collection.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -870,7 +870,7 @@ const PRODUCTS = {
     {
       id: 2007,
       name: "Europillow",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
       img: "colchon_colflex_foam.png",
       colors: [
         {
@@ -886,8 +886,8 @@ const PRODUCTS = {
     {
       id: 2008,
       name: "Therapedic",
-      desc: "descripcion sofa cairo",
-      img: "colchon_Therapedic-Serta-con-box.png",
+      desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
+      img: "colchon_serta_therapic.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -902,8 +902,8 @@ const PRODUCTS = {
     {
       id: 2009,
       name: "Performance",
-      desc: "descripcion sofa cairo",
-      img: "colchon_Performance-sleep-Colflex-con-box-y-qr.jpg",
+      desc: "El colchón ortopédico Performance Sleep de la marca Colflex es una magnífica elección para aquellos que buscan un descanso de primera calidad. Este modelo cuenta con una garantía de 12 años y está equipado con 1088 resortes electrónicamente templados y embolsados mediante el sistema Pocket Coils, lo que asegura una mayor firmeza y estabilidad al dormir. ",
+      img: "colchon_colfex_performance.png",
       colors: [
         {
           size: "1",
@@ -926,8 +926,8 @@ const PRODUCTS = {
     {
       id: 2010,
       name: "Lady Best",
-      desc: "descripcion sofa cairo",
-      img: "colchon_Lady-best-Colflex-con-box.jpg",
+      desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
+      img: "colchon_colflex_lady_best.png",
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
