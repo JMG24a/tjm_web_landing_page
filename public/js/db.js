@@ -1067,6 +1067,22 @@ const PRODUCTS = {
         }
       ]
     },
+    {
+      id: 2019,
+      name: "Dallas",
+      desc: "descripcion sofa cairo",
+      img: "colchon_colflex_dallas.png",
+      colors: [
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#633e3e",
+        },
+        {
+          img: "16_9_cairo_gris_claro.jpg",
+          color: "#333333"
+        }
+      ]
+    },
   ],
   comedores: [
     {
