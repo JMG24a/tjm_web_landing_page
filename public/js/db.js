@@ -771,6 +771,23 @@ const PRODUCTS = {
         },
       ]
     },
+    {
+      id: 1024,
+      name: "Sofa Lineal",
+      desc: "El sofá lineal es una opción ideal para negocios y espacios amplios gracias a su diseño modular y elegante. Se comercializa por metro lineal, lo que permite adaptarlo fácilmente a cualquier ambiente, ofreciendo comodidad, estilo y funcionalidad en cada tramo.",
+      img: "sofa_barco_beige.jpeg",
+      size: "120cm x 140cm",
+      colors: [
+        {
+          img: "sofa_lineal.png",
+          color: "red"
+        },
+        {
+          img: "sofa_lineal_beige.png",
+          color: "beige",
+        },
+      ]
+    },
   ],
   colchones: [
     {
