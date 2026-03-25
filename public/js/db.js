@@ -900,7 +900,7 @@ const PRODUCTS = {
       id: 2007,
       name: "Europillow",
       desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
-      img: "colchon_colflex_foam.png",
+      img: "colchon_serta_europillow.jpg",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -916,7 +916,7 @@ const PRODUCTS = {
       id: 2008,
       name: "Therapedic",
       desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
-      img: "colchon_serta_therapic.png",
+      img: "colchon_serta_therapedic.jpg",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -932,7 +932,7 @@ const PRODUCTS = {
       id: 2009,
       name: "Performance",
       desc: "El colchón ortopédico Performance Sleep de la marca Colflex es una magnífica elección para aquellos que buscan un descanso de primera calidad. Este modelo cuenta con una garantía de 12 años y está equipado con 1088 resortes electrónicamente templados y embolsados mediante el sistema Pocket Coils, lo que asegura una mayor firmeza y estabilidad al dormir. ",
-      img: "colchon_colfex_performance.png",
+      img: "colchon_colflex_performance.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
