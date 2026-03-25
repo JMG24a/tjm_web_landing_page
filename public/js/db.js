@@ -807,6 +807,38 @@ const PRODUCTS = {
       ]
     },
     {
+      id: 2008,
+      name: "Therapedic",
+      desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
+      img: "colchon_serta_therapedic.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
+    },
+    {
+      id: 2007,
+      name: "Europillow",
+      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
+      img: "colchon_serta_europillow.jpg",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
+    },
+    {
       id: 2002,
       name: "S&CO",
       desc: "descripcion sofa cairo",
@@ -897,38 +929,6 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 2007,
-      name: "Europillow",
-      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
-      img: "colchon_serta_europillow.jpg",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
-    {
-      id: 2008,
-      name: "Therapedic",
-      desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
-      img: "colchon_serta_therapedic.jpg",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
-    {
       id: 2009,
       name: "Performance",
       desc: "El colchón ortopédico Performance Sleep de la marca Colflex es una magnífica elección para aquellos que buscan un descanso de primera calidad. Este modelo cuenta con una garantía de 12 años y está equipado con 1088 resortes electrónicamente templados y embolsados mediante el sistema Pocket Coils, lo que asegura una mayor firmeza y estabilidad al dormir. ",
@@ -949,6 +949,22 @@ const PRODUCTS = {
       name: "Lady Best",
       desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
       img: "colchon_colflex_ladybest.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
+    },
+    {
+      id: 2021,
+      name: "Dallas",
+      desc: "El colchón ortopédico Dallas Pillow de la marca Colflex es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
+      img: "colchon_colflex_dallas.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -1077,22 +1093,6 @@ const PRODUCTS = {
       name: "Fi-Li",
       desc: "descripcion sofa cairo",
       img: "colchon_lara_fili.jpeg",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
-    {
-      id: 2021,
-      name: "Dallas",
-      desc: "El colchón ortopédico Dallas Pillow de la marca Colflex es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
-      img: "colchon_colflex_dallas.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
