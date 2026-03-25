@@ -481,7 +481,7 @@ function loadProductsByCategory(category) {
 function initProducts() {
   showTopBarProduct()
 
-  loadProductPrice(1023);
+  loadProductPrices([1023, 1021, 1020]);
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);

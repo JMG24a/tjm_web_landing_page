@@ -159,7 +159,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_sol_gray.png",
-          color: "#333",
+          color: "#919191",
         },
         {
           img: "dormitorio_cama_sol_brown.png",
@@ -191,15 +191,19 @@ const PRODUCTS = {
       id: 7008,
       name: "Cama Moises",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_moises_white.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_moises_white.png",
           color: "#333",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_moises_blue.png",
+          color: "#0040a0",
+        },
+        {
+          img: "dormitorio_cama_moises_beige.png",
+          color: "beige",
         },
       ]
     },
@@ -207,15 +211,19 @@ const PRODUCTS = {
       id: 7009,
       name: "Cama Triangular",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_triangular_red.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
+          img: "dormitorio_cama_triangular_red.png",
+          color: "red",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_triangular_beige.png",
+          color: "beige",
+        },
+        {
+          img: "dormitorio_cama_triangular_gray.png",
+          color: "gray",
         },
       ]
     },
@@ -725,25 +733,21 @@ const PRODUCTS = {
       id: 1021,
       name: "Sofa Barco",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_barco_beige.jpeg",
+      img: "dormitorio_cama_barco_beige.png",
       size: "120cm x 140cm",
       colors: [
         {
-          img: "sofa_barco_beige.jpeg",
+          img: "dormitorio_cama_barco_beige.png",
           color: "beige"
         },
         {
-          img: "sofa_barco_black.jpeg",
+          img: "dormitorio_cama_barco_black.png",
           color: "black",
         },
         {
-          img: "sofa_barco_gray.jpeg",
-          color: "gray",
-        },
-        {
-          img: "sofa_barco_beige.jpeg",
-          color: "white",
-        },
+          img: "dormitorio_cama_barco_blue.png",
+          color: "blue",
+        }
       ]
     },
     {
