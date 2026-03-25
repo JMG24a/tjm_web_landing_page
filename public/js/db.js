@@ -810,7 +810,7 @@ const PRODUCTS = {
       id: 2002,
       name: "S&CO",
       desc: "descripcion sofa cairo",
-      img: "colchon_serta_syco.png",
+      img: "colchon_colflex_syco.png",
       colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -826,7 +826,7 @@ const PRODUCTS = {
       id: 2003,
       name: "Las Vegas",
       desc: "El colchón Las Vegas Colflex Semiortopédico ofrece un descanso de calidad con 4 años de garantía. Cuenta con 312 resortes electrónicamente templados que proporcionan un soporte óptimo. Su felpa de mezcla de algodón y polímeros importada brinda comodidad excepcional. Además, las láminas de poliuretano flexible de 20 kg/m³ de densidad garantizan una sensación de suavidad. Acolchado con tela importada de 280 gramos por metro cuadrado, este colchón es una opción ideal para un sueño reparador",
-      img: "colchon_las_vegas.png",
+      img: "colchon_colflex_vegas.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -842,7 +842,7 @@ const PRODUCTS = {
       id: 2004,
       name: "Collection",
       desc: "El colchón Collection Flex semi ortopédico de Colflex es una elección inigualable para un descanso óptimo y saludable. Con 350 resortes estratégicamente distribuidos, brinda un soporte excepcional y revitalizante. Con garantía de 5 años y altura de 25 cm, asegura durabilidad y comodidad. La tela importada antiácaros favorece tu descanso ya que no sentirás nada al dormir. En resumen, este colchón ofrece calidad, comodidad y durabilidad, siendo ideal para lograr un buen descanso.",
-      img: "colchon_collection.png",
+      img: "colchon_colflex_collection.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -868,7 +868,7 @@ const PRODUCTS = {
       id: 2005,
       name: "Collection 1 pillow",
       desc: "El colchón Collection Flex pillow top ortopédico de Colflex sobresale como una elección inigualable para aquellos que buscan un descanso óptimo con un enfoque en la salud postural. Sus 350 resortes estratégicamente distribuidos brindan un soporte excepcional, asegurando que cada noche de sueño sea verdaderamente revitalizante. Con una generosa garantía de 6 años y una altura de 26 cm, este colchón garantiza una experiencia duradera y placentera, mientras que la tela importada antiácaros contribuye a un ambiente limpio y saludable para dormir. En resumen, el colchón Collection Flex pillow top ortopédico de Colflex ofrece una combinación única de calidad, comodidad y durabilidad. Es la opción ideal para aquellos que valoran su bienestar y desean disfrutar de un descanso reparador que revitalice cuerpo y mente noche tras noche.",
-      img: "colchon_collection.png",
+      img: "colchon_colflex_collection_pillow_top.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -884,7 +884,7 @@ const PRODUCTS = {
       id: 2006,
       name: "collection 2 pillow",
       desc: "El colchón Collection Flex Doble Pillow ortopédico de Colflex destaca como una excelente alternativa para aquellos que buscan una opción ortopédica de calidad. Equipado con 350 resortes que brindan un soporte óptimo, cuenta con una garantía de 6 años y una altura de 28 cm, asegurando comodidad y estabilidad. Su tela importada anti ácaros garantizan un descanso reparador, que te ayudaran levantar todos días de excelente animo.",
-      img: "colchon_collection.png",
+      img: "colchon_colflex_collection_double_pillow_top.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -948,7 +948,7 @@ const PRODUCTS = {
       id: 2010,
       name: "Lady Best",
       desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
-      img: "colchon_colflex_lady_best.png",
+      img: "colchon_colflex_ladybest.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
