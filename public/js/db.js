@@ -87,22 +87,22 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 7002,
-      name: "Cama Hielo Medio",
-      desc: "descripcion cama coco",
-      img: "no_picture.png",
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-      ]
-    },
+    // {
+    //   id: 7002,
+    //   name: "Cama Hielo Medio",
+    //   desc: "descripcion cama coco",
+    //   img: "no_picture.png",
+    //   colors: [
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#333",
+    //     },
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#633e3e",
+    //     },
+    //   ]
+    // },
   {
       id: 7003,
       name: "Cama Coco",
@@ -155,15 +155,19 @@ const PRODUCTS = {
       id: 7006,
       name: "Cama Sol",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_sol_gray.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
+          img: "dormitorio_cama_sol_gray.png",
           color: "#333",
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_sol_brown.png",
+          color: "#4c2c2c",
+        },
+        {
+          img: "dormitorio_cama_sol_beige.png",
+          color: "beige",
         },
       ]
     },
