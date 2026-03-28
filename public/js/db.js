@@ -139,16 +139,20 @@ const PRODUCTS = {
       id: 7005,
       name: "Cama Barco",
       desc: "descripcion cama coco",
-      img: "no_picture.png",
+      img: "dormitorio_cama_barco_beige.png",
       colors: [
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
+          img: "dormitorio_cama_barco_beige.png",
+          color: "beige"
         },
         {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
+          img: "dormitorio_cama_barco_black.png",
+          color: "black",
         },
+        {
+          img: "dormitorio_cama_barco_blue.png",
+          color: "blue",
+        }
       ]
     },
    {
@@ -704,21 +708,25 @@ const PRODUCTS = {
     {
       id: 1021,
       name: "Sofa Barco",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "dormitorio_cama_barco_beige.png",
+      desc: "El sofá barco 2 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_barco_white.jpeg",
       size: "120cm x 140cm",
       colors: [
         {
-          img: "dormitorio_cama_barco_beige.png",
-          color: "beige"
+          img: "sofa_barco_white.jpeg",
+          color: "white"
         },
         {
-          img: "dormitorio_cama_barco_black.png",
+          img: "sofa_barco_gray.jpeg",
+          color: "gray",
+        },
+        {
+          img: "sofa_barco_black.jpeg",
           color: "black",
         },
         {
-          img: "dormitorio_cama_barco_blue.png",
-          color: "blue",
+          img: "sofa_barco_beige.jpeg",
+          color: "beige",
         }
       ]
     },
