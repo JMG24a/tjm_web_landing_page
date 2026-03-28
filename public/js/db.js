@@ -287,10 +287,6 @@ const PRODUCTS = {
           color: "gray",
         },
         {
-          img: "sofa_zultan_cuadrado_white.jpeg",
-          color: "#ffffff",
-        },
-        {
           img: "sofa_zultan_cuadrado_gray_black.jpeg",
           color: "#595959",
         }
@@ -391,7 +387,7 @@ const PRODUCTS = {
           color: "#d2b48c",
         },
         {
-          img: "sofa_nube_poltrona_beige_.PNG",
+          img: "sofa_nube_poltrona_beige.jpng",
           color: "#d2b48c",
         },
       ]
@@ -448,20 +444,16 @@ const PRODUCTS = {
           color: "#393939",
         },
         {
-          img: "sofa_richard_white.jpeg",
-          color: "rgba(255, 255, 255, 0.96)",
-        },
-        {
           img: "sofa_richard_black.jpeg",
           color: "black"
         },
         {
-          img: "sofa_richard_red.jpeg",
-          color: "red",
+          img: "sofa_richard_white.jpeg",
+          color: "rgba(255, 255, 255, 0.96)",
         },
         {
-          img: "sofa_richard_gray_white.jpeg",
-          color: "#272727"
+          img: "sofa_richard_red.jpeg",
+          color: "red",
         },
       ]
     },
@@ -496,10 +488,6 @@ const PRODUCTS = {
         {
           img: "sofa_palermo_beige.PNG",
           color: "beige",
-        },
-        {
-          img: "sofa_palermo_white.PNG",
-          color: "white"
         },
         {
           img: "sofa_palermo_gray.PNG",
@@ -560,15 +548,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_damasco_black.jpeg",
-          color: "white",
-        },
-        {
-          img: "sofa_damasco_beige.jpeg",
-          color: "beige",
-        },
-        {
-          img: "sofa_damasco_gray.jpeg",
-          color: "gray"
+          color: "black",
         },
         {
           img: "sofa_damasco_white.jpeg",
@@ -635,10 +615,6 @@ const PRODUCTS = {
           color: "beige"
         },
         {
-          img: "sofa_normandy_black.jpeg",
-          color: "black",
-        },
-        {
           img: "sofa_normandy_gray.jpeg",
           color: "gray"
         },
@@ -669,10 +645,6 @@ const PRODUCTS = {
         {
           img: "sofa_paris_black.jpeg",
           color: "black",
-        },
-        {
-          img: "sofa_paris_gray.jpeg",
-          color: "gray",
         },
       ]
     },
