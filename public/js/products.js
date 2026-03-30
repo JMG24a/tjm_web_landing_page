@@ -225,7 +225,7 @@ const btnElements = options.map(opt => {
     priceBox.className = "price-box";
     const priceValue = document.createElement("span");
     priceValue.className = "price-value";
-    priceValue.textContent = "150$"; // O el valor que necesites
+    priceValue.textContent = "cargando..."; // O el valor que necesites
     priceBox.appendChild(priceValue);
 
     // UNIÓN FINAL
