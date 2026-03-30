@@ -34,10 +34,6 @@
   margin: 10px 0;
 }
 
-.displayNone{
-  display: none;
-}
-
 /* Contenedor */
 .modal-content {
   position: relative;
@@ -257,7 +253,7 @@
     font-size: 1rem;
   } */
   .modal-name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #222;
     margin-bottom: 5px;
@@ -284,7 +280,7 @@
 }
 
 .modal-name{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -368,4 +364,8 @@
 
 .span-top:hover{
   background: rgb(83, 83, 83);
+}
+
+.displayNone{
+  display: none;
 }
