@@ -382,11 +382,34 @@ priceElement.addEventListener("click", async () => {
   }
 });
 
+function renderSuggestions(product) {
+  const suggestContainer = document.getElementById("suggest");
+  suggestContainer.innerHTML = ""; // limpiar
+
+  if (!product.suggest || product.suggest.length === 0) return;
+
+  product.suggest.forEach(id => {
+    const related = db.find(p => p.id === id);
+    if (!related) return;
+
+    const card = document.createElement("div");
+    card.classList.add("suggest-card");
+
+    card.innerHTML = `
+      <img src="/image/${related.img}" alt="${related.name}">
+      <p>${related.name}</p>
+    `;
+
+    // abrir modal del producto sugerido
+    card.onclick = () => openProductModal(related, related.category);
+
+    suggestContainer.appendChild(card);
+  });
+}
+
 function openProductModal(product, category) {
   showTopBarModal()
-
   const modal = document.getElementById("product-modal")
-  const suggest = document.getElementById("suggest")
 
   setupBaseModal(product);
 
@@ -400,18 +423,12 @@ function openProductModal(product, category) {
       break;
 
     case "colchones":
-      setupDormitorio(product);
-      break;
-
     case "dormitorios":
       setupDormitorio(product);
       break;
 
     case "sofas":
     default:
-      product.suggest.map((i)=>(
-        suggest.innerHTML = `<div>hello ${i}</div>`
-      ))
       setupSofas(product);
   }
 
@@ -420,6 +437,8 @@ function openProductModal(product, category) {
   modal.classList.remove("show");
   void modal.offsetWidth;
   modal.classList.add("show");
+
+  renderSuggestions(product);
 }
 
 function closeModal() {
