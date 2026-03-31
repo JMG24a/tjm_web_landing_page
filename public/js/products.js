@@ -386,6 +386,8 @@ function openProductModal(product, category) {
   showTopBarModal()
 
   const modal = document.getElementById("product-modal")
+  const suggest = document.getElementById("suggest")
+
   setupBaseModal(product);
 
   switch (category) {
@@ -407,6 +409,9 @@ function openProductModal(product, category) {
 
     case "sofas":
     default:
+      product.suggest.map((i)=>(
+        suggest.innerHTML = `<div>hello ${i}</div>`
+      ))
       setupSofas(product);
   }
 
