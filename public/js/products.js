@@ -382,14 +382,14 @@ priceElement.addEventListener("click", async () => {
   }
 });
 
-function renderSuggestions(product) {
+function renderSuggestions(product, category) {
   const suggestContainer = document.getElementById("suggest");
   suggestContainer.innerHTML = ""; // limpiar
 
   if (!product.suggest || product.suggest.length === 0) return;
 
   product.suggest.forEach(id => {
-    const related = PRODUCTS.find(p => p.id === id);
+    const related = PRODUCTS[category].find(p => p.id === id);
     if (!related) return;
 
     const card = document.createElement("div");
@@ -438,7 +438,7 @@ function openProductModal(product, category) {
   void modal.offsetWidth;
   modal.classList.add("show");
 
-  renderSuggestions(product);
+  renderSuggestions(product, category);
 }
 
 function closeModal() {
