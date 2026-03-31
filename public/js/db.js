@@ -736,7 +736,7 @@ const PRODUCTS = {
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_sofa_cama_beige.jpeg",
       size: "180cm x 160cm",
-      suggest: [1022, 1021],
+      suggest: [1020, 1021],
       colors: [
         {
           img: "sofa_sofa_cama_beige.jpeg",
