@@ -21,12 +21,17 @@
   backdrop-filter: blur(4px);
 }
 
-.product-price {
+/* .product-price {
   cursor: pointer;
-}
-
-.displayNone{
-  display: none;
+} */
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0px 0px;
 }
 
 /* Contenedor */
@@ -71,6 +76,12 @@
   box-shadow: 0px 2px 49px #000000c9;
 }
 
+.container-title{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 @media (max-width: 1200px) {
   .modal-info {
     box-shadow: none;
@@ -83,13 +94,21 @@
   gap: 10px;
 }
 
-.modal-colors span {
+/* .modal-colors span {
   width: 22px;
   height: 22px;
   border-radius: 50%;
   border: 1px solid #ccc;
   cursor: pointer;
-}
+  } */
+  .modal-colors span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #dcdcdc;
+    cursor: pointer;
+    transition: transform .2s ease;
+  }
 
 /* Cerrar */
 .modal-close {
@@ -178,14 +197,22 @@
   box-shadow: 0 0 0 2px #000;
 }
 
-.toggle_desc {
+/* .toggle_desc {
   font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   color: #000000a1;
   font-style: italic;
   line-height: 1;
+} */
+.toggle_desc {
+  font-size: 0.85rem;
+  color: #335f82;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: -10px;
 }
+
 
 @media (max-width: 768px) {
   .modal-content {
@@ -214,33 +241,67 @@
     overflow: visible;
   }
 
-  .modal-info {
+  /* .modal-info {
     border-left: none;
     border-top: 1px solid #e5e5e5;
+  } */
+  .modal-info {
+    font-family: "Poppins", sans-serif;
   }
 
-  .modal-name{
+  /* .modal-name{
     font-size: 1rem;
+  } */
+  .modal-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
   }
-  .size_text{
+
+  /* .size_text{
     font-size: 0.8rem;
+  } */
+  .size_text {
+    font-size: 0.9rem;
+    font-weight: 500;
   }
-  .desc{
+  /* .desc{
     font-size: 0.8rem;
     font-family: "Playfair Display", serif;
+  } */
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+    font-family: "Poppins", sans-serif;
+    max-width: 95%;
   }
 }
 
 .modal-name{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Playfair Display", serif;
 }
-.size_text{
+
+/* .size_text{
   font-size: 0.8rem;
+} */
+.size_text {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-.desc{
+
+/* .desc{
   font-size: 0.8rem;
   font-family: "Playfair Display", serif;
+} */
+.desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+  max-width: 95%;
 }
 
 .open-dot{
@@ -255,8 +316,34 @@
   background-color: rgb(8, 73, 138);
 }
 
-.modal-opens{
+/* .modal-opens{
   display: none;
+} */
+.modal-opens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+/* this is ia */
+.modal-opens .option-box {
+  background: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+/* this is ia */
+.modal-opens .option-box:hover {
+  background: #e7e7e7;
+}
+
+/* this is ia */
+.modal-opens .option-box.active {
+  border: 2px solid #000;
 }
 
 .modal-top{
@@ -264,6 +351,7 @@
   justify-content: center;
   gap: 5px;
 }
+
 
 .span-top{
   margin: 0px 10px 0px 0px;
@@ -276,4 +364,8 @@
 
 .span-top:hover{
   background: rgb(83, 83, 83);
+}
+
+.displayNone{
+  display: none;
 }

@@ -225,7 +225,7 @@ const btnElements = options.map(opt => {
     priceBox.className = "price-box";
     const priceValue = document.createElement("span");
     priceValue.className = "price-value";
-    priceValue.textContent = "150$"; // O el valor que necesites
+    priceValue.textContent = "cargando..."; // O el valor que necesites
     priceBox.appendChild(priceValue);
 
     // UNIÓN FINAL
@@ -382,10 +382,35 @@ priceElement.addEventListener("click", async () => {
   }
 });
 
+function renderSuggestions(product, category) {
+  const suggestContainer = document.getElementById("suggest");
+  suggestContainer.innerHTML = ""; // limpiar
+
+  if (!product.suggest || product.suggest.length === 0) return;
+
+  product.suggest.forEach(id => {
+    const related = PRODUCTS[category].find(p => p.id === id);
+    if (!related) return;
+
+    const card = document.createElement("div");
+    card.classList.add("suggest-card");
+
+    card.innerHTML = `
+      <img src="/image/${related.img}" alt="${related.name}">
+      <p>${related.name}</p>
+    `;
+
+    // abrir modal del producto sugerido
+    card.onclick = () => openProductModal(related, related.category);
+
+    suggestContainer.appendChild(card);
+  });
+}
+
 function openProductModal(product, category) {
   showTopBarModal()
-
   const modal = document.getElementById("product-modal")
+
   setupBaseModal(product);
 
   switch (category) {
@@ -398,9 +423,6 @@ function openProductModal(product, category) {
       break;
 
     case "colchones":
-      setupDormitorio(product);
-      break;
-
     case "dormitorios":
       setupDormitorio(product);
       break;
@@ -415,6 +437,8 @@ function openProductModal(product, category) {
   modal.classList.remove("show");
   void modal.offsetWidth;
   modal.classList.add("show");
+
+  renderSuggestions(product, category);
 }
 
 function closeModal() {

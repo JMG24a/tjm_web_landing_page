@@ -15,13 +15,16 @@
     <link rel="stylesheet" href="/css/welcome.css">
     <link rel="stylesheet" href="/css/modal_ws.css">
     <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/suggest.css">
     <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="/css/tag_price.css">
 
   </head>
   <body>
     <a href="/" class="top-gradient-bar_products">
-      <p class="logo_go_back" onclick="goToCategory('/')"><</p>
+      <p class="logo_go_back" onclick="goToCategory('/')">
+        <img width="25px" height="25px" src="/image/back_btn_white.png" alt="volver">
+      </p>
     </a>
 
     <section class="welcome-slider">
@@ -67,15 +70,17 @@
 
           <!-- Info -->
           <aside class="modal-info">
-            <h2 id="modal-name" class="modal-name"></h2>
-            <a id="ws-modal" class="social">
-              <img src="/image/whatsapp.png" alt="logo" width="24px">
-            </a>
+            <div class="container-title">
+              <h2 id="modal-name" class="modal-name"></h2>
+              <a id="ws-modal" class="social">
+                <img src="/image/whatsapp.png" alt="logo" width="24px">
+              </a>
+            </div>
             <p id="product-price" class="product-price displayNone"></p>
-            <div class="modal-opens" id="modal-chairs"></div>
-            <div class="modal-opens" id="modal-top"></div>
+            <div class="modal-opens displayNone" id="modal-chairs"></div>
+            <div class="modal-opens displayNone" id="modal-top"></div>
             <div class="modal-colors" id="modal-colors"></div>
-            <div class="modal-opens" id="modal-open"></div>
+            <div class="modal-opens displayNone" id="modal-open"></div>
             <div id="container_size" class="displayNone">
               <p class="size">
                 <i>
@@ -87,6 +92,11 @@
             </div>
             <p id="modal-desc" class="clamp desc"></p>
             <span id="toggle" class="toggle_desc">Leer más</span>
+
+            <h3 class="suggest-title">También te puede interesar</h3>
+            <div class="suggest-grid" id="suggest">
+
+            </div>
           </aside>
         </div>
       </div>
