@@ -50,7 +50,7 @@ const PRODUCTS = {
     {
       id: 7000,
       name: "Cama Hielo",
-      desc: "descripcion Cama Moises",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Hielo ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_hielo_gris.png",
       colors: [
         {
@@ -70,7 +70,7 @@ const PRODUCTS = {
     {
       id: 7001,
       name: "Cama Nube",
-      desc: "descripcion Cama Moises",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Nube ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_nube_beige.png",
       colors: [
         {
@@ -106,7 +106,7 @@ const PRODUCTS = {
   {
       id: 7003,
       name: "Cama Coco",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Coco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_coco_pink.png",
       colors: [
         {
@@ -122,7 +122,7 @@ const PRODUCTS = {
     {
       id: 7004,
       name: "Cama Princesa",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Princesa ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "no_picture.png",
       colors: [
         {
@@ -138,7 +138,7 @@ const PRODUCTS = {
     {
       id: 7005,
       name: "Cama Barco",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Barco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_barco_beige.png",
       colors: [
         {
@@ -158,7 +158,7 @@ const PRODUCTS = {
    {
       id: 7006,
       name: "Cama Sol",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Sol ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_sol_gray.png",
       colors: [
         {
@@ -178,7 +178,7 @@ const PRODUCTS = {
     {
       id: 7007,
       name: "Cama Nene",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Nene ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_nene_blue.png",
       colors: [
         {
@@ -194,7 +194,7 @@ const PRODUCTS = {
     {
       id: 7008,
       name: "Cama Moises",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Moises ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_moises_white.png",
       colors: [
         {
@@ -214,7 +214,7 @@ const PRODUCTS = {
    {
       id: 7009,
       name: "Cama Triangular",
-      desc: "descripcion cama coco",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Triangular ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_triangular_red.png",
       colors: [
         {
@@ -303,7 +303,7 @@ const PRODUCTS = {
       id: 1003,
       name: "Mueble L",
       size: "160cm - 240cm",
-      desc: "descripcion sofa cairo",
+      desc: "El sofá Mueble L destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_muebleL_red.png",
       suggest: [1004, 1007],
       colors: [
@@ -377,7 +377,7 @@ const PRODUCTS = {
       id: 1006,
       name: "Sofa Nube",
       size: "160cm - 240cm",
-      desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Nube destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_juego_nube_gray.PNG",
       suggest: [1012, 1019],
       colors: [
@@ -449,7 +449,7 @@ const PRODUCTS = {
     {
       id: 1009,
       name: "Sofa Richard",
-      desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_white.jpeg",
       suggest: [1020, 1011],
       colors: [
@@ -515,7 +515,7 @@ const PRODUCTS = {
       id: 1012,
       name: "Sofa Berlin",
       size: "160cm - 240cm",
-      desc: "El sofá Domus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Berlin destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_berlin_black.jpeg",
       suggest: [1019, 1019],
       colors: [
@@ -561,7 +561,7 @@ const PRODUCTS = {
     {
       id: 1014,
       name: "Sofa Damasco",
-      desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Damasco destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_damasco_black.jpeg",
       suggest: [1015],
       colors: [
@@ -628,7 +628,7 @@ const PRODUCTS = {
     {
       id: 1017,
       name: "Sofa Normandy",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Normandy 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_normandy_beige.jpeg",
       suggest: [1007, 1005],
       colors: [
@@ -653,7 +653,7 @@ const PRODUCTS = {
     {
       id: 1019,
       name: "Sofa Paris",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Paris destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_paris_white.jpeg",
       suggest: [1021, 1019],
       colors: [
@@ -674,7 +674,7 @@ const PRODUCTS = {
     {
       id: 1019,
       name: "Sofa Suiza",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Suiza destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_suiza_beige.jpeg",
       suggest: [1021, 1018],
       colors: [
@@ -703,7 +703,7 @@ const PRODUCTS = {
     {
       id: 1020,
       name: "Sofa Nigeria",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
       suggest: [1011, 1008],
       size: "180cm x 180cm",
@@ -755,7 +755,7 @@ const PRODUCTS = {
     {
       id: 1023,
       name: "Sofa Cama",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      desc: "El sofá cama de 3 plazas destaca como una pieza excepcional que combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para la versatilidad y comodidad de los invitados inesperados.",
       img: "sofa_sofa_cama_beige.jpeg",
       size: "180cm x 160cm",
       suggest: [1020, 1021],
@@ -785,7 +785,7 @@ const PRODUCTS = {
     {
       id: 1024,
       name: "Sofa Lineal",
-      desc: "El sofá lineal es una opción ideal para negocios y espacios amplios gracias a su diseño modular y elegante. Se comercializa por metro lineal, lo que permite adaptarlo fácilmente a cualquier ambiente, ofreciendo comodidad, estilo y funcionalidad en cada tramo.",
+      desc: "Diseñado para integrarse con sofisticación en entornos corporativos y áreas de gran escala, nuestro sofá lineal modular es la máxima expresión de la funcionalidad arquitectónica. Gracias a su innovador sistema de comercialización por metro lineal, este modelo ofrece una libertad creativa total, permitiendo configurar piezas continuas que se adaptan con precisión milimétrica a la geometría de su proyecto. Una solución que combina estética de vanguardia con un soporte ergonómico excepcional.",
       img: "sofa_lineal.png",
       size: "120cm x 140cm",
       suggest: [1014, 1015],
@@ -853,7 +853,7 @@ const PRODUCTS = {
     {
       id: 2002,
       name: "S&CO",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón Las S&CO Colflex Semiortopédico ofrece un descanso de calidad con 4 años de garantía. Cuenta con 312 resortes electrónicamente templados que proporcionan un soporte óptimo. Su felpa de mezcla de algodón y polímeros importada brinda comodidad excepcional. Además, las láminas de poliuretano flexible de 20 kg/m³ de densidad garantizan una sensación de suavidad. Acolchado con tela importada de 280 gramos por metro cuadrado, este colchón es una opción ideal para un sueño reparador",
       img: "colchon_colflex_syco.png",
       colors: [
         // {
@@ -1071,7 +1071,7 @@ const PRODUCTS = {
     {
       id: 2016,
       name: "Damiflex",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón ortopédico Damiflex de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_lara_damiflex_top_pillow.jpeg",
             colors: [
         // {
@@ -1087,7 +1087,7 @@ const PRODUCTS = {
     {
       id: 2017,
       name: "Damiflex 1 Pillow",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón ortopédico Damiflex Pillow de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_lara_damiflex_top.jpeg",
             colors: [
         // {
@@ -1103,7 +1103,7 @@ const PRODUCTS = {
     {
       id: 2018,
       name: "Fi-Li",
-      desc: "descripcion sofa cairo",
+      desc: "El colchón ortopédico Fi-Li de la marca Lara es una excelente opción para aquellos que buscan un descanso pleno durante la noche. Cuenta con una garantía de 8 años y está equipado con 350 resortes electrónicamente templados los cuales te haran sentir firme al dormir. ",
       img: "colchon_lara_fili.jpeg",
             colors: [
         // {
