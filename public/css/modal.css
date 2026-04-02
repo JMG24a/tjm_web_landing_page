@@ -366,6 +366,12 @@
   background: rgb(83, 83, 83);
 }
 
+.container_size{
+  display: flex;
+  justify-content: left;
+  align-items: end;
+}
+
 .displayNone{
   display: none;
 }

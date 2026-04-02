@@ -239,6 +239,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_2_barrigas_beige.png",
+      suggest: [1001, 1002],
       colors: [
         {
           img: "sofa_zultan_2_barrigas_beige.png",
@@ -260,6 +261,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_chapa_gray.png ",
+      suggest: [1000, 1002],
       colors: [
         {
           img: "sofa_zultan_chapa_gray.png ",
@@ -281,6 +283,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_cuadrado_black.jpeg",
+      suggest: [1000, 1001],
       colors: [
         {
           img: "sofa_zultan_cuadrado_black.jpeg",
@@ -302,6 +305,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "descripcion sofa cairo",
       img: "sofa_muebleL_red.png",
+      suggest: [1004, 1007],
       colors: [
         {
           img: "sofa_muebleL_red.png",
@@ -323,6 +327,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Osman destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_osman_white_d.jpg",
+      suggest: [1003, 1007],
       colors: [
         {
           img: "sofa_osman_white_d.jpg",
@@ -352,6 +357,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Hielo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_hielo_gray.jpg",
+      suggest: [1017, 1023],
       colors: [
         {
           img: "sofa_hielo_gray.jpg",
@@ -373,6 +379,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_juego_nube_gray.PNG",
+      suggest: [1012, 1019],
       colors: [
         {
           img: "sofa_juego_nube_gray.PNG",
@@ -401,6 +408,7 @@ const PRODUCTS = {
       name: "Sofa Labros",
       desc: "El sofá Labros destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_labros_beige.jpg",
+      suggest: [1004, 1003],
       colors: [
         {
           img: "sofa_labros_beige.jpg",
@@ -422,6 +430,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_cairo_beige_d.jpg",
+      suggest: [1011, 1009],
       colors: [
         {
           img: "sofa_cairo_beige_d.jpg",
@@ -442,6 +451,7 @@ const PRODUCTS = {
       name: "Sofa Richard",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_white.jpeg",
+      suggest: [1020, 1011],
       colors: [
         {
           img: "sofa_richard_gray_white.jpeg",
@@ -467,6 +477,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_toty_black_d.jpg",
+      suggest: [1013, 1011],
       colors: [
         {
           img: "sofa_toty_black_d.jpg",
@@ -484,6 +495,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Palermo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_palermo_gray_black.PNG",
+      suggest: [1013, 1010],
       colors: [
         {
           img: "sofa_palermo_gray_black.PNG",
@@ -505,6 +517,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Domus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_berlin_black.jpeg",
+      suggest: [1019, 1019],
       colors: [
         {
           img: "sofa_berlin_black.jpeg",
@@ -529,6 +542,7 @@ const PRODUCTS = {
       name: "Sofa Enmaly",
       desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_enmaly_white.jpg",
+      suggest: [1011, 1010],
       colors: [
         {
           img: "sofa_enmaly_white.jpg",
@@ -549,6 +563,7 @@ const PRODUCTS = {
       name: "Sofa Damasco",
       desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_damasco_black.jpeg",
+      suggest: [1015],
       colors: [
         {
           img: "sofa_damasco_black.jpeg",
@@ -565,6 +580,7 @@ const PRODUCTS = {
       name: "Sofa Roma",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_roma_black.jpg",
+      suggest: [1014],
       colors: [
         {
           img: "sofa_roma_black.jpg",
@@ -589,6 +605,7 @@ const PRODUCTS = {
       name: "Sofa Zultan 3 puestos",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_3puestos_gray.jpeg",
+      suggest: [1001, 1002],
       colors: [
         {
           img: "sofa_zultan_3puestos_gray.jpeg",
@@ -613,6 +630,7 @@ const PRODUCTS = {
       name: "Sofa Normandy",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_normandy_beige.jpeg",
+      suggest: [1007, 1005],
       colors: [
         {
           img: "sofa_normandy_beige.jpeg",
@@ -633,10 +651,11 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 1018,
+      id: 1019,
       name: "Sofa Paris",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_paris_white.jpeg",
+      suggest: [1021, 1019],
       colors: [
         {
           img: "sofa_paris_white.jpeg",
@@ -657,6 +676,7 @@ const PRODUCTS = {
       name: "Sofa Suiza",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_suiza_beige.jpeg",
+      suggest: [1021, 1018],
       colors: [
         {
           img: "sofa_suiza_beige.jpeg",
@@ -685,6 +705,7 @@ const PRODUCTS = {
       name: "Sofa Nigeria",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
+      suggest: [1011, 1008],
       size: "180cm x 180cm",
       colors: [
         {
@@ -711,6 +732,7 @@ const PRODUCTS = {
       desc: "El sofá barco 2 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_barco_white.jpeg",
       size: "120cm x 140cm",
+      suggest: [1019, 1018],
       colors: [
         {
           img: "sofa_barco_white.jpeg",
@@ -766,6 +788,7 @@ const PRODUCTS = {
       desc: "El sofá lineal es una opción ideal para negocios y espacios amplios gracias a su diseño modular y elegante. Se comercializa por metro lineal, lo que permite adaptarlo fácilmente a cualquier ambiente, ofreciendo comodidad, estilo y funcionalidad en cada tramo.",
       img: "sofa_lineal.png",
       size: "120cm x 140cm",
+      suggest: [1014, 1015],
       colors: [
         {
           img: "sofa_lineal.png",
