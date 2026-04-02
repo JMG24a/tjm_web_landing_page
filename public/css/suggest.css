@@ -40,3 +40,7 @@
   text-align: center;
   color: #333;
 }
+
+.DisplayNoneSuggest{
+  display: none;
+}

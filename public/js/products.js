@@ -384,6 +384,7 @@ priceElement.addEventListener("click", async () => {
 
 function renderSuggestions(product, category) {
   const suggestContainer = document.getElementById("suggest");
+  suggestContainer.classList.remove("displayNoneSuggest");
   suggestContainer.innerHTML = ""; // limpiar
 
   if (!product.suggest || product.suggest.length === 0) return;
