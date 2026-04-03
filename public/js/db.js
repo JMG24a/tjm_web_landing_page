@@ -803,10 +803,26 @@ const PRODUCTS = {
   ],
   colchones: [
     {
+      id: 2007,
+      name: "Europillow",
+      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
+      img: "colchon_serta_europillow.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
+    },
+    {
       id: 2001,
       name: "Serta Foam",
       desc: "El colchón Serta Foam 2 años de garantía es 100% antialérgico lo cual ayudara a dormir mejor durante las noches, su estructura esta compuesta de Poliuretano de alta densidad(HD) donde te sentirás super cómodo al acostarte. ya que posee un polímero al 30% de 20 kg/m³ de densidad que  garantizan una sensación muy suave, además su tela importada de punto  importada te garantiza durabilidad. Además este Modelo es Fácil de transportar ya que puede ser empacado al vacío. quedando envuelto para la facilidad de manejo.",
-      img: "colchon_serta_foam.png",
+      img: "colchon_serta_foam_.png",
       colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -822,23 +838,7 @@ const PRODUCTS = {
       id: 2008,
       name: "Therapedic",
       desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
-      img: "colchon_serta_therapedic.jpg",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
-    {
-      id: 2007,
-      name: "Europillow",
-      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
-      img: "colchon_serta_europillow.jpg",
+      img: "colchon_serta_therapic.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
