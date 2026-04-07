@@ -928,7 +928,7 @@ const PRODUCTS = {
       id: 2006,
       name: "collection 2 pillow",
       desc: "El colchón Collection Flex Doble Pillow ortopédico de Colflex destaca como una excelente alternativa para aquellos que buscan una opción ortopédica de calidad. Equipado con 350 resortes que brindan un soporte óptimo, cuenta con una garantía de 6 años y una altura de 28 cm, asegurando comodidad y estabilidad. Su tela importada anti ácaros garantizan un descanso reparador, que te ayudaran levantar todos días de excelente animo.",
-      img: "colchon_colflex_collection_double_pillow_top.png",
+      img: "colchon_colflex_double_pillow_top.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -960,7 +960,7 @@ const PRODUCTS = {
       id: 2010,
       name: "Lady Best",
       desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
-      img: "colchon_colflex_ladybest.png",
+      img: "colchon_colflex_lady_best.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
