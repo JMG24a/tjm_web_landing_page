@@ -239,6 +239,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_2_barrigas_beige.png",
+      suggest: [1001, 1002],
       colors: [
         {
           img: "sofa_zultan_2_barrigas_beige.png",
@@ -260,6 +261,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_chapa_gray.png ",
+      suggest: [1000, 1002],
       colors: [
         {
           img: "sofa_zultan_chapa_gray.png ",
@@ -281,6 +283,7 @@ const PRODUCTS = {
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_cuadrado_black.jpeg",
+      suggest: [1000, 1001],
       colors: [
         {
           img: "sofa_zultan_cuadrado_black.jpeg",
@@ -302,6 +305,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Mueble L destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_muebleL_red.png",
+      suggest: [1004, 1007],
       colors: [
         {
           img: "sofa_muebleL_red.png",
@@ -323,6 +327,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Osman destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_osman_white_d.jpg",
+      suggest: [1003, 1007],
       colors: [
         {
           img: "sofa_osman_white_d.jpg",
@@ -352,6 +357,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Hielo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_hielo_gray.jpg",
+      suggest: [1017, 1023],
       colors: [
         {
           img: "sofa_hielo_gray.jpg",
@@ -373,6 +379,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Nube destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_juego_nube_gray.PNG",
+      suggest: [1012, 1019],
       colors: [
         {
           img: "sofa_juego_nube_gray.PNG",
@@ -401,6 +408,7 @@ const PRODUCTS = {
       name: "Sofa Labros",
       desc: "El sofá Labros destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_labros_beige.jpg",
+      suggest: [1004, 1003],
       colors: [
         {
           img: "sofa_labros_beige.jpg",
@@ -422,6 +430,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_cairo_beige_d.jpg",
+      suggest: [1011, 1009],
       colors: [
         {
           img: "sofa_cairo_beige_d.jpg",
@@ -442,6 +451,7 @@ const PRODUCTS = {
       name: "Sofa Richard",
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_white.jpeg",
+      suggest: [1020, 1011],
       colors: [
         {
           img: "sofa_richard_gray_white.jpeg",
@@ -467,6 +477,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_toty_black_d.jpg",
+      suggest: [1013, 1011],
       colors: [
         {
           img: "sofa_toty_black_d.jpg",
@@ -484,6 +495,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Palermo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_palermo_gray_black.PNG",
+      suggest: [1013, 1010],
       colors: [
         {
           img: "sofa_palermo_gray_black.PNG",
@@ -505,6 +517,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Berlin destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_berlin_black.jpeg",
+      suggest: [1019, 1019],
       colors: [
         {
           img: "sofa_berlin_black.jpeg",
@@ -529,6 +542,7 @@ const PRODUCTS = {
       name: "Sofa Enmaly",
       desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_enmaly_white.jpg",
+      suggest: [1011, 1010],
       colors: [
         {
           img: "sofa_enmaly_white.jpg",
@@ -549,6 +563,7 @@ const PRODUCTS = {
       name: "Sofa Damasco",
       desc: "El sofá Damasco destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_damasco_black.jpeg",
+      suggest: [1015],
       colors: [
         {
           img: "sofa_damasco_black.jpeg",
@@ -565,6 +580,7 @@ const PRODUCTS = {
       name: "Sofa Roma",
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_roma_black.jpg",
+      suggest: [1014],
       colors: [
         {
           img: "sofa_roma_black.jpg",
@@ -589,6 +605,7 @@ const PRODUCTS = {
       name: "Sofa Zultan 3 puestos",
       desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_3puestos_gray.jpeg",
+      suggest: [1001, 1002],
       colors: [
         {
           img: "sofa_zultan_3puestos_gray.jpeg",
@@ -613,6 +630,7 @@ const PRODUCTS = {
       name: "Sofa Normandy",
       desc: "El sofá Normandy 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_normandy_beige.jpeg",
+      suggest: [1007, 1005],
       colors: [
         {
           img: "sofa_normandy_beige.jpeg",
@@ -633,10 +651,11 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 1018,
+      id: 1019,
       name: "Sofa Paris",
       desc: "El sofá Paris destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_paris_white.jpeg",
+      suggest: [1021, 1019],
       colors: [
         {
           img: "sofa_paris_white.jpeg",
@@ -657,6 +676,7 @@ const PRODUCTS = {
       name: "Sofa Suiza",
       desc: "El sofá Suiza destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_suiza_beige.jpeg",
+      suggest: [1021, 1018],
       colors: [
         {
           img: "sofa_suiza_beige.jpeg",
@@ -685,6 +705,7 @@ const PRODUCTS = {
       name: "Sofa Nigeria",
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
+      suggest: [1011, 1008],
       size: "180cm x 180cm",
       colors: [
         {
@@ -711,6 +732,7 @@ const PRODUCTS = {
       desc: "El sofá barco 2 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_barco_white.jpeg",
       size: "120cm x 140cm",
+      suggest: [1019, 1018],
       colors: [
         {
           img: "sofa_barco_white.jpeg",
@@ -766,6 +788,7 @@ const PRODUCTS = {
       desc: "Diseñado para integrarse con sofisticación en entornos corporativos y áreas de gran escala, nuestro sofá lineal modular es la máxima expresión de la funcionalidad arquitectónica. Gracias a su innovador sistema de comercialización por metro lineal, este modelo ofrece una libertad creativa total, permitiendo configurar piezas continuas que se adaptan con precisión milimétrica a la geometría de su proyecto. Una solución que combina estética de vanguardia con un soporte ergonómico excepcional.",
       img: "sofa_lineal.png",
       size: "120cm x 140cm",
+      suggest: [1014, 1015],
       colors: [
         {
           img: "sofa_lineal.png",
@@ -780,10 +803,26 @@ const PRODUCTS = {
   ],
   colchones: [
     {
+      id: 2007,
+      name: "Europillow",
+      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
+      img: "colchon_serta_europillow.png",
+            colors: [
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#633e3e",
+        // },
+        // {
+        //   img: "16_9_cairo_gris_claro.jpg",
+        //   color: "#333333"
+        // }
+      ]
+    },
+    {
       id: 2001,
       name: "Serta Foam",
       desc: "El colchón Serta Foam 2 años de garantía es 100% antialérgico lo cual ayudara a dormir mejor durante las noches, su estructura esta compuesta de Poliuretano de alta densidad(HD) donde te sentirás super cómodo al acostarte. ya que posee un polímero al 30% de 20 kg/m³ de densidad que  garantizan una sensación muy suave, además su tela importada de punto  importada te garantiza durabilidad. Además este Modelo es Fácil de transportar ya que puede ser empacado al vacío. quedando envuelto para la facilidad de manejo.",
-      img: "colchon_serta_foam.png",
+      img: "colchon_serta_foam_.png",
       colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -799,23 +838,7 @@ const PRODUCTS = {
       id: 2008,
       name: "Therapedic",
       desc: "El Therapedic Serta ortopédico es una opción excepcional para aquellos que buscan un descanso óptimo. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, garantizan una sensación de confort y suavidad",
-      img: "colchon_serta_therapedic.jpg",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
-    {
-      id: 2007,
-      name: "Europillow",
-      desc: "El colchón ortopédico Europillow Serta es una elección de alta calidad para aquellos que buscan un descanso reparador. Este modelo cuenta con una garantía de 10 años y está equipado con 405 resortes electrónicamente templados que otorgan una mayor firmeza y estabilidad al dormir. Su felpa de mezcla de algodón y polímeros importada, junto con su encapsulado en poliuretano de 32kg/m³ de densidad, proporciona una sensación de confort y suavidad al dormir.",
-      img: "colchon_serta_europillow.jpg",
+      img: "colchon_serta_therapic.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -905,7 +928,7 @@ const PRODUCTS = {
       id: 2006,
       name: "collection 2 pillow",
       desc: "El colchón Collection Flex Doble Pillow ortopédico de Colflex destaca como una excelente alternativa para aquellos que buscan una opción ortopédica de calidad. Equipado con 350 resortes que brindan un soporte óptimo, cuenta con una garantía de 6 años y una altura de 28 cm, asegurando comodidad y estabilidad. Su tela importada anti ácaros garantizan un descanso reparador, que te ayudaran levantar todos días de excelente animo.",
-      img: "colchon_colflex_collection_double_pillow_top.png",
+      img: "colchon_colflex_double_pillow_top.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
@@ -937,7 +960,7 @@ const PRODUCTS = {
       id: 2010,
       name: "Lady Best",
       desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
-      img: "colchon_colflex_ladybest.png",
+      img: "colchon_colflex_lady_best.png",
             colors: [
         // {
         //   img: "16_9_cairo_gris_claro.jpg",
