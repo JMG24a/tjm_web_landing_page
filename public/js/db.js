@@ -1964,12 +1964,12 @@ const PRODUCTS = {
       id: 3008,
       name: "Saturno V",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
+      img: "comedor_saturno_pvc.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "no_picture.png",
+          img: "comedor_saturno_vidrio.png",
           colors: [
             {
               img: "comedor_isabel_v.jpeg",
@@ -1987,7 +1987,7 @@ const PRODUCTS = {
         },
         {
           top: "pintado",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_saturno_pintado.png",
           colors: [
             {
               img: "comedor_isabel_v.jpeg",
@@ -2005,7 +2005,7 @@ const PRODUCTS = {
         },
         {
           top: "pvc",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_saturno_pvc.png",
           colors: [
             {
               img: "comedor_isabel_v.jpeg",
