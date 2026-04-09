@@ -2036,7 +2036,7 @@ const PRODUCTS = {
             },
             {
               img: "comedor_saturno_pintado.png",
-              color:"#c8c8c8"
+              color:"#a126b4"
             },
             {
               img: "comedor_saturno_pintado.png",
