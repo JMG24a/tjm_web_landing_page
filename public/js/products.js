@@ -330,7 +330,7 @@ function setupComedores(product) {
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}4${position}`);
 
-      changeModalImage(product.chairs_4[0].img);
+      changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
       chairBtn.textContent = "Cuatro Sillas";
@@ -339,8 +339,9 @@ function setupComedores(product) {
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}6${position}`);
-
-      changeModalImage(product.chairs_6[0].img);
+      console.log("chair 6 position: ", position)
+      console.log("chair 6 position: ", product.chairs_6[position].img)
+      changeModalImage(product.chairs_6[position].img);
       renderColors(product.chairs_6[position].colors, colors);
     }
   }
