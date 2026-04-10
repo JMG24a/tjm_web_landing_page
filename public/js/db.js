@@ -1991,24 +1991,6 @@ const PRODUCTS = {
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
-          top: "pvc",
-          img: "comedor_saturno_pvc.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-          ],
-        },
-        {
           top: "vidrio",
           img: "comedor_saturno_vidrio.png",
           colors: [
@@ -2041,6 +2023,24 @@ const PRODUCTS = {
             {
               img: "comedor_saturno_pintado.png",
               color:"#eb0d69"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_saturno_pvc.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
             },
           ],
         },
