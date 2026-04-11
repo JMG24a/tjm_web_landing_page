@@ -16,7 +16,7 @@ section {
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   font-weight: 500;
   letter-spacing: 0.5px;
 }

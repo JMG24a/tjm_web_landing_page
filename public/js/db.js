@@ -52,6 +52,7 @@ const PRODUCTS = {
       name: "Cama Hielo",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Hielo ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_hielo_gris.png",
+      suggest: [7001, 7005],
       colors: [
         {
           img: "dormitorio_cama_hielo_gris.png",
@@ -72,6 +73,7 @@ const PRODUCTS = {
       name: "Cama Nube",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Nube ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_nube_beige.png",
+      suggest: [7000, 7005],
       colors: [
         {
           img: "dormitorio_cama_nube_beige.png",
@@ -108,6 +110,7 @@ const PRODUCTS = {
       name: "Cama Coco",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Coco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_coco_pink.png",
+      suggest: [7004, 7007],
       colors: [
         {
           img: "dormitorio_cama_coco_pink.png",
@@ -124,6 +127,7 @@ const PRODUCTS = {
       name: "Cama Princesa",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Princesa ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "no_picture.png",
+      suggest: [7003, 7007],
       colors: [
         {
           img: "16_9_cairo_gris_claro.jpg",
@@ -140,6 +144,7 @@ const PRODUCTS = {
       name: "Cama Barco",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Barco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_barco_beige.png",
+      suggest: [7000, 7001],
       colors: [
         {
           img: "dormitorio_cama_barco_beige.png",
@@ -160,6 +165,7 @@ const PRODUCTS = {
       name: "Cama Sol",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Sol ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_sol_gray.png",
+      suggest: [7008, 7009],
       colors: [
         {
           img: "dormitorio_cama_sol_gray.png",
@@ -180,6 +186,7 @@ const PRODUCTS = {
       name: "Cama Nene",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Nene ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_nene_blue.png",
+      suggest: [7003, 7004],
       colors: [
         {
           img: "dormitorio_cama_nene_blue.png",
@@ -196,6 +203,7 @@ const PRODUCTS = {
       name: "Cama Moises",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Moises ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_moises_white.png",
+      suggest: [7006, 7009],
       colors: [
         {
           img: "dormitorio_cama_moises_white.png",
@@ -216,6 +224,7 @@ const PRODUCTS = {
       name: "Cama Triangular",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Triangular ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
       img: "dormitorio_cama_triangular_red.png",
+      suggest: [7006, 7008],
       colors: [
         {
           img: "dormitorio_cama_triangular_red.png",
@@ -1991,24 +2000,6 @@ const PRODUCTS = {
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
-          top: "pvc",
-          img: "comedor_saturno_pvc.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-          ],
-        },
-        {
           top: "vidrio",
           img: "comedor_saturno_vidrio.png",
           colors: [
@@ -2041,6 +2032,24 @@ const PRODUCTS = {
             {
               img: "comedor_saturno_pintado.png",
               color:"#eb0d69"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_saturno_pvc.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
             },
           ],
         },
