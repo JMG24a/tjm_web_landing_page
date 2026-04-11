@@ -376,3 +376,9 @@
 .displayNone{
   display: none;
 }
+
+.btns_top{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
