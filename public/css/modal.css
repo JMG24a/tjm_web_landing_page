@@ -321,10 +321,19 @@
   display: none;
 } */
 .modal-opens {
-  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: #1a428a;
+  color: #f2e088;
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0px 0px;
+
+  /* display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 10px 0px;
+  margin: 10px 0px; */
 }
 
 /* this is ia */
@@ -379,5 +388,6 @@
 
 .btns_top{
   display: flex;
+  justify-content: space-around;
   gap: 8px;
 }
