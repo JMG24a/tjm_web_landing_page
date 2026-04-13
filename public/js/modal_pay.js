@@ -33,7 +33,7 @@ const payBtn = document.getElementById("pay");
       const mensaje = `Hola, quiero comprar usando ${metodoSeleccionado} desde ${ubicacionSeleccionada}.`;
 
       // 5) Enviar a WhatsApp
-      const telefono = "584123456789"; // <-- tu número AQUÍ
+      const telefono = "584120328399"; // <-- tu número AQUÍ
       const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
       window.open(url, "_blank");
