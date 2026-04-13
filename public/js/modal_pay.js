@@ -39,3 +39,18 @@ const payBtn = document.getElementById("pay");
       window.open(url, "_blank");
     });
   });
+
+  // Cerrar modales con botón "X"
+  document.querySelectorAll(".close_pay").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.dataset.close;
+      document.getElementById(modalId).style.display = "none";
+    });
+  });
+
+  // Cerrar modal haciendo click fuera del contenido
+  window.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal")) {
+      e.target.style.display = "none";
+    }
+  });

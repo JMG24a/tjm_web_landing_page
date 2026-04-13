@@ -1,3 +1,16 @@
+.close_pay {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close_pay:hover {
+  color: rgb(6, 126, 255);
+}
+
 .modal_pay {
   z-index: 1000;
   display: none;
@@ -9,6 +22,7 @@
 }
 
 .modal-content_pay {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: white;
@@ -20,6 +34,7 @@
 .pago-btn {
   background: #007bff;
   color: white;
+  margin: 5px;
   padding: 12px 20px;
   width: 120px;
   text-align: center;
