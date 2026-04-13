@@ -1,6 +1,6 @@
 const priceElement = document.getElementById("product-price")
 
-let priceProductWs = 0
+let priceProductWs
 let nameProductWs
 
 function changeModalImage(img) {
@@ -44,7 +44,7 @@ async function loadProductPrice(id) {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
     //precioGlobal
-    priceProductWs = data.price;
+    priceProductWs = data.precio;
 
     const porcentage = 45;
     const priceUSD = calcularAumento(data.precio, porcentage);
