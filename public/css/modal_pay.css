@@ -1,3 +1,7 @@
+.modal_pay_title{
+  margin: 5px;
+}
+
 .close_pay {
   position: absolute;
   top: 8px;
@@ -34,9 +38,20 @@
 .pago-btn {
   background: #007bff;
   color: white;
-  margin: 5px;
+  margin: 5px auto;
   padding: 12px 20px;
-  width: 120px;
+  width: 80%;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ubic-btn {
+  background: #007bff;
+  color: white;
+  margin: 5px auto;
+  padding: 12px 20px;
+  width: 80%;
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
