@@ -1,5 +1,8 @@
 const priceElement = document.getElementById("product-price")
 
+let priceProductWs = 0
+let nameProductWs
+
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
 
@@ -40,6 +43,9 @@ async function loadProductPrice(id) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
+    //precioGlobal
+    priceProductWs = data.price;
+
     const porcentage = 45;
     const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
@@ -101,6 +107,8 @@ function renderColors(colors, container) {
 
 function setupBaseModal(product) {
   document.getElementById("modal-img").src = `/image/${product.img}`;
+  // global name
+  nameProductWs = product.name
   document.getElementById("modal-name").textContent = product.name;
 
   const desc = document.getElementById("modal-desc");

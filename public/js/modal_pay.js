@@ -1,7 +1,4 @@
-
-  console.log("??1")
-
-const payBtn = document.getElementById("pay");
+  const payBtn = document.getElementById("pay");
   const modalPago = document.getElementById("modalPago");
   const modalUbicacion = document.getElementById("modalUbicacion");
 
@@ -11,7 +8,6 @@ const payBtn = document.getElementById("pay");
   // 1) Abrir modal de métodos de pago
   payBtn.addEventListener("click", () => {
     modalPago.style.display = "flex";
-    console.log("PayClick")
   });
 
   // 2) Elegir método de pago
@@ -30,11 +26,10 @@ const payBtn = document.getElementById("pay");
       modalUbicacion.style.display = "none";
 
       // 4) Generar mensaje
-      const mensaje = `Hola, quiero comprar usando ${metodoSeleccionado} desde ${ubicacionSeleccionada}.`;
+      const mensaje = `Hola, quiero comprar ${nameProductWs} usando ${metodoSeleccionado} con un costo de ${priceProductWs}.`;
 
       // 5) Enviar a WhatsApp
-      const telefono = "584120328399"; // <-- tu número AQUÍ
-      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      const url = `https://wa.me/${ubicacionSeleccionada}?text=${encodeURIComponent(mensaje)}`;
 
       window.open(url, "_blank");
     });
