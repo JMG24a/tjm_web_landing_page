@@ -60,6 +60,17 @@
 .carrito {
   position: relative;
   display: inline-block;
+  position: fixed;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  background: blue;
+  border-radius: 50px;
+  padding: 25px;
 }
 
 .badge {
