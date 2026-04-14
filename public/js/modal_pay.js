@@ -1,15 +1,32 @@
 const payBtn = document.getElementById("pay");
 const modalPago = document.getElementById("modalPago");
 const modalUbicacion = document.getElementById("modalUbicacion");
+document.addEventListener("DOMContentLoaded", actualizarCarritoUI);
+
 
 let metodoSeleccionado = "";
 let ubicacionSeleccionada = "";
+
+function actualizarCarritoUI() {
+  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+  const badge = document.getElementById("contadorCarrito");
+
+  if (productos.length === 0) {
+    badge.style.display = "none";
+  } else {
+    badge.style.display = "block";
+    badge.textContent = productos.length;
+  }
+}
+
 
 // Función para guardar en localStorage
 function guardarProductoEnLocalStorage(producto) {
   const productos = JSON.parse(localStorage.getItem("productos")) || [];
   productos.push(producto);
   localStorage.setItem("productos", JSON.stringify(productos));
+
+  actualizarCarritoUI()
 }
 
 // Abrir modal de métodos de pago
@@ -34,20 +51,22 @@ document.querySelectorAll(".ubic-btn").forEach(btn => {
 
     // Crear objeto del producto
     const producto = {
-      metodo: metodoSeleccionado,
+      price: priceProductWs,
+      name: nameProductWs,
       ubicacion: ubicacionSeleccionada,
       fecha: new Date().toISOString()
+      // metodo: metodoSeleccionado,
     };
 
     // Guardar en localStorage
     guardarProductoEnLocalStorage(producto);
 
     // Generar mensaje para WhatsApp
-    const mensaje = `Hola, quiero comprar usando ${metodoSeleccionado}.`;
-    const telefono = ubicacionSeleccionada; // <-- tu número
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    // const mensaje = `Hola, quiero comprar usando ${metodoSeleccionado}.`;
+    // const telefono = ubicacionSeleccionada; // <-- tu número
+    // const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, "_blank");
+    // window.open(url, "_blank");
   });
 });
 
