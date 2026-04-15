@@ -12,6 +12,7 @@ function actualizarCarritoUI() {
   const badge = document.getElementById("contadorCarrito");
 
   if (productos.length === 0) {
+    console.log("Is here?")
     badge.style.display = "none";
   } else {
     badge.style.display = "block";
