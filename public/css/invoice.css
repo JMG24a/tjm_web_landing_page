@@ -1,0 +1,141 @@
+/* Configuraciones base */
+:root {
+    --primary-color: #2563eb;
+    --bg-light: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --white: #ffffff;
+    --status-pending: #f59e0b;
+}
+
+.invoice-details {
+    background-color: var(--bg-light);
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #1e293b;
+}
+
+/* Sistema de Grid Responsivo */
+.grid-invoice {
+    display: grid;
+    gap: 20px;
+    /* Por defecto: 1 columna (móvil) */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 columnas, la última estirada */
+@media (min-width: 768px) {
+    .grid-invoice {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columnas iguales */
+@media (min-width: 1024px) {
+    .grid-invoice {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Estilos de las Tarjetas (Cards) */
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Items de Factura */
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.item.total {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 15px 0;
+}
+
+/* Lista de Pagos */
+.payment-methods {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.payment-methods li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* Badge de Estado */
+.status-badge {
+    background-color: #fef3c7;
+    color: var(--status-pending);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto; /* Empuja hacia abajo */
+    font-size: 0.85rem;
+}
+
+/* Botón de Mapa */
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.btn-map:hover {
+    background-color: #1d4ed8;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 5px 0;
+}
