@@ -14,53 +14,79 @@
   <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
-  <section class="invoice-details">
-    <div class="container">
-      <h2 class="section-title">Resumen de Operación</h2>
+  <a href="/" class="top-gradient-bar">
+    <img class="logo" src="/image/logo_tjm.png" alt="logo" onclick="goToCategory('/')">
+  </a>
 
-      <div class="grid-invoice">
-              <div class="card">
-                  <h3>Detalle de Factura</h3>
-                  <div class="item">
-                      <span>Factura N°:</span>
-                      <strong>#INV-2026-0045</strong>
-                  </div>
-                  <div class="item">
-                      <span>Fecha:</span>
-                      <strong>15 de abril, 2026</strong>
-                  </div>
-                  <hr>
-                  <div class="item">
-                      <span>Subtotal:</span>
-                      <span>$120.00</span>
-                  </div>
-                  <div class="item total">
-                      <span>Total a Pagar:</span>
-                      <span>$120.00</span>
-                  </div>
-              </div>
+<section class="invoice-details">
+  <div class="container">
+    <h2 class="section-title">Resumen de Operación</h2>
 
-              <div class="card">
-                  <h3>Métodos de Pago</h3>
-                  <p>Aceptamos las siguientes opciones:</p>
-                  <ul class="payment-methods">
-                      <li><i class="icon-card"></i> Tarjeta de Crédito/Débito</li>
-                      <li><i class="icon-transfer"></i> Transferencia Bancaria</li>
-                      <li><i class="icon-wallet"></i> Pago Móvil / Zelle</li>
-                  </ul>
-                  <div class="status-badge">Estado: Pendiente</div>
-              </div>
+    <div class="grid-invoice">
+      <div class="card">
+        <h3>Detalle de Factura</h3>
+        <div class="item">
+          <span>Fecha:</span>
+          <strong>15 de abril, 2026</strong>
+        </div>
+        <hr>
 
-              <div class="card">
-                  <h3>Sede de Emisión</h3>
-                  <p><strong>Sede Principal Barquisimeto</strong></p>
-                  <p>Av. Los Leones, C.C. Las Trinitarias, Nivel PB.</p>
-                  <p>Lara, Venezuela.</p>
-                  <a href="#" class="btn-map">Ver en Google Maps</a>
-              </div>
+        <div class="products-list">
+          <div class="product-item">
+            <div class="info">
+              <span class="label">Producto:</span>
+              <strong class="name">Sofá Modelo X</strong>
+            </div>
+            <div class="price-box">
+              <span class="label">Precio:</span>
+              <strong class="amount">$120.00</strong>
+            </div>
           </div>
+
+          <div class="product-item">
+            <div class="info">
+              <span class="label">Producto:</span>
+              <strong class="name">Sofá Modelo X 2</strong>
+            </div>
+            <div class="price-box">
+              <span class="label">Precio:</span>
+              <strong class="amount">$140.00</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="item total">
+          <span>Total a Pagar:</span>
+          <span>$260.00</span>
+        </div>
       </div>
-  </section>
+
+      <div class="card">
+        <h3>Métodos de Pago</h3>
+        <p>Seleccione su opción:</p>
+        <select class="custom-select payment-methods">
+          <option value="card">💳 Tarjeta de Crédito/Débito</option>
+          <option value="transfer">🏦 Transferencia Bancaria</option>
+          <option value="wallet">📱 Pago Móvil / Zelle</option>
+        </select>
+        <div class="status-badge">Estado: Pendiente</div>
+      </div>
+
+      <div class="card">
+        <h3>Sede de Emisión</h3>
+        <p>Seleccione la sede:</p>
+        <select class="custom-select location-select">
+          <option value="barquisimeto">Barquisimeto (Principal)</option>
+          <option value="san-pablo">San Pablo</option>
+          <option value="zulia">Zulia</option>
+        </select>
+        <div class="location-info">
+          <p id="address-display">Av. Los Leones, C.C. Las Trinitarias.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="footer-container">
