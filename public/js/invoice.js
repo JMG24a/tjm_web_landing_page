@@ -1,5 +1,5 @@
 function cargarFactura() {
-  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+  const productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   const contenedor = document.getElementById("product_items");
   const fechaEl = document.getElementById("data_invoice");
 

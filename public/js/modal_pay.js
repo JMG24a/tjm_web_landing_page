@@ -8,7 +8,7 @@ let metodoSeleccionado = "";
 let ubicacionSeleccionada = "";
 
 function actualizarCarritoUI() {
-  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+  const productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   const badge = document.getElementById("contadorCarrito");
   const badge_container = document.getElementById("carrito");
 
@@ -25,15 +25,17 @@ function actualizarCarritoUI() {
 
 // Función para guardar en localStorage
 function guardarProductoEnLocalStorage(producto) {
-  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+  const productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   productos.push(producto);
-  localStorage.setItem("productos", JSON.stringify(productos));
+  localStorage.setItem("productos_tjm", JSON.stringify(productos));
 
   actualizarCarritoUI()
 }
 
 // Abrir modal de métodos de pago
 payBtn.addEventListener("click", () => {
+  console.log("IS Rigth Here??")
+
   const producto = {
     price: priceProductWs,
     name: nameProductWs,
