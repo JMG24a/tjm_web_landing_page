@@ -10,11 +10,13 @@ let ubicacionSeleccionada = "";
 function actualizarCarritoUI() {
   const productos = JSON.parse(localStorage.getItem("productos")) || [];
   const badge = document.getElementById("contadorCarrito");
+  const badge_container = document.getElementById("carrito");
 
   if (productos.length === 0) {
-    console.log("Is here?")
     badge.style.display = "none";
+    badge_container.classList.add("displayNonePay");
   } else {
+    badge_container.style.classList.remove("displayNonePay");
     badge.style.display = "block";
     badge.textContent = productos.length;
   }

@@ -83,3 +83,7 @@
   font-size: 12px;
   display: none; /* Oculto por defecto */
 }
+
+.displayNonePay {
+  display: none;
+}
