@@ -14,11 +14,11 @@ function actualizarCarritoUI() {
 
   if (productos.length === 0) {
     badge.style.display = "none";
-    badge_container.classList.add("displayNonePay");
+    badge_container.classList.remove("displayNonePay");
   } else {
-    badge_container.style.classList.remove("displayNonePay");
     badge.style.display = "block";
     badge.textContent = productos.length;
+    badge_container.classList.remove("displayNonePay");
   }
 }
 
