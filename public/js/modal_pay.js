@@ -34,7 +34,13 @@ function guardarProductoEnLocalStorage(producto) {
 
 // Abrir modal de métodos de pago
 payBtn.addEventListener("click", () => {
-  modalPago.style.display = "flex";
+  const producto = {
+    price: priceProductWs,
+    name: nameProductWs,
+    color: colorProductWs
+  };
+
+  guardarProductoEnLocalStorage(producto);
 });
 
 // Elegir método de pago
