@@ -15,80 +15,83 @@
   <link rel="stylesheet" href="/css/bar.css">
 </head>
 <body>
-  <a href="/" class="top-gradient-bar">
+  <!-- <a href="/" class="top-gradient-bar">
     <img class="logo" src="/image/logo_tjm.png" alt="logo" onclick="goToCategory('/')">
-  </a>
+  </a> -->
 
-<section class="invoice-details">
-  <div class="container">
-    <h2 class="section-title">Resumen de Operación</h2>
+  <section class="invoice-details">
+    <div class="container">
+      <h2 class="section-title">Resumen de Operación</h2>
 
-    <div class="grid-invoice">
-      <div class="card">
-        <h3>Detalle de Factura</h3>
-        <div class="item">
-          <span>Fecha:</span>
-          <strong id="data_invoice">15 de abril, 2026</strong>
-        </div>
-        <hr>
+      <div class="grid-invoice">
+        <div class="card">
+          <h3>Detalle de Factura</h3>
+          <div class="item">
+            <span>Fecha:</span>
+            <strong id="data_invoice">15 de abril, 2026</strong>
+          </div>
+          <hr>
 
-        <div class="products-list" id="product_items">
-          <div class="product-item">
-            <div class="info">
-              <span class="label">Producto:</span>
-              <strong class="name">Sofá Modelo X</strong>
+          <div class="products-list" id="product_items">
+            <div class="product-item">
+              <div class="info">
+                <span class="label">Producto:</span>
+                <strong class="name">Sofá Modelo X</strong>
+              </div>
+              <div class="price-box">
+                <span class="label">Precio:</span>
+                <strong class="amount">$120.00</strong>
+              </div>
             </div>
-            <div class="price-box">
-              <span class="label">Precio:</span>
-              <strong class="amount">$120.00</strong>
+
+            <div class="product-item">
+              <div class="info">
+                <span class="label">Producto:</span>
+                <strong class="name">Sofá Modelo X 2</strong>
+              </div>
+              <div class="price-box">
+                <span class="label">Precio:</span>
+                <strong class="amount">$140.00</strong>
+              </div>
             </div>
           </div>
 
-          <div class="product-item">
-            <div class="info">
-              <span class="label">Producto:</span>
-              <strong class="name">Sofá Modelo X 2</strong>
-            </div>
-            <div class="price-box">
-              <span class="label">Precio:</span>
-              <strong class="amount">$140.00</strong>
-            </div>
+
+
+          <div class="item total">
+            <span>Total a Pagar:</span>
+            <span>$260.00</span>
           </div>
-
-
         </div>
 
-
-
-        <div class="item total">
-          <span>Total a Pagar:</span>
-          <span>$260.00</span>
+        <div class="card">
+          <h3>Métodos de Pago</h3>
+          <p>Seleccione su opción:</p>
+          <select class="custom-select payment-methods">
+            <option value="Transferencia">🏦 Transferencia Bancaria</option>
+            <option value="Cashea">🪙 Cashea</option>
+            <option value="Zelle">💷 Zelle</option>
+            <option value="Binance">📱 Binance</option>
+          </select>
         </div>
-      </div>
 
-      <div class="card">
-        <h3>Métodos de Pago</h3>
-        <p>Seleccione su opción:</p>
-        <select class="custom-select payment-methods">
-          <option value="Transferencia">🏦 Transferencia Bancaria</option>
-          <option value="Cashea">🪙 Cashea</option>
-          <option value="Zelle">💷 Zelle</option>
-          <option value="Binance">📱 Binance</option>
-        </select>
-      </div>
-
-      <div class="card">
-        <h3>Sede de Emisión</h3>
-        <p>Seleccione la sede:</p>
-        <select class="custom-select location-select">
-          <option value="san-pablo">San Pablo (Principal)</option>
-          <option value="barquisimeto">Barquisimeto</option>
-          <option value="zulia">Zulia</option>
-        </select>
+        <div class="card">
+          <h3>Sede de Emisión</h3>
+          <p>Seleccione la sede:</p>
+          <select class="custom-select location-select">
+            <option value="san-pablo">San Pablo (Principal)</option>
+            <option value="barquisimeto">Barquisimeto</option>
+            <option value="zulia">Zulia</option>
+          </select>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <div>
+      <button>Completar</button>
+      <a href="/">seguir comprando</a>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="footer-container">
@@ -151,6 +154,6 @@
 
   <script src="/js/db.js"></script>
   <script src="/js/home.js"></script>
-  <script src="/js/admin.js"></script>
+  <script src="/js/invoice.js"></script>
 </body>
 </html>
