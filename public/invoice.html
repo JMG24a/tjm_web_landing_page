@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/css/modal_ws.css">
   <link rel="stylesheet" href="/css/invoice.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/bar.css">
 </head>
 <body>
   <a href="/" class="top-gradient-bar">
@@ -27,11 +28,11 @@
         <h3>Detalle de Factura</h3>
         <div class="item">
           <span>Fecha:</span>
-          <strong>15 de abril, 2026</strong>
+          <strong id="data_invoice">15 de abril, 2026</strong>
         </div>
         <hr>
 
-        <div class="products-list">
+        <div class="products-list" id="product_items">
           <div class="product-item">
             <div class="info">
               <span class="label">Producto:</span>
@@ -53,7 +54,11 @@
               <strong class="amount">$140.00</strong>
             </div>
           </div>
+
+
         </div>
+
+
 
         <div class="item total">
           <span>Total a Pagar:</span>
@@ -65,24 +70,21 @@
         <h3>Métodos de Pago</h3>
         <p>Seleccione su opción:</p>
         <select class="custom-select payment-methods">
-          <option value="card">💳 Tarjeta de Crédito/Débito</option>
-          <option value="transfer">🏦 Transferencia Bancaria</option>
-          <option value="wallet">📱 Pago Móvil / Zelle</option>
+          <option value="Transferencia">🏦 Transferencia Bancaria</option>
+          <option value="Cashea">🪙 Cashea</option>
+          <option value="Zelle">💷 Zelle</option>
+          <option value="Binance">📱 Binance</option>
         </select>
-        <div class="status-badge">Estado: Pendiente</div>
       </div>
 
       <div class="card">
         <h3>Sede de Emisión</h3>
         <p>Seleccione la sede:</p>
         <select class="custom-select location-select">
-          <option value="barquisimeto">Barquisimeto (Principal)</option>
-          <option value="san-pablo">San Pablo</option>
+          <option value="san-pablo">San Pablo (Principal)</option>
+          <option value="barquisimeto">Barquisimeto</option>
           <option value="zulia">Zulia</option>
         </select>
-        <div class="location-info">
-          <p id="address-display">Av. Los Leones, C.C. Las Trinitarias.</p>
-        </div>
       </div>
     </div>
   </div>
