@@ -7,6 +7,12 @@ const porcentajesPago = {
   Binance: 10
 };
 
+const sedes = [
+  "04121506497"= "San Pablo",
+  "04120213946"= "Barquisimeto",
+  "04121506491"= "Zulia",
+]
+
 const sedeSelect = document.getElementById("sedeSelect");
 
 sedeSelect.addEventListener("change", () => {
@@ -199,14 +205,17 @@ const metodoPago = document.querySelector(".payment-methods").value;
     return;
   }
 
+  // Recalcular precios según método de pago
+  const productosConPrecio = aplicarMetodoPago(productos, metodoPago);
+
   // Construir mensaje
   let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
 
-  productos.forEach(p => {
+  productosConPrecio.forEach(p => {
     mensaje += `- ${p.name} | $${p.price}\n`;
   });
 
-  mensaje += `\nSede seleccionada: ${telefonoSede}`;
+  mensaje += `\nSede seleccionada: ${sedes[telefonoSede]}`;
 
   // URL de WhatsApp
   const url = `https://wa.me/${telefonoSede}?text=${encodeURIComponent(mensaje)}`;
