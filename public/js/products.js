@@ -2,6 +2,7 @@ const priceElement = document.getElementById("product-price")
 
 let priceProductWs
 let nameProductWs
+let colorProductWs
 
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
@@ -92,6 +93,7 @@ function renderColors(colors, container) {
   colors.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
+    colorProductWs = item.color
     dot.className = "color-dot";
 
     dot.onclick = () => {
