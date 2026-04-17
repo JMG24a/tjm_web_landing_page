@@ -1,9 +1,17 @@
+let telefonoSede = "04121506497";
+
 const porcentajesPago = {
   Transferencia: 40,
-  Cashea: 20,
+  Cashea: 40,
   Zelle: 10,
-  Binance: 5
+  Binance: 10
 };
+
+const sedeSelect = document.getElementById("sedeSelect");
+
+sedeSelect.addEventListener("change", () => {
+  telefonoSede = sedeSelect.value;
+});
 
 function aplicarMetodoPago(productos, metodo) {
   const porcentaje = porcentajesPago[metodo] || 0;
@@ -175,12 +183,37 @@ function cargarFactura() {
 //   document.querySelector(".item.total span:last-child").textContent = `$${total}`;
 // }
 
-  function eliminarProducto(index) {
-    let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
-    productos.splice(index, 1); // eliminar por índice
-    localStorage.setItem("productos_tjm", JSON.stringify(productos));
-    cargarFactura(); // recargar UI
+function eliminarProducto(index) {
+  let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+  productos.splice(index, 1); // eliminar por índice
+  localStorage.setItem("productos_tjm", JSON.stringify(productos));
+  cargarFactura(); // recargar UI
+}
+
+document.getElementById("btnCompletar").addEventListener("click", () => {
+const productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+const metodoPago = document.querySelector(".payment-methods").value;
+
+  if (productos.length === 0) {
+    alert("No hay productos en la factura");
+    return;
   }
+
+  // Construir mensaje
+  let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
+
+  productos.forEach(p => {
+    mensaje += `- ${p.name} | $${p.price}\n`;
+  });
+
+  mensaje += `\nSede seleccionada: ${telefonoSede}`;
+
+  // URL de WhatsApp
+  const url = `https://wa.me/${telefonoSede}?text=${encodeURIComponent(mensaje)}`;
+
+  window.open(url, "_blank");
+});
+
 
 // Ejecutar al cargar la página
 document.querySelector(".payment-methods").addEventListener("change", cargarFactura);

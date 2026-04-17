@@ -235,3 +235,14 @@ hr {
   text-decoration: none;
   cursor: pointer;
 }
+
+.delete-btn{
+  padding: 8px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #2563eb;
+  color: white;
+  width: 50%;
+  text-decoration: none;
+  cursor: pointer;
+}
