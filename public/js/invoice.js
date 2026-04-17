@@ -21,7 +21,7 @@ function aplicarMetodoPago(productos, metodo) {
 }
 
 function cargarFactura() {
-  let productos = JSON.parse(localStorage.getItem("productos")) || [];
+  let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   const contenedor = document.getElementById("product_items");
   const fechaEl = document.getElementById("data_invoice");
   const metodoSelect = document.querySelector(".payment-methods");
@@ -176,9 +176,9 @@ function cargarFactura() {
 // }
 
   function eliminarProducto(index) {
-    let productos = JSON.parse(localStorage.getItem("productos")) || [];
+    let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
     productos.splice(index, 1); // eliminar por índice
-    localStorage.setItem("productos", JSON.stringify(productos));
+    localStorage.setItem("productos_tjm", JSON.stringify(productos));
     cargarFactura(); // recargar UI
   }
 
