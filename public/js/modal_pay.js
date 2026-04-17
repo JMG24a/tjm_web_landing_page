@@ -14,7 +14,7 @@ function actualizarCarritoUI() {
 
   if (productos.length === 0) {
     badge.style.display = "none";
-    badge_container.classList.remove("displayNonePay");
+    badge_container.classList.add("displayNonePay");
   } else {
     badge.style.display = "block";
     badge.textContent = productos.length;
