@@ -7,11 +7,11 @@ const porcentajesPago = {
   Binance: 10
 };
 
-const sedes = [
-  "04121506497"= "San Pablo",
-  "04120213946"= "Barquisimeto",
-  "04121506491"= "Zulia",
-]
+const sedes = {
+  "04121506497": "San Pablo",
+  "04120213946": "Barquisimeto",
+  "04121506491": "Zulia",
+}
 
 const sedeSelect = document.getElementById("sedeSelect");
 
