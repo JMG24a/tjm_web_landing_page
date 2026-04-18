@@ -311,7 +311,7 @@ function setupDormitorio(product) {
 
     // Guardar variables globales
     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
-    nameProductWs = btnElements[index].label;
+    nameProductWs = `${product.name} ${btnElements[index].label}`;
   }
 
   // Asignar eventos de click

@@ -24,8 +24,8 @@
 }
 
 .banner.selected {
-  border-color: #007bff;
-  background: #e8f0ff;
+  border-color: #000;
+  background: #007bff;
 }
 
 /* El círculo de la izquierda */
