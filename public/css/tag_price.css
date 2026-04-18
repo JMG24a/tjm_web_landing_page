@@ -17,7 +17,7 @@
 
 .banner {
   border: 2px solid #ccc;
-  padding: 9px;
+  padding: 9px 4px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
