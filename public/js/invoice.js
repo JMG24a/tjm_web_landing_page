@@ -112,7 +112,7 @@ const metodoPago = document.querySelector(".payment-methods").value;
   // Construir mensaje
   let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
   productosConPrecio.forEach(p => {
-    mensaje += `- ${p.name} | $${p.price}\n`;
+    mensaje += `- ${p.name} | $${p.precioFinal}\n`;
   });
   mensaje += `\nSede: ${sedes[telefonoSede]}`;
   // URL de WhatsApp
