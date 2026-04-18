@@ -188,41 +188,89 @@ function setupColchones(product){
   updatePrice(1) // inicial
 }
 
+// function setupDormitorio(product) {
+//   const colors = document.getElementById("modal-colors");
+//   const topContainer = document.getElementById("modal-top");
+//   topContainer.className = "modal-top";
+
+//   const price = document.getElementById("modal-top");
+//   price.removeAttribute("display")
+
+//   // Opciones con sus posiciones
+//   const options = [
+//     { label: "Individual", position: 1 },
+//     { label: "Matrimonial", position: 14 },
+//     { label: "Queen", position: 16 },
+//     { label: "King", position: 2 }
+//   ];
+
+//   topContainer.innerHTML = "";
+
+//   // Crear botones + contenedores de precio
+//   const btnElements = options.map(opt => {
+//     const wrapper = document.createElement("div");
+//     wrapper.className = "banner"; // Clase principal del diseño
+
+//     // CÍRCULO IZQUIERDA
+//     // const circleContainer = document.createElement("div");
+//     // circleContainer.className = "circle-container";
+//     // const whiteCircle = document.createElement("div");
+//     // whiteCircle.className = "white-circle";
+//     // circleContainer.appendChild(whiteCircle);
+
+//     // CONTENEDOR DE CONTENIDO
+//     const contentWrapper = document.createElement("div");
+//     contentWrapper.className = "content-wrapper";
+
+//     // ETIQUETA TEXTO (MATRIMONIAL, ETC)
+//     const labelBox = document.createElement("div");
+//     labelBox.className = "label-box";
+//     const textBlue = document.createElement("span");
+//     textBlue.className = "text-blue";
+//     textBlue.textContent = opt.label.toUpperCase();
+//     labelBox.appendChild(textBlue);
+
+//     // PRECIO
+//     const priceBox = document.createElement("div");
+//     priceBox.className = "price-box";
+//     const priceValue = document.createElement("span");
+//     priceValue.className = "price-value";
+//     priceValue.textContent = "cargando..."; // O el valor que necesites
+//     priceBox.appendChild(priceValue);
+
+//     // UNIÓN FINAL
+//     contentWrapper.appendChild(labelBox);
+//     contentWrapper.appendChild(priceBox);
+
+//     // wrapper.appendChild(circleContainer);
+//     wrapper.appendChild(contentWrapper);
+
+//     topContainer.appendChild(wrapper);
+
+//     return { btn: textBlue, priceTag: priceValue, position: opt.position };
+// });
+
 function setupDormitorio(product) {
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
 
-  const price = document.getElementById("modal-top");
-  price.removeAttribute("display")
-
-  // Opciones con sus posiciones
   const options = [
-    { label: "Individual", position: 1 },
-    { label: "Matrimonial", position: 14 },
-    { label: "Queen", position: 16 },
-    { label: "King", position: 2 }
+    { label: "Individual", position: 1, size: "100" },
+    { label: "Matrimonial", position: 14, size: "140" },
+    { label: "Queen", position: 16, size: "160" },
+    { label: "King", position: 2, size: "200" }
   ];
 
   topContainer.innerHTML = "";
 
-  // Crear botones + contenedores de precio
-const btnElements = options.map(opt => {
+  const btnElements = options.map(opt => {
     const wrapper = document.createElement("div");
-    wrapper.className = "banner"; // Clase principal del diseño
+    wrapper.className = "banner";
 
-    // CÍRCULO IZQUIERDA
-    // const circleContainer = document.createElement("div");
-    // circleContainer.className = "circle-container";
-    // const whiteCircle = document.createElement("div");
-    // whiteCircle.className = "white-circle";
-    // circleContainer.appendChild(whiteCircle);
-
-    // CONTENEDOR DE CONTENIDO
     const contentWrapper = document.createElement("div");
     contentWrapper.className = "content-wrapper";
 
-    // ETIQUETA TEXTO (MATRIMONIAL, ETC)
     const labelBox = document.createElement("div");
     labelBox.className = "label-box";
     const textBlue = document.createElement("span");
@@ -230,48 +278,67 @@ const btnElements = options.map(opt => {
     textBlue.textContent = opt.label.toUpperCase();
     labelBox.appendChild(textBlue);
 
-    // PRECIO
     const priceBox = document.createElement("div");
     priceBox.className = "price-box";
     const priceValue = document.createElement("span");
     priceValue.className = "price-value";
-    priceValue.textContent = "cargando..."; // O el valor que necesites
+    priceValue.textContent = "cargando...";
     priceBox.appendChild(priceValue);
 
-    // UNIÓN FINAL
     contentWrapper.appendChild(labelBox);
     contentWrapper.appendChild(priceBox);
-
-    // wrapper.appendChild(circleContainer);
     wrapper.appendChild(contentWrapper);
-
     topContainer.appendChild(wrapper);
 
-    return { btn: textBlue, priceTag: priceValue, position: opt.position };
-});
+    return { wrapper, priceTag: priceValue, position: opt.position, size: opt.size, label: opt.label };
+  });
 
   // IDs completos para buscar precios
   const ids = btnElements.map(el => `${product.id}${el.position}`);
 
-  // Cargar todos los precios
+  // Cargar precios
   loadProductPrices(ids).then(prices => {
     prices.forEach((price, index) => {
       btnElements[index].priceTag.textContent = `${price}$`;
     });
   });
 
-  // // Acción al hacer click
-  // btnElements.forEach((el, index) => {
-  //   el.btn.onclick = () => {
-  //     const price = document.getElementById("product-price");
-  //     price.innerHTML = `${btnElements[index].priceTag.textContent}`;
-  //   };
-  // });
+  // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
+  function seleccionarMedida(index) {
+    btnElements.forEach((el, i) => {
+      el.wrapper.classList.toggle("selected", i === index);
+    });
+
+    // Guardar variables globales
+    priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
+    nameProductWs = btnElements[index].label;
+  }
+
+  // Asignar eventos de click
+  btnElements.forEach((el, index) => {
+    el.wrapper.addEventListener("click", () => seleccionarMedida(index));
+  });
+
+  // Seleccionar la primera opción por defecto
+  seleccionarMedida(0);
 
   renderColors(product.colors, colors);
-  // Precio inicial
-  btnElements[0].btn.click();
 }
+
+
+//   // IDs completos para buscar precios
+//   const ids = btnElements.map(el => `${product.id}${el.position}`);
+
+//   // Cargar todos los precios
+//   loadProductPrices(ids).then(prices => {
+//     prices.forEach((price, index) => {
+//       btnElements[index].priceTag.textContent = `${price}$`;
+//     });
+//   });
+
+//   renderColors(product.colors, colors);
+//   btnElements[0].btn.click();
+// }
 
 
 function setupMultimuebles(product) {

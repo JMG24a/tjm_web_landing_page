@@ -14,6 +14,20 @@
   box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
 }
 
+
+.banner {
+  border: 2px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.banner.selected {
+  border-color: #007bff;
+  background: #e8f0ff;
+}
+
 /* El círculo de la izquierda */
 .circle-container {
   background-color: var(--blue-main);

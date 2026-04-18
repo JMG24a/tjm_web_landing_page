@@ -321,15 +321,17 @@
   display: none;
 } */
 .modal-opens {
-  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
   font-weight: 600;
   background: #1a428a;
   color: #f2e088;
-  padding: 18px 14px;
+  padding: 10px 10px;
   border-radius: 8px;
   width: fit-content;
   margin: 0px 0px;
-
+  align-content: center;
   /* display: flex;
   flex-direction: column;
   gap: 8px;
@@ -361,7 +363,6 @@
   justify-content: center;
   gap: 5px;
 }
-
 
 .span-top{
   margin: 0px 10px 0px 0px;
