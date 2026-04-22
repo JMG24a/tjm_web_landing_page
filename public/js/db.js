@@ -660,7 +660,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 1019,
+      id: 1018,
       name: "Sofa Paris",
       desc: "El sofá Paris destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_paris_white.jpeg",
