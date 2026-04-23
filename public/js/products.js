@@ -54,7 +54,7 @@ async function loadProductPrice(id) {
     const data = await response.json();
     //precioGlobal
     priceProductWs = data.precio;
-
+    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
