@@ -67,7 +67,8 @@ async function loadProductPrice(id) {
 
 async function loadProductPrices(ids = []) {
   try {
-    const porcentage = 40;
+    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
     const requests = ids.map(id =>
       fetch(`https://tjmwebback-production.up.railway.app/${id}`)
