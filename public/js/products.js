@@ -3,6 +3,14 @@ const priceElement = document.getElementById("product-price")
 let priceProductWs
 let nameProductWs
 let colorProductWs
+let categoryProductWs
+const porcentajesPago = {
+  multimuebles: 40,
+  comedores: 40,
+  colchones: 49,
+  dormitorios: 40,
+  sofas: 40
+};
 
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
@@ -47,7 +55,7 @@ async function loadProductPrice(id) {
     //precioGlobal
     priceProductWs = data.precio;
 
-    const porcentage = 40;
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(data.precio, porcentage);
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
@@ -495,7 +503,7 @@ function openProductModal(product, category) {
   const modal = document.getElementById("product-modal")
 
   setupBaseModal(product);
-
+  categoryProductWs = category
   switch (category) {
     case "multimuebles":
       setupMultimuebles(product);
