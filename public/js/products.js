@@ -75,7 +75,7 @@ async function loadProductPrices(ids = []) {
     );
 
     const results = await Promise.all(requests);
-    priceProductWs = results.find((item)=>item.id == ids[0]);
+    priceProductWs = results.find((item)=>{ if(item.id == ids[0]){return item.price}});
 
     return results.map(data => calcularAumento(data.precio, porcentage));
   } catch (error) {
