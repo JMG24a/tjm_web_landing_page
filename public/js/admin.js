@@ -1,91 +1,22 @@
-let selectedProduct = null;
+const btnLogin = document.getElementById("btnLogin");
+const errorMsg = document.getElementById("loginError");
 
-function initProductsObserver() {
-  const cards = document.querySelectorAll('.furniture-card');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.55 }
-  );
-  cards.forEach((card) => observer.observe(card));
-}
+btnLogin.addEventListener("click", () => {
+  const user = document.getElementById("user").value.trim();
+  const pass = document.getElementById("pass").value.trim();
 
-async function loadAdminProducts() {
-  const grid = document.getElementById("admin-grid");
-  grid.innerHTML = "";
-  products = PRODUCTS['sofas']
+  // Usuario y contraseña "falsos" (hardcodeados)
+  const USER_OK = "admin";
+  const PASS_OK = "1234";
 
-  products.forEach((product) => {
-    const card = document.createElement("article");
-    card.className = "furniture-card";
-    card.innerHTML = `
-      <img src="/image/${product.img}" alt="${product.name}">
-      <h3>${product.name}</h3>
-    `;
-    card.addEventListener("click", () => {
-      openAdminModal(product);
-    });
-    grid.appendChild(card);
-  });
-  initProductsObserver();
-}
+  if (user === USER_OK && pass === PASS_OK) {
+    // Guardar sesión
+    localStorage.setItem("session_tjm", "123tjmadmin");
 
-function loadProduct(category){
-  console.log("🚀 ~ loadProduct ~ category:", category)
-  const grid = document.getElementById("admin-grid");
-  grid.innerHTML = "";
-  products = PRODUCTS[category]
+    // Redirigir al home
+    window.location.href = "/";
+  } else {
+    errorMsg.textContent = "Usuario o contraseña incorrectos";
+  }
+});
 
-  products.forEach((product) => {
-    const card = document.createElement("article");
-    card.className = "furniture-card";
-    card.innerHTML = `
-      <img src="/image/${product.img}" alt="${product.name}">
-      <h3>${product.name}</h3>
-    `;
-    card.addEventListener("click", () => {
-      openAdminModal(product);
-    });
-    grid.appendChild(card);
-  });
-  initProductsObserver();
-}
-
-function openAdminModal(product) {
-  selectedProduct = product;
-
-  document.getElementById("admin-name").textContent = product.name;
-  document.getElementById("admin-price").value = product.price;
-
-  document.getElementById("admin-modal").classList.remove("hidden");
-}
-
-function closeAdminModal() {
-  document.getElementById("admin-modal").classList.add("hidden");
-}
-
-async function submitForm (){
-  console.log("HELLO")
-  const price = document.getElementById("admin-price").value;
-  console.log("🚀 ~ submitForm ~ price:", price)
-  const password = document.getElementById("admin-password").value;
-  console.log("🚀 ~ submitForm ~ password:", password)
-
-  // await fetch(`/api/products/${selectedProduct.id}`, {
-  //   method: "PUT",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({ price })
-  // });
-
-  closeAdminModal();
-  loadAdminProducts(); // refresca lista
-};
-
-function initAdmin() {
-  loadAdminProducts();
-}
