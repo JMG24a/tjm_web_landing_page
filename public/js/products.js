@@ -75,8 +75,7 @@ async function loadProductPrices(ids = []) {
     );
 
     const results = await Promise.all(requests);
-    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs], "results: ", results.find((item)=>item.id == ids[0]));
-    // priceProductWs = results.precio;
+    priceProductWs = results.find((item)=>item.id == ids[0]);
 
     return results.map(data => calcularAumento(data.precio, porcentage));
   } catch (error) {
