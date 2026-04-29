@@ -52,13 +52,12 @@ async function loadProductPrice(id) {
   try {
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    //precioGlobal
     pricePlus5 = calcularAumento(data.precio, 5);
-    priceProductWs = pricePlus5;
-
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(pricePlus5, porcentage);
+    //precioGlobal
+    priceProductWs = priceUSD;
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
@@ -77,11 +76,9 @@ async function loadProductPrices(ids = []) {
     );
 
     const results = await Promise.all(requests);
-    priceProductWs = results.find((item)=>{ if(item.id == ids[0]){return calcularAumento(item.price, 5)}});
-    console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
+    priceProductWs = results.find((item)=>{ if(item.id == ids[0]){return item.price}});
 
     const newR = results.map(data => calcularAumento(data.precio, 5));
-    console.log("🚀 ~ loadProductPrices ~ newR:", newR)
     return newR.map(data => calcularAumento(data, porcentage));
   } catch (error) {
     console.error("Error cargando precios:", error);

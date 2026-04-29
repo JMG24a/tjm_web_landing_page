@@ -1,8 +1,8 @@
 let telefonoSede = "04121506497";
 
 const porcentajesPago = {
-  Transferencia: 40,
-  Cashea: 40,
+  Transferencia: 0,
+  Cashea: 0,
   Zelle: -5,
   Binance: -5
 };
