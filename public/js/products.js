@@ -81,6 +81,7 @@ async function loadProductPrices(ids = []) {
     console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
 
     const newR = results.map(data => calcularAumento(data.precio, 5));
+    console.log("🚀 ~ loadProductPrices ~ newR:", newR)
     return newR.map(data => calcularAumento(data, porcentage));
   } catch (error) {
     console.error("Error cargando precios:", error);
