@@ -67,15 +67,15 @@ async function loadProductPrice(id) {
 
 async function loadProductPrices(ids = []) {
   try {
-    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
     const requests = ids.map(id =>
       fetch(`https://tjmwebback-production.up.railway.app/${id}`)
-        .then(res => res.json())
+      .then(res => res.json())
     );
 
     const results = await Promise.all(requests);
+    priceProductWs = results.find((item)=>{ if(item.id == ids[0]){return item.price}});
 
     return results.map(data => calcularAumento(data.precio, porcentage));
   } catch (error) {
