@@ -7,7 +7,7 @@ let categoryProductWs
 const porcentajesPago = {
   multimuebles: 40,
   comedores: 40,
-  colchones: 49,
+  colchones: 40,
   dormitorios: 40,
   sofas: 40
 };

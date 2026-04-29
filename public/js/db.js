@@ -965,22 +965,22 @@ const PRODUCTS = {
         // }
       ]
     },
-    {
-      id: 2010,
-      name: "Lady Best",
-      desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
-      img: "colchon_colflex_lady_best.png",
-            colors: [
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#633e3e",
-        // },
-        // {
-        //   img: "16_9_cairo_gris_claro.jpg",
-        //   color: "#333333"
-        // }
-      ]
-    },
+    // {
+    //   id: 2010,
+    //   name: "Lady Best",
+    //   desc: "Este Colchón es una excelente opción para quienes buscan una superficie de descanso de alta calidad. Con una garantía de 10 años, cuenta con 405 resortes electrónicamente templados que brindan una mayor firmeza y estabilidad.",
+    //   img: "colchon_colflex_lady_best.png",
+    //         colors: [
+    //     // {
+    //     //   img: "16_9_cairo_gris_claro.jpg",
+    //     //   color: "#633e3e",
+    //     // },
+    //     // {
+    //     //   img: "16_9_cairo_gris_claro.jpg",
+    //     //   color: "#333333"
+    //     // }
+    //   ]
+    // },
     {
       id: 2021,
       name: "Dallas",
