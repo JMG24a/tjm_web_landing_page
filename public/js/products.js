@@ -78,9 +78,9 @@ async function loadProductPrices(ids = []) {
 
     const results = await Promise.all(requests);
     priceProductWs = results.find((item)=>{ if(item.id == ids[0]){return calcularAumento(item.price, 5)}});
+    console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
 
     const newR = results.map(data => calcularAumento(data.precio, 5));
-    console.log("🚀 ~ loadProductPrices ~ newR:", newR)
     return newR.map(data => calcularAumento(data, porcentage));
   } catch (error) {
     console.error("Error cargando precios:", error);
