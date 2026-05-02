@@ -355,7 +355,6 @@ function setupDormitorio(product) {
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
-  openContainer.classList.remove("displayNone")
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
@@ -368,7 +367,8 @@ function setupMultimuebles(product) {
   loadProductPrice(product.id);
 
   if(product.open){
-    openContainer.classList.remove("modal-opens")
+    // openContainer.classList.remove("modal-opens")
+    openContainer.classList.remove("displayNone")
   }else{
     openContainer.classList.add("modal-opens")
   }
