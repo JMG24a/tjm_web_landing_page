@@ -395,8 +395,8 @@ function setupComedores(product) {
 
   const topContainer = document.getElementById("modal-top");
   let isFour = false; // estado toggle
-  chairContainer.classList.remove("modal-opens")
-  topContainer.classList.remove("modal-opens")
+  // chairContainer.classList.remove("modal-opens")
+  // topContainer.classList.remove("modal-opens")
   topContainer.className = "modal-top";
 
   const topBtn1 = document.createElement("span");
