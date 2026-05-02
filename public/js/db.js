@@ -1162,7 +1162,7 @@ const PRODUCTS = {
     {
       id: 3001,
       name: "Isabel Arteco",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "comedor_isabel_v.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1281,7 +1281,7 @@ const PRODUCTS = {
     {
       id: 3002,
       name: "Isabel Torre",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "comedor_isabel_torre.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1400,7 +1400,7 @@ const PRODUCTS = {
     {
       id: 3003,
       name: "Isabel 4D",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "comedor_isabel_v.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1519,7 +1519,7 @@ const PRODUCTS = {
     {
       id: 3004,
       name: "Isabel V",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "comedor_isabel_v.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1638,7 +1638,7 @@ const PRODUCTS = {
     {
       id: 3005,
       name: "Saturno Arteco",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1757,7 +1757,7 @@ const PRODUCTS = {
     {
       id: 3006,
       name: "Saturno Torre",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1876,7 +1876,7 @@ const PRODUCTS = {
     {
       id: 3007,
       name: "Saturno 4D",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -1995,7 +1995,7 @@ const PRODUCTS = {
     {
       id: 3008,
       name: "Saturno V",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "comedor_saturno_pvc.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2114,7 +2114,7 @@ const PRODUCTS = {
     {
       id: 3009,
       name: "Luna Arteco",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2233,7 +2233,7 @@ const PRODUCTS = {
     {
       id: 3010,
       name: "Luna Torre",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2352,7 +2352,7 @@ const PRODUCTS = {
     {
       id: 3011,
       name: "Luna 4D",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2471,7 +2471,7 @@ const PRODUCTS = {
     {
       id: 3012,
       name: "Luna V",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2590,7 +2590,7 @@ const PRODUCTS = {
     {
       id: 3013,
       name: "Lily Arteco",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2709,7 +2709,7 @@ const PRODUCTS = {
     {
       id: 3014,
       name: "Lily Torre",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2828,7 +2828,7 @@ const PRODUCTS = {
     {
       id: 3015,
       name: "Lily 4D",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
@@ -2947,7 +2947,7 @@ const PRODUCTS = {
     {
       id: 3016,
       name: "Lily V",
-      desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      desc: "...",
       img: "no_picture.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[

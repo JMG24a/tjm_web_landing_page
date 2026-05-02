@@ -48,7 +48,7 @@
 /* Grid */
 .modal-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   height: 100%;
 }
 
@@ -66,7 +66,7 @@
 
 /* Barra lateral */
 .modal-info {
-  grid-column: span 2;
+  grid-column: span 3;
   padding: 24px;
   display: flex;
   flex-direction: column;
