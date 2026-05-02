@@ -306,10 +306,17 @@
 }
 
 .open-dot{
-  background-color: rgb(26 66 138);
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #1a428a;
   color: #f2e088;
-  padding: 7px 10px;
-  border-radius: 5px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0px 0px;
+  text-align: center;
   cursor: pointer;
 }
 
