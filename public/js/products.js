@@ -12,6 +12,17 @@ const porcentajesPago = {
   sofas: 40
 };
 
+function verificarSesion() {
+  const form = document.querySelector(".form-contenedor");
+
+  if (localStorage.getItem("session_tjm")) {
+    form.classList.remove("displayNoneSuggestPrice");
+  } else {
+    form.classList.add("displayNoneSuggestPrice");
+  }
+}
+
+
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
 
@@ -119,6 +130,7 @@ function renderColors(colors, container) {
 }
 
 function setupBaseModal(product) {
+  verificarSesion()
   document.getElementById("modal-img").src = `/image/${product.img}`;
   // global name
   nameProductWs = product.name
