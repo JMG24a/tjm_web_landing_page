@@ -526,7 +526,7 @@ const PRODUCTS = {
       size: "160cm - 240cm",
       desc: "El sofá Berlin destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_berlin_black.jpeg",
-      suggest: [1019, 1019],
+      suggest: [1019, 1018],
       colors: [
         {
           img: "sofa_berlin_black.jpeg",
