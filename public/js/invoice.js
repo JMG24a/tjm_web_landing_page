@@ -118,6 +118,8 @@ const metodoPago = document.querySelector(".payment-methods").value;
   // URL de WhatsApp
   const url = `https://wa.me/${telefonoSede}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
+
+  localStorage.removeItem("productos_tjm")
 });
 
 
