@@ -1159,125 +1159,125 @@ const PRODUCTS = {
     },
   ],
   comedores: [
-    {
-      id: 3001,
-      name: "Isabel Arteco",
-      desc: "...",
-      img: "comedor_isabel_v.jpeg",
-      size: "Largo: 190cm - Ancho: 90cm",
-      chairs_6:[
-        {
-          top: "vidrio",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#3f0b0b"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#0a134a"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#520131"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ea13aa"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#c8c8c8"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#eb0d69"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ffffff"
-            },
-          ],
-        },
-      ],
-      chairs_4:[
-        {
-          top: "vidrio",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#333"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#333"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#333"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#09ff00"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ffd500"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#1d1dc4"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_isabel_v.jpeg",
-          colors: [
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#fdf906"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#0037ff"
-            },
-            {
-              img: "comedor_isabel_v.jpeg",
-              color:"#ff0000"
-            },
-          ],
-        },
-      ]
-    },
+    // {
+    //   id: 3001,
+    //   name: "Isabel Arteco",
+    //   desc: "...",
+    //   img: "comedor_isabel_v.jpeg",
+    //   size: "Largo: 190cm - Ancho: 90cm",
+    //   chairs_6:[
+    //     {
+    //       top: "vidrio",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#3f0b0b"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#0a134a"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#520131"
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       top: "pintado",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ea13aa"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#c8c8c8"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#eb0d69"
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       top: "pvc",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ffffff"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ffffff"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ffffff"
+    //         },
+    //       ],
+    //     },
+    //   ],
+    //   chairs_4:[
+    //     {
+    //       top: "vidrio",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#333"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#333"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#333"
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       top: "pintado",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#09ff00"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ffd500"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#1d1dc4"
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       top: "pvc",
+    //       img: "comedor_isabel_v.jpeg",
+    //       colors: [
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#fdf906"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#0037ff"
+    //         },
+    //         {
+    //           img: "comedor_isabel_v.jpeg",
+    //           color:"#ff0000"
+    //         },
+    //       ],
+    //     },
+    //   ]
+    // },
     {
       id: 3002,
       name: "Isabel Torre",
@@ -1287,54 +1287,54 @@ const PRODUCTS = {
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#3f0b0b"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#0a134a"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#520131"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ea13aa"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#c8c8c8"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#eb0d69"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ffffff"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ffffff"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ffffff"
             },
           ],
@@ -1343,54 +1343,54 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#333"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#333"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#333"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#09ff00"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ffd500"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#1d1dc4"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_isabel_v.jpeg",
+          img: "comedor_isabel_torre.jpeg",
           colors: [
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#fdf906"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#0037ff"
             },
             {
-              img: "comedor_isabel_v.jpeg",
+              img: "comedor_isabel_torre.jpeg",
               color:"#ff0000"
             },
           ],
