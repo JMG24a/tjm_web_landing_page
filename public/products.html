@@ -92,10 +92,34 @@
               <p class="size">
                 <i>
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-                  <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-                </svg>
-              </i>
+                    <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+                  </svg>
+                </i>
               </p><p id="size" class="size_text"></p>
+            </div>
+            <div class="form-details-container">
+                <h3>Detalles del Producto</h3>
+
+                <!-- Input para Color -->
+                <div class="form-details-group">
+                    <label for="colorInput">Color del Producto:</label>
+                    <input type="text" id="colorInput" placeholder="Ej. Azul, Negro...">
+                </div>
+
+                <!-- Select para Material -->
+                <div class="form-details-group">
+                    <label for="materialSelect">Material:</label>
+                    <select id="materialSelect">
+                        <option value="tela">Tela</option>
+                        <option value="cuero">Cuero</option>
+                    </select>
+                </div>
+
+                <!-- Input para Cantidad -->
+                <div class="form-details-group">
+                    <label for="cantidadInput">Cantidad:</label>
+                    <input type="number" id="cantidadInput" min="1" value="1">
+                </div>
             </div>
             <div class="modal-opens" id="pay">Agregar <img src="/image/carrito.png" width="25px" height="25px" alt="carrito"></div>
             <p id="modal-desc" class="clamp desc"></p>

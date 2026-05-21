@@ -100,3 +100,42 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+        /* Contenedor del formulario en columna */
+.form-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre cada elemento */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Estilo para las etiquetas y los inputs */
+.form-details-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

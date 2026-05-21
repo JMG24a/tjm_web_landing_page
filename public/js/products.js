@@ -3,6 +3,7 @@ const priceElement = document.getElementById("product-price")
 let priceProductWs
 let nameProductWs
 let colorProductWs
+let methodProductPay
 let categoryProductWs
 const porcentajesPago = {
   multimuebles: 40,
@@ -11,6 +12,22 @@ const porcentajesPago = {
   dormitorios: 40,
   sofas: 40
 };
+
+function actualizarDatos() {
+  // Asignación inmediata de valores ante cualquier cambio
+  colorProductWs = document.getElementById('colorInput').value;
+  materialProduct = document.getElementById('materialSelect').value;
+  cantidad = parseInt(document.getElementById('cantidadInput').value) || 0;
+
+  // Muestra en la consola cómo se actualizan las variables en tiempo real
+  console.log("--- Cambio detectado ---");
+  console.log("let colorProductWs =", colorProductWs);
+  console.log("let materialProduct =", materialProduct);
+  console.log("let cantidad =", cantidad);
+}
+
+// Ejecutamos una vez al cargar para tener los valores iniciales listos
+actualizarDatos();
 
 function verificarSesion() {
   const form = document.querySelector(".form-contenedor");
