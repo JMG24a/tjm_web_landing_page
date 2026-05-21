@@ -3,7 +3,8 @@ const priceElement = document.getElementById("product-price")
 let priceProductWs
 let nameProductWs
 let colorProductWs
-let methodProductPay
+let materialProduct
+let cantidad
 let categoryProductWs
 const porcentajesPago = {
   multimuebles: 40,
