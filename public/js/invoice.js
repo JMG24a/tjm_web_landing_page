@@ -73,6 +73,16 @@ function cargarFactura() {
           <strong class="amount">$${prod.precioFinal}</strong>
         </div>
 
+        <div class="price-box">
+          <span class="label">Color:</span>
+          <strong class="amount">$${prod.color}</strong>
+        </div>
+
+        <div class="price-box">
+          <span class="label">Material:</span>
+          <strong class="amount">$${prod.material}</strong>
+        </div>
+
         <button class="delete-btn" data-index="${index}">Eliminar</button>
       </div>
     `;
@@ -112,7 +122,7 @@ const metodoPago = document.querySelector(".payment-methods").value;
   // Construir mensaje
   let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
   productosConPrecio.forEach(p => {
-    mensaje += `- ${p.name} | $${p.precioFinal}\n`;
+    mensaje += `- ${p.name} | ${p.color} | ${p.material} | $${p.precioFinal}\n`;
   });
   mensaje += `\nSede: ${sedes[telefonoSede]}`;
   // URL de WhatsApp

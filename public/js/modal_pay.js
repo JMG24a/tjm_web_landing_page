@@ -64,6 +64,10 @@ document.querySelectorAll(".ubic-btn").forEach(btn => {
     const producto = {
       price: priceProductWs,
       name: nameProductWs,
+      name: nameProductWs,
+      color: colorProductWs,
+      material: materialProduct,
+      cantidad: cantidad,
       ubicacion: ubicacionSeleccionada,
       fecha: new Date().toISOString()
       // metodo: metodoSeleccionado,
