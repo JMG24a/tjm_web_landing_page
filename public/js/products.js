@@ -14,6 +14,10 @@ const porcentajesPago = {
   sofas: 40
 };
 
+document.getElementById("colorInput").addEventListener("input", actualizarDatos);
+document.getElementById("materialSelect").addEventListener("change", actualizarDatos);
+document.getElementById("cantidadInput").addEventListener("input", actualizarDatos);
+
 function actualizarDatos() {
   // Asignación inmediata de valores ante cualquier cambio
   colorProductWs = document.getElementById('colorInput').value;
