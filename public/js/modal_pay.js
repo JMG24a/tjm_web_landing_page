@@ -34,12 +34,20 @@ function guardarProductoEnLocalStorage(producto) {
 
 // Abrir modal de métodos de pago
 payBtn.addEventListener("click", () => {
-  console.log("IS Rigth Here??")
+  console.log("IS Rigth Here??", {
+    priceProductWs,
+    nameProductWs,
+    colorProductWs,
+    materialProduct,
+    cantidad
+  })
 
   const producto = {
     price: priceProductWs,
     name: nameProductWs,
-    color: colorProductWs
+    color: colorProductWs,
+    material: materialProduct,
+    cantidad: cantidad,
   };
 
   guardarProductoEnLocalStorage(producto);
