@@ -59,7 +59,7 @@ function cargarFactura() {
   let total = 0;
 
   productosConPrecio.forEach((prod, index) => {
-    total += Number(prod.precioFinal);
+    total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
 
     const itemHTML = `
       <div class="product-item">
