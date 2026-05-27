@@ -69,18 +69,23 @@ function cargarFactura() {
         </div>
 
         <div class="price-box">
-        <span class="label">Color:</span>
-        <strong class="amount">${prod.color}</strong>
+          <span class="label">Color:</span>
+          <strong class="amount">${prod.color}</strong>
         </div>
 
         <div class="price-box">
-        <span class="label">Material:</span>
-        <strong class="amount">${prod.material}</strong>
+          <span class="label">Material:</span>
+          <strong class="amount">${prod.material}</strong>
+        </div>
+
+        <div class="price-box">
+          <span class="label">Cantidad:</span>
+          <strong class="amount">${prod.cantidad}</strong>
         </div>
 
         <div class="price-box">
           <span class="label">Precio:</span>
-          <strong class="amount">$${prod.precioFinal}</strong>
+          <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
 
         <button class="delete-btn" data-index="${index}">Eliminar</button>

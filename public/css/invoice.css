@@ -186,7 +186,7 @@ hr {
 /* Ajuste para pantallas medianas/grandes en los productos */
 @media (min-width: 480px) {
     .product-item {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
     }
     .product-item .info,
@@ -197,7 +197,7 @@ hr {
     }
     .product-item .price-box {
         text-align: right;
-        align-items: flex-end;
+        align-items: baseline;
     }
 }
 
