@@ -34,7 +34,7 @@ function actualizarDatos() {
 // Ejecutamos una vez al cargar para tener los valores iniciales listos
 actualizarDatos();
 
-function verificarSesion() {
+async function verificarSesion() {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
 
