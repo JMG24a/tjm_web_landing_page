@@ -178,6 +178,10 @@ function setupBaseModal(product) {
   };
 }
 
+async function guardarPrecio() {
+  console.log("HEllo mennnnn")
+}
+
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
   const container_size = document.getElementById("container_size");
