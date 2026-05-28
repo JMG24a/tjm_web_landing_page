@@ -42,7 +42,8 @@ async function verificarSesion() {
     form.classList.remove("displayNoneSuggestPrice");
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    price.textContent = data.precio;
+    console.log("🚀 ~ verificarSesion ~ data.precio:", data.precio)
+    price.placeholder = data.precio;
   } else {
     form.classList.add("displayNoneSuggestPrice");
   }
