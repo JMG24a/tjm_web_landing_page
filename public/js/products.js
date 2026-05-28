@@ -37,17 +37,13 @@ actualizarDatos();
 async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
-    console.log("🚀 ~ verificarSesion")
 
   if (localStorage.getItem("session_tjm")) {
     form.classList.remove("displayNoneSuggestPrice");
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    console.log("🚀 ~ verificarSesion ~ data.precio:", data.precio)
     price.placeholder = data.precio;
   } else {
-    console.log("🚀 ~ verificarSesion333")
-
     form.classList.add("displayNoneSuggestPrice");
   }
 }
@@ -178,8 +174,36 @@ function setupBaseModal(product) {
   };
 }
 
-async function guardarPrecio() {
-  console.log("HEllo mennnnn")
+async function guardarPrecio(id) {
+  if (!localStorage.getItem("session_tjm")) {
+    alert("No tienes permisos");
+    return;
+  }
+
+  const nuevoPrecio = document.getElementById("precioInput").value;
+
+  if (!nuevoPrecio) {
+    alert("Debes ingresar un precio");
+    return;
+  }
+
+  const body = {
+    id: Number(id),
+    precio: Number(nuevoPrecio)
+  };
+
+  const response = await fetch("https://tjmwebback-production.up.railway.app", {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await response.json();
+  console.log("Respuesta del backend:", data);
+
+  alert("Precio actualizado correctamente");
 }
 
 function setupSofas(product) {
