@@ -37,6 +37,7 @@ actualizarDatos();
 async function verificarSesion() {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
+    console.log("🚀 ~ verificarSesion")
 
   if (localStorage.getItem("session_tjm")) {
     form.classList.remove("displayNoneSuggestPrice");
@@ -45,6 +46,8 @@ async function verificarSesion() {
     console.log("🚀 ~ verificarSesion ~ data.precio:", data.precio)
     price.placeholder = data.precio;
   } else {
+    console.log("🚀 ~ verificarSesion333")
+
     form.classList.add("displayNoneSuggestPrice");
   }
 }
