@@ -34,7 +34,7 @@ function actualizarDatos() {
 // Ejecutamos una vez al cargar para tener los valores iniciales listos
 actualizarDatos();
 
-async function verificarSesion() {
+async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
     console.log("🚀 ~ verificarSesion")
@@ -160,7 +160,7 @@ function renderColors(colors, container) {
 }
 
 function setupBaseModal(product) {
-  verificarSesion()
+  verificarSesion(product.id)
   document.getElementById("modal-img").src = `/image/${product.img}`;
   // global name
   nameProductWs = product.name
