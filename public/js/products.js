@@ -36,9 +36,13 @@ actualizarDatos();
 
 function verificarSesion() {
   const form = document.querySelector(".form-contenedor");
+  const price = document.getElementById("precioInput");
 
   if (localStorage.getItem("session_tjm")) {
     form.classList.remove("displayNoneSuggestPrice");
+    const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+    const data = await response.json();
+    price.textContent = data.precio;
   } else {
     form.classList.add("displayNoneSuggestPrice");
   }
