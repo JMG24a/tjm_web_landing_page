@@ -20,8 +20,6 @@ function actualizarCarritoUI() {
     badge.textContent = productos.length;
     badge_container.classList.remove("displayNonePay");
   }
-
-  window.location.href = "/invoice.html";
 }
 
 
@@ -53,6 +51,7 @@ payBtn.addEventListener("click", () => {
   };
 
   guardarProductoEnLocalStorage(producto);
+  window.location.href = "/invoice.html";
 });
 
 // Elegir método de pago
