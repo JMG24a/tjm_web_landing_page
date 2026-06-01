@@ -20,6 +20,8 @@ function actualizarCarritoUI() {
     badge.textContent = productos.length;
     badge_container.classList.remove("displayNonePay");
   }
+
+  window.location.href = "/invoice.html";
 }
 
 
