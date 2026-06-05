@@ -122,23 +122,23 @@ const PRODUCTS = {
         },
       ]
     },
-    {
-      id: 7004,
-      name: "Cama Princesa",
-      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Princesa ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
-      img: "no_picture.png",
-      suggest: [7003, 7007],
-      colors: [
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#333",
-        },
-        {
-          img: "16_9_cairo_gris_claro.jpg",
-          color: "#633e3e",
-        },
-      ]
-    },
+    // {
+    //   id: 7004,
+    //   name: "Cama Princesa",
+    //   desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Princesa ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
+    //   img: "no_picture.png",
+    //   suggest: [7003, 7007],
+    //   colors: [
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#333",
+    //     },
+    //     {
+    //       img: "16_9_cairo_gris_claro.jpg",
+    //       color: "#633e3e",
+    //     },
+    //   ]
+    // },
     {
       id: 7005,
       name: "Cama Barco",
@@ -3359,20 +3359,20 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 4013,
-      name: "Ropero Acai 3 puertas",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
+    // {
+    //   id: 4013,
+    //   name: "Ropero Acai 3 puertas",
+    //   size: "Alto: 191cm - Ancho: 171cm",
+    //   desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+    //   img: "no_picture.png",
+    //   open: "multimueble_closet_caju_plus_open.jpg",
+    //   colors: [
+    //     {
+    //       img: "multimueble_closet_caju_plus.jpg",
+    //       color: "#ffffff",
+    //     }
+    //   ]
+    // },
     {
       id: 4014,
       name: "Ropero Duetto",
@@ -3390,20 +3390,20 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 4015,
-      name: "Ropero Barcelona",
-      size: "Alto: 191cm - Ancho: 171cm",
-      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "no_picture.png",
-      open: "multimueble_closet_caju_plus_open.jpg",
-      colors: [
-        {
-          img: "multimueble_closet_caju_plus.jpg",
-          color: "#ffffff",
-        }
-      ]
-    },
+    // {
+    //   id: 4015,
+    //   name: "Ropero Barcelona",
+    //   size: "Alto: 191cm - Ancho: 171cm",
+    //   desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+    //   img: "no_picture.png",
+    //   open: "multimueble_closet_caju_plus_open.jpg",
+    //   colors: [
+    //     {
+    //       img: "multimueble_closet_caju_plus.jpg",
+    //       color: "#ffffff",
+    //     }
+    //   ]
+    // },
   ],
   accesorios: [
     {
