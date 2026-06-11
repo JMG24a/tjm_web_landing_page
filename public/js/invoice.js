@@ -1,5 +1,3 @@
-let telefonoSede = "04121506497";
-
 const porcentajesPago = {
   Transferencia: 0,
   Cashea: 0,
