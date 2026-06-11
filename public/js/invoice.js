@@ -133,7 +133,8 @@ function cargarFactura() {
 
   if (productos.length === 0) {
     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
-    document.querySelector(".item.total span:last-child").textContent = "$0";
+    document.getElementById("total_final").textContent = "$0";
+    document.getElementById("total_original").textContent = "";
     return;
   }
 
@@ -141,14 +142,14 @@ function cargarFactura() {
   const opciones = { day: "numeric", month: "long", year: "numeric" };
   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
 
-  // 🔥 USAR LA VARIABLE, NO .value
   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
-
   contenedor.innerHTML = "";
   let total = 0;
+  let totalSinDescuento = 0;
 
   productosConPrecio.forEach((prod, index) => {
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
+    totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
 
     contenedor.innerHTML += `
       <div class="product-item">
@@ -167,9 +168,19 @@ function cargarFactura() {
     `;
   });
 
-  document.querySelector(".item.total span:last-child").textContent = `$${total.toFixed(2)}`;
-}
+  // Mostrar total final
+  document.getElementById("total_final").textContent = `$${total.toFixed(2)}`;
 
+  // Mostrar precio original si hay descuento
+  const porcentaje = porcentajesPago[metodoSeleccionado];
+
+  if (porcentaje < 0) {
+    document.getElementById("total_original").textContent =
+      `Precio original: $${totalSinDescuento.toFixed(2)}`;
+  } else {
+    document.getElementById("total_original").textContent = "";
+  }
+}
 
 // function cargarFactura() {
 //   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
