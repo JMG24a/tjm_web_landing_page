@@ -117,16 +117,16 @@ metodoDivs.forEach(div => {
   });
 });
 
-const sedeDivs = document.querySelectorAll(".sede");
-let telefonoSede = "04121506497"; // valor inicial
+// const sedeDivs = document.querySelectorAll(".sede");
+// let telefonoSede = "04121506497"; // valor inicial
 
-sedeDivs.forEach(div => {
-  div.addEventListener("click", () => {
-    sedeDivs.forEach(d => d.classList.remove("active"));
-    div.classList.add("active");
-    telefonoSede = div.dataset.phone;
-  });
-});
+// sedeDivs.forEach(div => {
+//   div.addEventListener("click", () => {
+//     sedeDivs.forEach(d => d.classList.remove("active"));
+//     div.classList.add("active");
+//     telefonoSede = div.dataset.phone;
+//   });
+// });
 
 
 function cargarFactura() {
