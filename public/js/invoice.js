@@ -128,7 +128,6 @@ sedeDivs.forEach(div => {
   });
 });
 
-
 function cargarFactura() {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   const contenedor = document.getElementById("product_items");
@@ -144,22 +143,27 @@ function cargarFactura() {
   const opciones = { day: "numeric", month: "long", year: "numeric" };
   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
 
+  // 🔥 USAR LA VARIABLE, NO .value
   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
+
   contenedor.innerHTML = "";
   let total = 0;
 
   productosConPrecio.forEach((prod, index) => {
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
+
     contenedor.innerHTML += `
       <div class="product-item">
         <div class="info">
           <span class="label">Producto:</span>
           <strong class="name">${prod.name}</strong>
         </div>
+
         <div class="price-box">
           <span class="label">Precio:</span>
           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
+
         <button class="delete-btn" data-index="${index}">Eliminar</button>
       </div>
     `;
@@ -167,6 +171,46 @@ function cargarFactura() {
 
   document.querySelector(".item.total span:last-child").textContent = `$${total.toFixed(2)}`;
 }
+
+
+// function cargarFactura() {
+//   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+//   const contenedor = document.getElementById("product_items");
+//   const fechaEl = document.getElementById("data_invoice");
+
+//   if (productos.length === 0) {
+//     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
+//     document.querySelector(".item.total span:last-child").textContent = "$0";
+//     return;
+//   }
+
+//   const fecha = new Date();
+//   const opciones = { day: "numeric", month: "long", year: "numeric" };
+//   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
+
+//   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
+//   contenedor.innerHTML = "";
+//   let total = 0;
+
+//   productosConPrecio.forEach((prod, index) => {
+//     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
+//     contenedor.innerHTML += `
+//       <div class="product-item">
+//         <div class="info">
+//           <span class="label">Producto:</span>
+//           <strong class="name">${prod.name}</strong>
+//         </div>
+//         <div class="price-box">
+//           <span class="label">Precio:</span>
+//           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
+//         </div>
+//         <button class="delete-btn" data-index="${index}">Eliminar</button>
+//       </div>
+//     `;
+//   });
+
+//   document.querySelector(".item.total span:last-child").textContent = `$${total.toFixed(2)}`;
+// }
 
 function eliminarProducto(index) {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
