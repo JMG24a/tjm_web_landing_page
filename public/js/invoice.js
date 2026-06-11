@@ -13,11 +13,11 @@ const sedes = {
   "04121506491": "Zulia",
 }
 
-const sedeSelect = document.getElementById("sedeSelect");
+// const sedeSelect = document.getElementById("sedeSelect");
 
-sedeSelect.addEventListener("change", () => {
-  telefonoSede = sedeSelect.value;
-});
+// sedeSelect.addEventListener("change", () => {
+//   telefonoSede = sedeSelect.value;
+// });
 
 function aplicarMetodoPago(productos, metodo) {
   const porcentaje = porcentajesPago[metodo] || 0;
@@ -34,11 +34,93 @@ function aplicarMetodoPago(productos, metodo) {
   });
 }
 
+// function cargarFactura() {
+//   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+//   const contenedor = document.getElementById("product_items");
+//   const fechaEl = document.getElementById("data_invoice");
+//   const metodoSelect = document.querySelector(".payment-methods");
+
+//   if (productos.length === 0) {
+//     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
+//     document.querySelector(".item.total span:last-child").textContent = "$0";
+//     return;
+//   }
+
+//   // Fecha actual
+//   const fecha = new Date();
+//   const opciones = { day: "numeric", month: "long", year: "numeric" };
+//   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
+
+//   // Aplicar método de pago actual
+//   const metodo = metodoSelect.value;
+//   const productosConPrecio = aplicarMetodoPago(productos, metodo);
+
+//   contenedor.innerHTML = "";
+//   let total = 0;
+
+//   productosConPrecio.forEach((prod, index) => {
+//     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
+
+//     const itemHTML = `
+//       <div class="product-item">
+//         <div class="info">
+//           <span class="label">Producto:</span>
+//           <strong class="name">${prod.name}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Color:</span>
+//           <strong class="amount">${prod.color}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Material:</span>
+//           <strong class="amount">${prod.material}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Cantidad:</span>
+//           <strong class="amount">${prod.cantidad}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Precio:</span>
+//           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
+//         </div>
+
+//         <button class="delete-btn" data-index="${index}">Eliminar</button>
+//       </div>
+//     `;
+
+//     contenedor.innerHTML += itemHTML;
+//   });
+
+//   document.querySelector(".item.total span:last-child").textContent = `$${total.toFixed(2)}`;
+
+//   // Activar botones de eliminar
+//   document.querySelectorAll(".delete-btn").forEach(btn => {
+//     btn.addEventListener("click", () => {
+//       eliminarProducto(btn.dataset.index);
+//     });
+//   });
+// }
+
+const metodoDivs = document.querySelectorAll(".method");
+let metodoSeleccionado = "Transferencia";
+
+metodoDivs.forEach(div => {
+  div.addEventListener("click", () => {
+    metodoDivs.forEach(d => d.classList.remove("active"));
+    div.classList.add("active");
+    metodoSeleccionado = div.dataset.value;
+    cargarFactura(); // recalcula precios
+  });
+});
+
 function cargarFactura() {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   const contenedor = document.getElementById("product_items");
   const fechaEl = document.getElementById("data_invoice");
-  const metodoSelect = document.querySelector(".payment-methods");
 
   if (productos.length === 0) {
     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
@@ -46,63 +128,32 @@ function cargarFactura() {
     return;
   }
 
-  // Fecha actual
   const fecha = new Date();
   const opciones = { day: "numeric", month: "long", year: "numeric" };
   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
 
-  // Aplicar método de pago actual
-  const metodo = metodoSelect.value;
-  const productosConPrecio = aplicarMetodoPago(productos, metodo);
-
+  const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
   contenedor.innerHTML = "";
   let total = 0;
 
   productosConPrecio.forEach((prod, index) => {
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
-
-    const itemHTML = `
+    contenedor.innerHTML += `
       <div class="product-item">
         <div class="info">
           <span class="label">Producto:</span>
           <strong class="name">${prod.name}</strong>
         </div>
-
-        <div class="price-box">
-          <span class="label">Color:</span>
-          <strong class="amount">${prod.color}</strong>
-        </div>
-
-        <div class="price-box">
-          <span class="label">Material:</span>
-          <strong class="amount">${prod.material}</strong>
-        </div>
-
-        <div class="price-box">
-          <span class="label">Cantidad:</span>
-          <strong class="amount">${prod.cantidad}</strong>
-        </div>
-
         <div class="price-box">
           <span class="label">Precio:</span>
           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
-
         <button class="delete-btn" data-index="${index}">Eliminar</button>
       </div>
     `;
-
-    contenedor.innerHTML += itemHTML;
   });
 
   document.querySelector(".item.total span:last-child").textContent = `$${total.toFixed(2)}`;
-
-  // Activar botones de eliminar
-  document.querySelectorAll(".delete-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      eliminarProducto(btn.dataset.index);
-    });
-  });
 }
 
 function eliminarProducto(index) {
