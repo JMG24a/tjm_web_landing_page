@@ -34,6 +34,48 @@ function actualizarDatos() {
 // Ejecutamos una vez al cargar para tener los valores iniciales listos
 actualizarDatos();
 
+async function fetchBinanceP2P(tradeType) {
+  const url = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search";
+
+  const body = {
+    page: 1,
+    rows: 10,
+    payTypes: [],
+    asset: "USDT",
+    fiat: "VES",
+    tradeType: tradeType // "BUY" o "SELL"
+  };
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await res.json();
+
+  // Tomamos el primer anuncio (el mejor precio)
+  return parseFloat(data.data[0].adv.price);
+}
+
+async function getUSDTPriceVES() {
+  const buyPrice = await fetchBinanceP2P("BUY");   // Bs → USDT
+  const sellPrice = await fetchBinanceP2P("SELL"); // USDT → Bs
+
+  const reference = (buyPrice + sellPrice) / 2;
+
+  return {
+    buy: buyPrice,
+    sell: sellPrice,
+    reference: reference
+  };
+}
+
+// Ejecución
+getUSDTPriceVES().then(console.log);
+
 async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
