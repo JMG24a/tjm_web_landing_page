@@ -312,3 +312,9 @@ hr {
   margin-top: 5px;
   font-weight: 600;
 }
+
+.footer {
+  background: #0f172a; /* azul oscuro elegante */
+  color: #e5e7eb;
+  padding: "1px 0px 35px";
+}
