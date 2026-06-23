@@ -155,11 +155,12 @@ async function loadProductPrices(ids = []) {
     );
 
     const results = await Promise.all(requests);
-    priceProductWs = results.find(item => item.id == ids[0])?.precio;
-    console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
 
     const newR = results.map(data => calcularAumento(data.precio, 5));
-    return newR.map(data => calcularAumento(data, porcentage));
+    const bcv = newR.map(data => calcularAumento(data, porcentage));
+    console.log("🚀 ~ loadProductPrices ~ bcv:", bcv)
+    // priceProductWs = bcv.find(item => item.id == ids[0])?.precio;
+    // console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
   } catch (error) {
     console.error("Error cargando precios:", error);
     return [];
