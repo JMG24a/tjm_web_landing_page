@@ -153,14 +153,13 @@ async function loadProductPrices(ids = []) {
       fetch(`https://tjmwebback-production.up.railway.app/${id}`)
       .then(res => res.json())
     );
-
     const results = await Promise.all(requests);
 
     const newR = results.map(data => calcularAumento(data.precio, 5));
     const bcv = newR.map(data => calcularAumento(data, porcentage));
-    console.log("🚀 ~ loadProductPrices ~ bcv:", bcv)
-    // priceProductWs = bcv.find(item => item.id == ids[0])?.precio;
-    // console.log("🚀 ~ loadProductPrices ~ priceProductWs:", priceProductWs)
+
+    priceProductWs = bcv[0]
+    return bcv
   } catch (error) {
     console.error("Error cargando precios:", error);
     return [];
