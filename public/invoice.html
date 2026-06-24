@@ -74,11 +74,24 @@
     </div>
   </section> -->
 
-  <section class="invoice-details">
+  <!-- <section class="invoice-details">
+    <div class="progress-bar">
+      <div class="step active">1</div>
+      <div class="step">2</div>
+    </div>
+
+
     <div class="container">
-      <!-- PASO 1 -->
+      <!-- PASO 1
       <div class="step-content" data-step="1">
         <h2 class="section-title">Resumen de Operación</h2>
+
+        <div class="payment-methods">
+          <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
+          <div class="method" data-value="Cashea">🪙 Cashea</div>
+          <div class="method" data-value="Zelle">💷 Zelle -25%</div>
+          <div class="method" data-value="Binance">📱 Binance -25%</div>
+        </div>
 
         <div class="grid-invoice">
           <div class="card">
@@ -98,45 +111,25 @@
 
             <div id="total_original" class="total-original"></div>
           </div>
-        </div>
-
-        <div class="payment-methods">
-          <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
-          <div class="method" data-value="Cashea">🪙 Cashea</div>
-          <div class="method" data-value="Zelle">💷 Zelle -25%</div>
-          <div class="method" data-value="Binance">📱 Binance -25%</div>
         </div>
 
         <div class="nav-buttons">
           <a href="/" class="btn_current_buy" class="btn_current_buy">seguir comprando</a>
-          <!-- <div class="container_btns"> -->
+          <!-<div class="container_btns">
           <button class="btn_ready_buy btn_next">Siguiente</button>
-          <!-- </div> -->
+          <! </div>
         </div>
       </div>
 
-      <!-- PASO 2 -->
+      < PASO 2
       <div class="step-content hidden" data-step="2">
         <h2 class="section-title">Localizacion de la tienda</h2>
-        <h3>Métodos de Pago</h3>
-        <p>Seleccione su opción:</p>
 
-        <div class="payment-methods">
-          <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
-          <div class="method" data-value="Cashea">🪙 Cashea</div>
-          <div class="method" data-value="Zelle">💷 Zelle -25%</div>
-          <div class="method" data-value="Binance">📱 Binance -25%</div>
+        <div class="sede-options">
+          <div class="sede" data-phone="04121506497">🏠 San Pablo (Principal)</div>
+          <div class="sede" data-phone="04120213946">🏢 Barquisimeto</div>
+          <div class="sede" data-phone="04121506491">🌆 Zulia</div>
         </div>
-
-        <div class="nav-buttons">
-          <button class="btn_back btn_current_buy">Atrás</button>
-          <button class="btn_next" id="btnPagoNext" disabled>Siguiente</button>
-        </div>
-      </div>
-
-      <!-- PASO 3 -->
-      <div class="step-content hidden" data-step="3">
-        <h2 class="section-title">Localizacion de la tienda</h2>
 
         <div class="grid-invoice">
           <div class="card">
@@ -157,6 +150,34 @@
             <div id="total_original" class="total-original"></div>
           </div>
         </div>
+
+        <div class="nav-buttons">
+          <button class="btn_back btn_current_buy">Atrás</button>
+          <button class="btn_ready_buy" id="btnCompletar" disabled>Completar Pedido</button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="invoice-details">
+    <div class="container">
+      <div class="step-content" data-step="1">
+        <h2 class="section-title">Método de Pago</h2>
+
+        <div class="payment-methods">
+          <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
+          <div class="method" data-value="Cashea">🪙 Cashea</div>
+          <div class="method" data-value="Zelle">💷 Zelle -25%</div>
+          <div class="method" data-value="Binance">📱 Binance -25%</div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn_next btn_ready_buy">Siguiente</button>
+        </div>
+      </div>
+
+      <div class="step-content hidden" data-step="2">
+        <h2 class="section-title">Localización de la tienda</h2>
 
         <div class="sede-options">
           <div class="sede" data-phone="04121506497">🏠 San Pablo (Principal)</div>
@@ -170,6 +191,32 @@
         </div>
       </div>
 
+      <!-- FACTURA SIEMPRE VISIBLE -->
+      <div class="invoice-box">
+        <h2 class="section-title">Resumen de Operación</h2>
+
+        <div class="grid-invoice">
+          <div class="card">
+            <h3>Detalle de Factura</h3>
+
+            <div class="item">
+              <span>Fecha:</span>
+              <strong id="data_invoice"></strong>
+            </div>
+
+            <hr>
+
+            <div class="products-list" id="product_items"></div>
+
+            <div class="item total">
+              <span>Total a pagar:</span>
+              <span id="total_final">$0</span>
+            </div>
+
+            <div id="total_original" class="total-original"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

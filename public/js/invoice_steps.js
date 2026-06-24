@@ -5,6 +5,7 @@ let sedeSeleccionada = null;
 const steps = document.querySelectorAll(".step-content");
 const progressSteps = document.querySelectorAll(".progress-bar .step");
 
+// Mostrar paso
 function showStep(step) {
   steps.forEach(s => s.classList.add("hidden"));
   document.querySelector(`.step-content[data-step="${step}"]`).classList.remove("hidden");
@@ -16,19 +17,17 @@ function showStep(step) {
   currentStep = step;
 }
 
-// BOTONES SIGUIENTE
+// SIGUIENTE
 document.querySelectorAll(".btn_next").forEach(btn => {
   btn.addEventListener("click", () => {
-    if (currentStep === 1) showStep(2);
-    if (currentStep === 2 && metodoPago) showStep(3);
+    if (currentStep === 1 && metodoPago) showStep(2);
   });
 });
 
-// BOTONES ATRÁS
+// ATRÁS
 document.querySelectorAll(".btn_back").forEach(btn => {
   btn.addEventListener("click", () => {
     if (currentStep === 2) showStep(1);
-    if (currentStep === 3) showStep(1);
   });
 });
 
@@ -41,7 +40,6 @@ document.querySelectorAll(".method").forEach(div => {
     metodoPago = div.dataset.value;
 
     aplicarMetodoPago(); // tu función actual
-    document.getElementById("btnPagoNext").disabled = false;
   });
 });
 
