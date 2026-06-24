@@ -28,7 +28,7 @@ document.querySelectorAll(".btn_next").forEach(btn => {
 document.querySelectorAll(".btn_back").forEach(btn => {
   btn.addEventListener("click", () => {
     if (currentStep === 2) showStep(1);
-    if (currentStep === 3) showStep(2);
+    if (currentStep === 3) showStep(1);
   });
 });
 

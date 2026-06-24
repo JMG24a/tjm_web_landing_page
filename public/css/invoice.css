@@ -11,7 +11,7 @@
 
 .invoice-details {
     background-color: var(--bg-light);
-    padding: 40px 20px;
+    padding: 20px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-main);
 }
