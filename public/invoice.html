@@ -13,13 +13,15 @@
   <link rel="stylesheet" href="/css/invoice.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/bar.css">
+  <link rel="stylesheet" href="/css/invoice_steps.css">
+
 </head>
 <body>
   <!-- <a href="/" class="top-gradient-bar">
     <img class="logo" src="/image/logo_tjm.png" alt="logo" onclick="goToCategory('/')">
   </a> -->
 
-  <section class="invoice-details">
+  <!-- <section class="invoice-details">
     <div class="container">
       <h2 class="section-title">Resumen de Operación</h2>
 
@@ -42,17 +44,6 @@
 
           <div id="total_original" class="total-original"></div>
         </div>
-
-        <!-- <div class="card">
-          <h3>Métodos de Pago</h3>
-          <p>Seleccione su opción:</p>
-          <select class="custom-select payment-methods">
-            <option value="Transferencia">🏦 Transferencia Bancaria</option>
-            <option value="Cashea">🪙 Cashea</option>
-            <option value="Zelle">💷 Zelle -25%</option>
-            <option value="Binance">📱 Binance -25%</option>
-          </select>
-        </div> -->
 
         <div class="card">
           <h3>Métodos de Pago</h3>
@@ -81,63 +72,89 @@
       <a href="/" class="btn_current_buy" class="btn_current_buy">seguir comprando</a>
       <button class="btn_ready_buy" id="btnCompletar">Completar Pedido</button>
     </div>
+  </section> -->
+
+  <div class="progress-bar">
+    <div class="step active">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
+  </div>
+
+  <section class="invoice-details">
+    <div class="container">
+
+      <!-- PASO 1 -->
+      <div class="step-content" data-step="1">
+        <h2 class="section-title">Resumen de Operación</h2>
+
+        <div class="grid-invoice">
+          <div class="card">
+            <h3>Detalle de Factura</h3>
+            <div class="item">
+              <span>Fecha:</span>
+              <strong id="data_invoice">15 de abril, 2026</strong>
+            </div>
+            <hr>
+
+            <div class="products-list" id="product_items"></div>
+
+            <div class="item total">
+              <span>Total a pagar:</span>
+              <span id="total_final">$0</span>
+            </div>
+
+            <div id="total_original" class="total-original"></div>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn_next">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="step-content hidden" data-step="2">
+        <h3>Métodos de Pago</h3>
+        <p>Seleccione su opción:</p>
+
+        <div class="payment-methods">
+          <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
+          <div class="method" data-value="Cashea">🪙 Cashea</div>
+          <div class="method" data-value="Zelle">💷 Zelle -25%</div>
+          <div class="method" data-value="Binance">📱 Binance -25%</div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn_back">Atrás</button>
+          <button class="btn_next" id="btnPagoNext" disabled>Siguiente</button>
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="step-content hidden" data-step="3">
+        <h3>Sede de Emisión</h3>
+        <p>Seleccione su sede:</p>
+
+        <div class="sede-options">
+          <div class="sede" data-phone="04121506497">🏠 San Pablo (Principal)</div>
+          <div class="sede" data-phone="04120213946">🏢 Barquisimeto</div>
+          <div class="sede" data-phone="04121506491">🌆 Zulia</div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn_back">Atrás</button>
+          <button class="btn_ready_buy" id="btnCompletar" disabled>Completar Pedido</button>
+        </div>
+      </div>
+
+    </div>
   </section>
 
+
+
+
+
   <footer class="footer">
-     <!--
-    <div class="footer-container">
-
-      <!-- LOCALES
-      <div class="footer-section">
-        <h4>Nuestros Locales</h4>
-
-        <div class="location">
-          <strong>Tio Jaime – San Pablo</strong>
-          <p>Esquina calle San Agustín, sector carrizales</p>
-        </div>
-
-        <div class="location">
-          <strong>Tio Jaime – Barquisimeto</strong>
-          <p>Calle 21 con carrera 21</p>
-        </div>
-
-        <div class="location">
-          <strong>Tio Jaime – Ojeda</strong>
-          <p>Calle - con carrera -</p>
-        </div>
-      </div>
-
-      <!-- CONTACTO 
-      <div class="footer-section-contact">
-        <h4>Contáctanos.</h4>
-
-        <a href="https://instagram.com/tiojaimemuebleria" target="_blank" class="social">
-          <img src="/image/instagram.png" alt="logo" width="24px">
-        </a>
-
-        <a id="ws-modal" class="social">
-          <img src="/image/whatsapp.png" alt="logo" width="24px">
-        </a>
-      </div>
-
-      <div id="modal-container" class="modal-overlay">
-        <div class="modal-content-ws">
-          <div class="links-container">
-            <a href="https://wa.me/04121506497" class="location-link">
-              San Pablo Yaracuy <img src="/image/whatsapp.png" alt="logo" width="24px"></i>
-            </a>
-            <a href="https://wa.me/04120213946" class="location-link">
-              Lara Barquisimeto <img src="/image/whatsapp.png" alt="logo" width="24px"></i>
-            </a>
-            <a href="https://wa.me/0412021394" class="location-link">
-              Ciudad Ojeda Zulia <img src="/image/whatsapp.png" alt="logo" width="24px"></i>
-            </a>
-          </div>
-          <button id="close-modal" class="close-btn">Cerrar</button>
-        </div>
-      </div>
-    </div>
-    -->
     <div class="footer-bottom">
       © Mueblería Tio Jaime. Todos los derechos reservados.
     </div>
@@ -146,5 +163,6 @@
   <script src="/js/db.js"></script>
   <script src="/js/home.js"></script>
   <script src="/js/invoice.js"></script>
+  <script src="/js/invoice_steps.js"></script>
 </body>
 </html>
