@@ -161,6 +161,33 @@
 
   <section class="invoice-details">
     <div class="container">
+      <!-- FACTURA SIEMPRE VISIBLE -->
+      <div class="invoice-box">
+        <h2 class="section-title">Resumen de Operación</h2>
+
+        <div class="grid-invoice">
+          <div class="card">
+            <h3>Detalle de Factura</h3>
+
+            <div class="item">
+              <span>Fecha:</span>
+              <strong id="data_invoice"></strong>
+            </div>
+
+            <hr>
+
+            <div class="products-list" id="product_items"></div>
+
+            <div class="item total">
+              <span>Total a pagar:</span>
+              <span id="total_final">$0</span>
+            </div>
+
+            <div id="total_original" class="total-original"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="step-content" data-step="1">
         <h2 class="section-title">Método de Pago</h2>
 
@@ -188,33 +215,6 @@
         <div class="nav-buttons">
           <button class="btn_back btn_current_buy">Atrás</button>
           <button class="btn_ready_buy" id="btnCompletar" disabled>Completar Pedido</button>
-        </div>
-      </div>
-
-      <!-- FACTURA SIEMPRE VISIBLE -->
-      <div class="invoice-box">
-        <h2 class="section-title">Resumen de Operación</h2>
-
-        <div class="grid-invoice">
-          <div class="card">
-            <h3>Detalle de Factura</h3>
-
-            <div class="item">
-              <span>Fecha:</span>
-              <strong id="data_invoice"></strong>
-            </div>
-
-            <hr>
-
-            <div class="products-list" id="product_items"></div>
-
-            <div class="item total">
-              <span>Total a pagar:</span>
-              <span id="total_final">$0</span>
-            </div>
-
-            <div id="total_original" class="total-original"></div>
-          </div>
         </div>
       </div>
     </div>
