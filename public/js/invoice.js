@@ -197,6 +197,7 @@ const metodoPago = metodoSeleccionado;
   window.open(url, "_blank");
 
   localStorage.removeItem("productos_tjm")
+  window.location.href = "/";
 });
 
 
