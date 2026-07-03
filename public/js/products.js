@@ -18,21 +18,21 @@ const porcentajesPago = {
 // document.getElementById("materialSelect").addEventListener("change", actualizarDatos);
 // document.getElementById("cantidadInput").addEventListener("input", actualizarDatos);
 
-function actualizarDatos() {
-  // Asignación inmediata de valores ante cualquier cambio
-  colorProductWs = document.getElementById('colorInput').value;
-  materialProduct = document.getElementById('materialSelect').value;
-  cantidad = parseInt(document.getElementById('cantidadInput').value) || 0;
+// function actualizarDatos() {
+//   // Asignación inmediata de valores ante cualquier cambio
+//   colorProductWs = document.getElementById('colorInput').value;
+//   materialProduct = document.getElementById('materialSelect').value;
+//   cantidad = parseInt(document.getElementById('cantidadInput').value) || 0;
 
-  // Muestra en la consola cómo se actualizan las variables en tiempo real
-  console.log("--- Cambio detectado ---");
-  console.log("let colorProductWs =", colorProductWs);
-  console.log("let materialProduct =", materialProduct);
-  console.log("let cantidad =", cantidad);
-}
+//   // Muestra en la consola cómo se actualizan las variables en tiempo real
+//   console.log("--- Cambio detectado ---");
+//   console.log("let colorProductWs =", colorProductWs);
+//   console.log("let materialProduct =", materialProduct);
+//   console.log("let cantidad =", cantidad);
+// }
 
 // Ejecutamos una vez al cargar para tener los valores iniciales listos
-actualizarDatos();
+// actualizarDatos();
 
 async function fetchBinanceP2P(tradeType) {
   const url = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search";
