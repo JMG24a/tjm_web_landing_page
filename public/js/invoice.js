@@ -77,6 +77,7 @@ function cargarFactura() {
   let totalSinDescuento = 0;
 
   productosConPrecio.forEach((prod, index) => {
+    console.log("prod: ", prod)
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
 
