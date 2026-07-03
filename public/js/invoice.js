@@ -17,8 +17,13 @@ function aplicarMetodoPago(productos, metodo) {
 
   return productos.map(prod => {
     const precioBase = Number(prod.price);
+    console.log("prod.price: ", prod.price)
     const aumento = precioBase * (porcentaje / 100);
+    console.log("prod.aumento: ", aumento)
+
     const precioFinal = precioBase + aumento;
+    console.log("prod.precioFinal: ", precioFinal)
+
 
     return {
       ...prod,
