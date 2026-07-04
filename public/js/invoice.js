@@ -95,6 +95,11 @@ function cargarFactura() {
           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
 
+        <div class="price-box">
+          <span class="label">Color:</span>
+          <strong class="amount">${prod.color}</strong>
+        </div>
+
         <div class="price-box cantidad-box">
           <span class="label">Cantidad:</span>
           <div class="cantidad-controls">
