@@ -4,7 +4,7 @@ let priceProductWs = 0
 let nameProductWs
 let colorProductWs
 let materialProduct
-let cantidad
+let cantidad = 1
 let categoryProductWs
 const porcentajesPago = {
   multimuebles: 60,
