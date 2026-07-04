@@ -93,6 +93,21 @@ function cargarFactura() {
           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
 
+        <div class="price-box">
+          <span class="label">Color:</span>
+          <strong class="amount">$${prod.color}</strong>
+        </div>
+
+        <div class="price-box cantidad-box">
+          <span class="label">Cantidad:</span>
+
+          <div class="cantidad-controls">
+            <button class="qty-btn" data-action="minus" data-index="${index}"><</button>
+            <strong class="amount cantidad">${prod.cantidad}</strong>
+            <button class="qty-btn" data-action="plus" data-index="${index}">></button>
+          </div>
+        </div>
+
         <button class="delete-btn" data-index="${index}">Eliminar</button>
       </div>
     `;
@@ -156,3 +171,23 @@ document.querySelector(".payment-methods").addEventListener("change", cargarFact
 document.addEventListener("DOMContentLoaded", cargarFactura);
 
 
+// Activar botones de cantidad
+document.querySelectorAll(".qty-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const index = Number(btn.dataset.index);
+    const action = btn.dataset.action;
+
+    let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+
+    if (!productos[index].cantidad) productos[index].cantidad = 1;
+
+    if (action === "plus") {
+      productos[index].cantidad++;
+    } else if (action === "minus" && productos[index].cantidad > 1) {
+      productos[index].cantidad--;
+    }
+
+    localStorage.setItem("productos_tjm", JSON.stringify(productos));
+    cargarFactura();
+  });
+});
