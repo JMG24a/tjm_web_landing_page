@@ -24,7 +24,6 @@ function aplicarMetodoPago(productos, metodo) {
     const precioFinal = precioBase + aumento;
     console.log("prod.precioFinal: ", precioFinal)
 
-
     return {
       ...prod,
       precioFinal: precioFinal.toFixed(2)
@@ -57,6 +56,7 @@ sedeDivs.forEach(div => {
 
 function cargarFactura() {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+  console.log("🚀 ~ cargarFactura ~ productos:", productos)
   const contenedor = document.getElementById("product_items");
   const fechaEl = document.getElementById("data_invoice");
 
@@ -77,7 +77,7 @@ function cargarFactura() {
   let totalSinDescuento = 0;
 
   productosConPrecio.forEach((prod, index) => {
-    console.log("prod: ", (prod.precioFinal * prod.cantidad).toFixed(2))
+    console.log("prod22: ", prod)
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
 
@@ -116,63 +116,6 @@ function cargarFactura() {
     });
   });
 }
-
-
-// function cargarFactura() {
-//   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
-//   const contenedor = document.getElementById("product_items");
-//   const fechaEl = document.getElementById("data_invoice");
-
-//   if (productos.length === 0) {
-//     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
-//     document.getElementById("total_final").textContent = "$0";
-//     document.getElementById("total_original").textContent = "";
-//     return;
-//   }
-
-//   const fecha = new Date();
-//   const opciones = { day: "numeric", month: "long", year: "numeric" };
-//   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
-
-//   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
-//   contenedor.innerHTML = "";
-//   let total = 0;
-//   let totalSinDescuento = 0;
-
-//   productosConPrecio.forEach((prod, index) => {
-//     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
-//     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
-
-//     contenedor.innerHTML += `
-//       <div class="product-item">
-//         <div class="info">
-//           <span class="label">Producto:</span>
-//           <strong class="name">${prod.name}</strong>
-//         </div>
-
-//         <div class="price-box">
-//           <span class="label">Precio:</span>
-//           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
-//         </div>
-
-//         <button class="delete-btn" data-index="${index}">Eliminar</button>
-//       </div>
-//     `;
-//   });
-
-//   // Mostrar total final
-//   document.getElementById("total_final").textContent = `$${total.toFixed(2)}`;
-
-//   // Mostrar precio original si hay descuento
-//   const porcentaje = porcentajesPago[metodoSeleccionado];
-
-//   if (porcentaje < 0) {
-//     document.getElementById("total_original").textContent =
-//       `Precio original: $${totalSinDescuento.toFixed(2)}`;
-//   } else {
-//     document.getElementById("total_original").textContent = "";
-//   }
-// }
 
 function eliminarProducto(index) {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
