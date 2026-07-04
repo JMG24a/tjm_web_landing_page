@@ -11,7 +11,7 @@ const porcentajesPago = {
   comedores: 40,
   colchones: 40,
   dormitorios: 40,
-  sofas: 38
+  sofas: 35
 };
 
 // document.getElementById("colorInput").addEventListener("input", actualizarDatos);
