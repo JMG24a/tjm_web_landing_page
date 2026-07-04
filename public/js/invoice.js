@@ -17,12 +17,8 @@ function aplicarMetodoPago(productos, metodo) {
 
   return productos.map(prod => {
     const precioBase = Number(prod.price);
-    console.log("prod.price: ", prod.price)
     const aumento = precioBase * (porcentaje / 100);
-    console.log("prod.aumento: ", aumento)
-
     const precioFinal = precioBase + aumento;
-    console.log("prod.precioFinal: ", precioFinal)
 
     return {
       ...prod,
@@ -56,7 +52,6 @@ sedeDivs.forEach(div => {
 
 function cargarFactura() {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
-  console.log("🚀 ~ cargarFactura ~ productos:", productos)
   const contenedor = document.getElementById("product_items");
   const fechaEl = document.getElementById("data_invoice");
 
@@ -77,7 +72,6 @@ function cargarFactura() {
   let totalSinDescuento = 0;
 
   productosConPrecio.forEach((prod, index) => {
-    console.log("prod22: ", prod)
     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
 
@@ -95,7 +89,7 @@ function cargarFactura() {
 
         <div class="price-box">
           <span class="label">Color:</span>
-          <strong class="amount">$${prod.color}</strong>
+          <strong class="amount">${prod.color}</strong>
         </div>
 
         <div class="price-box cantidad-box">
@@ -186,6 +180,8 @@ document.querySelectorAll(".qty-btn").forEach(btn => {
     } else if (action === "minus" && productos[index].cantidad > 1) {
       productos[index].cantidad--;
     }
+
+    console.log("???: ", productos)
 
     localStorage.setItem("productos_tjm", JSON.stringify(productos));
     cargarFactura();
