@@ -60,11 +60,11 @@ const PRODUCTS = {
         },
         {
           img: "dormitorio_cama_hielo_black.png",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "dormitorio_cama_hielo_beige.png",
-          color: "Beige"
+          color: "beige"
         }
       ]
     },
@@ -77,15 +77,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_nube_beige.png",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "dormitorio_cama_nube_black.png",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "dormitorio_cama_nube_gray.png",
-          color: "Gris"
+          color: "gray"
         }
       ]
     },
@@ -114,11 +114,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_coco_pink.png",
-          color: "Rosa",
+          color: "pink",
         },
         {
           img: "dormitorio_cama_coco_beige.png",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },
@@ -148,15 +148,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_barco_beige.png",
-          color: "Beige"
+          color: "beige"
         },
         {
           img: "dormitorio_cama_barco_black.png",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "dormitorio_cama_barco_blue.png",
-          color: "Azul",
+          color: "blue",
         }
       ]
     },
@@ -177,7 +177,7 @@ const PRODUCTS = {
         },
         {
           img: "dormitorio_cama_sol_beige.png",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },
@@ -194,7 +194,7 @@ const PRODUCTS = {
         },
         {
           img: "dormitorio_cama_nene_beige.png",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },
@@ -215,7 +215,7 @@ const PRODUCTS = {
         },
         {
           img: "dormitorio_cama_moises_beige.png",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },
@@ -228,15 +228,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_triangular_red.png",
-          color: "Rojo",
+          color: "red",
         },
         {
           img: "dormitorio_cama_triangular_beige.png",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "dormitorio_cama_triangular_gray.png",
-          color: "Gris",
+          color: "gray",
         },
       ]
     },
@@ -249,7 +249,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_trendy.jpeg",
-          color: "Rosa",
+          color: "pink",
         },
       ]
     },
@@ -262,11 +262,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_cuna_duplex_pink.png",
-          color: "Rosa",
+          color: "pink",
         },
         {
           img: "dormitorio_cama_cuna_duplex_blue.png",
-          color: "Azul",
+          color: "blue",
         }
       ]
     },
@@ -282,15 +282,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_zultan_2_barrigas_beige.png",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_zultan_2_barrigas_gris.png",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_zultan_2_barrigas_black.png",
-          color: "Negro",
+          color: "black",
         }
       ]
     },
@@ -304,11 +304,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_zultan_chapa_gray.png ",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_zultan_chapa_black.png",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_zultan_chapa_white.png ",
@@ -326,11 +326,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_zultan_cuadrado_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_zultan_cuadrado_gray.jpeg",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_zultan_cuadrado_gray_black.jpeg",
@@ -348,11 +348,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_muebleL_red.png",
-          color: "Rojo",
+          color: "red",
         },
         {
           img: "sofa_muebleL_black.png ",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_muebleL_white.png",
@@ -382,11 +382,11 @@ const PRODUCTS = {
         },
         {
           img: "sofa_osman_gray_d.jpg",
-          color: "Gris"
+          color: "gray"
         },
         {
           img: "sofa_osman_beige_d.jpg",
-          color: "Beige"
+          color: "beige"
         }
       ]
     },
@@ -400,15 +400,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_hielo_gray.jpg",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_hielo_beige.jpg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_hielo_black.jpg",
-          color: "Negro",
+          color: "black",
         },
       ]
     },
@@ -451,15 +451,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_labros_beige.jpg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_labros_black.jpg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_labros_gray.jpg",
-          color: "Gris"
+          color: "gray"
         }
       ]
     },
@@ -473,7 +473,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_cairo_beige_d.jpg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_cairo_black_d.jpg",
@@ -498,7 +498,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_richard_black.jpeg",
-          color: "Negro"
+          color: "black"
         },
         {
           img: "sofa_richard_white.jpeg",
@@ -506,7 +506,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_richard_red.jpeg",
-          color: "Rojo",
+          color: "red",
         },
       ]
     },
@@ -538,15 +538,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_palermo_gray_black.PNG",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_palermo_beige.PNG",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_palermo_gray.PNG",
-          color: "Gris"
+          color: "gray"
         }
       ]
     },
@@ -560,11 +560,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_berlin_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_berlin_beige.jpeg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_berlin_white.jpeg",
@@ -589,11 +589,11 @@ const PRODUCTS = {
         },
         {
           img: "sofa_enmaly_beige.jpg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_enmaly_gray.jpg",
-          color: "Gris"
+          color: "gray"
         }
       ]
     },
@@ -606,7 +606,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_damasco_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_damasco_white.jpeg",
@@ -623,7 +623,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_roma_black.jpg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_roma_red.jpg",
@@ -631,7 +631,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_roma_gray.jpg",
-          color: "Gris"
+          color: "gray"
         },
         {
           img: "sofa_roma_white.jpg",
@@ -648,15 +648,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_zultan_3puestos_gray.jpeg",
-          color: "Gris"
+          color: "gray"
         },
         {
           img: "sofa_zultan_3puestos_gray_white.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_zultan_3puestos_beige.jpeg",
-          color: "Beige",
+          color: "beige",
         },
         {
           img: "sofa_zultan_3puestos_white.jpeg",
@@ -673,15 +673,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_normandy_beige.jpeg",
-          color: "Beige"
+          color: "beige"
         },
         {
           img: "sofa_normandy_gray.jpeg",
-          color: "Gris"
+          color: "gray"
         },
         {
           img: "sofa_normandy_blue.jpeg",
-          color: "Azul",
+          color: "blue",
         },
         {
           img: "sofa_normandy_brown.jpeg",
@@ -706,7 +706,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_paris_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
       ]
     },
@@ -719,15 +719,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_suiza_beige.jpeg",
-          color: "Beige"
+          color: "beige"
         },
         {
           img: "sofa_suiza_gray.jpeg",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_suiza_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_suiza_white.jpeg",
@@ -749,11 +749,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_nigeria_beige.jpeg",
-          color: "Beige"
+          color: "beige"
         },
         {
           img: "sofa_nigeria_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_nigeria_white.jpeg",
@@ -761,7 +761,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_nigeria_gray.jpeg",
-          color: "Gris",
+          color: "gray",
         },
       ]
     },
@@ -779,15 +779,15 @@ const PRODUCTS = {
         },
         {
           img: "sofa_barco_gray.jpeg",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_barco_black.jpeg",
-          color: "Negro",
+          color: "black",
         },
         {
           img: "sofa_barco_beige.jpeg",
-          color: "Beige",
+          color: "beige",
         }
       ]
     },
@@ -801,11 +801,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_sofa_cama_beige.jpeg",
-          color: "Beige"
+          color: "beige"
         },
         {
           img: "sofa_sofa_cama_gray.jpeg",
-          color: "Gris",
+          color: "gray",
         },
         {
           img: "sofa_sofa_cama_gray_black.jpeg",
@@ -817,7 +817,7 @@ const PRODUCTS = {
         },
         {
           img: "sofa_sofa_cama_beige_down.jpeg",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },
@@ -831,11 +831,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_lineal.png",
-          color: "Rojo"
+          color: "red"
         },
         {
           img: "sofa_lineal_beige.png",
-          color: "Beige",
+          color: "beige",
         },
       ]
     },

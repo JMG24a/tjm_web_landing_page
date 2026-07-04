@@ -62,9 +62,18 @@ function cargarFactura() {
     return;
   }
 
+  // Asegurar cantidad por defecto
+  productos = productos.map(p => ({
+    ...p,
+    cantidad: p.cantidad ? Number(p.cantidad) : 1
+  }));
+
   const fecha = new Date();
-  const opciones = { day: "numeric", month: "long", year: "numeric" };
-  fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
+  fechaEl.textContent = fecha.toLocaleDateString("es-ES", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
 
   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
   contenedor.innerHTML = "";
@@ -87,14 +96,8 @@ function cargarFactura() {
           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
         </div>
 
-        <div class="price-box">
-          <span class="label">Color:</span>
-          <strong class="amount">${prod.color}</strong>
-        </div>
-
         <div class="price-box cantidad-box">
           <span class="label">Cantidad:</span>
-
           <div class="cantidad-controls">
             <button class="qty-btn" data-action="minus" data-index="${index}"><</button>
             <strong class="amount cantidad">${prod.cantidad}</strong>
@@ -110,21 +113,114 @@ function cargarFactura() {
   document.getElementById("total_final").textContent = `$${total.toFixed(2)}`;
 
   const porcentaje = porcentajesPago[metodoSeleccionado];
+  document.getElementById("total_original").textContent =
+    porcentaje < 0 ? `Precio original: $${totalSinDescuento.toFixed(2)}` : "";
 
-  if (porcentaje < 0) {
-    document.getElementById("total_original").textContent =
-      `Precio original: $${totalSinDescuento.toFixed(2)}`;
-  } else {
-    document.getElementById("total_original").textContent = "";
-  }
-
-  // 🔥 REACTIVAR BOTONES DE ELIMINAR
+  // 🔥 ACTIVAR BOTONES DE ELIMINAR
   document.querySelectorAll(".delete-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       eliminarProducto(btn.dataset.index);
     });
   });
+
+  // 🔥 ACTIVAR BOTONES DE CANTIDAD (AQUÍ ESTÁ LA SOLUCIÓN)
+  document.querySelectorAll(".qty-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const index = Number(btn.dataset.index);
+      const action = btn.dataset.action;
+
+      let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+
+      if (!productos[index].cantidad) productos[index].cantidad = 1;
+
+      if (action === "plus") {
+        productos[index].cantidad++;
+      } else if (action === "minus" && productos[index].cantidad > 1) {
+        productos[index].cantidad--;
+      }
+
+      localStorage.setItem("productos_tjm", JSON.stringify(productos));
+      cargarFactura();
+    });
+  });
 }
+
+
+// function cargarFactura() {
+//   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
+//   const contenedor = document.getElementById("product_items");
+//   const fechaEl = document.getElementById("data_invoice");
+
+//   if (productos.length === 0) {
+//     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
+//     document.getElementById("total_final").textContent = "$0";
+//     document.getElementById("total_original").textContent = "";
+//     return;
+//   }
+
+//   const fecha = new Date();
+//   const opciones = { day: "numeric", month: "long", year: "numeric" };
+//   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
+
+//   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
+//   contenedor.innerHTML = "";
+//   let total = 0;
+//   let totalSinDescuento = 0;
+
+//   productosConPrecio.forEach((prod, index) => {
+//     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
+//     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
+
+//     contenedor.innerHTML += `
+//       <div class="product-item">
+//         <div class="info">
+//           <span class="label">Producto:</span>
+//           <strong class="name">${prod.name}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Precio:</span>
+//           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
+//         </div>
+
+//         <div class="price-box">
+//           <span class="label">Color:</span>
+//           <strong class="amount">${prod.color}</strong>
+//         </div>
+
+//         <div class="price-box cantidad-box">
+//           <span class="label">Cantidad:</span>
+
+//           <div class="cantidad-controls">
+//             <button class="qty-btn" data-action="minus" data-index="${index}"><</button>
+//             <strong class="amount cantidad">${prod.cantidad}</strong>
+//             <button class="qty-btn" data-action="plus" data-index="${index}">></button>
+//           </div>
+//         </div>
+
+//         <button class="delete-btn" data-index="${index}">Eliminar</button>
+//       </div>
+//     `;
+//   });
+
+//   document.getElementById("total_final").textContent = `$${total.toFixed(2)}`;
+
+//   const porcentaje = porcentajesPago[metodoSeleccionado];
+
+//   if (porcentaje < 0) {
+//     document.getElementById("total_original").textContent =
+//       `Precio original: $${totalSinDescuento.toFixed(2)}`;
+//   } else {
+//     document.getElementById("total_original").textContent = "";
+//   }
+
+//   // 🔥 REACTIVAR BOTONES DE ELIMINAR
+//   document.querySelectorAll(".delete-btn").forEach(btn => {
+//     btn.addEventListener("click", () => {
+//       eliminarProducto(btn.dataset.index);
+//     });
+//   });
+// }
 
 function eliminarProducto(index) {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
@@ -163,27 +259,3 @@ const metodoPago = metodoSeleccionado;
 // Ejecutar al cargar la página
 document.querySelector(".payment-methods").addEventListener("change", cargarFactura);
 document.addEventListener("DOMContentLoaded", cargarFactura);
-
-
-// Activar botones de cantidad
-document.querySelectorAll(".qty-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const index = Number(btn.dataset.index);
-    const action = btn.dataset.action;
-
-    let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
-
-    if (!productos[index].cantidad) productos[index].cantidad = 1;
-
-    if (action === "plus") {
-      productos[index].cantidad++;
-    } else if (action === "minus" && productos[index].cantidad > 1) {
-      productos[index].cantidad--;
-    }
-
-    console.log("???: ", productos)
-
-    localStorage.setItem("productos_tjm", JSON.stringify(productos));
-    cargarFactura();
-  });
-});
