@@ -246,11 +246,32 @@ const metodoPago = metodoSeleccionado;
   const productosConPrecio = aplicarMetodoPago(productos, metodoPago);
 
   // Construir mensaje
-  let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
+  // let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
+  // productosConPrecio.forEach(p => {
+  //   mensaje += `- ${p.name} | ${p.color} | $${p.precioFinal}\n`;
+  // });
+  // mensaje += `\nSede: ${sedes[telefonoSede]}`;
+
+  let mensaje =
+  `✨ *Hola! Quiero completar mi pedido* ✨
+
+  🧾 *Método de pago:* ${metodoPago}
+
+  🛍️ *Productos seleccionados:*`;
+
   productosConPrecio.forEach(p => {
-    mensaje += `- ${p.name} | ${p.color} | ${p.material} | $${p.precioFinal}\n`;
+    mensaje += `
+  • 🛏️ *${p.name}*
+    🎨 Color: ${p.color}
+    📦 Cantidad: ${p.cantidad}
+    💵 Precio: $${p.precioFinal}
+  `;
   });
-  mensaje += `\nSede: ${sedes[telefonoSede]}`;
+
+  mensaje += `
+  📍 *Sede de retiro:* ${sedes[telefonoSede]}
+
+  🙏 Gracias por su atención.`;
   // URL de WhatsApp
   const url = `https://wa.me/${telefonoSede}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
