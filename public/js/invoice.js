@@ -12,7 +12,6 @@ const sedes = {
 }
 
 function aplicarMetodoPago(productos, metodo) {
-  console.log("productos: ", productos)
   const porcentaje = porcentajesPago[metodo] || 0;
 
   return productos.map(prod => {
