@@ -6,9 +6,9 @@ const porcentajesPago = {
 };
 
 const sedes = {
-  "04121506497": "San Pablo",
-  "04120213946": "Barquisimeto",
-  "04121506491": "Zulia",
+  "584228463448": "San Pablo",
+  "584120213946": "Barquisimeto",
+  "584121506491": "Zulia",
 }
 
 function aplicarMetodoPago(productos, metodo) {
