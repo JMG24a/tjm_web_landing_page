@@ -13,6 +13,10 @@
   object-position: center center; /* centra el video vertical y horizontalmente */
 }
 
+video::-webkit-media-controls {
+  display: none !important;
+}
+
 @media (max-width: 480px) {
   .video-container {
     height: 50vh; /* altura deseada */
