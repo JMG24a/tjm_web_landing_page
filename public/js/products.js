@@ -1,5 +1,6 @@
 const priceElement = document.getElementById("product-price")
 
+let idProductSelected = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
@@ -200,6 +201,7 @@ function renderColors(colors, container) {
 
 function setupBaseModal(product) {
   verificarSesion(product.id)
+  idProductSelected = product.id;
   document.getElementById("modal-img").src = `/image/${product.img}`;
   // global name
   nameProductWs = product.name
@@ -217,7 +219,7 @@ function setupBaseModal(product) {
   };
 }
 
-async function guardarPrecio(id) {
+async function guardarPrecio() {
   if (!localStorage.getItem("session_tjm")) {
     alert("No tienes permisos");
     return;
@@ -231,7 +233,7 @@ async function guardarPrecio(id) {
   }
 
   const body = {
-    id: Number(id),
+    id: Number(idProductSelected),
     precio: Number(nuevoPrecio)
   };
 
