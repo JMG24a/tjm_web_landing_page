@@ -8,11 +8,11 @@ let materialProduct
 let cantidad = 1
 let categoryProductWs
 const porcentajesPago = {
-  multimuebles: 60,
+  multimuebles: 40,
   comedores: 40,
   colchones: 40,
   dormitorios: 40,
-  sofas: 36
+  sofas: 40
 };
 
 // document.getElementById("colorInput").addEventListener("input", actualizarDatos);
