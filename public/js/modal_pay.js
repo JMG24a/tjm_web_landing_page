@@ -39,7 +39,8 @@ payBtn.addEventListener("click", () => {
     nameProductWs,
     colorProductWs,
     materialProduct,
-    cantidad
+    cantidad,
+    percentagePayCategory
   })
 
   const producto = {
@@ -48,6 +49,7 @@ payBtn.addEventListener("click", () => {
     color: colorProductWs,
     material: materialProduct,
     cantidad: cantidad,
+    category: percentagePayCategory
   };
 
   guardarProductoEnLocalStorage(producto);

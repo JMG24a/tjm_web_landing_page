@@ -1,6 +1,7 @@
 const priceElement = document.getElementById("product-price")
 
 let idProductSelected = 0
+let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
@@ -130,9 +131,10 @@ if (goHomeBtn) {
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id) {
   try {
+    percentagePayCategory = porcentajesPago[categoryProductWs]
     const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
-    pricePlus5 = calcularAumento(data.precio, 7);
+    pricePlus5 = calcularAumento(data.precio, 5);
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(pricePlus5, porcentage);
@@ -148,6 +150,7 @@ async function loadProductPrice(id) {
 
 async function loadProductPrices(ids = []) {
   try {
+    percentagePayCategory = porcentajesPago[categoryProductWs]
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
     const requests = ids.map(id =>
@@ -156,7 +159,7 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
 
-    const newR = results.map(data => calcularAumento(data.precio, 7));
+    const newR = results.map(data => calcularAumento(data.precio, 5));
     const bcv = newR.map(data => calcularAumento(data, porcentage));
 
     priceProductWs = bcv[0]

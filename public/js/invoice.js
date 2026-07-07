@@ -11,20 +11,56 @@ const sedes = {
   "584121506491": "Zulia",
 }
 
+// function aplicarMetodoPago(productos, metodo) {
+//   const porcentaje = porcentajesPago[metodo] || 0;
+
+//   return productos.map(prod => {
+//     const precioBase = Number(prod.price);
+//     const aumento = precioBase * (porcentaje / 100);
+//     const precioFinal = precioBase + aumento;
+
+//     return {
+//       ...prod,
+//       precioFinal: precioFinal.toFixed(2)
+//     };
+//   });
+// }
+
 function aplicarMetodoPago(productos, metodo) {
-  const porcentaje = porcentajesPago[metodo] || 0;
+  if (!productos.length) return productos;
+
+  const categoria = Number(productos[0].category) || 0;
 
   return productos.map(prod => {
     const precioBase = Number(prod.price);
-    const aumento = precioBase * (porcentaje / 100);
-    const precioFinal = precioBase + aumento;
+    let precioFinal = precioBase;
+
+    switch (metodo) {
+      case "Transferencia":
+      case "Cashea":
+        // Sin descuento
+        precioFinal = precioBase;
+        break;
+
+      case "Zelle":
+      case "Binance":
+        // Quitar el porcentaje agregado previamente
+        const factor = 1 + (categoria / 100);
+        precioFinal = precioBase / factor;
+        break;
+
+      default:
+        precioFinal = precioBase;
+        break;
+    }
 
     return {
       ...prod,
-      precioFinal: precioFinal.toFixed(2)
+      precioFinal: Number(precioFinal.toFixed(2))
     };
   });
 }
+
 
 const metodoDivs = document.querySelectorAll(".method");
 let metodoSeleccionado = "Transferencia";
