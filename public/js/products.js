@@ -430,14 +430,14 @@ function setupDormitorio(product) {
   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
   function seleccionarMedida(index) {
     btnElements.forEach((el, i) => {
-      console.log("🚀 ~ seleccionarMedida ~ el, i:", el, i)
-      // idProductSelected = product.id;
       el.wrapper.classList.toggle("selected", i === index);
     });
 
     // Guardar variables globales
     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
     nameProductWs = `${product.name} ${btnElements[index].label}`;
+    idProductSelected = `${product.name}${btnElements[index].position}`;
+    idProductSelected = Number(idProductSelected);
   }
 
   // Asignar eventos de click
