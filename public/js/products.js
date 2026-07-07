@@ -200,7 +200,7 @@ function renderColors(colors, container) {
 }
 
 function setupBaseModal(product) {
-  verificarSesion(product.id)
+  verificarSesion(product.id);
   idProductSelected = product.id;
   document.getElementById("modal-img").src = `/image/${product.img}`;
   // global name
@@ -224,9 +224,7 @@ async function guardarPrecio() {
     alert("No tienes permisos");
     return;
   }
-
   const nuevoPrecio = document.getElementById("precioInput").value;
-
   if (!nuevoPrecio) {
     alert("Debes ingresar un precio");
     return;
@@ -432,6 +430,8 @@ function setupDormitorio(product) {
   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
   function seleccionarMedida(index) {
     btnElements.forEach((el, i) => {
+      console.log("🚀 ~ seleccionarMedida ~ el, i:", el, i)
+      // idProductSelected = product.id;
       el.wrapper.classList.toggle("selected", i === index);
     });
 
@@ -619,7 +619,6 @@ function renderSuggestions(product, category) {
 function openProductModal(product, category) {
   showTopBarModal()
   const modal = document.getElementById("product-modal")
-
   setupBaseModal(product);
   categoryProductWs = category
   switch (category) {
