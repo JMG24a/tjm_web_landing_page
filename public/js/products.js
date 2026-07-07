@@ -436,11 +436,9 @@ function setupDormitorio(product) {
     // Guardar variables globales
     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
     nameProductWs = `${product.name} ${btnElements[index].label}`;
-    idProductSelected = `${product.name}${btnElements[index].position}`;
-    console.log("${btnElements[index].position}`:", btnElements[index].position)
-    console.log("🚀 ~ seleccionarMedida ~ idProductSelected:", idProductSelected)
+    idProductSelected = `${product.id}${btnElements[index].position}`;
     idProductSelected = Number(idProductSelected);
-    console.log("🚀 ~ selecc:", idProductSelected)
+    verificarSesion(idProductSelected)
   }
 
   // Asignar eventos de click
