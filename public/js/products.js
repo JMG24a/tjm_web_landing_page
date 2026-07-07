@@ -437,7 +437,10 @@ function setupDormitorio(product) {
     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
     nameProductWs = `${product.name} ${btnElements[index].label}`;
     idProductSelected = `${product.name}${btnElements[index].position}`;
+    console.log("${btnElements[index].position}`:", btnElements[index].position)
+    console.log("🚀 ~ seleccionarMedida ~ idProductSelected:", idProductSelected)
     idProductSelected = Number(idProductSelected);
+    console.log("🚀 ~ selecc:", idProductSelected)
   }
 
   // Asignar eventos de click
