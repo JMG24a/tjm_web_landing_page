@@ -139,3 +139,45 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.payment-methods {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.payment-methods li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.method {
+  background: var(--white);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.method:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.method.active {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
