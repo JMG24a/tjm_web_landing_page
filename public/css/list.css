@@ -238,3 +238,30 @@ button:hover {
 .custom-select.open .arrow {
   transform: rotate(180deg);
 }
+
+.selected-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.selected-wrapper img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.selected-wrapper .method-name {
+  font-weight: 500;
+}
+
+.selected-wrapper .badge {
+  background: #1562c2;
+  color: #f2e088;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}

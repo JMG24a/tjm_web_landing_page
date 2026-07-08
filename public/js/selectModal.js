@@ -12,9 +12,17 @@ trigger.addEventListener("click", () => {
 options.forEach(opt => {
   opt.addEventListener("click", () => {
     metodoSeleccionado = opt.dataset.value;
-    selectedOption.textContent = opt.querySelector(".method-name").textContent;
+    const img = opt.querySelector("img")?.outerHTML || "";
+    const name = opt.querySelector(".method-name")?.outerHTML || "";
+    const badge = opt.querySelector(".badge")?.outerHTML || "";
+    selectedOption.innerHTML = `
+      <div class="selected-wrapper">
+        ${img}
+        ${name}
+        ${badge}
+      </div>
+    `;
     select.classList.remove("open");
-
     if (typeof cargarFactura === "function") {
       cargarFactura();
     }
