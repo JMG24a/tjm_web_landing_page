@@ -27,7 +27,6 @@ options.forEach(opt => {
     temp.innerHTML = name;
     const text = temp.textContent.trim();
     loadPayPercentage(text);
-
   });
 });
 
@@ -36,3 +35,51 @@ document.addEventListener("click", (e) => {
     select.classList.remove("open");
   }
 });
+
+const payBtn = document.getElementById("pay");
+payBtn.addEventListener("click", () => {
+  const price = document.getElementById("product-price");
+  const pricePay = price.textContent.trim()
+  console.log("IS Rigth Here??", {
+    priceProductWs,
+    nameProductWs,
+    colorProductWs,
+    materialProduct,
+    cantidad,
+    percentagePayCategory
+  })
+
+  const producto = {
+    name: nameProductWs,
+    color: colorProductWs,
+    material: materialProduct,
+    cantidad: cantidadWs,
+    method: methodPayProductWs
+  };
+
+  let mensaje =
+  `✨ *Hola! Quiero completar mi pedido* ✨
+
+  🧾 *Método de pago:* ${producto.method}
+
+  🛍️ *Productos seleccionados:*`;
+
+  productosConPrecio.forEach(p => {
+    mensaje += `
+  • 🛏️ *${producto.name}*
+    🎨 Color: ${producto.color}
+    📦 Cantidad: ${producto.cantidad}
+    💵 Precio: $${pricePay * producto.cantidad}
+  `;
+  });
+
+  mensaje += `
+  📍 *Sede de retiro:* ${sedes[telefonoSede]}
+
+  🙏 Gracias por su atención.`;
+  // URL de WhatsApp
+  const url = `https://wa.me/${580328399}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
+
+  window.location.href = "/";
+})

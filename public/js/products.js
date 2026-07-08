@@ -5,8 +5,9 @@ let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
+let methodPayProductWs
 let materialProduct
-let cantidad = 1
+let cantidadWs = 1
 let categoryProductWs
 const porcentajesPago = {
   multimuebles: 40,
@@ -174,12 +175,10 @@ async function loadProductPrices(ids = []) {
 function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
   let precioFinal = priceProductWs;
-
+  methodPayProductWs = metodo
   switch (metodo) {
     case "Transferencia":
     case "Cashea":
-      console.log("HELLOBSs")
-
       // Sin descuento
       price.classList.remove("displayNone")
       price.innerHTML = `$${priceProductWs}`
@@ -188,8 +187,6 @@ function loadPayPercentage(metodo){
     case "Zelle":
     case "Binance":
       // Quitar el porcentaje agregado previamente
-      console.log("HELLO$$$")
-
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${priceProductWs / factor}`;
       break;
