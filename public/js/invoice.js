@@ -7,7 +7,7 @@ const porcentajesPago = {
 
 const sedes = {
   "584228463448": "San Pablo",
-  "584120213946": "Barquisimeto",
+  "584120328399": "Barquisimeto",
   "584121506491": "Zulia",
 }
 

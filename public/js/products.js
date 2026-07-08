@@ -36,6 +36,7 @@ const porcentajesPago = {
 // Ejecutamos una vez al cargar para tener los valores iniciales listos
 // actualizarDatos();
 
+
 async function fetchBinanceP2P(tradeType) {
   const url = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search";
 
@@ -76,7 +77,7 @@ async function getUSDTPriceVES() {
 }
 
 // Ejecución
-getUSDTPriceVES().then(console.log);
+// getUSDTPriceVES().then(console.log);
 
 async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
@@ -170,6 +171,35 @@ async function loadProductPrices(ids = []) {
   }
 }
 
+function loadPayPercentage(){
+  console.log("HELLO3")
+  const price = document.getElementById("product-price");
+  let precioFinal = precioBase;
+
+  switch (metodo) {
+    case "Transferencia":
+    case "Cashea":
+      console.log("HELLOBSs")
+
+      // Sin descuento
+      price.classList.remove("displayNone")
+      price.innerHTML = priceProductWs
+      break;
+
+    case "Zelle":
+    case "Binance":
+      // Quitar el porcentaje agregado previamente
+      console.log("HELLO$$$")
+
+      const factor = 1 + (percentagePayCategory / 100);
+      price.innerHTML = priceProductWs / factor;
+      break;
+
+    default:
+       price.innerHTML = precioBase;
+      break;
+  }
+}
 
 // 2. Obtener precio del dólar
 async function getDollarRate() {

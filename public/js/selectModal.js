@@ -23,8 +23,11 @@ options.forEach(opt => {
       </div>
     `;
     select.classList.remove("open");
-    if (typeof cargarFactura === "function") {
-      cargarFactura();
+      console.log("HELLO?1")
+
+    if (typeof loadPay === "function") {
+      console.log("HELLO2")
+      loadPayPercentage();
     }
   });
 });
