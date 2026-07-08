@@ -141,7 +141,7 @@ button:hover {
 }
 
 .custom-select {
-  width: 90%;
+  width: 100%;
   position: relative;
   font-family: sans-serif;
 }

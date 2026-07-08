@@ -1,10 +1,10 @@
 let metodoSeleccionado = "Cashea"; // default
-
 const select = document.getElementById("paymentSelect");
 const trigger = select.querySelector(".select-trigger");
 const selectedOption = select.querySelector(".selected-option");
 const options = select.querySelectorAll(".option");
 
+console.log("???")
 trigger.addEventListener("click", () => {
   select.classList.toggle("open");
 });
@@ -16,9 +16,9 @@ options.forEach(opt => {
     select.classList.remove("open");
 
     // Recalcular factura si quieres
-    if (typeof cargarFactura === "function") {
-      cargarFactura();
-    }
+    // if (typeof cargarFactura === "function") {
+    //   cargarFactura();
+    // }
   });
 });
 
