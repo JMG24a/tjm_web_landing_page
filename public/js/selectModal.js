@@ -90,7 +90,7 @@ payBtn.addEventListener("click", () => {
   📦 Cantidad: ${producto.cantidad}
   💵 Precio: $${priceProductWs * producto.cantidad}
 
-📍 *Sede de retiro:* ${sedes[telefonoSede]}
+📍 *Sede de retiro:* ${"sedes[ubicacion]"}
 
 🙏 Gracias por su atención.`;
 
