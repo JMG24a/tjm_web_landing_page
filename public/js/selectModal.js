@@ -45,7 +45,7 @@ payBtn.addEventListener("click", () => {
     nameProductWs,
     colorProductWs,
     materialProduct,
-    cantidad,
+    cantidadWs,
     percentagePayCategory
   })
 
