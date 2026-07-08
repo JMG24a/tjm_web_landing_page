@@ -23,9 +23,10 @@ options.forEach(opt => {
       </div>
     `;
     select.classList.remove("open");
-
-    console.log("HELLO2", name)
-    loadPayPercentage(name);
+    const temp = document.createElement('div');
+    temp.innerHTML = name;
+    const text = temp.textContent.trim();
+    loadPayPercentage(text);
 
   });
 });
