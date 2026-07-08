@@ -174,7 +174,7 @@ async function loadProductPrices(ids = []) {
 function loadPayPercentage(metodo){
   console.log("HELLO3")
   const price = document.getElementById("product-price");
-  let precioFinal = precioBase;
+  let precioFinal = priceProductWs;
 
   switch (metodo) {
     case "Transferencia":
