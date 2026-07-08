@@ -85,11 +85,18 @@
               <p id="product-price" class="product-price displayNone"></p>
             </div>
             <div class="modal-colors" id="modal-colors"></div>
-            <div class="payment-methods">
-              <div class="method" data-value="Transferencia">🏦 Transferencia Bancaria</div>
-              <div class="method" data-value="Cashea">🪙 Cashea</div>
-              <div class="method" data-value="Zelle">💷 Zelle -25%</div>
-              <div class="method" data-value="Binance">📱 Binance -25%</div>
+            <div class="custom-select" id="paymentSelect">
+              <div class="select-trigger">
+                <span class="selected-option">🪙 Cashea</span>
+                <span class="arrow">▼</span>
+              </div>
+
+              <div class="select-options">
+                <div class="option" data-value="Transferencia">🏦 Transferencia Bancaria</div>
+                <div class="option" data-value="Cashea">🪙 Cashea</div>
+                <div class="option" data-value="Zelle">💷 Zelle -25%</div>
+                <div class="option" data-value="Binance">📱 Binance -25%</div>
+              </div>
             </div>
             <div class="modal-opens" id="pay">Comprar <img src="/image/carrito.png" width="25px" height="25px" alt="carrito"></div>
             <p>📄 Garantía de 2 años.</p>
@@ -163,6 +170,7 @@
     <script src="/js/products.js"></script>
     <script src="/js/admin.js"></script>
     <script src="/js/modal_pay.js"></script>
+    <script src="/js/selectModal.js"></script>
     <!-- <script src="/js/router.js"></script> -->
   </body>
 </html>
