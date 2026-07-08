@@ -23,12 +23,10 @@ options.forEach(opt => {
       </div>
     `;
     select.classList.remove("open");
-      console.log("HELLO?1")
 
-    if (typeof loadPay === "function") {
-      console.log("HELLO2")
-      loadPayPercentage();
-    }
+    console.log("HELLO2")
+    loadPayPercentage();
+
   });
 });
 
