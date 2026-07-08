@@ -55,27 +55,49 @@ payBtn.addEventListener("click", () => {
     method: methodPayProductWs
   };
 
+  // let mensaje =
+  // `✨ *Hola! Quiero completar mi pedido* ✨
+
+  // 🧾 *Método de pago:* ${producto.method}
+
+  // 🛍️ *Producto seleccionado:*`;
+
+  // mensaje += `
+  // • 🛏️ *${producto.name}*
+  //   🎨 Color: ${producto.color}
+  //   📦 Cantidad: ${producto.cantidad}
+  //   💵 Precio: $${priceProductWs * producto.cantidad}
+  // `;
+
+  // mensaje += `
+  // 📍 *Sede de retiro:* ${"sedes[telefonoSede]"}
+
+  // 🙏 Gracias por su atención.`;
+  // // URL de WhatsApp
+  // const url = `https://wa.me/${580328399}?text=${encodeURIComponent(mensaje)}`;
+  // window.open(url, "_blank");
+
+  // window.location.href = "/";
+
   let mensaje =
-  `✨ *Hola! Quiero completar mi pedido* ✨
+`✨ *Hola! Quiero completar mi pedido* ✨
 
-  🧾 *Método de pago:* ${producto.method}
+🧾 *Método de pago:* ${producto.method}
 
-  🛍️ *Producto seleccionado:*`;
+🛍️ *Producto seleccionado:*
+• 🛏️ *${producto.name}*
+  🎨 Color: ${producto.color}
+  📦 Cantidad: ${producto.cantidad}
+  💵 Precio: $${priceProductWs * producto.cantidad}
 
-  mensaje += `
-  • 🛏️ *${producto.name}*
-    🎨 Color: ${producto.color}
-    📦 Cantidad: ${producto.cantidad}
-    💵 Precio: $${priceProductWs * producto.cantidad}
-  `;
+📍 *Sede de retiro:* ${sedes[telefonoSede]}
 
-  mensaje += `
-  📍 *Sede de retiro:* ${"sedes[telefonoSede]"}
+🙏 Gracias por su atención.`;
 
-  🙏 Gracias por su atención.`;
-  // URL de WhatsApp
-  const url = `https://wa.me/${580328399}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+// URL de WhatsApp
+const url = `https://wa.me/${580328399}?text=${encodeURIComponent(mensaje)}`;
+window.open(url, "_blank");
 
-  window.location.href = "/";
+window.location.href = "/";
+
 })
