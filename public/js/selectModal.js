@@ -25,7 +25,7 @@ options.forEach(opt => {
     select.classList.remove("open");
 
     console.log("HELLO2")
-    loadPayPercentage();
+    loadPayPercentage(name);
 
   });
 });

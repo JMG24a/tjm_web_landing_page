@@ -171,7 +171,7 @@ async function loadProductPrices(ids = []) {
   }
 }
 
-function loadPayPercentage(){
+function loadPayPercentage(metodo){
   console.log("HELLO3")
   const price = document.getElementById("product-price");
   let precioFinal = precioBase;
@@ -196,7 +196,7 @@ function loadPayPercentage(){
       break;
 
     default:
-       price.innerHTML = precioBase;
+       price.innerHTML = priceProductWs;
       break;
   }
 }
