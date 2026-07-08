@@ -38,8 +38,6 @@ document.addEventListener("click", (e) => {
 
 const payBtn = document.getElementById("pay");
 payBtn.addEventListener("click", () => {
-  const price = document.getElementById("product-price");
-  const pricePay = price.textContent.trim()
   console.log("IS Rigth Here??", {
     priceProductWs,
     nameProductWs,
@@ -68,7 +66,7 @@ payBtn.addEventListener("click", () => {
   • 🛏️ *${producto.name}*
     🎨 Color: ${producto.color}
     📦 Cantidad: ${producto.cantidad}
-    💵 Precio: $${pricePay * producto.cantidad}
+    💵 Precio: $${priceProductWs * producto.cantidad}
   `;
 
   mensaje += `

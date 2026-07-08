@@ -189,6 +189,7 @@ function loadPayPercentage(metodo){
       // Quitar el porcentaje agregado previamente
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${priceProductWs / factor}`;
+      priceProductWs = `$${priceProductWs / factor}`
       break;
 
     default:
