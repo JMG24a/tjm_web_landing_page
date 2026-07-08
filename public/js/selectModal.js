@@ -62,19 +62,17 @@ payBtn.addEventListener("click", () => {
 
   🧾 *Método de pago:* ${producto.method}
 
-  🛍️ *Productos seleccionados:*`;
+  🛍️ *Producto seleccionado:*`;
 
-  productosConPrecio.forEach(p => {
-    mensaje += `
+  mensaje += `
   • 🛏️ *${producto.name}*
     🎨 Color: ${producto.color}
     📦 Cantidad: ${producto.cantidad}
     💵 Precio: $${pricePay * producto.cantidad}
   `;
-  });
 
   mensaje += `
-  📍 *Sede de retiro:* ${sedes[telefonoSede]}
+  📍 *Sede de retiro:* ${"sedes[telefonoSede]"}
 
   🙏 Gracias por su atención.`;
   // URL de WhatsApp
