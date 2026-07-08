@@ -11,21 +11,6 @@ const sedes = {
   "584121506491": "Zulia",
 }
 
-// function aplicarMetodoPago(productos, metodo) {
-//   const porcentaje = porcentajesPago[metodo] || 0;
-
-//   return productos.map(prod => {
-//     const precioBase = Number(prod.price);
-//     const aumento = precioBase * (porcentaje / 100);
-//     const precioFinal = precioBase + aumento;
-
-//     return {
-//       ...prod,
-//       precioFinal: precioFinal.toFixed(2)
-//     };
-//   });
-// }
-
 function aplicarMetodoPago(productos, metodo) {
   if (!productos.length) return productos;
 
@@ -185,83 +170,6 @@ function cargarFactura() {
   });
 }
 
-
-// function cargarFactura() {
-//   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
-//   const contenedor = document.getElementById("product_items");
-//   const fechaEl = document.getElementById("data_invoice");
-
-//   if (productos.length === 0) {
-//     contenedor.innerHTML = "<p>No hay productos en la factura.</p>";
-//     document.getElementById("total_final").textContent = "$0";
-//     document.getElementById("total_original").textContent = "";
-//     return;
-//   }
-
-//   const fecha = new Date();
-//   const opciones = { day: "numeric", month: "long", year: "numeric" };
-//   fechaEl.textContent = fecha.toLocaleDateString("es-ES", opciones);
-
-//   const productosConPrecio = aplicarMetodoPago(productos, metodoSeleccionado);
-//   contenedor.innerHTML = "";
-//   let total = 0;
-//   let totalSinDescuento = 0;
-
-//   productosConPrecio.forEach((prod, index) => {
-//     total += Number((prod.precioFinal * prod.cantidad).toFixed(2));
-//     totalSinDescuento += Number((prod.price * prod.cantidad).toFixed(2));
-
-//     contenedor.innerHTML += `
-//       <div class="product-item">
-//         <div class="info">
-//           <span class="label">Producto:</span>
-//           <strong class="name">${prod.name}</strong>
-//         </div>
-
-//         <div class="price-box">
-//           <span class="label">Precio:</span>
-//           <strong class="amount">$${(prod.precioFinal * prod.cantidad).toFixed(2)}</strong>
-//         </div>
-
-//         <div class="price-box">
-//           <span class="label">Color:</span>
-//           <strong class="amount">${prod.color}</strong>
-//         </div>
-
-//         <div class="price-box cantidad-box">
-//           <span class="label">Cantidad:</span>
-
-//           <div class="cantidad-controls">
-//             <button class="qty-btn" data-action="minus" data-index="${index}"><</button>
-//             <strong class="amount cantidad">${prod.cantidad}</strong>
-//             <button class="qty-btn" data-action="plus" data-index="${index}">></button>
-//           </div>
-//         </div>
-
-//         <button class="delete-btn" data-index="${index}">Eliminar</button>
-//       </div>
-//     `;
-//   });
-
-//   document.getElementById("total_final").textContent = `$${total.toFixed(2)}`;
-
-//   const porcentaje = porcentajesPago[metodoSeleccionado];
-
-//   if (porcentaje < 0) {
-//     document.getElementById("total_original").textContent =
-//       `Precio original: $${totalSinDescuento.toFixed(2)}`;
-//   } else {
-//     document.getElementById("total_original").textContent = "";
-//   }
-
-//   // 🔥 REACTIVAR BOTONES DE ELIMINAR
-//   document.querySelectorAll(".delete-btn").forEach(btn => {
-//     btn.addEventListener("click", () => {
-//       eliminarProducto(btn.dataset.index);
-//     });
-//   });
-// }
-
 function eliminarProducto(index) {
   let productos = JSON.parse(localStorage.getItem("productos_tjm")) || [];
   productos.splice(index, 1); // eliminar por índice
@@ -280,13 +188,6 @@ const metodoPago = metodoSeleccionado;
 
   // Recalcular precios según método de pago
   const productosConPrecio = aplicarMetodoPago(productos, metodoPago);
-
-  // Construir mensaje
-  // let mensaje = `Hola, quiero completar mi pedido.\n\nMétodo de pago: ${metodoPago}\n\nProductos:\n`;
-  // productosConPrecio.forEach(p => {
-  //   mensaje += `- ${p.name} | ${p.color} | $${p.precioFinal}\n`;
-  // });
-  // mensaje += `\nSede: ${sedes[telefonoSede]}`;
 
   let mensaje =
   `✨ *Hola! Quiero completar mi pedido* ✨

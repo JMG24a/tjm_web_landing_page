@@ -1,5 +1,5 @@
-console.log("??? select")
-let metodoSeleccionado = "Cashea"; // default
+let metodoSeleccionado = "Cashea";
+
 const select = document.getElementById("paymentSelect");
 const trigger = select.querySelector(".select-trigger");
 const selectedOption = select.querySelector(".selected-option");
@@ -12,17 +12,15 @@ trigger.addEventListener("click", () => {
 options.forEach(opt => {
   opt.addEventListener("click", () => {
     metodoSeleccionado = opt.dataset.value;
-    selectedOption.textContent = opt.textContent;
+    selectedOption.textContent = opt.querySelector(".method-name").textContent;
     select.classList.remove("open");
 
-    // Recalcular factura si quieres
-    // if (typeof cargarFactura === "function") {
-    //   cargarFactura();
-    // }
+    if (typeof cargarFactura === "function") {
+      cargarFactura();
+    }
   });
 });
 
-// Cerrar si se hace click fuera
 document.addEventListener("click", (e) => {
   if (!select.contains(e.target)) {
     select.classList.remove("open");
