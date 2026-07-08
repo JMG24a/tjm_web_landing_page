@@ -172,7 +172,6 @@ async function loadProductPrices(ids = []) {
 }
 
 function loadPayPercentage(metodo){
-  console.log("HELLO3")
   const price = document.getElementById("product-price");
   let precioFinal = priceProductWs;
 
@@ -183,7 +182,7 @@ function loadPayPercentage(metodo){
 
       // Sin descuento
       price.classList.remove("displayNone")
-      price.innerHTML = priceProductWs
+      price.innerHTML = `$${priceProductWs}`
       break;
 
     case "Zelle":
@@ -192,11 +191,11 @@ function loadPayPercentage(metodo){
       console.log("HELLO$$$")
 
       const factor = 1 + (percentagePayCategory / 100);
-      price.innerHTML = priceProductWs / factor;
+      price.innerHTML = `$${priceProductWs / factor}`;
       break;
 
     default:
-       price.innerHTML = priceProductWs;
+       price.innerHTML = `$${priceProductWs}`;
       break;
   }
 }
