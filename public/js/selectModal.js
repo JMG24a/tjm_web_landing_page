@@ -36,6 +36,39 @@ document.addEventListener("click", (e) => {
   }
 });
 
+let sedeSeleccionada = "SanPablo";
+
+const locationSelect = document.getElementById("locationSelect");
+const triggerLoc = locationSelect.querySelector(".select-trigger");
+const selectedLoc = locationSelect.querySelector(".selected-option");
+const optionsLoc = locationSelect.querySelectorAll(".option");
+
+triggerLoc.addEventListener("click", () => {
+  locationSelect.classList.toggle("open");
+});
+
+optionsLoc.forEach(opt => {
+  opt.addEventListener("click", () => {
+    sedeSeleccionada = opt.dataset.value;
+    const img = opt.querySelector("img")?.outerHTML || "";
+    const name = opt.querySelector(".method-name")?.outerHTML || "";
+    selectedLoc.innerHTML = `
+      <div class="selected-wrapper">
+        ${img}
+        ${name}
+      </div>
+    `;
+    locationSelect.classList.remove("open");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!locationSelect.contains(e.target)) {
+    locationSelect.classList.remove("open");
+  }
+});
+
+
 const payBtn = document.getElementById("pay");
 payBtn.addEventListener("click", () => {
   console.log("IS Rigth Here??", {
@@ -54,30 +87,6 @@ payBtn.addEventListener("click", () => {
     cantidad: cantidadWs,
     method: methodPayProductWs
   };
-
-  // let mensaje =
-  // `✨ *Hola! Quiero completar mi pedido* ✨
-
-  // 🧾 *Método de pago:* ${producto.method}
-
-  // 🛍️ *Producto seleccionado:*`;
-
-  // mensaje += `
-  // • 🛏️ *${producto.name}*
-  //   🎨 Color: ${producto.color}
-  //   📦 Cantidad: ${producto.cantidad}
-  //   💵 Precio: $${priceProductWs * producto.cantidad}
-  // `;
-
-  // mensaje += `
-  // 📍 *Sede de retiro:* ${"sedes[telefonoSede]"}
-
-  // 🙏 Gracias por su atención.`;
-  // // URL de WhatsApp
-  // const url = `https://wa.me/${580328399}?text=${encodeURIComponent(mensaje)}`;
-  // window.open(url, "_blank");
-
-  // window.location.href = "/";
 
   let mensaje =
 `✨ *Hola! Quiero completar mi pedido* ✨
