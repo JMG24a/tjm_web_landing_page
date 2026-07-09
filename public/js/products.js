@@ -308,7 +308,7 @@ function setupSofas(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  // loadProductPrice(product.id);
+  loadProductPrice(product.id);
   renderColors(product.colors, colors);
 }
 
