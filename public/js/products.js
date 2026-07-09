@@ -1,9 +1,8 @@
 const priceElement = document.getElementById("product-price")
 
-let priceProductOriginal = 0; // precio real sin aumentos
-let priceProductWs = 0;
 let idProductSelected = 0
 let percentagePayCategory = 0
+let priceProductWs = 0
 let nameProductWs
 let colorProductWs
 let methodPayProductWs
@@ -136,24 +135,19 @@ if (goHomeBtn) {
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id) {
   try {
-    percentagePayCategory = porcentajesPago[categoryProductWs];
+    percentagePayCategory = porcentajesPago[categoryProductWs]
+    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
-
-    // Precio original sin aumentos
-    priceProductOriginal = data.precio;
-
-    // Aumento del 5%
-    const pricePlus5 = calcularAumento(priceProductOriginal, 5);
-
-    // Aumento por categoría
-    const porcentage = porcentajesPago[categoryProductWs] || 40;
-    priceProductWs = calcularAumento(pricePlus5, porcentage);
-
-    priceElement.dataset.usd = priceProductWs;
-    priceElement.dataset.mode = "usd";
-    priceElement.innerHTML = `${priceProductWs}$`;
-
+    pricePlus5 = calcularAumento(data.precio, 5);
+    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
+    const priceUSD = calcularAumento(pricePlus5, porcentage);
+    //precioGlobal
+    priceProductWs = priceUSD;
+    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+    priceElement.dataset.mode = "usd"; // Estado inicial
+    priceElement.innerHTML = `${priceUSD}$`;
   } catch (error) {
     console.error("Error cargando el producto:", error);
   }
@@ -161,58 +155,65 @@ async function loadProductPrice(id) {
 
 async function loadProductPrices(ids = []) {
   try {
-    percentagePayCategory = porcentajesPago[categoryProductWs];
-    const porcentage = porcentajesPago[categoryProductWs] || 40;
+    percentagePayCategory = porcentajesPago[categoryProductWs]
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
     const requests = ids.map(id =>
-      fetch(`https://tjm-web-back.onrender.com/${id}`).then(res => res.json())
+      // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+      fetch(`https://tjm-web-back.onrender.com/${id}`)
+      .then(res => res.json())
     );
-
     const results = await Promise.all(requests);
 
-    // Precio original sin aumentos
-    const originals = results.map(data => data.precio);
+    const newR = results.map(data => calcularAumento(data.precio, 5));
+    const bcv = newR.map(data => calcularAumento(data, porcentage));
 
-    // Aumento del 5%
-    const plus5 = originals.map(p => calcularAumento(p, 5));
-
-    // Aumento por categoría
-    const finalPrices = plus5.map(p => calcularAumento(p, porcentage));
-
-    return { originals, finalPrices };
-
+    priceProductWs = bcv[0]
+    return bcv
   } catch (error) {
     console.error("Error cargando precios:", error);
-    return { originals: [], finalPrices: [] };
+    return [];
   }
 }
 
 function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
-  methodPayProductWs = metodo;
-
-  const factor = 1 + (percentagePayCategory / 100);
-
+  let precioFinal = priceProductWs;
+  methodPayProductWs = metodo
   switch (metodo) {
-
     case "Transferencia":
     case "Cashea":
-      priceProductWs = priceProductOriginal * factor;
-      price.innerHTML = `$${priceProductWs.toFixed(2)}`;
+      // Sin descuento
+      price.classList.remove("displayNone")
+      price.innerHTML = '<span class="loader"></span>'
+      loadProductPrice(idProductSelected)
       break;
 
     case "Zelle":
     case "Binance":
-      priceProductWs = priceProductOriginal;
-      price.innerHTML = `$${priceProductWs.toFixed(2)}`;
+      // Quitar el porcentaje agregado previamente
+      const factor = 1 + (percentagePayCategory / 100);
+      price.innerHTML = `$${priceProductWs / factor}`;
+      priceProductWs = `${priceProductWs / factor}`
       break;
 
     default:
-      price.innerHTML = `$${priceProductWs.toFixed(2)}`;
+      console.log("Default: ",
+        idProductSelected,
+        percentagePayCategory,
+        priceProductWs,
+        nameProductWs,
+        colorProductWs,
+        methodPayProductWs,
+        materialProduct,
+        cantidadWs,
+        categoryProductWs
+      )
+
+       price.innerHTML = `$${priceProductWs}`;
       break;
   }
 }
-
 
 // 2. Obtener precio del dólar
 async function getDollarRate() {
@@ -461,42 +462,43 @@ function setupDormitorio(product) {
     wrapper.appendChild(contentWrapper);
     topContainer.appendChild(wrapper);
 
-    return { wrapper, priceTag: priceValue, position: opt.position, label: opt.label };
+    return { wrapper, priceTag: priceValue, position: opt.position, size: opt.size, label: opt.label };
   });
 
+  // IDs completos para buscar precios
   const ids = btnElements.map(el => `${product.id}${el.position}`);
 
-  loadProductPrices(ids).then(({ originals, finalPrices }) => {
-    btnElements.forEach((el, index) => {
-      el.original = originals[index];      // precio real sin aumentos
-      el.final = finalPrices[index];       // precio con aumentos
-      el.priceTag.textContent = `${el.final}$`;
+  // Cargar precios
+  loadProductPrices(ids).then(prices => {
+    prices.forEach((price, index) => {
+      btnElements[index].priceTag.textContent = `${price}$`;
     });
   });
 
+  // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
   function seleccionarMedida(index) {
     btnElements.forEach((el, i) => {
       el.wrapper.classList.toggle("selected", i === index);
     });
 
-    priceProductOriginal = btnElements[index].original;
-    priceProductWs = btnElements[index].final;
-
+    // Guardar variables globales
+    priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
     nameProductWs = `${product.name} ${btnElements[index].label}`;
-    idProductSelected = Number(`${product.id}${btnElements[index].position}`);
-
-    verificarSesion(idProductSelected);
+    idProductSelected = `${product.id}${btnElements[index].position}`;
+    idProductSelected = Number(idProductSelected);
+    verificarSesion(idProductSelected)
   }
 
+  // Asignar eventos de click
   btnElements.forEach((el, index) => {
     el.wrapper.addEventListener("click", () => seleccionarMedida(index));
   });
 
+  // Seleccionar la primera opción por defecto
   seleccionarMedida(0);
 
   renderColors(product.colors, colors);
 }
-
 
 
 //   // IDs completos para buscar precios
