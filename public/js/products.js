@@ -183,7 +183,6 @@ function loadPayPercentage(metodo){
     case "Transferencia":
     case "Cashea":
       // Sin descuento
-      const price = document.getElementById("product-price");
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(idProductSelected)
