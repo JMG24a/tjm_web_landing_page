@@ -132,48 +132,48 @@ if (goHomeBtn) {
 }
 
 // 1. Cargar precio del producto en USD
-async function loadProductPrice(id) {
-  try {
-    percentagePayCategory = porcentajesPago[categoryProductWs]
-    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
-    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
-    const data = await response.json();
-    pricePlus5 = calcularAumento(data.precio, 5);
-    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
-    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
-    const priceUSD = calcularAumento(pricePlus5, porcentage);
-    //precioGlobal
-    priceProductWs = priceUSD;
-    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
-    priceElement.dataset.mode = "usd"; // Estado inicial
-    priceElement.innerHTML = `${priceUSD}$`;
-  } catch (error) {
-    console.error("Error cargando el producto:", error);
-  }
-}
+// async function loadProductPrice(id) {
+//   try {
+//     percentagePayCategory = porcentajesPago[categoryProductWs]
+//     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+//     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+//     const data = await response.json();
+//     pricePlus5 = calcularAumento(data.precio, 5);
+//     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
+//     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
+//     const priceUSD = calcularAumento(pricePlus5, porcentage);
+//     //precioGlobal
+//     priceProductWs = priceUSD;
+//     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+//     priceElement.dataset.mode = "usd"; // Estado inicial
+//     priceElement.innerHTML = `${priceUSD}$`;
+//   } catch (error) {
+//     console.error("Error cargando el producto:", error);
+//   }
+// }
 
-async function loadProductPrices(ids = []) {
-  try {
-    percentagePayCategory = porcentajesPago[categoryProductWs]
-    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
+// async function loadProductPrices(ids = []) {
+//   try {
+//     percentagePayCategory = porcentajesPago[categoryProductWs]
+//     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
-    const requests = ids.map(id =>
-      // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
-      fetch(`https://tjm-web-back.onrender.com/${id}`)
-      .then(res => res.json())
-    );
-    const results = await Promise.all(requests);
+//     const requests = ids.map(id =>
+//       // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+//       fetch(`https://tjm-web-back.onrender.com/${id}`)
+//       .then(res => res.json())
+//     );
+//     const results = await Promise.all(requests);
 
-    const newR = results.map(data => calcularAumento(data.precio, 5));
-    const bcv = newR.map(data => calcularAumento(data, porcentage));
+//     const newR = results.map(data => calcularAumento(data.precio, 5));
+//     const bcv = newR.map(data => calcularAumento(data, porcentage));
 
-    priceProductWs = bcv[0]
-    return bcv
-  } catch (error) {
-    console.error("Error cargando precios:", error);
-    return [];
-  }
-}
+//     priceProductWs = bcv[0]
+//     return bcv
+//   } catch (error) {
+//     console.error("Error cargando precios:", error);
+//     return [];
+//   }
+// }
 
 function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
@@ -183,8 +183,10 @@ function loadPayPercentage(metodo){
     case "Transferencia":
     case "Cashea":
       // Sin descuento
+      console.log("CASHEA: ", )
+
       price.classList.remove("displayNone")
-      price.innerHTML = `$${priceProductWs}`
+      price.innerHTML = `$${precioFinal}`
       break;
 
     case "Zelle":
@@ -196,6 +198,18 @@ function loadPayPercentage(metodo){
       break;
 
     default:
+      console.log("Default: ",
+        idProductSelected,
+        percentagePayCategory,
+        priceProductWs,
+        nameProductWs,
+        colorProductWs,
+        methodPayProductWs,
+        materialProduct,
+        cantidadWs,
+        categoryProductWs
+      )
+
        price.innerHTML = `$${priceProductWs}`;
       break;
   }
@@ -293,7 +307,7 @@ function setupSofas(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id);
+  // loadProductPrice(product.id);
   renderColors(product.colors, colors);
 }
 
@@ -328,7 +342,7 @@ function setupColchones(product){
     const price = document.getElementById("product-price");
     price.classList.remove("displayNone")
     price.innerHTML = '<span class="loader"></span>'
-    loadProductPrice(`${product.id}${position}`);
+    // loadProductPrice(`${product.id}${position}`);
   }
 
   topBtn1.onclick = () => { updatePrice(1) }
@@ -513,7 +527,7 @@ function setupMultimuebles(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id);
+  // loadProductPrice(product.id);
 
   if(product.open){
     // openContainer.classList.remove("modal-opens")
@@ -567,7 +581,7 @@ function setupComedores(product) {
 
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}4${position}`);
+      // loadProductPrice(`${product.id}4${position}`);
 
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
@@ -577,7 +591,7 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}6${position}`);
+      // loadProductPrice(`${product.id}6${position}`);
       console.log("chair 6 position: ", position)
       console.log("chair 6 position color: ", product.chairs_6[position].img)
       console.log("chair 6 position: colors", colors)
@@ -747,7 +761,7 @@ function loadProductsByCategory(category) {
 function initProducts() {
   showTopBarProduct()
 
-  loadProductPrices([1023, 1021, 1020]);
+  // loadProductPrices([1023, 1021, 1020]);
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);
