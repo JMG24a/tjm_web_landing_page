@@ -108,7 +108,7 @@ payBtn.addEventListener("click", () => {
 🙏 Gracias por su atención.`;
 
 // URL de WhatsApp
-const telefonoWS = "580328399";
+const telefonoWS = "584120328399";
 const url = `https://wa.me/${telefonoWS}?text=${encodeURIComponent(mensaje)}`;
 window.open(url, "_blank");
 
