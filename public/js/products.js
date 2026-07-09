@@ -1,5 +1,6 @@
 const priceElement = document.getElementById("product-price")
 
+let productBaseWS
 let idProductSelected = 0
 let percentagePayCategory = 0
 let priceProductWs = 0
@@ -132,10 +133,9 @@ async function loadPayPercentage(metodo){
       price.innerHTML = '<span class="loader"></span>'
       await loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
-      price.innerHTML = `$${priceProductWs / factor}`;
+      price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
       priceProductWs = `${priceProductWs / factor}`
       break;
-
     default:
       price.innerHTML = `$${priceProductWs}`;
       break;
@@ -470,6 +470,7 @@ function openProductModal(product, category) {
   showTopBarModal()
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
+  productBaseWS = product
   categoryProductWs = category
   switch (category) {
     case "multimuebles":
