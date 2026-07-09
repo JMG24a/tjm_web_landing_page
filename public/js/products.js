@@ -18,69 +18,6 @@ const porcentajesPago = {
   sofas: 40
 };
 
-// document.getElementById("colorInput").addEventListener("input", actualizarDatos);
-// document.getElementById("materialSelect").addEventListener("change", actualizarDatos);
-// document.getElementById("cantidadInput").addEventListener("input", actualizarDatos);
-
-// function actualizarDatos() {
-//   // Asignación inmediata de valores ante cualquier cambio
-//   colorProductWs = document.getElementById('colorInput').value;
-//   materialProduct = document.getElementById('materialSelect').value;
-//   cantidad = parseInt(document.getElementById('cantidadInput').value) || 0;
-
-//   // Muestra en la consola cómo se actualizan las variables en tiempo real
-//   console.log("--- Cambio detectado ---");
-//   console.log("let colorProductWs =", colorProductWs);
-//   console.log("let materialProduct =", materialProduct);
-//   console.log("let cantidad =", cantidad);
-// }
-
-// Ejecutamos una vez al cargar para tener los valores iniciales listos
-// actualizarDatos();
-
-
-async function fetchBinanceP2P(tradeType) {
-  const url = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search";
-
-  const body = {
-    page: 1,
-    rows: 10,
-    payTypes: [],
-    asset: "USDT",
-    fiat: "VES",
-    tradeType: tradeType // "BUY" o "SELL"
-  };
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
-  });
-
-  const data = await res.json();
-
-  // Tomamos el primer anuncio (el mejor precio)
-  return parseFloat(data.data[0].adv.price);
-}
-
-async function getUSDTPriceVES() {
-  const buyPrice = await fetchBinanceP2P("BUY");   // Bs → USDT
-  const sellPrice = await fetchBinanceP2P("SELL"); // USDT → Bs
-
-  const reference = (buyPrice + sellPrice) / 2;
-
-  return {
-    buy: buyPrice,
-    sell: sellPrice,
-    reference: reference
-  };
-}
-
-// Ejecución
-// getUSDTPriceVES().then(console.log);
-
 async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
@@ -95,7 +32,6 @@ async function verificarSesion(id) {
     form.classList.add("displayNoneSuggestPrice");
   }
 }
-
 
 function changeModalImage(img) {
   const modalImg = document.getElementById("modal-img");
@@ -192,25 +128,16 @@ function loadPayPercentage(metodo){
     case "Zelle":
     case "Binance":
       // Quitar el porcentaje agregado previamente
+      price.classList.remove("displayNone")
+      price.innerHTML = '<span class="loader"></span>'
+      loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${priceProductWs / factor}`;
       priceProductWs = `${priceProductWs / factor}`
       break;
 
     default:
-      console.log("Default: ",
-        idProductSelected,
-        percentagePayCategory,
-        priceProductWs,
-        nameProductWs,
-        colorProductWs,
-        methodPayProductWs,
-        materialProduct,
-        cantidadWs,
-        categoryProductWs
-      )
-
-       price.innerHTML = `$${priceProductWs}`;
+      price.innerHTML = `$${priceProductWs}`;
       break;
   }
 }
@@ -312,116 +239,6 @@ function setupSofas(product) {
   renderColors(product.colors, colors);
 }
 
-function setupColchones(product){
-  const topContainer = document.getElementById("modal-top");
-  topContainer.classList.remove("modal-opens")
-  topContainer.className = "modal-top";
-
-  // Opciones con sus posiciones
-  const options = [
-    { label: "Individual", position: 1 },
-    { label: "Matrimonial", position: 14 },
-    { label: "Queen", position: 16 },
-    { label: "King", position: 2 }
-  ];
-
-  const topBtn1 = document.createElement("span");
-  topBtn1.className = "span-top";
-  const topBtn2 = document.createElement("span");
-  topBtn2.className = "span-top";
-  const topBtn3 = document.createElement("span");
-  topBtn3.className = "span-top";
-  const topBtn4 = document.createElement("span");
-  topBtn4.className = "span-top";
-
-  topBtn1.textContent = "Individual";
-  topBtn2.textContent = "Matrimonial";
-  topBtn3.textContent = "Queen";
-  topBtn4.textContent = "King";
-
-  function updatePrice(position) {
-    const price = document.getElementById("product-price");
-    price.classList.remove("displayNone")
-    price.innerHTML = '<span class="loader"></span>'
-    // loadProductPrice(`${product.id}${position}`);
-  }
-
-  topBtn1.onclick = () => { updatePrice(1) }
-  topBtn2.onclick = () => { updatePrice(14) }
-  topBtn3.onclick = () => { updatePrice(16) }
-  topBtn4.onclick = () => { updatePrice(2) }
-
-  topContainer.innerHTML = "";
-  topContainer.appendChild(topBtn1);
-  topContainer.appendChild(topBtn2);
-  topContainer.appendChild(topBtn3);
-  topContainer.appendChild(topBtn4);
-
-  updatePrice(1) // inicial
-}
-
-// function setupDormitorio(product) {
-//   const colors = document.getElementById("modal-colors");
-//   const topContainer = document.getElementById("modal-top");
-//   topContainer.className = "modal-top";
-
-//   const price = document.getElementById("modal-top");
-//   price.removeAttribute("display")
-
-//   // Opciones con sus posiciones
-//   const options = [
-//     { label: "Individual", position: 1 },
-//     { label: "Matrimonial", position: 14 },
-//     { label: "Queen", position: 16 },
-//     { label: "King", position: 2 }
-//   ];
-
-//   topContainer.innerHTML = "";
-
-//   // Crear botones + contenedores de precio
-//   const btnElements = options.map(opt => {
-//     const wrapper = document.createElement("div");
-//     wrapper.className = "banner"; // Clase principal del diseño
-
-//     // CÍRCULO IZQUIERDA
-//     // const circleContainer = document.createElement("div");
-//     // circleContainer.className = "circle-container";
-//     // const whiteCircle = document.createElement("div");
-//     // whiteCircle.className = "white-circle";
-//     // circleContainer.appendChild(whiteCircle);
-
-//     // CONTENEDOR DE CONTENIDO
-//     const contentWrapper = document.createElement("div");
-//     contentWrapper.className = "content-wrapper";
-
-//     // ETIQUETA TEXTO (MATRIMONIAL, ETC)
-//     const labelBox = document.createElement("div");
-//     labelBox.className = "label-box";
-//     const textBlue = document.createElement("span");
-//     textBlue.className = "text-blue";
-//     textBlue.textContent = opt.label.toUpperCase();
-//     labelBox.appendChild(textBlue);
-
-//     // PRECIO
-//     const priceBox = document.createElement("div");
-//     priceBox.className = "price-box";
-//     const priceValue = document.createElement("span");
-//     priceValue.className = "price-value";
-//     priceValue.textContent = "cargando..."; // O el valor que necesites
-//     priceBox.appendChild(priceValue);
-
-//     // UNIÓN FINAL
-//     contentWrapper.appendChild(labelBox);
-//     contentWrapper.appendChild(priceBox);
-
-//     // wrapper.appendChild(circleContainer);
-//     wrapper.appendChild(contentWrapper);
-
-//     topContainer.appendChild(wrapper);
-
-//     return { btn: textBlue, priceTag: priceValue, position: opt.position };
-// });
-
 function setupDormitorio(product) {
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
@@ -499,22 +316,6 @@ function setupDormitorio(product) {
 
   renderColors(product.colors, colors);
 }
-
-
-//   // IDs completos para buscar precios
-//   const ids = btnElements.map(el => `${product.id}${el.position}`);
-
-//   // Cargar todos los precios
-//   loadProductPrices(ids).then(prices => {
-//     prices.forEach((price, index) => {
-//       btnElements[index].priceTag.textContent = `${price}$`;
-//     });
-//   });
-
-//   renderColors(product.colors, colors);
-//   btnElements[0].btn.click();
-// }
-
 
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
