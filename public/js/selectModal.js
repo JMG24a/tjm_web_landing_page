@@ -59,6 +59,10 @@ optionsLoc.forEach(opt => {
       </div>
     `;
     locationSelect.classList.remove("open");
+    const temp = document.createElement('div');
+    temp.innerHTML = name;
+    const text = temp.textContent.trim();
+    locationWsSede = text
   });
 });
 
@@ -99,7 +103,7 @@ payBtn.addEventListener("click", () => {
   📦 Cantidad: ${producto.cantidad}
   💵 Precio: $${priceProductWs * producto.cantidad}
 
-📍 *Sede de retiro:* ${"sedes[ubicacion]"}
+📍 *Sede de retiro:* ${locationWsSede}
 
 🙏 Gracias por su atención.`;
 

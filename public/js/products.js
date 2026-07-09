@@ -9,6 +9,7 @@ let methodPayProductWs
 let materialProduct
 let cantidadWs = 1
 let categoryProductWs
+let locationWsSede
 const porcentajesPago = {
   multimuebles: 40,
   comedores: 40,
