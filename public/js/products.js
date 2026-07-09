@@ -132,25 +132,25 @@ if (goHomeBtn) {
 }
 
 // 1. Cargar precio del producto en USD
-// async function loadProductPrice(id) {
-//   try {
-//     percentagePayCategory = porcentajesPago[categoryProductWs]
-//     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
-//     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
-//     const data = await response.json();
-//     pricePlus5 = calcularAumento(data.precio, 5);
-//     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
-//     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
-//     const priceUSD = calcularAumento(pricePlus5, porcentage);
-//     //precioGlobal
-//     priceProductWs = priceUSD;
-//     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
-//     priceElement.dataset.mode = "usd"; // Estado inicial
-//     priceElement.innerHTML = `${priceUSD}$`;
-//   } catch (error) {
-//     console.error("Error cargando el producto:", error);
-//   }
-// }
+async function loadProductPrice(id) {
+  try {
+    percentagePayCategory = porcentajesPago[categoryProductWs]
+    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+    const data = await response.json();
+    pricePlus5 = calcularAumento(data.precio, 5);
+    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
+    const priceUSD = calcularAumento(pricePlus5, porcentage);
+    //precioGlobal
+    priceProductWs = priceUSD;
+    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+    priceElement.dataset.mode = "usd"; // Estado inicial
+    priceElement.innerHTML = `${priceUSD}$`;
+  } catch (error) {
+    console.error("Error cargando el producto:", error);
+  }
+}
 
 // async function loadProductPrices(ids = []) {
 //   try {
@@ -282,7 +282,8 @@ async function guardarPrecio() {
     precio: Number(nuevoPrecio)
   };
 
-  const response = await fetch("https://tjmwebback-production.up.railway.app", {
+  // const response = await fetch("https://tjmwebback-production.up.railway.app", {
+  const response = await fetch("https://tjm-web-back.onrender.com", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
