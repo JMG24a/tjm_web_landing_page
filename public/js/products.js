@@ -153,28 +153,28 @@ async function loadProductPrice(id) {
   }
 }
 
-// async function loadProductPrices(ids = []) {
-//   try {
-//     percentagePayCategory = porcentajesPago[categoryProductWs]
-//     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
+async function loadProductPrices(ids = []) {
+  try {
+    percentagePayCategory = porcentajesPago[categoryProductWs]
+    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
-//     const requests = ids.map(id =>
-//       // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
-//       fetch(`https://tjm-web-back.onrender.com/${id}`)
-//       .then(res => res.json())
-//     );
-//     const results = await Promise.all(requests);
+    const requests = ids.map(id =>
+      // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+      fetch(`https://tjm-web-back.onrender.com/${id}`)
+      .then(res => res.json())
+    );
+    const results = await Promise.all(requests);
 
-//     const newR = results.map(data => calcularAumento(data.precio, 5));
-//     const bcv = newR.map(data => calcularAumento(data, porcentage));
+    const newR = results.map(data => calcularAumento(data.precio, 5));
+    const bcv = newR.map(data => calcularAumento(data, porcentage));
 
-//     priceProductWs = bcv[0]
-//     return bcv
-//   } catch (error) {
-//     console.error("Error cargando precios:", error);
-//     return [];
-//   }
-// }
+    priceProductWs = bcv[0]
+    return bcv
+  } catch (error) {
+    console.error("Error cargando precios:", error);
+    return [];
+  }
+}
 
 function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
@@ -761,8 +761,6 @@ function loadProductsByCategory(category) {
 
 function initProducts() {
   showTopBarProduct()
-
-  // loadProductPrices([1023, 1021, 1020]);
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);
