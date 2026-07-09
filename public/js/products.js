@@ -528,7 +528,7 @@ function setupMultimuebles(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  // loadProductPrice(product.id);
+  loadProductPrice(product.id);
 
   if(product.open){
     // openContainer.classList.remove("modal-opens")
@@ -582,7 +582,7 @@ function setupComedores(product) {
 
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
-      // loadProductPrice(`${product.id}4${position}`);
+      loadProductPrice(`${product.id}4${position}`);
 
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
