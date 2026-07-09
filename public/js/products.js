@@ -112,7 +112,7 @@ async function loadProductPrices(ids = []) {
   }
 }
 
-function loadPayPercentage(metodo){
+async function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
   let precioFinal = priceProductWs;
   methodPayProductWs = metodo
@@ -130,7 +130,7 @@ function loadPayPercentage(metodo){
       // Quitar el porcentaje agregado previamente
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected)
+      await loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${priceProductWs / factor}`;
       priceProductWs = `${priceProductWs / factor}`
