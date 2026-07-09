@@ -86,7 +86,8 @@ async function verificarSesion(id) {
 
   if (localStorage.getItem("session_tjm")) {
     form.classList.remove("displayNoneSuggestPrice");
-    const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
     price.placeholder = data.precio;
   } else {
@@ -134,7 +135,8 @@ if (goHomeBtn) {
 async function loadProductPrice(id) {
   try {
     percentagePayCategory = porcentajesPago[categoryProductWs]
-    const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
     pricePlus5 = calcularAumento(data.precio, 5);
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
@@ -156,7 +158,8 @@ async function loadProductPrices(ids = []) {
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
 
     const requests = ids.map(id =>
-      fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+      // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
+      fetch(`https://tjm-web-back.onrender.com/${id}`)
       .then(res => res.json())
     );
     const results = await Promise.all(requests);
