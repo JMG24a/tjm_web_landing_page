@@ -7,7 +7,7 @@ let priceProductWs = 0
 let nameProductWs
 let colorProductWs
 let methodPayProductWs = "Transferencia"
-let materialProduct
+let materialProductWs = "tela"
 let cantidadWs = 1
 let categoryProductWs
 let locationWsSede

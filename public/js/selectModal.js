@@ -73,6 +73,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+const materialToggle = document.getElementById("materialToggle");
+const thumb = materialToggle.querySelector(".toggle-thumb");
+
+materialToggle.addEventListener("click", () => {
+  materialToggle.classList.toggle("active");
+
+  if (materialToggle.classList.contains("active")) {
+    materialProductWs = "cuero";
+    thumb.textContent = "🐮";
+  } else {
+    materialProductWs = "tela";
+    thumb.textContent = "🧵";
+  }
+
+  console.log("Material seleccionado:", materialProductWs);
+});
+
 
 const payBtn = document.getElementById("pay");
 payBtn.addEventListener("click", () => {
@@ -80,7 +97,7 @@ payBtn.addEventListener("click", () => {
     priceProductWs,
     nameProductWs,
     colorProductWs,
-    materialProduct,
+    materialProductWs,
     cantidadWs,
     percentagePayCategory
   })
@@ -88,7 +105,7 @@ payBtn.addEventListener("click", () => {
   const producto = {
     name: nameProductWs,
     color: colorProductWs,
-    material: materialProduct,
+    material: materialProductWs,
     cantidad: cantidadWs,
     method: methodPayProductWs
   };
@@ -101,6 +118,7 @@ payBtn.addEventListener("click", () => {
 🛍️ *Producto seleccionado:*
 • 🛏️ *${producto.name}*
   🎨 Color: ${producto.color}
+  🎨 Material: ${producto.material}
   📦 Cantidad: ${producto.cantidad}
   💵 Precio: $${priceProductWs * producto.cantidad}
 
@@ -116,3 +134,4 @@ window.open(url, "_blank");
 window.location.href = "/";
 
 })
+

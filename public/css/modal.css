@@ -92,6 +92,7 @@
 .color_fabric {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Colores */
@@ -137,7 +138,6 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
-  margin: 10px 0;
 }
 
 .toggle-track {
@@ -171,9 +171,10 @@
 
 .toggle-labels {
   width: 100%;
-  margin-top: 6px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   font-weight: 600;
 }
