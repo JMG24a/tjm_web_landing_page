@@ -134,7 +134,7 @@ async function loadPayPercentage(metodo){
       await loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
-      priceProductWs = `${priceProductWs / factor}`
+      priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
       break;
     default:
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
@@ -507,9 +507,32 @@ function openProductModal(product, category) {
   renderSuggestions(product, category);
 }
 
+function resetPaymentSelect() {
+  const paymentSelect = document.getElementById("paymentSelect");
+  const selectedOption = paymentSelect.querySelector(".selected-option");
+
+  // Restaurar HTML original del trigger
+  selectedOption.innerHTML = `
+    <div class="selected-wrapper">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEWn9nf5D2UBw/company-logo_200_200/company-logo_200_200/0/1664637447675?e=2147483647&v=beta&t=7FTDjI3a0GfZfQt2rTyDlJ62OjS4GVQ7RACFFohMFww" alt="Cashea">
+      <span class="method-name">Cashea</span>
+      <span class="badge">40% Inicial</span>
+    </div>
+  `;
+
+  // Restaurar método global
+  metodoSeleccionado = "Cashea";
+  // Cerrar el dropdown si quedó abierto
+  paymentSelect.classList.remove("open");
+}
+
+
 function closeModal() {
   const modal = document.getElementById("product-modal");
   modal.classList.remove("show");
+
+  // 🔥 Resetear select de método de pago
+  resetPaymentSelect();
 
   setTimeout(() => {
     modal.classList.add("hidden");
