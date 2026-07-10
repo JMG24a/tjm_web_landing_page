@@ -91,6 +91,7 @@
 
 .color_fabric {
   display: flex;
+  justify-content: space-between;
 }
 
 /* Colores */
@@ -128,9 +129,61 @@
   cursor: pointer;
 }
 
-.buttonColorFabric{
-  background-color: #1a428a;
+.toggle-container {
+  width: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin: 10px 0;
 }
+
+.toggle-track {
+  width: 100%;
+  height: 40px;
+  background: #dcdcdc;
+  border-radius: 20px;
+  position: relative;
+  transition: background .3s ease;
+}
+
+.toggle-thumb {
+  width: 50%;
+  height: 100%;
+  background: #1562c2;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all .3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f2e088;
+  font-weight: bold;
+}
+
+.toggle-container.active .toggle-thumb {
+  left: 50%;
+}
+
+.toggle-labels {
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.toggle-left,
+.toggle-right {
+  width: 50%;
+  text-align: center;
+}
+
 
 /* Animación */
 @keyframes modalIn {
