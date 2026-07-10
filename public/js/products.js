@@ -477,6 +477,7 @@ function openProductModal(product, category) {
   setupBaseModal(product);
   productBaseWS = product
   categoryProductWs = category
+  loadPayPercentage("default")
   switch (category) {
     case "multimuebles":
       setupMultimuebles(product);
