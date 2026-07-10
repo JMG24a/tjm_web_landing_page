@@ -6,7 +6,7 @@ let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
-let methodPayProductWs
+let methodPayProductWs = "Transferencia"
 let materialProduct
 let cantidadWs = 1
 let categoryProductWs
@@ -308,6 +308,7 @@ function setupDormitorio(product) {
     nameProductWs = `${product.name} ${btnElements[index].label}`;
     idProductSelected = `${product.id}${btnElements[index].position}`;
     idProductSelected = Number(idProductSelected);
+    loadPayPercentage(methodPayProductWs)
     verificarSesion(idProductSelected)
   }
 

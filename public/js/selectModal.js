@@ -26,6 +26,7 @@ options.forEach(opt => {
     const temp = document.createElement('div');
     temp.innerHTML = name;
     const text = temp.textContent.trim();
+    methodPayProductWs = text;
     loadPayPercentage(text);
   });
 });
