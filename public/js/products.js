@@ -137,6 +137,11 @@ async function loadPayPercentage(metodo){
       priceProductWs = `${priceProductWs / factor}`
       break;
     default:
+      if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
+        price.classList.remove("displayNone")
+        price.innerHTML = '<span class="loader"></span>'
+        loadProductPrice(`${idProductSelected}1`)
+      }
       price.innerHTML = `$${priceProductWs}`;
       break;
   }
