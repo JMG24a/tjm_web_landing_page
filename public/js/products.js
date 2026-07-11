@@ -144,7 +144,7 @@ async function loadPayPercentage(metodo){
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
         price.classList.remove("displayNone")
         price.innerHTML = '<span class="loader"></span>'
-        loadProductPrice(`${idProductSelected}1`)
+        await loadProductPrice(`${idProductSelected}1`)
       }
       off.classList.add("displayNone")
       price.innerHTML = `$${priceProductWs}`;
