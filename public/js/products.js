@@ -136,6 +136,7 @@ async function loadPayPercentage(metodo){
       await loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
+      off.classList.remove("displayNone")
       off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
       break;
