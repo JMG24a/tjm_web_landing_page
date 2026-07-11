@@ -475,8 +475,7 @@
 
 .container_size{
   display: flex;
-  justify-content: left;
-  align-items: end;
+  flex-direction: column;
 }
 
 .displayNone{
