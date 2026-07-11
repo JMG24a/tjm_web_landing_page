@@ -24,6 +24,31 @@
 /* .product-price {
   cursor: pointer;
 } */
+.priceContainerOff{
+  position: relative;
+  display: flex;
+}
+
+/* .offPrice{
+  color: gray;
+} */
+
+.offPrice {
+  position: relative;
+  display: inline-block;
+}
+
+.offPrice::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: #d4af37; /* dorado */
+  transform: translateY(-50%);
+}
+
 .product-price {
   font-size: 1.4rem;
   font-weight: 600;

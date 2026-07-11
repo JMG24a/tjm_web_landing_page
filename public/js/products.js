@@ -115,6 +115,7 @@ async function loadProductPrices(ids = []) {
 
 async function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
+  const off = document.getElementById("off");
   let precioFinal = priceProductWs;
   methodPayProductWs = metodo
   switch (metodo) {
@@ -134,6 +135,7 @@ async function loadPayPercentage(metodo){
       await loadProductPrice(idProductSelected)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
+      off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
       break;
     default:
