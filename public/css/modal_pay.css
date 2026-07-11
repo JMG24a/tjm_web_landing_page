@@ -72,8 +72,8 @@
   padding: 25px;
 }
 
-.badge {
-  position: absolute;
+/* .badge {
+
   top: -6px;
   right: -6px;
   background: red;
@@ -81,8 +81,7 @@
   padding: 2px 6px;
   border-radius: 50%;
   font-size: 12px;
-  display: none; /* Oculto por defecto */
-}
+} */
 
 .displayNonePay {
   display: none;
