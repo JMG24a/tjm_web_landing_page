@@ -122,6 +122,7 @@ async function loadPayPercentage(metodo){
     case "Transferencia":
     case "Cashea":
       // Sin descuento
+      off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(idProductSelected)
@@ -144,6 +145,7 @@ async function loadPayPercentage(metodo){
         price.innerHTML = '<span class="loader"></span>'
         loadProductPrice(`${idProductSelected}1`)
       }
+      off.classList.add("displayNone")
       price.innerHTML = `$${priceProductWs}`;
       break;
   }
@@ -161,6 +163,10 @@ async function getDollarRate() {
 }
 
 function renderColors(colors, container) {
+  if(categoryProductWs != "colchones"){
+    const fabricColor = document.getElementById("color_fabric_container");
+    fabricColor.classList.remove("displayNone")
+  }
   container.innerHTML = "";
 
   colors.forEach((item, index) => {
