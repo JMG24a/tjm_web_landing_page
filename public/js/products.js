@@ -249,6 +249,10 @@ function setupDormitorio(product) {
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
 
+  const price = document.getElementById("product-price");
+  price.classList.remove("displayNone")
+  price.innerHTML = '<span class="loader"></span>'
+
   const options = [
     { label: "Individual", position: 1, size: "100" },
     { label: "Matrimonial", position: 14, size: "140" },
