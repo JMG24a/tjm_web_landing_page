@@ -170,7 +170,8 @@ function renderColors(colors, container) {
   }
   container.innerHTML = "";
 
-  const colorsOfMaterial = colors.map((item)=>(item.type == materialProductWs))
+  const colorsOfMaterial = colors.filter((item)=>(item.type != materialProductWs))
+  console.log("🚀 ~ renderColors ~ colorsOfMaterial:", colorsOfMaterial)
 
   colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
