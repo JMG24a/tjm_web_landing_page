@@ -78,6 +78,8 @@ const thumb = materialToggle.querySelector(".toggle-thumb");
 
 materialToggle.addEventListener("click", () => {
   materialToggle.classList.toggle("active");
+  const colors = document.getElementById("modal-colors");
+
 
   if (materialToggle.classList.contains("active")) {
     materialProductWs = "cuero";
@@ -86,6 +88,8 @@ materialToggle.addEventListener("click", () => {
     materialProductWs = "tela";
     thumb.textContent = "🧵";
   }
+
+  renderColors(productBaseWS, colors)
 
   console.log("Material seleccionado:", materialProductWs);
 });
