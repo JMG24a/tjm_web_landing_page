@@ -89,7 +89,7 @@ materialToggle.addEventListener("click", () => {
     thumb.textContent = "🧵";
   }
 
-  renderColors(productBaseWS, colors)
+  renderColors(productBaseWS.colors, colors)
 
   console.log("Material seleccionado:", materialProductWs);
 });
