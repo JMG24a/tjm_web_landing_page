@@ -283,14 +283,20 @@ const PRODUCTS = {
         {
           img: "sofa_zultan_2_barrigas_beige.png",
           color: "beige",
+          type: "cuero",
+          name: "Beige"
         },
         {
           img: "sofa_zultan_2_barrigas_gris.png",
           color: "gray",
+          type: "cuero",
+          name: "Gris"
         },
         {
           img: "sofa_zultan_2_barrigas_black.png",
           color: "black",
+          type: "cuero",
+          name: "Negro"
         }
       ]
     },

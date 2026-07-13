@@ -170,7 +170,9 @@ function renderColors(colors, container) {
   }
   container.innerHTML = "";
 
-  colors.forEach((item, index) => {
+  const colorsOfMaterial = colors.map((item)=>(item.type == materialProductWs))
+
+  colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
     colorProductWs = item.color
