@@ -170,7 +170,7 @@ function renderColors(colors, container) {
   }
   container.innerHTML = "";
 
-  const colorsOfMaterial = colors.filter((item)=>(item.type != materialProductWs))
+  const colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
   console.log("🚀 ~ renderColors ~ colorsOfMaterial:", colorsOfMaterial)
 
   colorsOfMaterial.forEach((item, index) => {
