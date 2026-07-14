@@ -191,7 +191,7 @@ button:hover {
 
 /* CADA OPCIÓN */
 .option {
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -214,6 +214,11 @@ button:hover {
   flex: 1;
   font-weight: 500;
   margin: 0 50px;
+}
+
+.option span.method-name-select {
+  flex: 1;
+  font-weight: 500;
 }
 
 /* BADGE A LA DERECHA */
