@@ -18,8 +18,10 @@ options.forEach(opt => {
     selectedOption.innerHTML = `
       <div class="selected-wrapper">
         ${img}
-        ${name}
-        ${badge}
+        <div method-body background_zelle>
+          ${name}
+          ${badge}
+        </div>
       </div>
     `;
     select.classList.remove("open");
