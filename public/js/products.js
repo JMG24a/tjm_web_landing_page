@@ -262,8 +262,8 @@ function setupDormitorio(product) {
   topContainer.className = "modal-top";
 
   const price = document.getElementById("product-price");
-  price.classList.remove("displayNone")
-  price.innerHTML = '<span class="loader"></span>'
+  price.classList.remove("displayNone");
+  price.innerHTML = '<span class="loader"></span>';
 
   const options = [
     { label: "Individual", position: 1, size: "100" },
@@ -274,101 +274,183 @@ function setupDormitorio(product) {
 
   topContainer.innerHTML = "";
 
-  const btnElements = options.map(opt => {
-    const wrapper = document.createElement("div");
-    wrapper.className = "banner";
+  // 1. Creamos el elemento Select
+  const selectElement = document.createElement("select");
+  selectElement.className = "select-medidas"; // Clase para darle estilos CSS
 
-    const contentWrapper = document.createElement("div");
-    contentWrapper.className = "content-wrapper";
+  // Arreglo en memoria para guardar las referencias de los datos y precios
+  const optData = options.map((opt, index) => {
+    const optionEl = document.createElement("option");
+    optionEl.value = index; // Guardamos el índice como valor
+    optionEl.textContent = `${opt.label.toUpperCase()} (Cargando...)`;
 
-    const labelBox = document.createElement("div");
-    labelBox.className = "label-box";
-    const textBlue = document.createElement("span");
-    textBlue.className = "text-blue";
-    textBlue.textContent = opt.label.toUpperCase();
-    labelBox.appendChild(textBlue);
+    selectElement.appendChild(optionEl);
 
-    const priceBox = document.createElement("div");
-    priceBox.className = "price-box";
-    const priceValue = document.createElement("span");
-    priceValue.className = "price-value";
-    priceValue.textContent = "cargando...";
-    priceBox.appendChild(priceValue);
-
-    contentWrapper.appendChild(labelBox);
-    contentWrapper.appendChild(priceBox);
-    wrapper.appendChild(contentWrapper);
-    topContainer.appendChild(wrapper);
-
-    return { wrapper, priceTag: priceValue, position: opt.position, size: opt.size, label: opt.label };
+    return {
+      optionEl,
+      position: opt.position,
+      size: opt.size,
+      label: opt.label,
+      price: 0 // Se actualizará al cargar
+    };
   });
 
-  // IDs completos para buscar precios
-  const ids = btnElements.map(el => `${product.id}${el.position}`);
+  topContainer.appendChild(selectElement);
 
-  // Cargar precios
+  // IDs completos para buscar precios
+  const ids = optData.map(el => `${product.id}${el.position}`);
+
+  // Cargar precios y actualizar el texto de las opciones del select
   loadProductPrices(ids).then(prices => {
-    prices.forEach((price, index) => {
-      btnElements[index].priceTag.textContent = `${price}$`;
+    prices.forEach((priceValue, index) => {
+      optData[index].price = priceValue;
+      optData[index].optionEl.textContent = `${optData[index].label.toUpperCase()} - $${priceValue}`;
     });
+
+    // Forzar la actualización de variables globales con el primer precio ya cargado
+    seleccionarMedida(selectElement.value);
   });
 
   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
   function seleccionarMedida(index) {
-    btnElements.forEach((el, i) => {
-      el.wrapper.classList.toggle("selected", i === index);
-    });
+    const selectedOpt = optData[index];
+    if (!selectedOpt) return;
 
-    // Guardar variables globales
-    priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
-    nameProductWs = `${product.name} ${btnElements[index].label}`;
-    idProductSelected = `${product.id}${btnElements[index].position}`;
+    // Guardar variables globales exactamente igual que antes
+    priceProductWs = parseFloat(selectedOpt.price);
+    nameProductWs = `${product.name} ${selectedOpt.label}`;
+    idProductSelected = `${product.id}${selectedOpt.position}`;
     idProductSelected = Number(idProductSelected);
-    loadPayPercentage(methodPayProductWs)
-    verificarSesion(idProductSelected)
+
+    loadPayPercentage(methodPayProductWs);
+    verificarSesion(idProductSelected);
   }
 
-  // Asignar eventos de click
-  btnElements.forEach((el, index) => {
-    el.wrapper.addEventListener("click", () => seleccionarMedida(index));
+  // Escuchar el cambio en el select
+  selectElement.addEventListener("change", (e) => {
+    seleccionarMedida(e.target.value);
   });
 
-  // Seleccionar la primera opción por defecto
+  // Selección inicial por defecto (posición 0)
+  selectElement.value = 0;
   seleccionarMedida(0);
 
   renderColors(product.colors, colors);
 }
 
-function setupMultimuebles(product) {
-  const colors = document.getElementById("modal-colors");
-  const openContainer = document.getElementById("modal-open");
+// function setupDormitorio(product) {
+//   const colors = document.getElementById("modal-colors");
+//   const topContainer = document.getElementById("modal-top");
+//   topContainer.className = "modal-top";
 
-  const container_size = document.getElementById("container_size");
-  container_size.classList.remove("displayNone");
-  const size = document.getElementById("size");
-  size.textContent = product.size || "";
+//   const price = document.getElementById("product-price");
+//   price.classList.remove("displayNone")
+//   price.innerHTML = '<span class="loader"></span>'
 
-  const price = document.getElementById("product-price");
-  price.classList.remove("displayNone")
-  price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id);
+//   const options = [
+//     { label: "Individual", position: 1, size: "100" },
+//     { label: "Matrimonial", position: 14, size: "140" },
+//     { label: "Queen", position: 16, size: "160" },
+//     { label: "King", position: 2, size: "200" }
+//   ];
 
-  if(product.open){
-    // openContainer.classList.remove("modal-opens")
-    openContainer.classList.remove("displayNone")
-  }else{
-    openContainer.classList.add("modal-opens")
-  }
-  renderColors(product.colors, colors);
-  openContainer.innerHTML = "";
-  if (product.open) {
-    const btn = document.createElement("span");
-    btn.textContent = "Abrir";
-    btn.className = "open-dot";
-    btn.onclick = () => changeModalImage(product.open);
-    openContainer.appendChild(btn);
-  }
-}
+//   topContainer.innerHTML = "";
+
+//   const btnElements = options.map(opt => {
+//     const wrapper = document.createElement("div");
+//     wrapper.className = "banner";
+
+//     const contentWrapper = document.createElement("div");
+//     contentWrapper.className = "content-wrapper";
+
+//     const labelBox = document.createElement("div");
+//     labelBox.className = "label-box";
+//     const textBlue = document.createElement("span");
+//     textBlue.className = "text-blue";
+//     textBlue.textContent = opt.label.toUpperCase();
+//     labelBox.appendChild(textBlue);
+
+//     const priceBox = document.createElement("div");
+//     priceBox.className = "price-box";
+//     const priceValue = document.createElement("span");
+//     priceValue.className = "price-value";
+//     priceValue.textContent = "cargando...";
+//     priceBox.appendChild(priceValue);
+
+//     contentWrapper.appendChild(labelBox);
+//     contentWrapper.appendChild(priceBox);
+//     wrapper.appendChild(contentWrapper);
+//     topContainer.appendChild(wrapper);
+
+//     return { wrapper, priceTag: priceValue, position: opt.position, size: opt.size, label: opt.label };
+//   });
+
+//   // IDs completos para buscar precios
+//   const ids = btnElements.map(el => `${product.id}${el.position}`);
+
+//   // Cargar precios
+//   loadProductPrices(ids).then(prices => {
+//     prices.forEach((price, index) => {
+//       btnElements[index].priceTag.textContent = `${price}$`;
+//     });
+//   });
+
+//   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
+//   function seleccionarMedida(index) {
+//     btnElements.forEach((el, i) => {
+//       el.wrapper.classList.toggle("selected", i === index);
+//     });
+
+//     // Guardar variables globales
+//     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
+//     nameProductWs = `${product.name} ${btnElements[index].label}`;
+//     idProductSelected = `${product.id}${btnElements[index].position}`;
+//     idProductSelected = Number(idProductSelected);
+//     loadPayPercentage(methodPayProductWs)
+//     verificarSesion(idProductSelected)
+//   }
+
+//   // Asignar eventos de click
+//   btnElements.forEach((el, index) => {
+//     el.wrapper.addEventListener("click", () => seleccionarMedida(index));
+//   });
+
+//   // Seleccionar la primera opción por defecto
+//   seleccionarMedida(0);
+
+//   renderColors(product.colors, colors);
+// }
+
+// function setupMultimuebles(product) {
+//   const colors = document.getElementById("modal-colors");
+//   const openContainer = document.getElementById("modal-open");
+
+//   const container_size = document.getElementById("container_size");
+//   container_size.classList.remove("displayNone");
+//   const size = document.getElementById("size");
+//   size.textContent = product.size || "";
+
+//   const price = document.getElementById("product-price");
+//   price.classList.remove("displayNone")
+//   price.innerHTML = '<span class="loader"></span>'
+//   loadProductPrice(product.id);
+
+//   if(product.open){
+//     // openContainer.classList.remove("modal-opens")
+//     openContainer.classList.remove("displayNone")
+//   }else{
+//     openContainer.classList.add("modal-opens")
+//   }
+//   renderColors(product.colors, colors);
+//   openContainer.innerHTML = "";
+//   if (product.open) {
+//     const btn = document.createElement("span");
+//     btn.textContent = "Abrir";
+//     btn.className = "open-dot";
+//     btn.onclick = () => changeModalImage(product.open);
+//     openContainer.appendChild(btn);
+//   }
+// }
 
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
