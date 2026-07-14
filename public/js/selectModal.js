@@ -85,10 +85,10 @@ materialToggle.addEventListener("click", () => {
 
   if (materialToggle.classList.contains("active")) {
     materialProductWs = "cuero";
-    thumb.textContent = "🐮";
+    thumb.textContent = "Cuero";
   } else {
     materialProductWs = "tela";
-    thumb.textContent = "🧵";
+    thumb.textContent = "Tela";
   }
 
   renderColors(productBaseWS.colors, colors)
