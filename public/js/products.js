@@ -198,16 +198,16 @@ function setupBaseModal(product) {
   nameProductWs = product.name
   document.getElementById("modal-name").textContent = product.name;
 
-  const desc = document.getElementById("modal-desc");
-  const btn = document.getElementById("toggle");
+  // const desc = document.getElementById("modal-desc");
+  // const btn = document.getElementById("toggle");
 
-  desc.textContent = product.desc;
+  // desc.textContent = product.desc;
 
-  btn.onclick = () => {
-    desc.classList.toggle("clamp");
-    btn.textContent =
-      desc.classList.contains("clamp") ? "Leer más" : "Leer menos";
-  };
+  // btn.onclick = () => {
+    // desc.classList.toggle("clamp");
+    // btn.textContent =
+      // desc.classList.contains("clamp") ? "Leer más" : "Leer menos";
+  // };
 }
 
 async function guardarPrecio() {

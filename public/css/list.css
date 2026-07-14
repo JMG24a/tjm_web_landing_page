@@ -213,6 +213,7 @@ button:hover {
 .option span.method-name {
   flex: 1;
   font-weight: 500;
+  margin: 0 50px;
 }
 
 /* BADGE A LA DERECHA */
@@ -223,6 +224,8 @@ button:hover {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
+  position: absolute;
+  right: 5px;
   white-space: nowrap;
 }
 
