@@ -277,15 +277,28 @@ function setupDormitorio(product) {
   const customSelect = document.createElement("div");
   customSelect.className = "custom-select-medidas";
 
+  // customSelect.innerHTML = `
+  //   <div class="select-trigger">
+  //     <div class="selected-option option">
+  //       <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
+  //       <span class="method-name">Cargando...</span>
+  //       <span class="arrow">▼</span>
+  //     </div>
+  //   <div class="select-options"></div>
+  // `;
+
   customSelect.innerHTML = `
     <div class="select-trigger">
       <div class="selected-option option">
-        <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
+        <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Medida">
         <span class="method-name">Cargando...</span>
-        <span class="arrow">▼</span>
       </div>
+      <span class="arrow">▼</span>
+    </div>
+
     <div class="select-options"></div>
   `;
+
 
   topContainer.appendChild(customSelect);
 
@@ -348,6 +361,18 @@ function setupDormitorio(product) {
 
   renderColors(product.colors, colors);
 }
+
+document.addEventListener("click", (e) => {
+  const select = document.querySelector(".custom-select-medidas");
+
+  if (!select) return;
+
+  if (select.contains(e.target)) {
+    select.classList.toggle("open");
+  } else {
+    select.classList.remove("open");
+  }
+});
 
 
 // function setupDormitorio(product) {
