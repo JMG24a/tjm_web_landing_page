@@ -336,7 +336,7 @@
     border-top: 1px solid #e5e5e5;
   } */
   .modal-info {
-    font-family: "Poppins", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   }
 
   /* .modal-name{
@@ -364,14 +364,14 @@
     font-size: 0.9rem;
     line-height: 1.4;
     color: #444;
-    font-family: "Poppins", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     max-width: 95%;
   }
 }
 
 .modal-name{
   font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* .size_text{
@@ -390,7 +390,7 @@
   font-size: 0.9rem;
   line-height: 1.4;
   color: #444;
-  font-family: "Poppins", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   max-width: 95%;
 }
 
