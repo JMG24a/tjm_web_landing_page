@@ -108,15 +108,6 @@ materialToggle.addEventListener("click", () => {
 
 const payBtn = document.getElementById("pay");
 payBtn.addEventListener("click", () => {
-  console.log("IS Rigth Here??", {
-    priceProductWs,
-    nameProductWs,
-    colorProductWs,
-    materialProductWs,
-    cantidadWs,
-    percentagePayCategory
-  })
-
   const producto = {
     name: nameProductWs,
     color: colorProductWs,
@@ -142,8 +133,7 @@ payBtn.addEventListener("click", () => {
 🙏 Gracias por su atención.`;
 
 // URL de WhatsApp
-const telefonoWS = "584120328399";
-const url = `https://wa.me/${telefonoWS}?text=${encodeURIComponent(mensaje)}`;
+const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
 window.open(url, "_blank");
 
 window.location.href = "/";

@@ -1,5 +1,10 @@
 const priceElement = document.getElementById("product-price")
 
+let sedesW = {
+  "Ojeda": "584126158205",
+  "San Pablo": "584228463448",
+  "Barquisimeto": "584120213946",
+}
 let productBaseWS
 let idProductSelected = 0
 let percentagePayCategory = 0
@@ -540,36 +545,36 @@ function setupDormitorio(product) {
 //   renderColors(product.colors, colors);
 // }
 
-// function setupMultimuebles(product) {
-//   const colors = document.getElementById("modal-colors");
-//   const openContainer = document.getElementById("modal-open");
+function setupMultimuebles(product) {
+  const colors = document.getElementById("modal-colors");
+  const openContainer = document.getElementById("modal-open");
 
-//   const container_size = document.getElementById("container_size");
-//   container_size.classList.remove("displayNone");
-//   const size = document.getElementById("size");
-//   size.textContent = product.size || "";
+  const container_size = document.getElementById("container_size");
+  container_size.classList.remove("displayNone");
+  const size = document.getElementById("size");
+  size.textContent = product.size || "";
 
-//   const price = document.getElementById("product-price");
-//   price.classList.remove("displayNone")
-//   price.innerHTML = '<span class="loader"></span>'
-//   loadProductPrice(product.id);
+  const price = document.getElementById("product-price");
+  price.classList.remove("displayNone")
+  price.innerHTML = '<span class="loader"></span>'
+  loadProductPrice(product.id);
 
-//   if(product.open){
-//     // openContainer.classList.remove("modal-opens")
-//     openContainer.classList.remove("displayNone")
-//   }else{
-//     openContainer.classList.add("modal-opens")
-//   }
-//   renderColors(product.colors, colors);
-//   openContainer.innerHTML = "";
-//   if (product.open) {
-//     const btn = document.createElement("span");
-//     btn.textContent = "Abrir";
-//     btn.className = "open-dot";
-//     btn.onclick = () => changeModalImage(product.open);
-//     openContainer.appendChild(btn);
-//   }
-// }
+  if(product.open){
+    // openContainer.classList.remove("modal-opens")
+    openContainer.classList.remove("displayNone")
+  }else{
+    openContainer.classList.add("modal-opens")
+  }
+  renderColors(product.colors, colors);
+  openContainer.innerHTML = "";
+  if (product.open) {
+    const btn = document.createElement("span");
+    btn.textContent = "Abrir";
+    btn.className = "open-dot";
+    btn.onclick = () => changeModalImage(product.open);
+    openContainer.appendChild(btn);
+  }
+}
 
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
