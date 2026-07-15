@@ -57,14 +57,20 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_hielo_gris.png",
           color: "#333",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "dormitorio_cama_hielo_black.png",
           color: "black",
+          type: "cuero",
+          name: "Negro",
         },
         {
           img: "dormitorio_cama_hielo_beige.png",
-          color: "beige"
+          color: "beige",
+          type: "cuero",
+          name: "Beige",
         }
       ]
     },
@@ -78,14 +84,20 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_nube_beige.png",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "dormitorio_cama_nube_black.png",
           color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "dormitorio_cama_nube_gray.png",
-          color: "gray"
+          color: "gray",
+          type: "cuero",
+          name: "Gris",
         }
       ]
     },
