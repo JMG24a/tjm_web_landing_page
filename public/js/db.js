@@ -349,7 +349,7 @@ const PRODUCTS = {
       suggest: [1000, 1001],
       colors: [
         {
-          img: "sofa_zultan_cuadrado_black.jpeg",
+          img: "sofa_zultan_cuadrado_black.jpg",
           color: "black",
           type: "tela",
           name: "Negro",

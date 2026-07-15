@@ -212,7 +212,6 @@ button:hover {
 .option span.method-name {
   flex: 1;
   font-weight: 500;
-  margin: 0 50px;
 }
 
 .option span.method-name-select {
