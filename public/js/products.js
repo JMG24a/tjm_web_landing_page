@@ -279,7 +279,7 @@ function setupDormitorio(product) {
 
   customSelect.innerHTML = `
     <div class="select-trigger">
-      https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg
+      <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
       <div class="selected-option option">
         <span class="method-name">Cargando...</span>
       </div>
