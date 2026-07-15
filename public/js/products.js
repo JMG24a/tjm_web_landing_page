@@ -168,11 +168,14 @@ async function getDollarRate() {
   }
 }
 
+if (categoryProductWs != "colchones" && categoryProductWs != "multimuebles") {
+  const fabricColor = document.getElementById("color_fabric_container");
+  fabricColor.classList.remove("displayNone");
+}
+
+
 function renderColors(colors, container) {
-  if(categoryProductWs != "colchones" || categoryProductWs != "multimuebles"){
-    const fabricColor = document.getElementById("color_fabric_container");
-    fabricColor.classList.remove("displayNone")
-  }
+  isFabricCategory(categoryProductWs)
   container.innerHTML = "";
 
   const colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
