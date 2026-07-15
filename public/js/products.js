@@ -169,7 +169,7 @@ async function getDollarRate() {
 }
 
 function renderColors(colors, container) {
-  if(categoryProductWs != "colchones"){
+  if(categoryProductWs != "colchones" || categoryProductWs != "multimuebles"){
     const fabricColor = document.getElementById("color_fabric_container");
     fabricColor.classList.remove("displayNone")
   }
