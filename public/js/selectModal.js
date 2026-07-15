@@ -81,19 +81,28 @@ const thumb = materialToggle.querySelector(".toggle-thumb");
 materialToggle.addEventListener("click", () => {
   materialToggle.classList.toggle("active");
   const colors = document.getElementById("modal-colors");
-
+  const leftLabel = document.querySelector(".toggle-left");
+  const rightLabel = document.querySelector(".toggle-right");
 
   if (materialToggle.classList.contains("active")) {
     materialProductWs = "cuero";
     thumb.textContent = "Cuero";
+
+    // Ocultar texto del lado seleccionado
+    rightLabel.textContent = "";
+    // Restaurar el texto del lado no seleccionado
+    leftLabel.textContent = "Tela";
   } else {
     materialProductWs = "tela";
     thumb.textContent = "Tela";
+
+    // Ocultar texto del lado seleccionado
+    leftLabel.textContent = "";
+    // Restaurar el texto del lado no seleccionado
+    rightLabel.textContent = "Cuero";
   }
 
   renderColors(productBaseWS.colors, colors)
-
-  console.log("Material seleccionado:", materialProductWs);
 });
 
 
