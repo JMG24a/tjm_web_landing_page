@@ -107,7 +107,47 @@ materialToggle.addEventListener("click", () => {
 
 
 const payBtn = document.getElementById("pay");
+// payBtn.addEventListener("click", () => {
+//   const producto = {
+//     name: nameProductWs,
+//     color: colorProductWs,
+//     material: materialProductWs,
+//     cantidad: cantidadWs,
+//     method: methodPayProductWs
+//   };
+
+//   let mensaje =
+// `✨ *Hola! Quiero completar mi pedido* ✨
+
+// 🧾 *Método de pago:* ${producto.method}
+
+// 🛍️ *Producto seleccionado:*
+// • 🛏️ *${producto.name}*
+//   🎨 Color: ${producto.color}
+//   🎨 Material: ${producto.material}
+//   📦 Cantidad: ${producto.cantidad}
+//   💵 Precio: $${priceProductWs * producto.cantidad}
+
+// 📍 *Sede de retiro:* ${locationWsSede}
+
+// 🙏 Gracias por su atención.`;
+
+//   // URL de WhatsApp
+//   const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
+//   window.open(url, "_blank");
+
+//   window.location.href = "/";
+// })
+
 payBtn.addEventListener("click", () => {
+
+  // 1️⃣ VALIDAR SEDE
+  if (!locationWsSede || locationWsSede.trim() === "") {
+    alert("Por favor selecciona una sede antes de continuar.");
+    return;
+  }
+
+  // 2️⃣ ARMAR OBJETO BASE
   const producto = {
     name: nameProductWs,
     color: colorProductWs,
@@ -116,6 +156,20 @@ payBtn.addEventListener("click", () => {
     method: methodPayProductWs
   };
 
+  // 3️⃣ ELIMINAR CAMPOS SEGÚN CATEGORÍA
+  let colorLine = `🎨 Color: ${producto.color}`;
+  let materialLine = `🎨 Material: ${producto.material}`;
+
+  if (categoryProductWs === "colchones") {
+    // colchones → eliminar color y material
+    colorLine = "";
+    materialLine = "";
+  } else if (categoryProductWs === "multimuebles") {
+    // multimuebles → eliminar solo material
+    materialLine = "";
+  }
+
+  // 4️⃣ CONSTRUIR MENSAJE DINÁMICO
   let mensaje =
 `✨ *Hola! Quiero completar mi pedido* ✨
 
@@ -123,8 +177,8 @@ payBtn.addEventListener("click", () => {
 
 🛍️ *Producto seleccionado:*
 • 🛏️ *${producto.name}*
-  🎨 Color: ${producto.color}
-  🎨 Material: ${producto.material}
+${colorLine ? "  " + colorLine + "\n" : ""}
+${materialLine ? "  " + materialLine + "\n" : ""}
   📦 Cantidad: ${producto.cantidad}
   💵 Precio: $${priceProductWs * producto.cantidad}
 
@@ -132,11 +186,9 @@ payBtn.addEventListener("click", () => {
 
 🙏 Gracias por su atención.`;
 
-// URL de WhatsApp
-const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
-window.open(url, "_blank");
+  // 5️⃣ URL DE WHATSAPP
+  const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
 
-window.location.href = "/";
-
-})
-
+  window.location.href = "/";
+});
