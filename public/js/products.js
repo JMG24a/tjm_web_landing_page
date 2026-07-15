@@ -256,125 +256,6 @@ function setupSofas(product) {
   renderColors(product.colors, colors);
 }
 
-function setupDormitorio(product) {
-  const colors = document.getElementById("modal-colors");
-  const topContainer = document.getElementById("modal-top");
-  topContainer.className = "modal-top";
-
-  const price = document.getElementById("product-price");
-  price.classList.remove("displayNone");
-  price.innerHTML = '<span class="loader"></span>';
-
-  const options = [
-    { label: "Individual", position: 1, size: "100" },
-    { label: "Matrimonial", position: 14, size: "140" },
-    { label: "Queen", position: 16, size: "160" },
-    { label: "King", position: 2, size: "200" }
-  ];
-
-  topContainer.innerHTML = "";
-  // 🔥 CUSTOM SELECT (igual al resto de tu app)
-  const customSelect = document.createElement("div");
-  customSelect.className = "custom-select-medidas";
-
-  // customSelect.innerHTML = `
-  //   <div class="select-trigger">
-  //     <div class="selected-option option">
-  //       <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
-  //       <span class="method-name">Cargando...</span>
-  //       <span class="arrow">▼</span>
-  //     </div>
-  //   <div class="select-options"></div>
-  // `;
-
-  customSelect.innerHTML = `
-    <div class="select-trigger">
-      <div class="selected-option option">
-        <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Medida">
-        <span class="method-name">Cargando...</span>
-      </div>
-      <span class="arrow">▼</span>
-    </div>
-
-    <div class="select-options"></div>
-  `;
-
-
-  topContainer.appendChild(customSelect);
-
-  const selectOptionsContainer = customSelect.querySelector(".select-options");
-  const selectedOption = customSelect.querySelector(".selected-option .method-name");
-
-  // 🔥 Arreglo en memoria igual que antes
-  const optData = options.map((opt, index) => ({
-    index,
-    position: opt.position,
-    size: opt.size,
-    label: opt.label,
-    price: 0
-  }));
-
-  // IDs completos para buscar precios
-  const ids = optData.map(el => `${product.id}${el.position}`);
-
-  // 🔥 Cargar precios
-  loadProductPrices(ids).then(prices => {
-    prices.forEach((priceValue, index) => {
-      optData[index].price = priceValue;
-
-      // Crear opción visual igual a tus selects
-      const optionEl = document.createElement("div");
-      optionEl.className = "option";
-      optionEl.dataset.value = index;
-
-      optionEl.innerHTML = `
-        <span class="method-name">${optData[index].label}</span>
-        <span class="badge">$${priceValue}</span>
-      `;
-
-      // Evento de selección
-      optionEl.onclick = () => {
-        selectedOption.textContent = `${optData[index].label} - $${priceValue}`;
-        seleccionarMedida(index);
-      };
-
-      selectOptionsContainer.appendChild(optionEl);
-    });
-
-    // Selección inicial
-    selectedOption.textContent = `${optData[0].label} - $${optData[0].price}`;
-    seleccionarMedida(0);
-  });
-
-  // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA (idéntica a tu versión)
-  function seleccionarMedida(index) {
-    const selectedOpt = optData[index];
-    if (!selectedOpt) return;
-
-    priceProductWs = parseFloat(selectedOpt.price);
-    nameProductWs = `${product.name} ${selectedOpt.label}`;
-    idProductSelected = Number(`${product.id}${selectedOpt.position}`);
-
-    loadPayPercentage(methodPayProductWs);
-    verificarSesion(idProductSelected);
-  }
-
-  renderColors(product.colors, colors);
-}
-
-document.addEventListener("click", (e) => {
-  const select = document.querySelector(".custom-select-medidas");
-
-  if (!select) return;
-
-  if (select.contains(e.target)) {
-    select.classList.toggle("open");
-  } else {
-    select.classList.remove("open");
-  }
-});
-
-
 // function setupDormitorio(product) {
 //   const colors = document.getElementById("modal-colors");
 //   const topContainer = document.getElementById("modal-top");
@@ -392,70 +273,189 @@ document.addEventListener("click", (e) => {
 //   ];
 
 //   topContainer.innerHTML = "";
+//   // 🔥 CUSTOM SELECT (igual al resto de tu app)
+//   const customSelect = document.createElement("div");
+//   customSelect.className = "custom-select-medidas";
 
-//   // 1. Creamos el elemento Select
-//   const selectElement = document.createElement("select");
-//   selectElement.className = "select-medidas"; // Clase para darle estilos CSS
+//   // customSelect.innerHTML = `
+//   //   <div class="select-trigger">
+//   //     <div class="selected-option option">
+//   //       <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
+//   //       <span class="method-name">Cargando...</span>
+//   //       <span class="arrow">▼</span>
+//   //     </div>
+//   //   <div class="select-options"></div>
+//   // `;
 
-//   // Arreglo en memoria para guardar las referencias de los datos y precios
-//   const optData = options.map((opt, index) => {
-//     const optionEl = document.createElement("option");
-//     optionEl.value = index; // Guardamos el índice como valor
-//     optionEl.textContent = `${opt.label.toUpperCase()} (Cargando...)`;
+//   customSelect.innerHTML = `
+//     <div class="select-trigger">
+//       <div class="selected-option option">
+//         <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Medida">
+//         <span class="method-name">Cargando...</span>
+//       </div>
+//       <span class="arrow">▼</span>
+//     </div>
 
-//     selectElement.appendChild(optionEl);
+//     <div class="select-options"></div>
+//   `;
 
-//     return {
-//       optionEl,
-//       position: opt.position,
-//       size: opt.size,
-//       label: opt.label,
-//       price: 0 // Se actualizará al cargar
-//     };
-//   });
 
-//   topContainer.appendChild(selectElement);
+//   topContainer.appendChild(customSelect);
+
+//   const selectOptionsContainer = customSelect.querySelector(".select-options");
+//   const selectedOption = customSelect.querySelector(".selected-option .method-name");
+
+//   // 🔥 Arreglo en memoria igual que antes
+//   const optData = options.map((opt, index) => ({
+//     index,
+//     position: opt.position,
+//     size: opt.size,
+//     label: opt.label,
+//     price: 0
+//   }));
 
 //   // IDs completos para buscar precios
 //   const ids = optData.map(el => `${product.id}${el.position}`);
 
-//   // Cargar precios y actualizar el texto de las opciones del select
+//   // 🔥 Cargar precios
 //   loadProductPrices(ids).then(prices => {
 //     prices.forEach((priceValue, index) => {
 //       optData[index].price = priceValue;
-//       optData[index].optionEl.textContent = `${optData[index].label.toUpperCase()} - $${priceValue}`;
+
+//       // Crear opción visual igual a tus selects
+//       const optionEl = document.createElement("div");
+//       optionEl.className = "option";
+//       optionEl.dataset.value = index;
+
+//       optionEl.innerHTML = `
+//         <span class="method-name">${optData[index].label}</span>
+//         <span class="badge">$${priceValue}</span>
+//       `;
+
+//       // Evento de selección
+//       optionEl.onclick = () => {
+//         selectedOption.textContent = `${optData[index].label} - $${priceValue}`;
+//         seleccionarMedida(index);
+//       };
+
+//       selectOptionsContainer.appendChild(optionEl);
 //     });
 
-//     // Forzar la actualización de variables globales con el primer precio ya cargado
-//     seleccionarMedida(selectElement.value);
+//     // Selección inicial
+//     selectedOption.textContent = `${optData[0].label} - $${optData[0].price}`;
+//     seleccionarMedida(0);
 //   });
 
-//   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
+//   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA (idéntica a tu versión)
 //   function seleccionarMedida(index) {
 //     const selectedOpt = optData[index];
 //     if (!selectedOpt) return;
 
-//     // Guardar variables globales exactamente igual que antes
 //     priceProductWs = parseFloat(selectedOpt.price);
 //     nameProductWs = `${product.name} ${selectedOpt.label}`;
-//     idProductSelected = `${product.id}${selectedOpt.position}`;
-//     idProductSelected = Number(idProductSelected);
+//     idProductSelected = Number(`${product.id}${selectedOpt.position}`);
 
 //     loadPayPercentage(methodPayProductWs);
 //     verificarSesion(idProductSelected);
 //   }
 
-//   // Escuchar el cambio en el select
-//   selectElement.addEventListener("change", (e) => {
-//     seleccionarMedida(e.target.value);
-//   });
-
-//   // Selección inicial por defecto (posición 0)
-//   selectElement.value = 0;
-//   seleccionarMedida(0);
-
 //   renderColors(product.colors, colors);
 // }
+
+// document.addEventListener("click", (e) => {
+//   const select = document.querySelector(".custom-select-medidas");
+
+//   if (!select) return;
+
+//   if (select.contains(e.target)) {
+//     select.classList.toggle("open");
+//   } else {
+//     select.classList.remove("open");
+//   }
+// });
+
+
+function setupDormitorio(product) {
+  const colors = document.getElementById("modal-colors");
+  const topContainer = document.getElementById("modal-top");
+  topContainer.className = "modal-top";
+
+  const price = document.getElementById("product-price");
+  price.classList.remove("displayNone");
+  price.innerHTML = '<span class="loader"></span>';
+
+  const options = [
+    { label: "Individual", position: 1, size: "100" },
+    { label: "Matrimonial", position: 14, size: "140" },
+    { label: "Queen", position: 16, size: "160" },
+    { label: "King", position: 2, size: "200" }
+  ];
+
+  topContainer.innerHTML = "";
+
+  // 1. Creamos el elemento Select
+  const selectElement = document.createElement("select");
+  selectElement.className = "select-medidas"; // Clase para darle estilos CSS
+
+  // Arreglo en memoria para guardar las referencias de los datos y precios
+  const optData = options.map((opt, index) => {
+    const optionEl = document.createElement("option");
+    optionEl.value = index; // Guardamos el índice como valor
+    optionEl.textContent = `${opt.label.toUpperCase()} (Cargando...)`;
+
+    selectElement.appendChild(optionEl);
+
+    return {
+      optionEl,
+      position: opt.position,
+      size: opt.size,
+      label: opt.label,
+      price: 0 // Se actualizará al cargar
+    };
+  });
+
+  topContainer.appendChild(selectElement);
+
+  // IDs completos para buscar precios
+  const ids = optData.map(el => `${product.id}${el.position}`);
+
+  // Cargar precios y actualizar el texto de las opciones del select
+  loadProductPrices(ids).then(prices => {
+    prices.forEach((priceValue, index) => {
+      optData[index].price = priceValue;
+      optData[index].optionEl.textContent = `${optData[index].label.toUpperCase()} - $${priceValue}`;
+    });
+
+    // Forzar la actualización de variables globales con el primer precio ya cargado
+    seleccionarMedida(selectElement.value);
+  });
+
+  // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
+  function seleccionarMedida(index) {
+    const selectedOpt = optData[index];
+    if (!selectedOpt) return;
+
+    // Guardar variables globales exactamente igual que antes
+    priceProductWs = parseFloat(selectedOpt.price);
+    nameProductWs = `${product.name} ${selectedOpt.label}`;
+    idProductSelected = `${product.id}${selectedOpt.position}`;
+    idProductSelected = Number(idProductSelected);
+
+    loadPayPercentage(methodPayProductWs);
+    verificarSesion(idProductSelected);
+  }
+
+  // Escuchar el cambio en el select
+  selectElement.addEventListener("change", (e) => {
+    seleccionarMedida(e.target.value);
+  });
+
+  // Selección inicial por defecto (posición 0)
+  selectElement.value = 0;
+  seleccionarMedida(0);
+
+  renderColors(product.colors, colors);
+}
 
 // function setupDormitorio(product) {
 //   const colors = document.getElementById("modal-colors");
