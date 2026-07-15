@@ -297,7 +297,13 @@ const PRODUCTS = {
           color: "black",
           type: "cuero",
           name: "Negro"
-        }
+        },
+        {
+          img: "sofa_zultan_2_barrigas_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
       ]
     },
     {
@@ -309,16 +315,28 @@ const PRODUCTS = {
       suggest: [1000, 1002],
       colors: [
         {
-          img: "sofa_zultan_chapa_gray.png ",
+          img: "sofa_zultan_chapa_gray.png",
           color: "gray",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "sofa_zultan_chapa_black.png",
           color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_zultan_chapa_white.png ",
           color: "white",
+          type: "tela",
+          name: "Blanco",
+        },
+        {
+          img: "sofa_zultan_chapa_white.png ",
+          color: "white",
+          type: "cuero",
+          name: "Blanco",
         }
       ]
     },
@@ -333,14 +351,26 @@ const PRODUCTS = {
         {
           img: "sofa_zultan_cuadrado_black.jpeg",
           color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_zultan_cuadrado_gray.jpeg",
           color: "gray",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "sofa_zultan_cuadrado_gray_black.jpeg",
           color: "#595959",
+          type: "tela",
+          name: "Gris Oscuro",
+        },
+        {
+          img: "sofa_zultan_cuadrado_gray_black.jpeg",
+          color: "#595959",
+          type: "cuero",
+          name: "Gris Oscuro",
         }
       ]
     },
@@ -355,14 +385,20 @@ const PRODUCTS = {
         {
           img: "sofa_muebleL_red.png",
           color: "red",
+          type: "tela",
+          name: "Rojo",
         },
         {
           img: "sofa_muebleL_black.png ",
           color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_muebleL_white.png",
           color: "white",
+          type: "cuero",
+          name: "Blanco",
         }
       ]
     },
@@ -377,22 +413,32 @@ const PRODUCTS = {
         {
           img: "sofa_osman_white_d.jpg",
           color: "#ffffff",
+          type: "tela",
+          name: "Blanco",
         },
         {
           img: "sofa_osman_black_d.jpg",
           color: "#000000",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_osman_brown_d.jpg",
-          color: "#6a3d2c"
+          color: "#6a3d2c",
+          type: "tela",
+          name: "Marron",
         },
         {
           img: "sofa_osman_gray_d.jpg",
-          color: "gray"
+          color: "gray",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "sofa_osman_beige_d.jpg",
-          color: "beige"
+          color: "beige",
+          type: "cuero",
+          name: "Beige",
         }
       ]
     },
