@@ -228,8 +228,8 @@ button:hover {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
-  position: absolute;
-  right: 40px;
+  /* position: absolute;
+  right: 40px; */
   white-space: nowrap;
 }
 
