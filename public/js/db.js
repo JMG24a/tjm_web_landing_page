@@ -490,11 +490,11 @@ const PRODUCTS = {
       name: "Sofa Nube",
       size: "160cm - 240cm",
       desc: "El sofá Nube destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_juego_nube_gray.PNG",
+      img: "sofa_juego_nube_gray.jpg",
       suggest: [1012, 1019],
       colors: [
         {
-          img: "sofa_juego_nube_gray.PNG",
+          img: "sofa_juego_nube_gray.jpg",
           color: "#3e3e3e",
         },
         {
