@@ -575,7 +575,7 @@ const PRODUCTS = {
       ]
     },
     {
-      id: 1022,
+      id: 1025,
       name: "Sofas Dormus",
       desc: "El sofá Dormus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_dormus_beige.jpeg",
@@ -583,9 +583,9 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_dormus_beige.jpeg",
-          color: "#393939",
+          color: "beige",
           type: "cuero",
-          name: "Gris Oscuro",
+          name: "Beige",
         },
         // {
         //   img: "sofa_richard_gray_white.jpeg",
