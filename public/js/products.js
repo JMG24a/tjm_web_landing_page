@@ -634,6 +634,7 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}4${position}`, extra);
+      console.log("🚀 ~ updateChairs ~ ${product.id}4${position}:", product.id,"4",position)
 
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
@@ -643,7 +644,7 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}6${position}`);
+      loadProductPrice(`${product.id}6${position}`, extra);
       console.log("chair 6 position: ", position)
       console.log("chair 6 position color: ", product.chairs_6[position].img)
       console.log("chair 6 position: colors", colors)
