@@ -1331,6 +1331,125 @@ const PRODUCTS = {
     },
   ],
   comedores: [
+    {
+      id: 3008,
+      name: "Galileo V",
+      desc: "...",
+      img: "comedor_galileo_v.png",
+      size: "Largo: 190cm - Ancho: 90cm",
+      chairs_6:[
+        {
+          top: "vidrio",
+          img: "comedor_galileo_v.png",
+          colors: [
+            {
+              img: "comedor_galileo_v.png",
+              color:"#3f0b0b"
+            },
+            {
+              img: "comedor_galileo_v.png",
+              color:"#0a134a"
+            },
+            {
+              img: "comedor_galileo_v.png",
+              color:"#520131"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_galileo_v.png",
+          colors: [
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#ea13aa"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#a126b4"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#eb0d69"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_galileo_v.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+          ],
+        },
+      ],
+      chairs_4:[
+        {
+          top: "vidrio",
+          img: "comedor_saturno_vidrio.png",
+          colors: [
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_saturno_pintado.png",
+          colors: [
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#09ff00"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#ffd500"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#1d1dc4"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_saturno_pvc.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#fdf906"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#0037ff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ff0000"
+            },
+          ],
+        },
+      ]
+    },
     // {
     //   id: 3001,
     //   name: "Isabel Arteco",
@@ -1563,6 +1682,125 @@ const PRODUCTS = {
             },
             {
               img: "comedor_isabel_torre.jpeg",
+              color:"#ff0000"
+            },
+          ],
+        },
+      ]
+    },
+ {
+      id: 3008,
+      name: "Saturno V",
+      desc: "...",
+      img: "comedor_saturno_vidrio.png",
+      size: "Largo: 190cm - Ancho: 90cm",
+      chairs_6:[
+        {
+          top: "vidrio",
+          img: "comedor_saturno_vidrio.png",
+          colors: [
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#3f0b0b"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#0a134a"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#520131"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_saturno_pintado.png",
+          colors: [
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#ea13aa"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#a126b4"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#eb0d69"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_saturno_pvc.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#ffffff"
+            },
+          ],
+        },
+      ],
+      chairs_4:[
+        {
+          top: "vidrio",
+          img: "comedor_saturno_vidrio.png",
+          colors: [
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+            {
+              img: "comedor_saturno_vidrio.png",
+              color:"#333"
+            },
+          ],
+        },
+        {
+          top: "pintado",
+          img: "comedor_saturno_pintado.png",
+          colors: [
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#09ff00"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#ffd500"
+            },
+            {
+              img: "comedor_saturno_pintado.png",
+              color:"#1d1dc4"
+            },
+          ],
+        },
+        {
+          top: "pvc",
+          img: "comedor_saturno_pvc.png",
+          colors: [
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#fdf906"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
+              color:"#0037ff"
+            },
+            {
+              img: "comedor_saturno_pvc.png",
               color:"#ff0000"
             },
           ],
@@ -2164,125 +2402,6 @@ const PRODUCTS = {
     //     },
     //   ]
     // },
-    {
-      id: 3008,
-      name: "Saturno V",
-      desc: "...",
-      img: "comedor_saturno_pvc.png",
-      size: "Largo: 190cm - Ancho: 90cm",
-      chairs_6:[
-        {
-          top: "vidrio",
-          img: "comedor_saturno_vidrio.png",
-          colors: [
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#3f0b0b"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#0a134a"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#520131"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_saturno_pintado.png",
-          colors: [
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#ea13aa"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#a126b4"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#eb0d69"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_saturno_pvc.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-          ],
-        },
-      ],
-      chairs_4:[
-        {
-          top: "vidrio",
-          img: "comedor_saturno_vidrio.png",
-          colors: [
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_saturno_pintado.png",
-          colors: [
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#09ff00"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#ffd500"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#1d1dc4"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_saturno_pvc.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#fdf906"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#0037ff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ff0000"
-            },
-          ],
-        },
-      ]
-    },
     // {
     //   id: 3009,
     //   name: "Luna Arteco",
@@ -3235,125 +3354,6 @@ const PRODUCTS = {
     //     },
     //   ]
     // },
-    {
-      id: 3008,
-      name: "Galileo V",
-      desc: "...",
-      img: "comedor_galileo_v.png",
-      size: "Largo: 190cm - Ancho: 90cm",
-      chairs_6:[
-        {
-          top: "vidrio",
-          img: "comedor_galileo_v.png",
-          colors: [
-            {
-              img: "comedor_galileo_v.png",
-              color:"#3f0b0b"
-            },
-            {
-              img: "comedor_galileo_v.png",
-              color:"#0a134a"
-            },
-            {
-              img: "comedor_galileo_v.png",
-              color:"#520131"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_galileo_v.png",
-          colors: [
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#ea13aa"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#a126b4"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#eb0d69"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_galileo_v.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ffffff"
-            },
-          ],
-        },
-      ],
-      chairs_4:[
-        {
-          top: "vidrio",
-          img: "comedor_saturno_vidrio.png",
-          colors: [
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-            {
-              img: "comedor_saturno_vidrio.png",
-              color:"#333"
-            },
-          ],
-        },
-        {
-          top: "pintado",
-          img: "comedor_saturno_pintado.png",
-          colors: [
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#09ff00"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#ffd500"
-            },
-            {
-              img: "comedor_saturno_pintado.png",
-              color:"#1d1dc4"
-            },
-          ],
-        },
-        {
-          top: "pvc",
-          img: "comedor_saturno_pvc.png",
-          colors: [
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#fdf906"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#0037ff"
-            },
-            {
-              img: "comedor_saturno_pvc.png",
-              color:"#ff0000"
-            },
-          ],
-        },
-      ]
-    },
   ],
   multimuebles: [
     {
