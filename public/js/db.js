@@ -575,8 +575,47 @@ const PRODUCTS = {
       ]
     },
     {
+      id: 1022,
+      name: "Sofas Dormus",
+      desc: "El sofá Dormus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_dormus_beige.jpeg",
+      suggest: [1020, 1011],
+      colors: [
+        {
+          img: "sofa_dormus_beige.jpeg",
+          color: "#393939",
+          type: "cuero",
+          name: "Gris Oscuro",
+        },
+        // {
+        //   img: "sofa_richard_gray_white.jpeg",
+        //   color: "#393939",
+        //   type: "cuero",
+        //   name: "Gris Claro",
+        // },
+        // {
+        //   img: "sofa_richard_black.jpeg",
+        //   color: "black",
+        //   type: "tela",
+        //   name: "Negro",
+        // },
+        // {
+        //   img: "sofa_richard_white.jpeg",
+        //   color: "rgba(255, 255, 255, 0.96)",
+        //   type: "cuero",
+        //   name: "Blanco",
+        // },
+        // {
+        //   img: "sofa_richard_red.jpeg",
+        //   color: "red",
+        //   type: "tela",
+        //   name: "Rojo",
+        // },
+      ]
+    },
+    {
       id: 1009,
-      name: "Sofa Richard",
+      name: "Mueble Richard",
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_black.jpeg",
       suggest: [1020, 1011],
