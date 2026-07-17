@@ -157,11 +157,11 @@ async function loadPayPercentage(metodo){
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       await loadProductPrice(idProductSelected, 0)
-      const factor = 1 + (percentagePayCategory / 100);
-      price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
+      const factor2 = 1 + (percentagePayCategory / 100);
+      price.innerHTML = `$${(priceProductWs / factor2).toFixed(2)}`;
       off.classList.remove("displayNone")
       off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
+      priceProductWs = `${(priceProductWs / factor2).toFixed(2)}`
       break;
     default:
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
