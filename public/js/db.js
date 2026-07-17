@@ -606,11 +606,11 @@ const PRODUCTS = {
       name: "Sofa Palermo",
       size: "160cm - 240cm",
       desc: "El sofá Palermo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_palermo_gray_black.PNG",
+      img: "sofa_palermo_gray_black.jpg",
       suggest: [1013, 1010],
       colors: [
         {
-          img: "sofa_palermo_gray_black.PNG",
+          img: "sofa_palermo_gray_black.jpg",
           color: "gray",
         },
         {
