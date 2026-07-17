@@ -20,7 +20,7 @@ let locationWsSede
 const porcentajesPago = {
   multimuebles: 40,
   comedores: 40,
-  colchones: 40,
+  colchones: 24,
   dormitorios: 26,
   sofas: 22
 };
