@@ -643,7 +643,7 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      // loadProductPrice(`${product.id}6${position}`);
+      loadProductPrice(`${product.id}6${position}`);
       console.log("chair 6 position: ", position)
       console.log("chair 6 position color: ", product.chairs_6[position].img)
       console.log("chair 6 position: colors", colors)
