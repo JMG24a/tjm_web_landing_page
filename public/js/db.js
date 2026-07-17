@@ -712,31 +712,31 @@ const PRODUCTS = {
         },
       ]
     },
-    {
-      id: 1016,
-      name: "Sofa Zultan 3 puestos",
-      desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_zultan_3puestos_gray.jpeg",
-      suggest: [1001, 1002],
-      colors: [
-        {
-          img: "sofa_zultan_3puestos_gray.jpeg",
-          color: "gray"
-        },
-        {
-          img: "sofa_zultan_3puestos_gray_white.jpeg",
-          color: "black",
-        },
-        {
-          img: "sofa_zultan_3puestos_beige.jpeg",
-          color: "beige",
-        },
-        {
-          img: "sofa_zultan_3puestos_white.jpeg",
-          color: "white",
-        },
-      ]
-    },
+    // {
+    //   id: 1016,
+    //   name: "Sofa Zultan 3 puestos",
+    //   desc: "El sofá Zultan 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+    //   img: "sofa_zultan_3puestos_gray.jpeg",
+    //   suggest: [1001, 1002],
+    //   colors: [
+    //     {
+    //       img: "sofa_zultan_3puestos_gray.jpeg",
+    //       color: "gray"
+    //     },
+    //     {
+    //       img: "sofa_zultan_3puestos_gray_white.jpeg",
+    //       color: "black",
+    //     },
+    //     {
+    //       img: "sofa_zultan_3puestos_beige.jpeg",
+    //       color: "beige",
+    //     },
+    //     {
+    //       img: "sofa_zultan_3puestos_white.jpeg",
+    //       color: "white",
+    //     },
+    //   ]
+    // },
     {
       id: 1017,
       name: "Sofa Normandy",
@@ -814,7 +814,7 @@ const PRODUCTS = {
     },
     {
       id: 1020,
-      name: "Sofa Nigeria",
+      name: "Sofa Fenix",
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
       suggest: [1011, 1008],
