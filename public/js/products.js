@@ -21,7 +21,7 @@ const porcentajesPago = {
   comedores: 40,
   colchones: 40,
   dormitorios: 40,
-  sofas: 40
+  sofas: 25
 };
 
 async function verificarSesion(id) {

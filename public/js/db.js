@@ -3289,7 +3289,7 @@ const PRODUCTS = {
   multimuebles: [
     {
       id: 4001,
-      name: "Closet Margarita",
+      name: "Closet Margarida",
       size: "Alto: 180cm - Ancho: 61cm",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_brown.jpg",
