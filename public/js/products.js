@@ -18,7 +18,7 @@ let cantidadWs = 1
 let categoryProductWs
 let locationWsSede
 const porcentajesPago = {
-  multimuebles: 40,
+  multimuebles: 23,
   comedores: 40,
   colchones: 24,
   dormitorios: 26,
