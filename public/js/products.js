@@ -5,13 +5,14 @@ let sedesW = {
   "San Pablo": "584228463448",
   "Barquisimeto": "584120213946",
 }
+let extra = 8
 let productBaseWS
 let idProductSelected = 0
 let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
-let methodPayProductWs = "Transferencia"
+let methodPayProductWs = "Decontado"
 let materialProductWs = "tela"
 let cantidadWs = 1
 let categoryProductWs
@@ -21,7 +22,7 @@ const porcentajesPago = {
   comedores: 40,
   colchones: 40,
   dormitorios: 40,
-  sofas: 25
+  sofas: 22
 };
 
 async function verificarSesion(id) {
@@ -75,13 +76,13 @@ if (goHomeBtn) {
 }
 
 // 1. Cargar precio del producto en USD
-async function loadProductPrice(id) {
+async function loadProductPrice(id, extra) {
   try {
     percentagePayCategory = porcentajesPago[categoryProductWs]
     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
-    pricePlus5 = calcularAumento(data.precio, 5);
+    pricePlus5 = calcularAumento(data.precio, extra);
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(pricePlus5, porcentage);
@@ -107,7 +108,7 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
 
-    const newR = results.map(data => calcularAumento(data.precio, 5));
+    const newR = results.map(data => calcularAumento(data.precio, extra));
     const bcv = newR.map(data => calcularAumento(data, porcentage));
 
     priceProductWs = bcv[0]
@@ -124,21 +125,38 @@ async function loadPayPercentage(metodo){
   let precioFinal = priceProductWs;
   methodPayProductWs = metodo
   switch (metodo) {
-    case "Transferencia":
+    case "Decontado":
+      off.classList.add("displayNone")
+      price.classList.remove("displayNone")
+      price.innerHTML = '<span class="loader"></span>'
+      loadProductPrice(idProductSelected, 0)
+      break;
+
     case "Cashea":
       // Sin descuento
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected)
+      loadProductPrice(idProductSelected, extra)
       break;
 
     case "Zelle":
-    case "Binance":
       // Quitar el porcentaje agregado previamente
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      await loadProductPrice(idProductSelected)
+      await loadProductPrice(idProductSelected, extra)
+      const factor = 1 + (percentagePayCategory / 100);
+      price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
+      off.classList.remove("displayNone")
+      off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
+      priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
+      break;
+
+    case "Cash - Binance":
+      // Quitar el porcentaje agregado previamente
+      price.classList.remove("displayNone")
+      price.innerHTML = '<span class="loader"></span>'
+      await loadProductPrice(idProductSelected, 0)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
       off.classList.remove("displayNone")
@@ -149,7 +167,7 @@ async function loadPayPercentage(metodo){
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
         price.classList.remove("displayNone")
         price.innerHTML = '<span class="loader"></span>'
-        await loadProductPrice(`${idProductSelected}1`)
+        await loadProductPrice(`${idProductSelected}1`, extra)
       }
       off.classList.add("displayNone")
       price.innerHTML = `$${priceProductWs}`;
@@ -261,7 +279,7 @@ function setupSofas(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id);
+  loadProductPrice(product.id, extra);
   renderColors(product.colors, colors);
 }
 
