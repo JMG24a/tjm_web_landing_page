@@ -76,13 +76,13 @@ if (goHomeBtn) {
 }
 
 // 1. Cargar precio del producto en USD
-async function loadProductPrice(id, extra) {
+async function loadProductPrice(id, extras) {
   try {
     percentagePayCategory = porcentajesPago[categoryProductWs]
     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
-    pricePlus5 = calcularAumento(data.precio, extra);
+    pricePlus5 = calcularAumento(data.precio, extras);
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
     const priceUSD = calcularAumento(pricePlus5, porcentage);
@@ -579,7 +579,7 @@ function setupMultimuebles(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id);
+  loadProductPrice(product.id, extra);
 
   if(product.open){
     // openContainer.classList.remove("modal-opens")
@@ -633,7 +633,7 @@ function setupComedores(product) {
 
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}4${position}`);
+      loadProductPrice(`${product.id}4${position}`, extra);
 
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
@@ -799,6 +799,7 @@ function initProductsObserver() {
 }
 
 function loadSliderByCategory(category) {
+    console.log("DSADSDSA?? 44")
   const welcome = document.querySelector(".sliders");
   const slogan1 = document.querySelector(".slogan-main");
   const slogan2 = document.querySelector(".slogan-sub");
@@ -816,6 +817,7 @@ function loadSliderByCategory(category) {
 }
 
 function loadProductsByCategory(category) {
+    console.log("DSADSDSA?? 22")
   const grid = document.querySelector(".furniture-grid");
   grid.innerHTML = "";
   const products = PRODUCTS[category] || [];
@@ -836,6 +838,7 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
+  console.log("DSADSDSA??")
   showTopBarProduct()
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
