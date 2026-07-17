@@ -474,14 +474,20 @@ const PRODUCTS = {
         {
           img: "sofa_hielo_gray.jpg",
           color: "gray",
+          type: "cuero",
+          name: "Gris",
         },
         {
           img: "sofa_hielo_beige.jpg",
           color: "beige",
+          type: "cuero",
+          name: "Beige",
         },
         {
           img: "sofa_hielo_black.jpg",
           color: "black",
+          type: "cuero",
+          name: "Negro",
         },
       ]
     },
@@ -496,22 +502,32 @@ const PRODUCTS = {
         {
           img: "sofa_juego_nube_gray.jpg",
           color: "#3e3e3e",
+          type: "cuero",
+          name: "Gris",
         },
         {
           img: "sofa_juego_nube_white.PNG",
           color: "#ffffff",
+          type: "cuero",
+          name: "Blanco",
         },
         {
           img: "sofa_juego_nube_beige.PNG",
           color: "#d2b48c",
+          type: "cuero",
+          name: "Beige",
         },
         {
           img: "sofa_nube_beige_.PNG",
           color: "#d2b48c",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "sofa_nube_poltrona_beige.jpng",
           color: "#d2b48c",
+          type: "tela",
+          name: "Beige",
         },
       ]
     },
@@ -562,24 +578,38 @@ const PRODUCTS = {
       id: 1009,
       name: "Sofa Richard",
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_richard_gray_white.jpeg",
+      img: "sofa_richard_gray_black.jpeg",
       suggest: [1020, 1011],
       colors: [
         {
+          img: "sofa_richard_gray_black.jpeg",
+          color: "#393939",
+          type: "cuero",
+          name: "Gris Oscuro",
+        },
+        {
           img: "sofa_richard_gray_white.jpeg",
           color: "#393939",
+          type: "cuero",
+          name: "Gris Claro",
         },
         {
           img: "sofa_richard_black.jpeg",
-          color: "black"
+          color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_richard_white.jpeg",
           color: "rgba(255, 255, 255, 0.96)",
+          type: "cuero",
+          name: "Blanco",
         },
         {
           img: "sofa_richard_red.jpeg",
           color: "red",
+          type: "tela",
+          name: "Rojo",
         },
       ]
     },
