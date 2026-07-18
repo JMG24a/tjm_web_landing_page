@@ -237,7 +237,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 } */
-/* Estilo para el selector cerrado (Trigger) */
+
 /* Estilo para el contenedor cerrado (Trigger) */
 .select-trigger {
   /* Degradado lineal de violeta a azul (puedes ajustar el ángulo si lo deseas) */
@@ -291,7 +291,7 @@ button:hover {
 
 /* Al pasar por encima de una opción, aplicamos un fondo sutil */
 .option:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.164);
   cursor: pointer;
 }
 
@@ -448,7 +448,7 @@ button:hover {
 }
 
 /* TRIGGER */
-/* #locationSelect .select-trigger {
+#locationSelect .select-trigger {
   background: #fff;
   border: 2px solid #ababab;
   padding: 12px;
@@ -457,7 +457,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-} */
+}
 
 /* OPCIÓN SELECCIONADA */
 #locationSelect .selected-option {
