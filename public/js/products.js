@@ -302,13 +302,6 @@ function setupSofas(product) {
         <span id="size" class="size_text"></span>
       </p>
     `
-    const size = document.getElementById("size");
-    size.textContent = product.size || "";
-
-
-  const container_size = document.getElementById("container_size");
-  container_size.classList.remove("displayNone");
-
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
