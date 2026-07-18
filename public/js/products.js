@@ -86,12 +86,14 @@ if (goHomeBtn) {
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id, extras) {
   try {
-  console.log("🚀 ~ loadProductPrice ~ id:", id)
+    console.log("🚀 ~ loadProductPrice ~ id:", id)
 
     percentagePayCategory = porcentajesPago[categoryProductWs]
     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
+    console.log("🚀 ~ loadProductPrice ~ id2: ", id)
+
     pricePlus5 = calcularAumento(data.precio, extras);
     const priceUSD = pricePlus5
     //precioGlobal
