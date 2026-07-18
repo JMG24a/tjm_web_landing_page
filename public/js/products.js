@@ -112,7 +112,7 @@ async function loadProductPrices(ids = []) {
       .then(res => res.json())
     );
     const results = await Promise.all(requests);
-    results.map(()=>(console.log("Item, result", item, results)))
+    results.map((item)=>(console.log("Item, result", item, results)))
     const bcv = results.map(data => calcularAumento(data, porcentajesPagoMethod.cashea));
 
     priceProductWs = bcv[0]
