@@ -25,6 +25,14 @@ const porcentajesPago = {
   sofas: 28.78
 };
 
+const porcentajesPagoMethod = {
+  cashea: 28.78,
+  zelle: 3,
+  colchones: 24,
+  dormitorios: 26,
+  sofas: 28.78
+};
+
 async function verificarSesion(id) {
   const form = document.querySelector(".form-contenedor");
   const price = document.getElementById("precioInput");
@@ -128,7 +136,7 @@ async function loadPayPercentage(metodo){
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected, 20.35)
+      loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
       break;
 
     case "Cashea":
@@ -136,14 +144,14 @@ async function loadPayPercentage(metodo){
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected, porcentajesPago.sofas)
+      loadProductPrice(idProductSelected, porcentajesPagoMethod.cashea)
       break;
 
     case "Zelle":
       // Quitar el porcentaje agregado previamente
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      await loadProductPrice(idProductSelected, extra)
+      await loadProductPrice(idProductSelected, porcentajesPagoMethod.zelle)
       const factor = 1 + (percentagePayCategory / 100);
       price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
       off.classList.remove("displayNone")
@@ -278,7 +286,7 @@ function setupSofas(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id, porcentajesPago.sofas);
+  loadProductPrice(product.id, porcentajesPagoMethod.cashea);
   renderColors(product.colors, colors);
 }
 
