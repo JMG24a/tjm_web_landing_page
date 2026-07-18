@@ -93,10 +93,13 @@ async function loadProductPrice(id, extras) {
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const priceUSD = pricePlus5
     //precioGlobal
-    if(priceProductWs == 0 && priceProductWs > priceUSD){
+    if(priceProductWs == 0 ){
       priceBaseDiscount = priceUSD
     }
     priceProductWs = priceUSD;
+    if(priceProductWs > priceUSD){
+      priceBaseDiscount = priceProductWs
+    }
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
