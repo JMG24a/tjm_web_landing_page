@@ -93,7 +93,7 @@ async function loadProductPrice(id, extras) {
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const priceUSD = pricePlus5
     //precioGlobal
-    if(priceProductWs == 0){
+    if(priceProductWs == 0 && priceProductWs > priceBaseDiscount){
       priceBaseDiscount = priceUSD
     }
     priceProductWs = priceUSD;
@@ -117,7 +117,8 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
     const bcv = results.map(data => calcularAumento(data.precio, porcentajesPagoMethod.cashea));
-    if(priceProductWs == 0){
+
+    if(priceProductWs == 0 && priceProductWs < bcv[0]){
       priceBaseDiscount = bcv[0]
     }
     priceProductWs = bcv[0]
@@ -131,11 +132,9 @@ async function loadProductPrices(ids = []) {
 async function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
   const off = document.getElementById("off");
-  let precioFinal = priceProductWs;
   methodPayProductWs = metodo
   switch (metodo) {
     case "Decontado":
-      off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       await loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
