@@ -800,7 +800,6 @@ function initProductsObserver() {
 }
 
 function loadSliderByCategory(category) {
-    console.log("DSADSDSA?? 44")
   const welcome = document.querySelector(".sliders");
   const slogan1 = document.querySelector(".slogan-main");
   const slogan2 = document.querySelector(".slogan-sub");
@@ -818,7 +817,6 @@ function loadSliderByCategory(category) {
 }
 
 function loadProductsByCategory(category) {
-    console.log("DSADSDSA?? 22")
   const grid = document.querySelector(".furniture-grid");
   grid.innerHTML = "";
   const products = PRODUCTS[category] || [];
@@ -839,7 +837,6 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
-  console.log("DSADSDSA??")
   showTopBarProduct()
 
   document.querySelector(".modal-close")?.addEventListener("click", closeModal);
