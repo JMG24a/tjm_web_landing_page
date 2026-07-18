@@ -6,6 +6,7 @@ let sedesW = {
   "Barquisimeto": "584120213946",
 }
 let extra = 8
+let camcolselected = 0
 let priceBaseDiscount = 0
 let productBaseWS
 let idProductSelected = 0
@@ -107,9 +108,6 @@ async function loadProductPrice(id, extras) {
 
 async function loadProductPrices(ids = []) {
   try {
-    percentagePayCategory = porcentajesPago[categoryProductWs]
-    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
-
     const requests = ids.map(id =>
       // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
       fetch(`https://tjm-web-back.onrender.com/${id}`)
@@ -117,6 +115,10 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
     const bcv = results.map(data => calcularAumento(data.precio, porcentajesPagoMethod.cashea));
+    if(priceProductWs == 0){
+      priceBaseDiscount = priceUSD
+      console.log("🚀 ~ loadProductPrices ~ bcv camcolselected:", bcv, camcolselected)
+    }
     priceProductWs = bcv[0]
     return bcv
   } catch (error) {
@@ -459,15 +461,16 @@ function setupDormitorio(product) {
       optData[index].price = priceValue;
       optData[index].optionEl.textContent = `${optData[index].label.toUpperCase()} - $${priceValue}`;
     });
-
     // Forzar la actualización de variables globales con el primer precio ya cargado
     seleccionarMedida(selectElement.value);
-  });
+  }, 0);
 
   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
   function seleccionarMedida(index) {
+    priceProductWs = 0
     const selectedOpt = optData[index];
     if (!selectedOpt) return;
+    camcolselected = selectedOpt.position
 
     // Guardar variables globales exactamente igual que antes
     priceProductWs = parseFloat(selectedOpt.price);
