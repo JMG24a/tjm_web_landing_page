@@ -24,13 +24,11 @@ const porcentajesPago = {
   dormitorios: 26,
   sofas: 28.78
 };
-
 const porcentajesPagoMethod = {
+  decontado: 20.35,
   cashea: 28.78,
   zelle: 3,
-  decontado: 20.35,
-  dormitorios: 26,
-  sofas: 28.78
+  cash: 0,
 };
 
 async function verificarSesion(id) {
@@ -163,11 +161,11 @@ async function loadPayPercentage(metodo){
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       await loadProductPrice(idProductSelected, 0)
-      const factor2 = 1 + (percentagePayCategory / 100);
-      price.innerHTML = `$${(priceProductWs / factor2).toFixed(2)}`;
+
+      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       off.classList.remove("displayNone")
       off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs / factor2).toFixed(2)}`
+      priceProductWs = `${(priceProductWs).toFixed(2)}`
       break;
     default:
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
