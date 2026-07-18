@@ -419,6 +419,28 @@ function setupDormitorio(product) {
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
 
+  if(categoryProductWs == "dormitorios"){
+    const container_size = document.getElementById("container_size");
+    container_size.classList.remove("displayNone");
+
+    container_size.innerHTML = `
+    <p>🪓 Madera Seca al Horno.</p>
+    <p>📄 Garantía de 1 año.</p>
+    <p>🕓 30 dìas hàbiles.</p>
+    <p>📦 Embalaje sin cargo.</p>
+    <p class="size">
+      <i>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+          <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+        </svg>
+      </i>
+      <span id="size" class="size_text"></span>
+    </p>
+    `
+    const size = document.getElementById("size");
+    size.textContent = product.size || "";
+  }
+
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone");
   price.innerHTML = '<span class="loader"></span>';
@@ -498,95 +520,25 @@ function setupDormitorio(product) {
   renderColors(product.colors, colors);
 }
 
-// function setupDormitorio(product) {
-//   const colors = document.getElementById("modal-colors");
-//   const topContainer = document.getElementById("modal-top");
-//   topContainer.className = "modal-top";
-
-//   const price = document.getElementById("product-price");
-//   price.classList.remove("displayNone")
-//   price.innerHTML = '<span class="loader"></span>'
-
-//   const options = [
-//     { label: "Individual", position: 1, size: "100" },
-//     { label: "Matrimonial", position: 14, size: "140" },
-//     { label: "Queen", position: 16, size: "160" },
-//     { label: "King", position: 2, size: "200" }
-//   ];
-
-//   topContainer.innerHTML = "";
-
-//   const btnElements = options.map(opt => {
-//     const wrapper = document.createElement("div");
-//     wrapper.className = "banner";
-
-//     const contentWrapper = document.createElement("div");
-//     contentWrapper.className = "content-wrapper";
-
-//     const labelBox = document.createElement("div");
-//     labelBox.className = "label-box";
-//     const textBlue = document.createElement("span");
-//     textBlue.className = "text-blue";
-//     textBlue.textContent = opt.label.toUpperCase();
-//     labelBox.appendChild(textBlue);
-
-//     const priceBox = document.createElement("div");
-//     priceBox.className = "price-box";
-//     const priceValue = document.createElement("span");
-//     priceValue.className = "price-value";
-//     priceValue.textContent = "cargando...";
-//     priceBox.appendChild(priceValue);
-
-//     contentWrapper.appendChild(labelBox);
-//     contentWrapper.appendChild(priceBox);
-//     wrapper.appendChild(contentWrapper);
-//     topContainer.appendChild(wrapper);
-
-//     return { wrapper, priceTag: priceValue, position: opt.position, size: opt.size, label: opt.label };
-//   });
-
-//   // IDs completos para buscar precios
-//   const ids = btnElements.map(el => `${product.id}${el.position}`);
-
-//   // Cargar precios
-//   loadProductPrices(ids).then(prices => {
-//     prices.forEach((price, index) => {
-//       btnElements[index].priceTag.textContent = `${price}$`;
-//     });
-//   });
-
-//   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA
-//   function seleccionarMedida(index) {
-//     btnElements.forEach((el, i) => {
-//       el.wrapper.classList.toggle("selected", i === index);
-//     });
-
-//     // Guardar variables globales
-//     priceProductWs = parseFloat(btnElements[index].priceTag.textContent.replace("$", ""));
-//     nameProductWs = `${product.name} ${btnElements[index].label}`;
-//     idProductSelected = `${product.id}${btnElements[index].position}`;
-//     idProductSelected = Number(idProductSelected);
-//     loadPayPercentage(methodPayProductWs)
-//     verificarSesion(idProductSelected)
-//   }
-
-//   // Asignar eventos de click
-//   btnElements.forEach((el, index) => {
-//     el.wrapper.addEventListener("click", () => seleccionarMedida(index));
-//   });
-
-//   // Seleccionar la primera opción por defecto
-//   seleccionarMedida(0);
-
-//   renderColors(product.colors, colors);
-// }
-
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
   const openContainer = document.getElementById("modal-open");
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
+
+  container_size.innerHTML = `
+  <p>📦 Embalaje sin cargo.</p>
+  <p class="size">
+    <i>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+        <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+      </svg>
+    </i>
+    <span id="size" class="size_text"></span>
+  </p>
+  `
+
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
@@ -612,6 +564,7 @@ function setupMultimuebles(product) {
   }
 }
 
+
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
@@ -619,6 +572,21 @@ function setupComedores(product) {
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
+
+  container_size.innerHTML = `
+  <p>🪓 Madera Seca al Horno.</p>
+  <p>📄 Garantía de 1 año.</p>
+  <p>🕓 30 dìas hàbiles.</p>
+  <p>📦 Embalaje sin cargo.</p>
+  <p class="size">
+    <i>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+        <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+      </svg>
+    </i>
+    <span id="size" class="size_text"></span>
+  </p>
+  `
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
