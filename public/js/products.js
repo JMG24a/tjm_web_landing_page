@@ -6,6 +6,7 @@ let sedesW = {
   "Barquisimeto": "584120213946",
 }
 let extra = 8
+let priceBaseDiscount = 0
 let productBaseWS
 let idProductSelected = 0
 let percentagePayCategory = 0
@@ -93,6 +94,7 @@ async function loadProductPrice(id, extras) {
     const priceUSD = pricePlus5
     //precioGlobal
     priceProductWs = priceUSD;
+    priceBaseDiscount = priceProductWs
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
@@ -115,6 +117,7 @@ async function loadProductPrices(ids = []) {
     const bcv = results.map(data => calcularAumento(data.precio, porcentajesPagoMethod.cashea));
 
     priceProductWs = bcv[0]
+    priceBaseDiscount = priceProductWs
     return bcv
   } catch (error) {
     console.error("Error cargando precios:", error);
@@ -150,7 +153,7 @@ async function loadPayPercentage(metodo){
       await loadProductPrice(idProductSelected, porcentajesPagoMethod.zelle)
       price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       off.classList.remove("displayNone")
-      off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
+      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
       priceProductWs = `${(priceProductWs).toFixed(2)}`
       break;
 
@@ -162,7 +165,7 @@ async function loadPayPercentage(metodo){
 
       price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       off.classList.remove("displayNone")
-      off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
+      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
       priceProductWs = `${(priceProductWs).toFixed(2)}`
       break;
     default:
