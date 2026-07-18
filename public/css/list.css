@@ -71,7 +71,7 @@ section {
   transform: scale(1.05);
 }
 
-.furniture-card h3 {
+.furniture-card h4 {
   padding: 15px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
