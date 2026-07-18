@@ -93,8 +93,10 @@ async function loadProductPrice(id, extras) {
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const priceUSD = pricePlus5
     //precioGlobal
+    if(priceProductWs == 0){
+      priceBaseDiscount = priceUSD
+    }
     priceProductWs = priceUSD;
-    priceBaseDiscount = priceProductWs
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
@@ -115,9 +117,10 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
     const bcv = results.map(data => calcularAumento(data.precio, porcentajesPagoMethod.cashea));
-
+    if(priceProductWs == 0){
+      priceBaseDiscount = bcv[0]
+    }
     priceProductWs = bcv[0]
-    priceBaseDiscount = priceProductWs
     return bcv
   } catch (error) {
     console.error("Error cargando precios:", error);
@@ -135,7 +138,11 @@ async function loadPayPercentage(metodo){
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
+      await loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
+      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
+      off.classList.remove("displayNone")
+      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
+      priceProductWs = `${(priceProductWs).toFixed(2)}`
       break;
 
     case "Cashea":
@@ -758,7 +765,7 @@ function openProductModal(product, category) {
 function resetPaymentSelect() {
   const paymentSelect = document.getElementById("paymentSelect");
   const selectedOption = paymentSelect.querySelector(".selected-option");
-
+  price
   // Restaurar HTML original del trigger
   selectedOption.innerHTML = `
     <div class="selected-wrapper">
