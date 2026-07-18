@@ -282,6 +282,30 @@ async function guardarPrecio() {
 
 function setupSofas(product) {
   const colors = document.getElementById("modal-colors");
+
+
+    const container_size = document.getElementById("container_size");
+    container_size.classList.remove("displayNone");
+
+    container_size.innerHTML = `
+      <p>🪓 Madera Seca al Horno.</p>
+      <p>🛌 Resortes Pocket.</p>
+      <p>📄 Garantía de 1 año.</p>
+      <p>🕓 30 dìas hàbiles.</p>
+      <p>📦 Embalaje sin cargo.</p>
+      <p class="size">
+        <i>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+            <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+          </svg>
+        </i>
+        <span id="size" class="size_text"></span>
+      </p>
+    `
+    const size = document.getElementById("size");
+    size.textContent = product.size || "";
+
+
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
 
@@ -428,14 +452,6 @@ function setupDormitorio(product) {
     <p>📄 Garantía de 1 año.</p>
     <p>🕓 30 dìas hàbiles.</p>
     <p>📦 Embalaje sin cargo.</p>
-    <p class="size">
-      <i>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-          <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-        </svg>
-      </i>
-      <span id="size" class="size_text"></span>
-    </p>
     `
     const size = document.getElementById("size");
     size.textContent = product.size || "";
