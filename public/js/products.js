@@ -85,13 +85,13 @@ if (goHomeBtn) {
 
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id, extras) {
+  console.log("🚀 ~ loadProductPrice ~ id:", id)
   try {
     percentagePayCategory = porcentajesPago[categoryProductWs]
     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
     pricePlus5 = calcularAumento(data.precio, extras);
-    console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
     const priceUSD = pricePlus5
     //precioGlobal
     if(priceProductWs == 0 ){
@@ -471,6 +471,7 @@ function setupDormitorio(product) {
     const selectedOpt = optData[index];
     if (!selectedOpt) return;
     camcolselected = selectedOpt.position
+    console.log("🚀 ~ seleccionarMedida ~ camcolselected:", camcolselected)
 
     // Guardar variables globales exactamente igual que antes
     priceProductWs = parseFloat(selectedOpt.price);
