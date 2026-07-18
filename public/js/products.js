@@ -28,7 +28,7 @@ const porcentajesPago = {
 const porcentajesPagoMethod = {
   cashea: 28.78,
   zelle: 3,
-  colchones: 24,
+  decontado: 20.35,
   dormitorios: 26,
   sofas: 28.78
 };
@@ -152,11 +152,10 @@ async function loadPayPercentage(metodo){
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       await loadProductPrice(idProductSelected, porcentajesPagoMethod.zelle)
-      const factor = 1 + (percentagePayCategory / 100);
-      price.innerHTML = `$${(priceProductWs / factor).toFixed(2)}`;
+      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
       off.classList.remove("displayNone")
       off.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs / factor).toFixed(2)}`
+      priceProductWs = `${(priceProductWs).toFixed(2)}`
       break;
 
     case "Cash - Binance":
