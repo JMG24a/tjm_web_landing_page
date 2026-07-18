@@ -435,9 +435,11 @@ function setupDormitorio(product) {
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
+  const container_size = document.getElementById("container_size");
 
   if(categoryProductWs == "dormitorios"){
-    const container_size = document.getElementById("container_size");
+    console.log("🚀 ~ setupDormitorio ~ categoryProductWs:", categoryProductWs)
+
     container_size.classList.remove("displayNone");
 
     container_size.innerHTML = `
@@ -446,8 +448,6 @@ function setupDormitorio(product) {
     <p>🕓 30 dìas hàbiles.</p>
     <p>📦 Embalaje sin cargo.</p>
     `
-    const size = document.getElementById("size");
-    size.textContent = product.size || "";
   }
 
   const price = document.getElementById("product-price");
