@@ -136,7 +136,7 @@ async function loadPayPercentage(metodo){
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected, extra)
+      loadProductPrice(idProductSelected, porcentajesPago.sofas)
       break;
 
     case "Zelle":
