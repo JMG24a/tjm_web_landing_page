@@ -97,9 +97,6 @@ async function loadProductPrice(id, extras) {
       priceBaseDiscount = priceUSD
     }
     priceProductWs = priceUSD;
-    if(priceProductWs > priceUSD){
-      priceBaseDiscount = priceProductWs
-    }
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
     priceElement.dataset.mode = "usd"; // Estado inicial
     priceElement.innerHTML = `${priceUSD}$`;
@@ -120,10 +117,6 @@ async function loadProductPrices(ids = []) {
     );
     const results = await Promise.all(requests);
     const bcv = results.map(data => calcularAumento(data.precio, porcentajesPagoMethod.cashea));
-
-    if(priceProductWs == 0 && priceProductWs > bcv[0]){
-      priceBaseDiscount = bcv[0]
-    }
     priceProductWs = bcv[0]
     return bcv
   } catch (error) {
@@ -767,7 +760,7 @@ function openProductModal(product, category) {
 function resetPaymentSelect() {
   const paymentSelect = document.getElementById("paymentSelect");
   const selectedOption = paymentSelect.querySelector(".selected-option");
-  price
+  priceProductWs = 0
   // Restaurar HTML original del trigger
   selectedOption.innerHTML = `
     <div class="selected-wrapper">
