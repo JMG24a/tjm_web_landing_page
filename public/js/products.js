@@ -19,7 +19,7 @@ let categoryProductWs
 let locationWsSede
 const porcentajesPago = {
   multimuebles: 23,
-  comedores: 40,
+  comedores: 22,
   colchones: 24,
   dormitorios: 26,
   sofas: 22
@@ -635,7 +635,7 @@ function setupComedores(product) {
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}4${position}`, extra);
       console.log("🚀 ~ updateChairs ~ ${product.id}4${position}:", product.id,"4",position)
-
+      idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
@@ -645,9 +645,7 @@ function setupComedores(product) {
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}6${position}`, extra);
-      console.log("chair 6 position: ", position)
-      console.log("chair 6 position color: ", product.chairs_6[position].img)
-      console.log("chair 6 position: colors", colors)
+      idProductSelected = Number(`${product.id}6${position}`);
       changeModalImage(product.chairs_6[position].img);
       renderColors(product.chairs_6[position].colors, colors);
     }
