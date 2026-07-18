@@ -227,7 +227,7 @@ button:hover {
 }
 
 /* TRIGGER DEL SELECT */
-.select-trigger {
+/* .select-trigger {
   background: #fff;
   border: 2px solid #ababab;
   padding: 5px 10px;
@@ -236,6 +236,22 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+} */
+/* Estilo para el selector cerrado (Trigger) */
+.select-trigger {
+  background: rgba(255, 255, 255, 0.25); /* Fondo blanco con 25% de opacidad */
+  backdrop-filter: blur(12px);          /* Este es el truco del difuminado */
+  -webkit-backdrop-filter: blur(12px);  /* Soporte para Safari */
+
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil que imita el reflejo */
+  border-radius: 12px;                  /* Bordes redondeados como en tu imagen */
+
+  /* Estilos extra de relleno y alineación para tu select */
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff; /* O el color de texto que prefieras */
 }
 
 .selected-option {
@@ -245,7 +261,7 @@ button:hover {
 }
 
 /* OPCIONES DEL SELECT */
-.select-options {
+/* .select-options {
   position: absolute;
   top: 110%;
   left: 0;
@@ -258,6 +274,18 @@ button:hover {
   transform: translateY(-10px);
   transition: all .3s ease;
   z-index: 10;
+} */
+
+/* Estilo para la lista desplegable (Opciones) */
+.select-options {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  margin-top: 5px;
+  /* ... tus otros estilos de posicionamiento (ej. position: absolute) ... */
 }
 
 .custom-select.open .select-options {
@@ -389,7 +417,7 @@ button:hover {
 }
 
 /* TRIGGER */
-#locationSelect .select-trigger {
+/* #locationSelect .select-trigger {
   background: #fff;
   border: 2px solid #ababab;
   padding: 12px;
@@ -398,7 +426,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-}
+} */
 
 /* OPCIÓN SELECCIONADA */
 #locationSelect .selected-option {

@@ -438,7 +438,6 @@ function setupDormitorio(product) {
   const container_size = document.getElementById("container_size");
 
   if(categoryProductWs == "dormitorios"){
-    console.log("🚀 ~ setupDormitorio ~ categoryProductWs:", categoryProductWs)
 
     container_size.classList.remove("displayNone");
 
