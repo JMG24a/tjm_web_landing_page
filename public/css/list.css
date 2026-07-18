@@ -239,12 +239,13 @@ button:hover {
 } */
 /* Estilo para el selector cerrado (Trigger) */
 .select-trigger {
-  background: rgb(232 226 226 / 35%);
-  backdrop-filter: blur(194px);      /* Este es el truco del difuminado */
-  -webkit-backdrop-filter: blur(12px);  /* Soporte para Safari */
+  background: rgba(13, 110, 253, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
   border: 1px solid rgb(156 155 155 / 60%); /* Borde sutil que imita el reflejo */
   border-radius: 12px;                  /* Bordes redondeados como en tu imagen */
-
+  border: 1px solid rgba(173, 216, 230, 0.4);
+  border-radius: 12px;
   /* Estilos extra de relleno y alineación para tu select */
   padding: 10px 15px;
   display: flex;
