@@ -18,11 +18,11 @@ let cantidadWs = 1
 let categoryProductWs
 let locationWsSede
 const porcentajesPago = {
-  multimuebles: 23,
+  multimuebles: 28.78,
   comedores: 22,
   colchones: 24,
   dormitorios: 26,
-  sofas: 22
+  sofas: 28.78
 };
 
 async function verificarSesion(id) {
@@ -84,8 +84,7 @@ async function loadProductPrice(id, extras) {
     const data = await response.json();
     pricePlus5 = calcularAumento(data.precio, extras);
     console.log("Precio base del producto:", categoryProductWs, priceProductWs, porcentajesPago[categoryProductWs]);
-    const porcentage = porcentajesPago[categoryProductWs] || 40; // porcentaje según categoría
-    const priceUSD = calcularAumento(pricePlus5, porcentage);
+    const priceUSD = pricePlus5
     //precioGlobal
     priceProductWs = priceUSD;
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
@@ -129,7 +128,7 @@ async function loadPayPercentage(metodo){
       off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(idProductSelected, 0)
+      loadProductPrice(idProductSelected, 20.35)
       break;
 
     case "Cashea":
