@@ -583,7 +583,7 @@ function setupMultimuebles(product) {
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
   price.innerHTML = '<span class="loader"></span>'
-  loadProductPrice(product.id, extra);
+  loadProductPrice(product.id, porcentajesPagoMethod.cashea);
 
   if(product.open){
     // openContainer.classList.remove("modal-opens")
@@ -637,7 +637,7 @@ function setupComedores(product) {
 
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}4${position}`, extra);
+      loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod.cashea);
       console.log("🚀 ~ updateChairs ~ ${product.id}4${position}:", product.id,"4",position)
       idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
@@ -648,7 +648,7 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      loadProductPrice(`${product.id}6${position}`, extra);
+      loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod.cashea);
       idProductSelected = Number(`${product.id}6${position}`);
       changeModalImage(product.chairs_6[position].img);
       renderColors(product.chairs_6[position].colors, colors);
