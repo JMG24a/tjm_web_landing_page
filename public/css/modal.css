@@ -476,6 +476,7 @@
 
 .container_size{
   display: flex;
+  color: gray;
   flex-direction: column;
 }
 
