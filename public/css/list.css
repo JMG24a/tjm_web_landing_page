@@ -448,7 +448,7 @@ button:hover {
 }
 
 /* TRIGGER */
-#locationSelect .select-trigger {
+/* #locationSelect .select-trigger {
   background: #fff;
   border: 2px solid #ababab;
   padding: 12px;
@@ -457,7 +457,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-}
+} */
 
 /* OPCIÓN SELECCIONADA */
 #locationSelect .selected-option {
