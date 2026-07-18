@@ -838,7 +838,7 @@ function loadProductsByCategory(category) {
     card.className = "furniture-card";
     card.innerHTML = `
       <img src="/image/${product.img}" alt="${product.name}">
-      <h3>${product.name}</h3>
+      <h4>${product.name}</h4>
     `;
     card.addEventListener("click", () => {
       openProductModal(product, category);

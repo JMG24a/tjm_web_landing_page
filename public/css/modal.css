@@ -44,7 +44,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 35%;
   height: 1px;
   background-color: #000000cc; /* dorado */
   transform: translateY(-50%);
@@ -53,9 +53,10 @@
 .product-price {
   font-size: 1.4rem;
   font-weight: 600;
-  background: #1a428a;
-  color: #f2e088;
-  padding: 10px 14px;
+  /* background: #1a428a; */
+  /* color: #f2e088; */
+  color: #1a428a;
+  /* padding: 10px 14px; */
   border-radius: 8px;
   width: fit-content;
   margin: 0px 0px;
@@ -370,7 +371,7 @@
 }
 
 .modal-name{
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
 }
 
