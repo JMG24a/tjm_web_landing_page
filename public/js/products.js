@@ -186,13 +186,16 @@ function isFabricCategory(){
   }
 }
 
+function isOpenRopeCategory(){
+  if (categoryProductWs == "multimuebles") {
+    const ropeColor = document.getElementById("color_open_container");
+    ropeColor.classList.remove("displayNone");
+  }
+}
+
 function renderColors(colors, container) {
-  isFabricCategory()
   container.innerHTML = "";
-
   const colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
-
-
   colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
@@ -262,27 +265,26 @@ async function guardarPrecio() {
 }
 
 function setupSofas(product) {
+  isFabricCategory()
   const colors = document.getElementById("modal-colors");
+  const container_size = document.getElementById("container_size");
+  container_size.classList.remove("displayNone");
 
-
-    const container_size = document.getElementById("container_size");
-    container_size.classList.remove("displayNone");
-
-    container_size.innerHTML = `
-      <p>🪓 Madera Seca al Horno.</p>
-      <p>🛌 Resortes Pocket.</p>
-      <p>📄 Garantía de 1 año.</p>
-      <p>🕓 30 dìas hàbiles.</p>
-      <p>📦 Embalaje sin cargo.</p>
-      <p class="size">
-        <i>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-            <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-          </svg>
-        </i>
-        <span id="size" class="size_text"></span>
-      </p>
-    `
+  container_size.innerHTML = `
+    <p>🪓 Madera Seca al Horno.</p>
+    <p>🛌 Resortes Pocket.</p>
+    <p>📄 Garantía de 1 año.</p>
+    <p>🕓 30 dìas hàbiles.</p>
+    <p>📦 Embalaje sin cargo.</p>
+    <p class="size">
+      <i>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+          <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+        </svg>
+      </i>
+      <span id="size" class="size_text"></span>
+    </p>
+  `
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
@@ -294,6 +296,7 @@ function setupSofas(product) {
 }
 
 function setupDormitorio(product) {
+  isFabricCategory()
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
@@ -392,8 +395,9 @@ function setupDormitorio(product) {
 }
 
 function setupMultimuebles(product) {
-  const colors = document.getElementById("modal-colors");
-  const openContainer = document.getElementById("open_rope"); // tu contenedor real
+  isOpenRopeCategory()
+  const colors = document.getElementById("modal-colors_rope");
+  const openContainer = document.getElementById("color_open_container"); // tu contenedor real
   const materialToggle = document.getElementById("materialToggle");
   const thumb = materialToggle.querySelector(".toggle-thumb");
 
