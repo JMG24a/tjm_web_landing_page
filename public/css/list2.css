@@ -75,7 +75,7 @@ section {
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  .furniture-grid { grid-template-columns: repeat(3, 1fr); }
+  .furniture-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .furniture-grid { grid-template-columns: repeat(2, 1fr); }
