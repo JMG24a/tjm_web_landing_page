@@ -135,25 +135,27 @@ button:hover {
 /* TRIGGER (BOTÓN PRINCIPAL) */
 .select-trigger {
   /* background: linear-gradient(135deg, #7f39fb 0%, #1d9bf0 100%); */
-  background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%);
-
+  /* background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%); */
+  background: linear-gradient(135deg, #ffffff1c 0%, #969ca14d 100%);
   border: none;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(29, 155, 240, 0.4),
-              0 10px 25px rgba(127, 57, 251, 0.2);
+  /* box-shadow: 0 10px 25px rgba(29, 155, 240, 0.4),
+              0 10px 25px rgba(127, 57, 251, 0.2); */
+  box-shadow: 0 10px 25px rgb(255 255 255 / 40%), 0 10px 25px rgb(0 0 0 / 20%);
   padding: 12px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #ffffff;
+  color: rgb(104, 104, 104);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .select-trigger:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(29, 155, 240, 0.5),
-              0 14px 30px rgba(127, 57, 251, 0.3);
+  /* box-shadow: 0 14px 30px rgba(29, 155, 240, 0.5),
+              0 14px 30px rgba(127, 57, 251, 0.3); */
+  box-shadow: 0 14px 30px rgb(0 0 0 / 50%), 0 14px 30px rgb(255 255 255 / 30%)
 }
 
 /* LISTA DESPLEGABLE (OPCIONES OCULTAS POR DEFECTO) */
@@ -163,8 +165,8 @@ button:hover {
   left: 0;
   width: 100%;
   z-index: 10;
-
-  background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%);
+  /* background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%); */
+  background: linear-gradient(135deg, #ffffff1c 0%, #969ca14d 100%);
   border: none;
   border-radius: 16px;
   margin-top: 8px;
@@ -187,7 +189,8 @@ button:hover {
 /* ELEMENTO OPCIÓN INDIVIDUAL */
 .option {
   padding: 12px 15px;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: rgb(104, 104, 104);
   display: flex;
   align-items: center;
   gap: 10px;
