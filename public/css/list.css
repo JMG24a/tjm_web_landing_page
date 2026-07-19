@@ -291,7 +291,7 @@ button:hover {
 
 /* Al pasar por encima de una opción, aplicamos un fondo sutil */
 .option:hover {
-  background: rgba(255, 255, 255, 0.164);
+  background: rgba(255, 255, 255, 0);
   cursor: pointer;
 }
 

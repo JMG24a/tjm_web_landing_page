@@ -604,16 +604,16 @@ function setupComedores(product) {
   // topContainer.classList.remove("modal-opens")
   topContainer.className = "modal-top";
 
-  const topBtn1 = document.createElement("span");
-  topBtn1.className = "span-top";
-  const topBtn2 = document.createElement("span");
-  topBtn2.className = "span-top";
-  const topBtn3 = document.createElement("span");
-  topBtn3.className = "span-top";
+  // const topBtn1 = document.createElement("span");
+  // topBtn1.className = "span-top";
+  // const topBtn2 = document.createElement("span");
+  // topBtn2.className = "span-top";
+  // const topBtn3 = document.createElement("span");
+  // topBtn3.className = "span-top";
 
-  topBtn1.textContent = "vidrio";
-  topBtn2.textContent = "Pintado";
-  topBtn3.textContent = "PVC";
+  // topBtn1.textContent = "vidrio";
+  // topBtn2.textContent = "Pintado";
+  // topBtn3.textContent = "PVC";
 
   const chairBtn = document.createElement("span");
   chairBtn.className = "open-dot";
@@ -624,7 +624,6 @@ function setupComedores(product) {
       const price = document.getElementById("product-price");
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod.cashea);
-      console.log("🚀 ~ updateChairs ~ ${product.id}4${position}:", product.id,"4",position)
       idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
@@ -645,9 +644,9 @@ function setupComedores(product) {
     updateChairs(0);
   };
 
-  topBtn1.onclick = () => { updateChairs(0) }
-  topBtn2.onclick = () => { updateChairs(1) }
-  topBtn3.onclick = () => { updateChairs(2) }
+  // topBtn1.onclick = () => { updateChairs(0) }
+  // topBtn2.onclick = () => { updateChairs(1) }
+  // topBtn3.onclick = () => { updateChairs(2) }
 
   chairContainer.innerHTML = "";
   chairContainer.appendChild(chairBtn);
