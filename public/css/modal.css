@@ -128,21 +128,14 @@
   gap: 10px;
 }
 
-/* .modal-colors span {
-  width: 22px;
-  height: 22px;
+.modal-colors span {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 2px solid #dcdcdc;
   cursor: pointer;
-  } */
-  .modal-colors span {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 2px solid #dcdcdc;
-    cursor: pointer;
-    transition: transform .2s ease;
-  }
+  transition: transform .2s ease;
+}
 
 /* Cerrar */
 .modal-close {

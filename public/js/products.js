@@ -293,125 +293,6 @@ function setupSofas(product) {
   renderColors(product.colors, colors);
 }
 
-// function setupDormitorio(product) {
-//   const colors = document.getElementById("modal-colors");
-//   const topContainer = document.getElementById("modal-top");
-//   topContainer.className = "modal-top";
-
-//   const price = document.getElementById("product-price");
-//   price.classList.remove("displayNone");
-//   price.innerHTML = '<span class="loader"></span>';
-
-//   const options = [
-//     { label: "Individual", position: 1, size: "100" },
-//     { label: "Matrimonial", position: 14, size: "140" },
-//     { label: "Queen", position: 16, size: "160" },
-//     { label: "King", position: 2, size: "200" }
-//   ];
-
-//   topContainer.innerHTML = "";
-//   // 🔥 CUSTOM SELECT (igual al resto de tu app)
-//   const customSelect = document.createElement("div");
-//   customSelect.className = "custom-select-medidas";
-
-//   // customSelect.innerHTML = `
-//   //   <div class="select-trigger">
-//   //     <div class="selected-option option">
-//   //       <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Binance">
-//   //       <span class="method-name">Cargando...</span>
-//   //       <span class="arrow">▼</span>
-//   //     </div>
-//   //   <div class="select-options"></div>
-//   // `;
-
-//   customSelect.innerHTML = `
-//     <div class="select-trigger">
-//       <div class="selected-option option">
-//         <img src="https://i.pinimg.com/564x/4f/a2/62/4fa262c79f61d8d6d8849b5503f04d9b.jpg" alt="Medida">
-//         <span class="method-name">Cargando...</span>
-//       </div>
-//       <span class="arrow">▼</span>
-//     </div>
-
-//     <div class="select-options"></div>
-//   `;
-
-
-//   topContainer.appendChild(customSelect);
-
-//   const selectOptionsContainer = customSelect.querySelector(".select-options");
-//   const selectedOption = customSelect.querySelector(".selected-option .method-name");
-
-//   // 🔥 Arreglo en memoria igual que antes
-//   const optData = options.map((opt, index) => ({
-//     index,
-//     position: opt.position,
-//     size: opt.size,
-//     label: opt.label,
-//     price: 0
-//   }));
-
-//   // IDs completos para buscar precios
-//   const ids = optData.map(el => `${product.id}${el.position}`);
-
-//   // 🔥 Cargar precios
-//   loadProductPrices(ids).then(prices => {
-//     prices.forEach((priceValue, index) => {
-//       optData[index].price = priceValue;
-
-//       // Crear opción visual igual a tus selects
-//       const optionEl = document.createElement("div");
-//       optionEl.className = "option";
-//       optionEl.dataset.value = index;
-
-//       optionEl.innerHTML = `
-//         <span class="method-name">${optData[index].label}</span>
-//         <span class="badge">$${priceValue}</span>
-//       `;
-
-//       // Evento de selección
-//       optionEl.onclick = () => {
-//         selectedOption.textContent = `${optData[index].label} - $${priceValue}`;
-//         seleccionarMedida(index);
-//       };
-
-//       selectOptionsContainer.appendChild(optionEl);
-//     });
-
-//     // Selección inicial
-//     selectedOption.textContent = `${optData[0].label} - $${optData[0].price}`;
-//     seleccionarMedida(0);
-//   });
-
-//   // 🔥 FUNCIÓN PARA SELECCIONAR UNA MEDIDA (idéntica a tu versión)
-//   function seleccionarMedida(index) {
-//     const selectedOpt = optData[index];
-//     if (!selectedOpt) return;
-
-//     priceProductWs = parseFloat(selectedOpt.price);
-//     nameProductWs = `${product.name} ${selectedOpt.label}`;
-//     idProductSelected = Number(`${product.id}${selectedOpt.position}`);
-
-//     loadPayPercentage(methodPayProductWs);
-//     verificarSesion(idProductSelected);
-//   }
-
-//   renderColors(product.colors, colors);
-// }
-
-// document.addEventListener("click", (e) => {
-//   const select = document.querySelector(".custom-select-medidas");
-
-//   if (!select) return;
-
-//   if (select.contains(e.target)) {
-//     select.classList.toggle("open");
-//   } else {
-//     select.classList.remove("open");
-//   }
-// });
-
-
 function setupDormitorio(product) {
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
@@ -512,47 +393,68 @@ function setupDormitorio(product) {
 
 function setupMultimuebles(product) {
   const colors = document.getElementById("modal-colors");
-  const openContainer = document.getElementById("modal-open");
+  const openContainer = document.getElementById("open_rope"); // tu contenedor real
+  const materialToggle = document.getElementById("materialToggle");
+  const thumb = materialToggle.querySelector(".toggle-thumb");
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
 
   container_size.innerHTML = `
-  <p>📦 Embalaje sin cargo.</p>
-  <p class="size">
-    <i>
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-        <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-      </svg>
-    </i>
-    <span id="size" class="size_text"></span>
-  </p>
-  `
+    <p>📦 Embalaje sin cargo.</p>
+    <p class="size">
+      <i>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+          <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+        </svg>
+      </i>
+      <span id="size" class="size_text"></span>
+    </p>
+  `;
 
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
   const price = document.getElementById("product-price");
-  price.classList.remove("displayNone")
-  price.innerHTML = '<span class="loader"></span>'
+  price.classList.remove("displayNone");
+  price.innerHTML = '<span class="loader"></span>';
   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
 
-  if(product.open){
-    // openContainer.classList.remove("modal-opens")
-    openContainer.classList.remove("displayNone")
-  }else{
-    openContainer.classList.add("modal-opens")
-  }
+  // Mostrar colores
   renderColors(product.colors, colors);
-  openContainer.innerHTML = "";
+
+  // Estado inicial del toggle según product.open
   if (product.open) {
-    const btn = document.createElement("span");
-    btn.textContent = "Abrir";
-    btn.className = "open-dot";
-    btn.onclick = () => changeModalImage(product.open);
-    openContainer.appendChild(btn);
+    materialToggle.classList.add("active");
+    openContainer.classList.remove("displayNone");
+    thumb.textContent = "Cerrar";
+  } else {
+    materialToggle.classList.remove("active");
+    openContainer.classList.add("displayNone");
+    thumb.textContent = "Abrir";
   }
+
+  // 🔥 Evento del toggle
+  materialToggle.addEventListener("click", () => {
+    materialToggle.classList.toggle("active");
+
+    const isOpen = materialToggle.classList.contains("active");
+
+    if (isOpen) {
+      // Abrir
+      openContainer.classList.remove("displayNone");
+      thumb.textContent = "Cerrar";
+
+      // Ejecutar tu función original
+      changeModalImage(product.open);
+    } else {
+      // Cerrar
+      openContainer.classList.add("displayNone");
+      thumb.textContent = "Abrir";
+    }
+  });
 }
+
 
 
 function setupComedores(product) {
