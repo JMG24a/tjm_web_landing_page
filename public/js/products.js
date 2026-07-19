@@ -196,7 +196,7 @@ function isOpenRopeCategory(){
 function renderColors(colors, container) {
   container.innerHTML = "";
   let colorsOfMaterial = []
-  if(categoryProductWs != "sofas" && categoryProductWs != "dormitorios"){
+  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios"){
     colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
   }else{
     colorsOfMaterial = colors
@@ -301,7 +301,7 @@ function setupSofas(product) {
 }
 
 function setupDormitorio(product) {
-  isFabricCategory()
+  // isFabricCategory()
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
