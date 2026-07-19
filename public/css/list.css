@@ -492,7 +492,7 @@ button:hover {
 }
 
 /* OPCIONES */
-#locationSelect .select-options {
+/* #locationSelect .select-options {
   position: absolute;
   top: 110%;
   left: 0;
@@ -514,7 +514,7 @@ button:hover {
   transform: translateY(0);
 }
 
-/* CADA OPCIÓN */
+/* CADA OPCIÓN
 #locationSelect .option {
   padding: 12px;
   cursor: pointer;
@@ -532,4 +532,21 @@ button:hover {
 
 #locationSelect .option:hover {
   background: #ffffff1b;
+} */
+
+/*  CONSERVA SOLO ESTO PARA LAS IMÁGENES */
+#locationSelect {
+  width: 100%;
+  position: relative;
+  font-family: Poppins, sans-serif;
+  margin-top: 15px; /* Un pequeño margen para que no se pegue al select de arriba */
+}
+
+#locationSelect .option img,
+#locationSelect .selected-wrapper img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Le da un borde fino blanco muy limpio */
 }
