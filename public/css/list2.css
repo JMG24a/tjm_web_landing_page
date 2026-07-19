@@ -84,7 +84,7 @@ section {
   transition: transform 0.4s ease;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .furniture-grid { grid-template-columns: repeat(2, 1fr); }
   .furniture-card img {
     width: 100%;

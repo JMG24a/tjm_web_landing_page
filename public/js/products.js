@@ -84,30 +84,54 @@ if (goHomeBtn) {
 }
 
 // 1. Cargar precio del producto en USD
+// async function loadProductPrice(id, extras) {
+//   try {
+//     console.log("🚀 ~ loadProductPrice ~ id:", id)
+
+//     percentagePayCategory = porcentajesPago[categoryProductWs]
+//     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
+//     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+//     const data = await response.json();
+//     console.log("🚀 ~ loadProductPrice ~ id2: ", id)
+
+//     pricePlus5 = calcularAumento(data.precio, extras);
+//     const priceUSD = pricePlus5
+//     //precioGlobal
+//     if(priceProductWs == 0 ){
+//       priceBaseDiscount = priceUSD
+//     }
+//     priceProductWs = priceUSD;
+//     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
+//     priceElement.dataset.mode = "usd"; // Estado inicial
+//     priceElement.innerHTML = `${priceUSD}$`;
+//   } catch (error) {
+//     console.error("Error cargando el producto:", error);
+//   }
+// }
+
 async function loadProductPrice(id, extras) {
   try {
-    console.log("🚀 ~ loadProductPrice ~ id:", id)
-
-    percentagePayCategory = porcentajesPago[categoryProductWs]
-    // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
-    console.log("🚀 ~ loadProductPrice ~ id2: ", id)
 
-    pricePlus5 = calcularAumento(data.precio, extras);
-    const priceUSD = pricePlus5
-    //precioGlobal
-    if(priceProductWs == 0 ){
-      priceBaseDiscount = priceUSD
-    }
+    // Precio original REAL según la medida seleccionada
+    priceBaseDiscount = data.precio;
+
+    // Precio con aumento o descuento
+    const pricePlus5 = calcularAumento(data.precio, extras);
+    const priceUSD = pricePlus5;
+
     priceProductWs = priceUSD;
-    priceElement.dataset.usd = priceUSD; // Guardamos el precio original
-    priceElement.dataset.mode = "usd"; // Estado inicial
+
+    priceElement.dataset.usd = priceUSD;
+    priceElement.dataset.mode = "usd";
     priceElement.innerHTML = `${priceUSD}$`;
+
   } catch (error) {
     console.error("Error cargando el producto:", error);
   }
 }
+
 
 async function loadProductPrices(ids = []) {
   try {
