@@ -722,6 +722,7 @@ function openProductModal(product, category) {
 }
 
 function resetPaymentSelect() {
+  const off = document.getElementById("off");
   const paymentSelect = document.getElementById("paymentSelect");
   const selectedOption = paymentSelect.querySelector(".selected-option");
   priceProductWs = 0
@@ -736,6 +737,7 @@ function resetPaymentSelect() {
 
   // Restaurar método global
   metodoSeleccionado = "Cashea";
+  off.classList.add("displayNone")
   // Cerrar el dropdown si quedó abierto
   paymentSelect.classList.remove("open");
 }
