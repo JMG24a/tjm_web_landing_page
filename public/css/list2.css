@@ -134,7 +134,9 @@ button:hover {
 
 /* TRIGGER (BOTÓN PRINCIPAL) */
 .select-trigger {
-  background: linear-gradient(135deg, #7f39fb 0%, #1d9bf0 100%);
+  /* background: linear-gradient(135deg, #7f39fb 0%, #1d9bf0 100%); */
+  background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%);
+
   border: none;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(29, 155, 240, 0.4),
@@ -162,7 +164,7 @@ button:hover {
   width: 100%;
   z-index: 10;
 
-  background: linear-gradient(135deg, #7f39fb 0%, #1d9bf0 100%);
+  background: linear-gradient(135deg, #c275159e 0%, #1d9bf0 100%);
   border: none;
   border-radius: 16px;
   margin-top: 8px;
@@ -375,7 +377,6 @@ button:hover {
   width: 100%;
   position: relative;
   font-family: Poppins, sans-serif;
-  margin-top: 15px; /* Un pequeño margen para que no se pegue al select de arriba */
 }
 
 #locationSelect .option img,
