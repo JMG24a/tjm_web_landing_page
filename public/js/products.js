@@ -436,11 +436,11 @@ function setupMultimuebles(product) {
   if (product.open) {
     openToggle.classList.add("active");
     openContainer.classList.remove("displayNone");
-    thumb.textContent = "Abrir";
+    thumb.textContent = "Cerrar";
   } else {
     openToggle.classList.remove("active");
     openContainer.classList.add("displayNone");
-    thumb.textContent = "Cerrar";
+    thumb.textContent = "Abrir";
   }
 
   // 🔥 Evento del toggle
@@ -452,13 +452,13 @@ function setupMultimuebles(product) {
     if (isOpen) {
       // Abrir
       openContainer.classList.remove("displayNone");
-      thumb.textContent = "Abrir";
+      thumb.textContent = "Cerrar";
       // Ejecutar tu función original
       changeModalImage(product.open);
     } else {
       // Cerrar
       openContainer.classList.add("displayNone");
-      thumb.textContent = "Cerrar";
+      thumb.textContent = "Abrir";
       changeModalImage(product.img);
     }
   });
