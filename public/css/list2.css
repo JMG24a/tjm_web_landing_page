@@ -329,7 +329,7 @@ button:hover {
   transform: rotate(180deg);
 }
 
-#locationSelect .select-options {
+/* #locationSelect .select-options {
   position: absolute;
   top: 110%;
   left: 0;
@@ -357,7 +357,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: initial; /* Resetea el color para que no herede el blanco si no está en degradado */
+  color: initial; /* Resetea el color para que no herede el blanco si no está en degradado
 }
 
 #locationSelect .option img {
@@ -368,5 +368,21 @@ button:hover {
 }
 
 #locationSelect .option:hover {
-  background: #f0f0f0; /* Un gris sutil para diferenciar el hover en fondo blanco */
+  background: #f0f0f0; /* Un gris sutil para diferenciar el hover en fondo blanco
+} */
+
+#locationSelect {
+  width: 100%;
+  position: relative;
+  font-family: Poppins, sans-serif;
+  margin-top: 15px; /* Un pequeño margen para que no se pegue al select de arriba */
+}
+
+#locationSelect .option img,
+#locationSelect .selected-wrapper img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Le da un borde fino blanco muy limpio */
 }
