@@ -301,7 +301,7 @@ function setupSofas(product) {
 }
 
 function setupDormitorio(product) {
-  // isFabricCategory()
+  isFabricCategory()
   const colors = document.getElementById("modal-colors");
   const topContainer = document.getElementById("modal-top");
   topContainer.className = "modal-top";
@@ -436,11 +436,11 @@ function setupMultimuebles(product) {
   if (product.open) {
     openToggle.classList.add("active");
     openContainer.classList.remove("displayNone");
-    thumb.textContent = "Cerrar";
+    thumb.textContent = "Abrir";
   } else {
     openToggle.classList.remove("active");
     openContainer.classList.add("displayNone");
-    thumb.textContent = "Abrir";
+    thumb.textContent = "Cerrar";
   }
 
   // 🔥 Evento del toggle
@@ -452,19 +452,17 @@ function setupMultimuebles(product) {
     if (isOpen) {
       // Abrir
       openContainer.classList.remove("displayNone");
-      thumb.textContent = "Cerrar";
+      thumb.textContent = "Abrir";
       // Ejecutar tu función original
       changeModalImage(product.open);
     } else {
       // Cerrar
       openContainer.classList.add("displayNone");
-      thumb.textContent = "Abrir";
+      thumb.textContent = "Cerrar";
       changeModalImage(product.img);
     }
   });
 }
-
-
 
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
