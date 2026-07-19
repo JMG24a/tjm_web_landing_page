@@ -464,11 +464,12 @@ function setupDormitorio(product) {
 
   // 1. Creamos el elemento Select
   const selectElement = document.createElement("select");
-  selectElement.className = "select-medidas"; // Clase para darle estilos CSS
+  selectElement.className = "select-trigger"; // Clase para darle estilos CSS
 
   // Arreglo en memoria para guardar las referencias de los datos y precios
   const optData = options.map((opt, index) => {
     const optionEl = document.createElement("option");
+    optionEl.className = "option"; // Clase para darle estilos CSS
     optionEl.value = index; // Guardamos el índice como valor
     optionEl.textContent = `${opt.label.toUpperCase()} (Cargando...)`;
 
