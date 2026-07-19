@@ -3366,6 +3366,7 @@ const PRODUCTS = {
         {
           img: "multimueble_closet_margarita_brown.jpg",
           color: "#a06218",
+          name: "Marron",
         }
       ]
     },

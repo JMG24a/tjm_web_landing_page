@@ -105,6 +105,32 @@ materialToggle.addEventListener("click", () => {
   renderColors(productBaseWS.colors, colors)
 });
 
+// const OpenToggle = document.getElementById("materialToggleOpen");
+// const thumb = materialToggle.querySelector(".toggle-thumb");
+
+// materialToggle.addEventListener("click", () => {
+//   materialToggle.classList.toggle("active");
+//   const colors = document.getElementById("modal-colors_rope");
+//   const leftLabel = document.querySelector(".toggle-left");
+//   const rightLabel = document.querySelector(".toggle-right");
+
+//   if (materialToggle.classList.contains("active")) {
+//     thumb.textContent = "Abrir";
+//     // Ocultar texto del lado seleccionado
+//     rightLabel.textContent = "";
+//     // Restaurar el texto del lado no seleccionado
+//     leftLabel.textContent = "Cerrar";
+//   } else {
+//     thumb.textContent = "Cerrar";
+//     // Ocultar texto del lado seleccionado
+//     leftLabel.textContent = "";
+//     // Restaurar el texto del lado no seleccionado
+//     rightLabel.textContent = "Abrir";
+//   }
+
+//   renderColors(productBaseWS.colors, colors)
+// });
+
 
 const payBtn = document.getElementById("pay");
 // payBtn.addEventListener("click", () => {

@@ -195,7 +195,12 @@ function isOpenRopeCategory(){
 
 function renderColors(colors, container) {
   container.innerHTML = "";
-  const colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
+  let colorsOfMaterial = []
+  if(categoryProductWs != "sofas" && categoryProductWs != "dormitorios"){
+    colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
+  }else{
+    colorsOfMaterial = colors
+  }
   colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
@@ -398,8 +403,8 @@ function setupMultimuebles(product) {
   isOpenRopeCategory()
   const colors = document.getElementById("modal-colors_rope");
   const openContainer = document.getElementById("color_open_container"); // tu contenedor real
-  const materialToggle = document.getElementById("materialToggleOpen");
-  const thumb = materialToggle.querySelector(".toggle-thumb");
+  const openToggle = document.getElementById("materialToggleOpen");
+  const thumb = openToggle.querySelector(".toggle-thumb");
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
@@ -429,32 +434,32 @@ function setupMultimuebles(product) {
 
   // Estado inicial del toggle según product.open
   if (product.open) {
-    materialToggle.classList.add("active");
+    openToggle.classList.add("active");
     openContainer.classList.remove("displayNone");
     thumb.textContent = "Cerrar";
   } else {
-    materialToggle.classList.remove("active");
+    openToggle.classList.remove("active");
     openContainer.classList.add("displayNone");
     thumb.textContent = "Abrir";
   }
 
   // 🔥 Evento del toggle
-  materialToggle.addEventListener("click", () => {
-    materialToggle.classList.toggle("active");
+  openToggle.addEventListener("click", () => {
+    openToggle.classList.toggle("active");
 
-    const isOpen = materialToggle.classList.contains("active");
+    const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
       // Abrir
       openContainer.classList.remove("displayNone");
       thumb.textContent = "Cerrar";
-
       // Ejecutar tu función original
       changeModalImage(product.open);
     } else {
       // Cerrar
       openContainer.classList.add("displayNone");
       thumb.textContent = "Abrir";
+      changeModalImage(product.img);
     }
   });
 }
