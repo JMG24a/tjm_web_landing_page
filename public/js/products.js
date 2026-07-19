@@ -651,10 +651,10 @@ function setupComedores(product) {
   chairContainer.innerHTML = "";
   chairContainer.appendChild(chairBtn);
 
-  topContainer.innerHTML = "";
-  topContainer.appendChild(topBtn1);
-  topContainer.appendChild(topBtn2);
-  topContainer.appendChild(topBtn3);
+  // topContainer.innerHTML = "";
+  // topContainer.appendChild(topBtn1);
+  // topContainer.appendChild(topBtn2);
+  // topContainer.appendChild(topBtn3);
   updateChairs(0); // inicial
 }
 
