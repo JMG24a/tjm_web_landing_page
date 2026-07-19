@@ -86,13 +86,16 @@ if (goHomeBtn) {
 // 1. Cargar precio del producto en USD
 async function loadProductPrice(id, extras) {
   try {
+    const off = document.getElementById("off");
     const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await response.json();
-    pricePlus5 = calcularAumento(data.precio, extras);
-    const priceUSD = pricePlus5
+    const priceUSD = calcularAumento(data.precio, extras);
     //precioGlobal
-    if(priceProductWs == 0 ){
-      priceBaseDiscount = priceUSD
+    if(porcentajesPagoMethod.cashea != extras){
+      off.classList.remove("displayNone")
+      off.innerHTML = `$${calcularAumento(data.precio, porcentajesPagoMethod.cashea)}`;
+    }else{
+      off.classList.add("displayNone")
     }
     priceProductWs = priceUSD;
     priceElement.dataset.usd = priceUSD; // Guardamos el precio original
@@ -124,24 +127,18 @@ async function loadProductPrices(ids = []) {
   }
 }
 
-async function loadPayPercentage(metodo){
+function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
-  const off = document.getElementById("off");
   methodPayProductWs = metodo
   switch (metodo) {
     case "Decontado":
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      await loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
-      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      off.classList.remove("displayNone")
-      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs).toFixed(2)}`
+      loadProductPrice(idProductSelected, porcentajesPagoMethod.decontado)
       break;
 
     case "Cashea":
       // Sin descuento
-      off.classList.add("displayNone")
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(idProductSelected, porcentajesPagoMethod.cashea)
@@ -151,31 +148,21 @@ async function loadPayPercentage(metodo){
       // Quitar el porcentaje agregado previamente
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      await loadProductPrice(idProductSelected, porcentajesPagoMethod.zelle)
-      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      off.classList.remove("displayNone")
-      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs).toFixed(2)}`
+      loadProductPrice(idProductSelected, porcentajesPagoMethod.zelle)
       break;
 
     case "Cash - Binance":
       // Quitar el porcentaje agregado previamente
       price.classList.remove("displayNone")
       price.innerHTML = '<span class="loader"></span>'
-      await loadProductPrice(idProductSelected, 0)
-
-      price.innerHTML = `$${(priceProductWs).toFixed(2)}`;
-      off.classList.remove("displayNone")
-      off.innerHTML = `$${(priceBaseDiscount).toFixed(2)}`;
-      priceProductWs = `${(priceProductWs).toFixed(2)}`
+      loadProductPrice(idProductSelected, 0)
       break;
     default:
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
         price.classList.remove("displayNone")
         price.innerHTML = '<span class="loader"></span>'
-        await loadProductPrice(`${idProductSelected}1`, extra)
+        loadProductPrice(`${idProductSelected}1`, extra)
       }
-      off.classList.add("displayNone")
       price.innerHTML = `$${priceProductWs}`;
       break;
   }
