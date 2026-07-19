@@ -398,7 +398,7 @@ function setupMultimuebles(product) {
   isOpenRopeCategory()
   const colors = document.getElementById("modal-colors_rope");
   const openContainer = document.getElementById("color_open_container"); // tu contenedor real
-  const materialToggle = document.getElementById("materialToggle");
+  const materialToggle = document.getElementById("materialToggleOpen");
   const thumb = materialToggle.querySelector(".toggle-thumb");
 
   const container_size = document.getElementById("container_size");
