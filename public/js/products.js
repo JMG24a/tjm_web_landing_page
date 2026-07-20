@@ -406,6 +406,8 @@ function setupMultimuebles(product) {
   const openContainer = document.getElementById("color_open_container");
   const openToggle = document.getElementById("materialToggleOpen");
   const thumb = openToggle.querySelector(".toggle-thumb");
+  const leftLabel = document.querySelector(".toggle-left");
+  const rightLabel = document.querySelector(".toggle-right");
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
@@ -428,19 +430,10 @@ function setupMultimuebles(product) {
   price.classList.remove("displayNone");
   price.innerHTML = '<span class="loader"></span>';
   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
-
-  renderColors(product.colors, colors);
-
   // Estado inicial del toggle
-  if (product.open) {
-    openToggle.classList.add("active");
-    thumb.textContent = "Abrir";
-    changeModalImage(product.open);
-  } else {
-    openToggle.classList.remove("active");
-    thumb.textContent = "Cerrar";
-    changeModalImage(product.img);
-  }
+  openToggle.classList.add("active");
+  thumb.textContent = "Cerrar";
+  renderColors(product.colors, colors);
 
   // Evento del toggle
   openToggle.addEventListener("click", () => {
