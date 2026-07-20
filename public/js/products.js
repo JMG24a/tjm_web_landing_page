@@ -201,7 +201,9 @@ function renderColors(colors, container) {
   }else{
     colorsOfMaterial = colors
   }
-  changeModalImage(colorsOfMaterial[0].img);
+  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios"){
+    changeModalImage(colorsOfMaterial[0].img);
+  }
   colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;

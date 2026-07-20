@@ -65,7 +65,7 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_hielo_gris.png",
-          color: "#333",
+          color: "gray",
           type: "tela",
           name: "Gris",
         },
@@ -301,12 +301,6 @@ const PRODUCTS = {
       img: "sofa_zultan_2_barrigas_beige.png",
       suggest: [1001, 1002],
       colors: [
-        {
-          img: "sofa_zultan_2_barrigas_beige.png",
-          color: "beige",
-          type: "cuero",
-          name: "Beige"
-        },
         {
           img: "sofa_zultan_2_barrigas_gris.png",
           color: "gray",
