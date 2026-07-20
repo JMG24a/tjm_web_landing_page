@@ -434,11 +434,11 @@ function setupMultimuebles(product) {
   // Estado inicial del toggle
   if (product.open) {
     openToggle.classList.add("active");
-    thumb.textContent = "Cerrar";
+    thumb.textContent = "Abrir";
     changeModalImage(product.open);
   } else {
     openToggle.classList.remove("active");
-    thumb.textContent = "Abrir";
+    thumb.textContent = "Cerrar";
     changeModalImage(product.img);
   }
 
@@ -449,11 +449,11 @@ function setupMultimuebles(product) {
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      thumb.textContent = "Cerrar";
-      changeModalImage(product.open);
-    } else {
       thumb.textContent = "Abrir";
       changeModalImage(product.img);
+    } else {
+      thumb.textContent = "Cerrar";
+      changeModalImage(product.open);
     }
   });
 }
