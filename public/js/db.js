@@ -573,14 +573,21 @@ const PRODUCTS = {
         {
           img: "sofa_labros_beige.jpg",
           color: "beige",
+          type: "tela",
+          name: "Beige",
+
         },
         {
           img: "sofa_labros_black.jpg",
           color: "black",
+          type: "cuero",
+          name: "Negro",
         },
         {
           img: "sofa_labros_gray.jpg",
-          color: "gray"
+          color: "gray",
+          type: "cuero",
+          name: "Gris",
         }
       ]
     },
@@ -595,14 +602,20 @@ const PRODUCTS = {
         {
           img: "sofa_cairo_beige_d.jpg",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "sofa_cairo_black_d.jpg",
           color: "#000000",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_cairo_white_d.jpg",
-          color: "#838383"
+          color: "#838383",
+          type: "cuero",
+          name: "Blanco"
         }
       ]
     },
@@ -613,6 +626,12 @@ const PRODUCTS = {
       img: "sofa_dormus_beige.jpeg",
       suggest: [1020, 1011],
       colors: [
+        {
+          img: "sofa_dormus_beige.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige",
+        },
         {
           img: "sofa_dormus_beige.jpeg",
           color: "beige",
@@ -695,10 +714,14 @@ const PRODUCTS = {
         {
           img: "sofa_toty_black_d.jpg",
           color: "#000000",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_toty_gray_d.jpg",
           color: "#949494",
+          type: "cuero",
+          name: "Gris",
         }
       ]
     },
@@ -713,14 +736,20 @@ const PRODUCTS = {
         {
           img: "sofa_palermo_gray_black.jpg",
           color: "gray",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "sofa_palermo_beige.PNG",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "sofa_palermo_gray.PNG",
-          color: "gray"
+          color: "gray",
+          type: "cuero",
+          name: "Gris",
         }
       ]
     },
@@ -735,18 +764,26 @@ const PRODUCTS = {
         {
           img: "sofa_berlin_black.jpeg",
           color: "black",
+          type: "tela",
+          name: "Negro",
         },
         {
           img: "sofa_berlin_beige.jpeg",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "sofa_berlin_white.jpeg",
-          color: "white"
+          color: "white",
+          type: "tela",
+          name: "Blanco",
         },
         {
           img: "sofa_berlin_gray.jpeg",
-          color: "#949494"
+          color: "#949494",
+          type: "tela",
+          name: "Gris"
         }
       ]
     },
@@ -760,14 +797,20 @@ const PRODUCTS = {
         {
           img: "sofa_enmaly_white.jpg",
           color: "white",
+          type: "tela",
+          name: "Blanco"
         },
         {
           img: "sofa_enmaly_beige.jpg",
           color: "beige",
+          type: "tela",
+          name: "Beige"
         },
         {
           img: "sofa_enmaly_gray.jpg",
-          color: "gray"
+          color: "gray",
+          type: "tela",
+          name: "Gris"
         }
       ]
     },
@@ -781,10 +824,14 @@ const PRODUCTS = {
         {
           img: "sofa_damasco_black.jpeg",
           color: "black",
+          type: "cuero",
+          name: "Negro"
         },
         {
           img: "sofa_damasco_white.jpeg",
-          color: "white"
+          color: "white",
+          type: "tela",
+          name: "Blanco"
         },
       ]
     },
@@ -798,18 +845,26 @@ const PRODUCTS = {
         {
           img: "sofa_roma_black.jpg",
           color: "black",
+          type: "cuero",
+          name: "Negro"
         },
         {
           img: "sofa_roma_red.jpg",
           color: "rgba(145, 11, 11, 0.96)",
+          type: "tela",
+          name: "Rojo"
         },
         {
           img: "sofa_roma_gray.jpg",
-          color: "gray"
+          color: "gray",
+          type: "tela",
+          name: "Gris"
         },
         {
           img: "sofa_roma_white.jpg",
           color: "white",
+          type: "tela",
+          name: "Blanco"
         },
       ]
     },
@@ -847,43 +902,51 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_normandy_beige.jpeg",
-          color: "beige"
+          color: "beige",
+          type: "tela",
+          name: "Beige"
         },
         {
           img: "sofa_normandy_gray.jpeg",
-          color: "gray"
+          color: "gray",
+          type: "tela",
+          name: "Gris"
         },
         {
           img: "sofa_normandy_blue.jpeg",
           color: "blue",
+          type: "tela",
+          name: "Azul"
         },
         {
           img: "sofa_normandy_brown.jpeg",
           color: "brown",
+          type: "cuero",
+          name: "Café"
         },
       ]
     },
-    {
-      id: 1018,
-      name: "Sofa Paris",
-      desc: "El sofá Paris destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_paris_white.jpeg",
-      suggest: [1021, 1019],
-      colors: [
-        {
-          img: "sofa_paris_white.jpeg",
-          color: "white"
-        },
-        {
-          img: "sofa_paris_gray_white.jpeg",
-          color: "#717171",
-        },
-        {
-          img: "sofa_paris_black.jpeg",
-          color: "black",
-        },
-      ]
-    },
+    // {
+    //   id: 1018,
+    //   name: "Sofa Paris",
+    //   desc: "El sofá Paris destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+    //   img: "sofa_paris_white.jpeg",
+    //   suggest: [1021, 1019],
+    //   colors: [
+    //     {
+    //       img: "sofa_paris_white.jpeg",
+    //       color: "white"
+    //     },
+    //     {
+    //       img: "sofa_paris_gray_white.jpeg",
+    //       color: "#717171",
+    //     },
+    //     {
+    //       img: "sofa_paris_black.jpeg",
+    //       color: "black",
+    //     },
+    //   ]
+    // },
     {
       id: 1019,
       name: "Sofa Suiza",
@@ -893,23 +956,33 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_suiza_beige.jpeg",
-          color: "beige"
+          color: "beige",
+          type: "tela",
+          name: "Beige"
         },
         {
           img: "sofa_suiza_gray.jpeg",
           color: "gray",
+          type: "tela",
+          name: "Gris"
         },
         {
           img: "sofa_suiza_black.jpeg",
           color: "black",
+          type: "tela",
+          name: "Negro"
         },
         {
           img: "sofa_suiza_white.jpeg",
           color: "white",
+          type: "tela",
+          name: "Blanco"
         },
         {
           img: "sofa_suiza_gray_white.jpeg",
           color: "#7b7b7b",
+          type: "tela",
+          name: "Gris/Blanco"
         },
       ]
     },
@@ -923,19 +996,27 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_nigeria_beige.jpeg",
-          color: "beige"
+          color: "beige",
+          type: "tela",
+          name: "Beige"
         },
         {
           img: "sofa_nigeria_black.jpeg",
           color: "black",
+          type: "tela",
+          name: "Negro"
         },
         {
           img: "sofa_nigeria_white.jpeg",
           color: "white",
+          type: "tela",
+          name: "Blanco"
         },
         {
           img: "sofa_nigeria_gray.jpeg",
           color: "gray",
+          type: "cuero",
+          name: "Gris"
         },
       ]
     },
@@ -949,19 +1030,27 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_barco_white.jpeg",
-          color: "white"
+          color: "white",
+          type: "tela",
+          name: "Blanco"
         },
         {
           img: "sofa_barco_gray.jpeg",
           color: "gray",
+          type: "tela",
+          name: "Gris"
         },
         {
           img: "sofa_barco_black.jpeg",
           color: "black",
+          type: "tela",
+          name: "Negro"
         },
         {
           img: "sofa_barco_beige.jpeg",
           color: "beige",
+          type: "cuero",
+          name: "Beige"
         }
       ]
     },
@@ -975,23 +1064,33 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_sofa_cama_beige.jpeg",
-          color: "beige"
+          color: "beige",
+          type: "cuero",
+          name: "Beige"
         },
         {
           img: "sofa_sofa_cama_gray.jpeg",
           color: "gray",
+          type: "cuero",
+          name: "Gris"
         },
         {
           img: "sofa_sofa_cama_gray_black.jpeg",
           color: "#525252",
+          type: "cuero",
+          name: "Gris/Oscuro"
         },
         {
           img: "sofa_sofa_cama_black_gray.jpeg",
           color: "#424242",
+          type: "cuero",
+          name: "Negro/Gris"
         },
         {
           img: "sofa_sofa_cama_beige_down.jpeg",
           color: "beige",
+          type: "cuero",
+          name: "Beige"
         },
       ]
     },
@@ -1005,11 +1104,15 @@ const PRODUCTS = {
       colors: [
         {
           img: "sofa_lineal.png",
-          color: "red"
+          color: "red",
+          type: "cuero",
+          name: "Rojo"
         },
         {
           img: "sofa_lineal_beige.png",
           color: "beige",
+          type: "cuero",
+          name: "Beige"
         },
       ]
     },
