@@ -163,6 +163,7 @@ function loadPayPercentage(metodo){
         price.innerHTML = '<span class="loader"></span>'
         loadProductPrice(`${idProductSelected}1`, porcentajesPagoMethod.cashea)
       }
+      price.innerHTML = `$${priceProductWs}`;
       break;
   }
 }
