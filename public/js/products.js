@@ -374,6 +374,7 @@ function setupDormitorio(product) {
     resetPaymentSelect()
 
     loadPayPercentage(methodPayProductWs);
+    console.log("🚀 ~ seleccionarMedida ~ methodPayProductWs:", methodPayProductWs)
     verificarSesion(idProductSelected);
   }
 
