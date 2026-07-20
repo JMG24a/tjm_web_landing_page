@@ -369,6 +369,7 @@ function setupDormitorio(product) {
     nameProductWs = `${product.name} ${selectedOpt.label}`;
     idProductSelected = `${product.id}${selectedOpt.position}`;
     idProductSelected = Number(idProductSelected);
+    console.log("🚀 ~ seleccionarMedida ~ idProductSelected:", idProductSelected)
 
     resetPaymentSelect()
 
