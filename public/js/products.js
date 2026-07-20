@@ -161,9 +161,8 @@ function loadPayPercentage(metodo){
       if(categoryProductWs == "colchones" || categoryProductWs == "dormitorios"){
         price.classList.remove("displayNone")
         price.innerHTML = '<span class="loader"></span>'
-        loadProductPrice(`${idProductSelected}1`, extra)
+        loadProductPrice(`${idProductSelected}1`, porcentajesPagoMethod.cashea)
       }
-      price.innerHTML = `$${priceProductWs}`;
       break;
   }
 }
