@@ -3356,6 +3356,7 @@ const PRODUCTS = {
       size: "Alto: 180cm - Ancho: 61cm",
       desc: "El ropero Margarita es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Es ligero, fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_brown.jpg",
+      suggest: [4006, 4014],
       colors: [
         {
           img: "multimueble_closet_margarita_brown.jpg",
@@ -3371,6 +3372,7 @@ const PRODUCTS = {
       desc: "El ropero Caju es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_mid_medium_brown.jpg",
       open: "multimueble_closet_margarita_medium_plus_open.jpg",
+      suggest: [4003, 4007],
       colors: [
         {
           img: "multimueble_closet_margarita_mid_medium_brown.jpg",
@@ -3389,6 +3391,7 @@ const PRODUCTS = {
       desc: "El ropero Caju es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_plus_brown.jpg",
       open: "multimueble_caju_6_puertas_open.jpeg",
+      suggest: [4007, 4002],
       colors: [
         {
           img: "multimueble_closet_margarita_plus_brown.jpg",
@@ -3406,6 +3409,7 @@ const PRODUCTS = {
       size: "Alto: 138cm - Ancho: 124cm",
       desc: "El peinadora Agne es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_vanity_white.jpg",
+      suggest: [4005],
       colors: [
         {
           img: "multimueble_vanity_white.jpg",
@@ -3419,6 +3423,7 @@ const PRODUCTS = {
       size: "Alto: 158cm - Ancho: 115cm",
       desc: "El peinadora B700 es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_gabetero_con_espejo_cuadrado_white.jpg",
+      suggest: [4004],
       colors: [
         {
           img: "multimueble_gabetero_con_espejo_cuadrado_white.jpg",
@@ -3433,6 +3438,7 @@ const PRODUCTS = {
       desc: "El ropero Monaco es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_mid_brown.jpg",
       open: "multimueble_closet_margarita_medium_open.jpg",
+      suggest: [4001, 4014],
       colors: [
         {
           img: "multimueble_closet_margarita_mid_brown.jpg",
@@ -3447,6 +3453,7 @@ const PRODUCTS = {
       desc: "El ropero Berlin elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_acai_medium_white.jpg",
       open: "multimueble_closet_margarita_medium_plus_open.jpg",
+      suggest: [4003, 4002],
       colors: [
         {
           img: "multimueble_closet_acai_medium_white.jpg",
@@ -3465,6 +3472,7 @@ const PRODUCTS = {
       desc: "El ropero Alemania elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_margarita_plus_white.jpg",
       open: "multimueble_closet_margarita_plus_open.jpg",
+      suggest: [40012, 4011],
       colors: [
         {
           img: "multimueble_closet_margarita_plus_white.jpg",
@@ -3478,6 +3486,7 @@ const PRODUCTS = {
       size: "Alto: 65cm - Ancho: 48cm",
       desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_chifonier_001.jpg",
+      suggest: [4010],
       colors: [
         {
           img: "multimueble_chifonier_001.jpg",
@@ -3492,6 +3501,7 @@ const PRODUCTS = {
       desc: "La comoda Madrid es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_chifonier_002.jpg",
       open: "multimueble_chifonier_002_open.jpg",
+      suggest: [4009],
       colors: [
         {
           img: "multimueble_chifonier_002.jpg",
@@ -3505,6 +3515,7 @@ const PRODUCTS = {
       size: "Alto: 191cm - Ancho: 106cm",
       desc: "El Ropero Paris es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_caju.jpg",
+      suggest: [4008, 4012],
       colors: [
         {
           img: "multimueble_closet_caju.jpg",
@@ -3519,6 +3530,7 @@ const PRODUCTS = {
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_caju_plus.jpg",
       open: "multimueble_closet_caju_plus_open.jpg",
+      suggest: [4008, 4011],
       colors: [
         {
           img: "multimueble_closet_caju_plus.jpg",
@@ -3546,6 +3558,7 @@ const PRODUCTS = {
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_closet_duetto_marron.png",
+      suggest: [4001, 4006],
       colors: [
         {
           img: "multimueble_closet_duetto_marron.png",
