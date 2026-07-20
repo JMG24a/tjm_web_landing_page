@@ -4,6 +4,7 @@ let sedesW = {
   "Ojeda": "584126158205",
   "San Pablo": "584228463448",
   "Barquisimeto": "584120213946",
+  "San Felipe": "584121539695"
 }
 let extra = 8
 let camcolselected = 0
