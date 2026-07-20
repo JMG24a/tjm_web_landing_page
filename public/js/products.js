@@ -406,9 +406,6 @@ function setupMultimuebles(product) {
   const openContainer = document.getElementById("color_open_container");
   const openToggle = document.getElementById("materialToggleOpen");
   const thumb = openToggle.querySelector(".toggle-thumb");
-  const leftLabel = document.querySelector(".toggle-left");
-  const rightLabel = document.querySelector(".toggle-right");
-
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
 
@@ -437,17 +434,19 @@ function setupMultimuebles(product) {
 
   // Evento del toggle
   openToggle.addEventListener("click", () => {
+    const leftLabel = document.querySelector(".toggle-left");
+    const rightLabel = document.querySelector(".toggle-right");
     openToggle.classList.toggle("active");
 
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      thumb.textContent = "Cerrar";
+      thumb.textContent = "Abrir";
       leftLabel.textContent = "Abrir";
       rightLabel.textContent = "";
       changeModalImage(product.open);
     } else {
-      thumb.textContent = "Abrir";
+      thumb.textContent = "Cerrar";
       rightLabel.textContent = "Cerrar";
       leftLabel.textContent = "";
       changeModalImage(product.img);
