@@ -682,31 +682,31 @@ function openProductModal(product, category) {
   renderSuggestions(product, category);
 }
 
-function resetMultimuebles() {
-  const colors = document.getElementById("modal-colors_rope");
-  const openContainer = document.getElementById("color_open_container");
-  const openToggle = document.getElementById("materialToggleOpen");
-  const thumb = openToggle.querySelector(".toggle-thumb");
-  const leftLabel = document.querySelector(".toggle-left");
-  const rightLabel = document.querySelector(".toggle-right");
+// function resetMultimuebles() {
+//   const colors = document.getElementById("modal-colors_rope");
+//   const openContainer = document.getElementById("color_open_container");
+//   const openToggle = document.getElementById("materialToggleOpen");
+//   const thumb = openToggle.querySelector(".toggle-thumb");
+//   const leftLabel = document.querySelector(".toggle-left");
+//   const rightLabel = document.querySelector(".toggle-right");
 
-  // Reset toggle
-  openToggle.classList.remove("active");
-  thumb.textContent = "Abrir";
+//   // Reset toggle
+//   openToggle.classList.remove("active");
+//   thumb.textContent = "Abrir";
 
-  // Reset labels
-  leftLabel.textContent = "";
-  rightLabel.textContent = "Abrir";
+//   // Reset labels
+//   leftLabel.textContent = "";
+//   rightLabel.textContent = "Abrir";
 
-  // Reset colores
-  colors.innerHTML = "";
+//   // Reset colores
+//   colors.innerHTML = "";
 
-  // Reset contenedor
-  openContainer.classList.add("displayNone");
+//   // Reset contenedor
+//   openContainer.classList.add("displayNone");
 
-  // Reset imagen a un placeholder o vacío
-  changeModalImage(""); // si quieres dejar sin imagen
-}
+//   // Reset imagen a un placeholder o vacío
+//   changeModalImage(""); // si quieres dejar sin imagen
+// }
 
 
 function resetPaymentSelect() {
@@ -738,7 +738,7 @@ function closeModal() {
 
   // 🔥 Resetear select de método de pago
   resetPaymentSelect();
-  resetMultimuebles();
+  // resetMultimuebles();
 
   setTimeout(() => {
     modal.classList.add("hidden");
