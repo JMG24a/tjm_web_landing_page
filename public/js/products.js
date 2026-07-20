@@ -416,7 +416,7 @@ function setupMultimuebles(product) {
   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
   // Estado inicial del toggle
   openToggle.classList.add("active");
-  thumb.textContent = "Cerrar";
+  thumb.textContent = "Abrir";
   renderColors(product.colors, colors);
 
   // Evento del toggle
@@ -442,8 +442,6 @@ function setupMultimuebles(product) {
 }
 
 function setupComedores(product) {
-  console.log("🚀 ~ setupComedores ~ methodPayProductWs:", methodPayProductWs)
-
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
   chairContainer.classList.remove("displayNone");
@@ -682,6 +680,33 @@ function openProductModal(product, category) {
   renderSuggestions(product, category);
 }
 
+function resetMultimuebles() {
+  const colors = document.getElementById("modal-colors_rope");
+  const openContainer = document.getElementById("color_open_container");
+  const openToggle = document.getElementById("materialToggleOpen");
+  const thumb = openToggle.querySelector(".toggle-thumb");
+  const leftLabel = document.querySelector(".toggle-left");
+  const rightLabel = document.querySelector(".toggle-right");
+
+  // Reset toggle
+  openToggle.classList.remove("active");
+  thumb.textContent = "Abrir";
+
+  // Reset labels
+  leftLabel.textContent = "";
+  rightLabel.textContent = "Abrir";
+
+  // Reset colores
+  colors.innerHTML = "";
+
+  // Reset contenedor
+  openContainer.classList.add("displayNone");
+
+  // Reset imagen a un placeholder o vacío
+  changeModalImage(""); // si quieres dejar sin imagen
+}
+
+
 function resetPaymentSelect() {
   const off = document.getElementById("off");
   const paymentSelect = document.getElementById("paymentSelect");
@@ -710,6 +735,7 @@ function closeModal() {
 
   // 🔥 Resetear select de método de pago
   resetPaymentSelect();
+  resetMultimuebles();
 
   setTimeout(() => {
     modal.classList.add("hidden");
