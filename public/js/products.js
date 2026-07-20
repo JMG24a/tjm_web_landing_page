@@ -442,17 +442,15 @@ function setupMultimuebles(product) {
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      thumb.textContent = "Abrir";
-      rightLabel.textContent = "";
-      // Restaurar el texto del lado no seleccionado
-      leftLabel.textContent = "Cerrar";
-      changeModalImage(product.img);
-    } else {
       thumb.textContent = "Cerrar";
-      leftLabel.textContent = "";
-      // Restaurar el texto del lado no seleccionado
-      rightLabel.textContent = "Abrir";
+      leftLabel.textContent = "Abrir";
+      rightLabel.textContent = "";
       changeModalImage(product.open);
+    } else {
+      thumb.textContent = "Abrir";
+      rightLabel.textContent = "Cerrar";
+      leftLabel.textContent = "";
+      changeModalImage(product.img);
     }
   });
 }
