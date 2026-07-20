@@ -431,15 +431,15 @@ function setupMultimuebles(product) {
 
   renderColors(product.colors, colors);
 
-  // Estado inicial
+  // Estado inicial del toggle
   if (product.open) {
     openToggle.classList.add("active");
-    colors.classList.remove("displayNone");
     thumb.textContent = "Cerrar";
+    changeModalImage(product.open);
   } else {
     openToggle.classList.remove("active");
-    colors.classList.add("displayNone");
     thumb.textContent = "Abrir";
+    changeModalImage(product.img);
   }
 
   // Evento del toggle
@@ -449,11 +449,9 @@ function setupMultimuebles(product) {
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      colors.classList.remove("displayNone");
       thumb.textContent = "Cerrar";
       changeModalImage(product.open);
     } else {
-      colors.classList.add("displayNone");
       thumb.textContent = "Abrir";
       changeModalImage(product.img);
     }
@@ -462,9 +460,10 @@ function setupMultimuebles(product) {
 
 
 // function setupMultimuebles(product) {
-//   isOpenRopeCategory()
+//   isOpenRopeCategory();
+
 //   const colors = document.getElementById("modal-colors_rope");
-//   const openContainer = document.getElementById("color_open_container"); // tu contenedor real
+//   const openContainer = document.getElementById("color_open_container");
 //   const openToggle = document.getElementById("materialToggleOpen");
 //   const thumb = openToggle.querySelector(".toggle-thumb");
 
@@ -483,43 +482,38 @@ function setupMultimuebles(product) {
 //     </p>
 //   `;
 
-//   const size = document.getElementById("size");
-//   size.textContent = product.size || "";
+//   document.getElementById("size").textContent = product.size || "";
 
 //   const price = document.getElementById("product-price");
 //   price.classList.remove("displayNone");
 //   price.innerHTML = '<span class="loader"></span>';
 //   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
 
-//   // Mostrar colores
 //   renderColors(product.colors, colors);
 
-//   // Estado inicial del toggle según product.open
+//   // Estado inicial
 //   if (product.open) {
 //     openToggle.classList.add("active");
-//     openContainer.classList.remove("displayNone");
+//     colors.classList.remove("displayNone");
 //     thumb.textContent = "Cerrar";
 //   } else {
 //     openToggle.classList.remove("active");
-//     openContainer.classList.add("displayNone");
+//     colors.classList.add("displayNone");
 //     thumb.textContent = "Abrir";
 //   }
 
-//   // 🔥 Evento del toggle
+//   // Evento del toggle
 //   openToggle.addEventListener("click", () => {
 //     openToggle.classList.toggle("active");
 
 //     const isOpen = openToggle.classList.contains("active");
 
 //     if (isOpen) {
-//       // Abrir
-//       openContainer.classList.remove("displayNone");
+//       colors.classList.remove("displayNone");
 //       thumb.textContent = "Cerrar";
-//       // Ejecutar tu función original
 //       changeModalImage(product.open);
 //     } else {
-//       // Cerrar
-//       openContainer.classList.add("displayNone");
+//       colors.classList.add("displayNone");
 //       thumb.textContent = "Abrir";
 //       changeModalImage(product.img);
 //     }
