@@ -166,7 +166,6 @@ const payBtn = document.getElementById("pay");
 // })
 
 payBtn.addEventListener("click", () => {
-
   // 1️⃣ VALIDAR SEDE
   if (!locationWsSede || locationWsSede.trim() === "") {
     alert("Por favor selecciona una sede antes de continuar.");
@@ -213,8 +212,18 @@ ${materialLine ? "  " + materialLine + "\n" : ""}
 🙏 Gracias por su atención.`;
 
   // 5️⃣ URL DE WHATSAPP
-  const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
+  const safeMessage = mensaje.replace(/[\u{1F300}-\u{1FAFF}]/gu, (emoji) =>
+    String.fromCodePoint(emoji.codePointAt(0))
+  );
+
+  const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(safeMessage)}`;
   window.open(url, "_blank");
 
   window.location.href = "/";
+
+
+  // const url = `https://wa.me/${sedesW[locationWsSede]}?text=${encodeURIComponent(mensaje)}`;
+  // window.open(url, "_blank");
+
+  // window.location.href = "/";
 });
