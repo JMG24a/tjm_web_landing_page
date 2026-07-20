@@ -656,8 +656,10 @@ function openProductModal(product, category) {
   showTopBarModal()
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
-  productBaseWS = product
-  categoryProductWs = category
+  productBaseWS = product;
+  console.log("🚀 ~ openProductModal ~ methodPayProductWs:", methodPayProductWs)
+
+  categoryProductWs = category;
   loadPayPercentage("default")
   switch (category) {
     case "multimuebles":
