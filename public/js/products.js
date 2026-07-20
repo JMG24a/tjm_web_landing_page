@@ -371,7 +371,7 @@ function setupDormitorio(product) {
     idProductSelected = Number(idProductSelected);
 
     resetPaymentSelect()
-    loadPayPercentage(MethodPayProductWs);
+    loadPayPercentage(methodPayProductWs);
     verificarSesion(idProductSelected);
   }
 
