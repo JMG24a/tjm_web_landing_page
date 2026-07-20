@@ -370,6 +370,8 @@ function setupDormitorio(product) {
     idProductSelected = `${product.id}${selectedOpt.position}`;
     idProductSelected = Number(idProductSelected);
 
+    resetPaymentSelect()
+
     loadPayPercentage(methodPayProductWs);
     verificarSesion(idProductSelected);
   }
@@ -488,13 +490,11 @@ function setupComedores(product) {
     const selected = Number(select.value);
 
     if (selected === 4) {
-      console.log("🚀 ~ updateChairs ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
-      console.log("🚀 ~ updateChairs ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}6${position}`);
       changeModalImage(product.chairs_6[position].img);
