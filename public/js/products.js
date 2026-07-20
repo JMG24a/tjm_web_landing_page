@@ -374,8 +374,6 @@ function setupDormitorio(product) {
     priceProductWs = 0
     const selectedOpt = optData[index];
     if (!selectedOpt) return;
-    camcolselected = selectedOpt.position
-    console.log("🚀 ~ seleccionarMedida ~ camcolselected:", camcolselected)
 
     // Guardar variables globales exactamente igual que antes
     priceProductWs = parseFloat(selectedOpt.price);
@@ -441,165 +439,172 @@ function setupMultimuebles(product) {
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      thumb.textContent = "Cerrar";
-      rightLabel.textContent = "Cerrar";
+      thumb.textContent = "Abrir";
+      rightLabel.textContent = "Abrir";
       leftLabel.textContent = "";
       changeModalImage(product.img);
     } else {
-      thumb.textContent = "Abrir";
-      leftLabel.textContent = "Abrir";
+      thumb.textContent = "Cerrar";
+      leftLabel.textContent = "Cerrar";
       rightLabel.textContent = "";
       changeModalImage(product.open);
     }
   });
 }
 
-
-// function setupMultimuebles(product) {
-//   isOpenRopeCategory();
-
-//   const colors = document.getElementById("modal-colors_rope");
-//   const openContainer = document.getElementById("color_open_container");
-//   const openToggle = document.getElementById("materialToggleOpen");
-//   const thumb = openToggle.querySelector(".toggle-thumb");
-
-//   const container_size = document.getElementById("container_size");
-//   container_size.classList.remove("displayNone");
-
-//   container_size.innerHTML = `
-//     <p>📦 Embalaje sin cargo.</p>
-//     <p class="size">
-//       <i>
-//         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-//           <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-//         </svg>
-//       </i>
-//       <span id="size" class="size_text"></span>
-//     </p>
-//   `;
-
-//   document.getElementById("size").textContent = product.size || "";
-
-//   const price = document.getElementById("product-price");
-//   price.classList.remove("displayNone");
-//   price.innerHTML = '<span class="loader"></span>';
-//   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
-
-//   renderColors(product.colors, colors);
-
-//   // Estado inicial
-//   if (product.open) {
-//     openToggle.classList.add("active");
-//     colors.classList.remove("displayNone");
-//     thumb.textContent = "Cerrar";
-//   } else {
-//     openToggle.classList.remove("active");
-//     colors.classList.add("displayNone");
-//     thumb.textContent = "Abrir";
-//   }
-
-//   // Evento del toggle
-//   openToggle.addEventListener("click", () => {
-//     openToggle.classList.toggle("active");
-
-//     const isOpen = openToggle.classList.contains("active");
-
-//     if (isOpen) {
-//       colors.classList.remove("displayNone");
-//       thumb.textContent = "Cerrar";
-//       changeModalImage(product.open);
-//     } else {
-//       colors.classList.add("displayNone");
-//       thumb.textContent = "Abrir";
-//       changeModalImage(product.img);
-//     }
-//   });
-// }
-
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
-  chairContainer.classList.remove("displayNone")
+  chairContainer.classList.remove("displayNone");
 
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
 
   container_size.innerHTML = `
-  <p>🪓 Madera Seca al Horno.</p>
-  <p>📄 Garantía de 1 año.</p>
-  <p>🕓 30 dìas hàbiles.</p>
-  <p>📦 Embalaje sin cargo.</p>
-  <p class="size">
-    <i>
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
-        <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
-      </svg>
-    </i>
-    <span id="size" class="size_text"></span>
-  </p>
-  `
+    <p>🪓 Madera Seca al Horno.</p>
+    <p>📄 Garantía de 1 año.</p>
+    <p>🕓 30 dìas hàbiles.</p>
+    <p>📦 Embalaje sin cargo.</p>
+    <p class="size">
+      <i>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+          <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+        </svg>
+      </i>
+      <span id="size" class="size_text"></span>
+    </p>
+  `;
+
   const size = document.getElementById("size");
   size.textContent = product.size || "";
 
-  const topContainer = document.getElementById("modal-top");
-  let isFour = false; // estado toggle
-  // chairContainer.classList.remove("modal-opens")
-  // topContainer.classList.remove("modal-opens")
-  topContainer.className = "modal-top";
+  const price = document.getElementById("product-price");
+  price.classList.remove("displayNone");
+  price.innerHTML = '<span class="loader"></span>';
 
-  // const topBtn1 = document.createElement("span");
-  // topBtn1.className = "span-top";
-  // const topBtn2 = document.createElement("span");
-  // topBtn2.className = "span-top";
-  // const topBtn3 = document.createElement("span");
-  // topBtn3.className = "span-top";
+  // Select para elegir cantidad de sillas
+  const select = document.createElement("select");
+  select.className = "select-trigger";
 
-  // topBtn1.textContent = "vidrio";
-  // topBtn2.textContent = "Pintado";
-  // topBtn3.textContent = "PVC";
+  select.innerHTML = `
+    <option value="4">4 Sillas</option>
+    <option value="6">6 Sillas</option>
+  `;
 
-  const chairBtn = document.createElement("span");
-  chairBtn.className = "open-dot";
+  chairContainer.innerHTML = "";
+  chairContainer.appendChild(select);
+
+  // Función para actualizar según la selección
   function updateChairs(position) {
-    if (isFour) {
-      chairBtn.textContent = "Seis Sillas";
+    const selected = Number(select.value);
 
-      const price = document.getElementById("product-price");
-      price.innerHTML = '<span class="loader"></span>'
+    if (selected === 4) {
       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod.cashea);
       idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
-      chairBtn.textContent = "Cuatro Sillas";
-
-      const price = document.getElementById("product-price");
-      price.classList.remove("displayNone")
-      price.innerHTML = '<span class="loader"></span>'
       loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod.cashea);
       idProductSelected = Number(`${product.id}6${position}`);
       changeModalImage(product.chairs_6[position].img);
       renderColors(product.chairs_6[position].colors, colors);
     }
   }
-  chairBtn.onclick = () => {
-    isFour = !isFour;
+
+  // Evento del select
+  select.addEventListener("change", () => {
     updateChairs(0);
-  };
+  });
 
-  // topBtn1.onclick = () => { updateChairs(0) }
-  // topBtn2.onclick = () => { updateChairs(1) }
-  // topBtn3.onclick = () => { updateChairs(2) }
-
-  chairContainer.innerHTML = "";
-  chairContainer.appendChild(chairBtn);
-
-  // topContainer.innerHTML = "";
-  // topContainer.appendChild(topBtn1);
-  // topContainer.appendChild(topBtn2);
-  // topContainer.appendChild(topBtn3);
-  updateChairs(0); // inicial
+  // Inicial
+  updateChairs(0);
 }
+
+
+// function setupComedores(product) {
+//   const colors = document.getElementById("modal-colors");
+//   const chairContainer = document.getElementById("modal-chairs");
+//   chairContainer.classList.remove("displayNone")
+
+//   const container_size = document.getElementById("container_size");
+//   container_size.classList.remove("displayNone");
+
+//   container_size.innerHTML = `
+//   <p>🪓 Madera Seca al Horno.</p>
+//   <p>📄 Garantía de 1 año.</p>
+//   <p>🕓 30 dìas hàbiles.</p>
+//   <p>📦 Embalaje sin cargo.</p>
+//   <p class="size">
+//     <i>
+//       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+//         <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+//       </svg>
+//     </i>
+//     <span id="size" class="size_text"></span>
+//   </p>
+//   `
+//   const size = document.getElementById("size");
+//   size.textContent = product.size || "";
+
+//   const topContainer = document.getElementById("modal-top");
+//   let isFour = false; // estado toggle
+//   // chairContainer.classList.remove("modal-opens")
+//   // topContainer.classList.remove("modal-opens")
+//   topContainer.className = "modal-top";
+
+//   // const topBtn1 = document.createElement("span");
+//   // topBtn1.className = "span-top";
+//   // const topBtn2 = document.createElement("span");
+//   // topBtn2.className = "span-top";
+//   // const topBtn3 = document.createElement("span");
+//   // topBtn3.className = "span-top";
+
+//   // topBtn1.textContent = "vidrio";
+//   // topBtn2.textContent = "Pintado";
+//   // topBtn3.textContent = "PVC";
+
+//   const chairBtn = document.createElement("span");
+//   chairBtn.className = "open-dot";
+//   function updateChairs(position) {
+//     if (isFour) {
+//       chairBtn.textContent = "Seis Sillas";
+
+//       const price = document.getElementById("product-price");
+//       price.innerHTML = '<span class="loader"></span>'
+//       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod.cashea);
+//       idProductSelected = Number(`${product.id}4${position}`);
+//       changeModalImage(product.chairs_4[position].img);
+//       renderColors(product.chairs_4[position].colors, colors);
+//     } else {
+//       chairBtn.textContent = "Cuatro Sillas";
+
+//       const price = document.getElementById("product-price");
+//       price.classList.remove("displayNone")
+//       price.innerHTML = '<span class="loader"></span>'
+//       loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod.cashea);
+//       idProductSelected = Number(`${product.id}6${position}`);
+//       changeModalImage(product.chairs_6[position].img);
+//       renderColors(product.chairs_6[position].colors, colors);
+//     }
+//   }
+//   chairBtn.onclick = () => {
+//     isFour = !isFour;
+//     updateChairs(0);
+//   };
+
+//   // topBtn1.onclick = () => { updateChairs(0) }
+//   // topBtn2.onclick = () => { updateChairs(1) }
+//   // topBtn3.onclick = () => { updateChairs(2) }
+
+//   chairContainer.innerHTML = "";
+//   chairContainer.appendChild(chairBtn);
+
+//   // topContainer.innerHTML = "";
+//   // topContainer.appendChild(topBtn1);
+//   // topContainer.appendChild(topBtn2);
+//   // topContainer.appendChild(topBtn3);
+//   updateChairs(0); // inicial
+// }
 
 // 3. Toggle USD ↔ Bs
 priceElement.addEventListener("click", async () => {
