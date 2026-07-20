@@ -443,9 +443,15 @@ function setupMultimuebles(product) {
 
     if (isOpen) {
       thumb.textContent = "Abrir";
+      rightLabel.textContent = "";
+      // Restaurar el texto del lado no seleccionado
+      leftLabel.textContent = "Cerrar";
       changeModalImage(product.img);
     } else {
       thumb.textContent = "Cerrar";
+      leftLabel.textContent = "";
+      // Restaurar el texto del lado no seleccionado
+      rightLabel.textContent = "Abrir";
       changeModalImage(product.open);
     }
   });
