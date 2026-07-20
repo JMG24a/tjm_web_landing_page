@@ -136,10 +136,14 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_coco_pink.png",
           color: "pink",
+          type: "cuero",
+          name: "Rosa",
         },
         {
           img: "dormitorio_cama_coco_beige.png",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
       ]
     },
@@ -169,15 +173,21 @@ const PRODUCTS = {
       colors: [
         {
           img: "dormitorio_cama_barco_beige.png",
-          color: "beige"
+          color: "beige",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "dormitorio_cama_barco_black.png",
           color: "black",
+          type: "cuero",
+          name: "Negro",
         },
         {
           img: "dormitorio_cama_barco_blue.png",
           color: "blue",
+          type: "cuero",
+          name: "Azul",
         }
       ]
     },
@@ -191,14 +201,20 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_sol_gray.png",
           color: "#919191",
+          type: "tela",
+          name: "Gris",
         },
         {
           img: "dormitorio_cama_sol_brown.png",
           color: "#4c2c2c",
+          type: "tela",
+          name: "Marrón",
         },
         {
           img: "dormitorio_cama_sol_beige.png",
           color: "beige",
+          type: "cuero",
+          name: "Beige",
         },
       ]
     },
@@ -212,10 +228,14 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_nene_blue.png",
           color: "#05ac88",
+          type: "tela",
+          name: "Azul",
         },
         {
           img: "dormitorio_cama_nene_beige.png",
           color: "beige",
+          type: "cuero",
+          name: "Beige",
         },
       ]
     },
@@ -229,14 +249,20 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_moises_white.png",
           color: "#333",
+          type: "tela",
+          name: "Blanco",
         },
         {
           img: "dormitorio_cama_moises_blue.png",
           color: "#0040a0",
+          type: "tela",
+          name: "Azul",
         },
         {
           img: "dormitorio_cama_moises_beige.png",
           color: "beige",
+          type: "cuero",
+          name: "Beige",
         },
       ]
     },
@@ -250,14 +276,20 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_triangular_red.png",
           color: "red",
+          type: "tela",
+          name: "Rojo",
         },
         {
           img: "dormitorio_cama_triangular_beige.png",
           color: "beige",
+          type: "tela",
+          name: "Beige",
         },
         {
           img: "dormitorio_cama_triangular_gray.png",
           color: "gray",
+          type: "cuero",
+          name: "Gris",
         },
       ]
     },
@@ -271,6 +303,8 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_trendy.jpeg",
           color: "pink",
+          type: "tela",
+          name: "Rosa",
         },
       ]
     },
@@ -284,10 +318,14 @@ const PRODUCTS = {
         {
           img: "dormitorio_cama_cuna_duplex_pink.png",
           color: "pink",
+          type: "tela",
+          name: "Rosa",
         },
         {
           img: "dormitorio_cama_cuna_duplex_blue.png",
           color: "blue",
+          type: "cuero",
+          name: "Azul",
         }
       ]
     },
