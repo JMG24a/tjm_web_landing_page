@@ -519,7 +519,6 @@ function setupComedores(product) {
   select.addEventListener("change", () => {
     updateChairs(0);
   });
-
   // Inicial
   updateChairs(0);
 }
@@ -661,26 +660,27 @@ function openProductModal(product, category) {
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
   productBaseWS = product;
-  console.log("🚀 ~ openProductModal ~ methodPayProductWs:", methodPayProductWs)
-
   categoryProductWs = category;
-  loadPayPercentage("default")
   switch (category) {
     case "multimuebles":
+      loadPayPercentage(methodPayProductWs)
       setupMultimuebles(product);
       break;
 
     case "comedores":
+      loadPayPercentage(methodPayProductWs)
       setupComedores(product);
       break;
 
     case "colchones":
     case "dormitorios":
+      loadPayPercentage('default')
       setupDormitorio(product);
       break;
 
     case "sofas":
     default:
+      loadPayPercentage(methodPayProductWs)
       setupSofas(product);
   }
 
