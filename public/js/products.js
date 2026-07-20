@@ -400,9 +400,10 @@ function setupDormitorio(product) {
 }
 
 function setupMultimuebles(product) {
-  isOpenRopeCategory()
+  isOpenRopeCategory();
+
   const colors = document.getElementById("modal-colors_rope");
-  const openContainer = document.getElementById("color_open_container"); // tu contenedor real
+  const openContainer = document.getElementById("color_open_container");
   const openToggle = document.getElementById("materialToggleOpen");
   const thumb = openToggle.querySelector(".toggle-thumb");
 
@@ -421,48 +422,109 @@ function setupMultimuebles(product) {
     </p>
   `;
 
-  const size = document.getElementById("size");
-  size.textContent = product.size || "";
+  document.getElementById("size").textContent = product.size || "";
 
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone");
   price.innerHTML = '<span class="loader"></span>';
   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
 
-  // Mostrar colores
   renderColors(product.colors, colors);
 
-  // Estado inicial del toggle según product.open
+  // Estado inicial
   if (product.open) {
     openToggle.classList.add("active");
-    openContainer.classList.remove("displayNone");
+    colors.classList.remove("displayNone");
     thumb.textContent = "Cerrar";
   } else {
     openToggle.classList.remove("active");
-    openContainer.classList.add("displayNone");
+    colors.classList.add("displayNone");
     thumb.textContent = "Abrir";
   }
 
-  // 🔥 Evento del toggle
+  // Evento del toggle
   openToggle.addEventListener("click", () => {
     openToggle.classList.toggle("active");
 
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      // Abrir
-      openContainer.classList.remove("displayNone");
+      colors.classList.remove("displayNone");
       thumb.textContent = "Cerrar";
-      // Ejecutar tu función original
       changeModalImage(product.open);
     } else {
-      // Cerrar
-      openContainer.classList.add("displayNone");
+      colors.classList.add("displayNone");
       thumb.textContent = "Abrir";
       changeModalImage(product.img);
     }
   });
 }
+
+
+// function setupMultimuebles(product) {
+//   isOpenRopeCategory()
+//   const colors = document.getElementById("modal-colors_rope");
+//   const openContainer = document.getElementById("color_open_container"); // tu contenedor real
+//   const openToggle = document.getElementById("materialToggleOpen");
+//   const thumb = openToggle.querySelector(".toggle-thumb");
+
+//   const container_size = document.getElementById("container_size");
+//   container_size.classList.remove("displayNone");
+
+//   container_size.innerHTML = `
+//     <p>📦 Embalaje sin cargo.</p>
+//     <p class="size">
+//       <i>
+//         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+//           <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+//         </svg>
+//       </i>
+//       <span id="size" class="size_text"></span>
+//     </p>
+//   `;
+
+//   const size = document.getElementById("size");
+//   size.textContent = product.size || "";
+
+//   const price = document.getElementById("product-price");
+//   price.classList.remove("displayNone");
+//   price.innerHTML = '<span class="loader"></span>';
+//   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
+
+//   // Mostrar colores
+//   renderColors(product.colors, colors);
+
+//   // Estado inicial del toggle según product.open
+//   if (product.open) {
+//     openToggle.classList.add("active");
+//     openContainer.classList.remove("displayNone");
+//     thumb.textContent = "Cerrar";
+//   } else {
+//     openToggle.classList.remove("active");
+//     openContainer.classList.add("displayNone");
+//     thumb.textContent = "Abrir";
+//   }
+
+//   // 🔥 Evento del toggle
+//   openToggle.addEventListener("click", () => {
+//     openToggle.classList.toggle("active");
+
+//     const isOpen = openToggle.classList.contains("active");
+
+//     if (isOpen) {
+//       // Abrir
+//       openContainer.classList.remove("displayNone");
+//       thumb.textContent = "Cerrar";
+//       // Ejecutar tu función original
+//       changeModalImage(product.open);
+//     } else {
+//       // Cerrar
+//       openContainer.classList.add("displayNone");
+//       thumb.textContent = "Abrir";
+//       changeModalImage(product.img);
+//     }
+//   });
+// }
 
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
