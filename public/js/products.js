@@ -369,12 +369,9 @@ function setupDormitorio(product) {
     nameProductWs = `${product.name} ${selectedOpt.label}`;
     idProductSelected = `${product.id}${selectedOpt.position}`;
     idProductSelected = Number(idProductSelected);
-    console.log("🚀 ~ seleccionarMedida ~ idProductSelected:", idProductSelected)
 
     resetPaymentSelect()
-
-    loadPayPercentage(methodPayProductWs);
-    console.log("🚀 ~ seleccionarMedida ~ methodPayProductWs:", methodPayProductWs)
+    loadPayPercentage(MethodPayProductWs);
     verificarSesion(idProductSelected);
   }
 
@@ -713,6 +710,7 @@ function resetPaymentSelect() {
   const off = document.getElementById("off");
   const paymentSelect = document.getElementById("paymentSelect");
   const selectedOption = paymentSelect.querySelector(".selected-option");
+  methodPayProductWs = "Cashea"
   priceProductWs = 0
   // Restaurar HTML original del trigger
   selectedOption.innerHTML = `
