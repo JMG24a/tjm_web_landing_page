@@ -14,7 +14,7 @@ let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
-let methodPayProductWs = "decontado"
+let methodPayProductWs = "cashea"
 let materialProductWs = "tela"
 let cantidadWs = 1
 let categoryProductWs
@@ -499,17 +499,13 @@ function setupComedores(product) {
     const selected = Number(select.value);
 
     if (selected === 4) {
-      console.log("🚀 ~ updateChairs 4 ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}4${position}`);
-      console.log("🚀 ~ updateChairs ~ idProductSelected:", idProductSelected)
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
-      console.log("🚀 ~ updateChairs 6 ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}6${position}`);
-      console.log("🚀 ~ updateChairs ~ idProductSelected:", idProductSelected)
       changeModalImage(product.chairs_6[position].img);
       renderColors(product.chairs_6[position].colors, colors);
     }
