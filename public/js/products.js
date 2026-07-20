@@ -201,6 +201,7 @@ function renderColors(colors, container) {
   }else{
     colorsOfMaterial = colors
   }
+  changeModalImage(colorsOfMaterial[0].img);
   colorsOfMaterial.forEach((item, index) => {
     const dot = document.createElement("span");
     dot.style.background = item.color;
