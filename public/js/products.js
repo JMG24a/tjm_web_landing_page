@@ -14,7 +14,7 @@ let percentagePayCategory = 0
 let priceProductWs = 0
 let nameProductWs
 let colorProductWs
-let methodPayProductWs = "Decontado"
+let methodPayProductWs = "decontado"
 let materialProductWs = "tela"
 let cantidadWs = 1
 let categoryProductWs
@@ -129,7 +129,7 @@ async function loadProductPrices(ids = []) {
 
 function loadPayPercentage(metodo){
   const price = document.getElementById("product-price");
-  methodPayProductWs = metodo
+  methodPayProductWs = metodo.toLowerCase();
   switch (metodo) {
     case "Decontado":
       price.classList.remove("displayNone")
