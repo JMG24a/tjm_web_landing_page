@@ -30,7 +30,7 @@ const porcentajesPagoMethod = {
   "decontado": 20.35,
   "cashea": 28.78,
   "zelle": 3,
-  "cash": 0,
+  "cash - binance": 0,
 };
 
 async function verificarSesion(id) {
@@ -453,6 +453,8 @@ function setupMultimuebles(product) {
 }
 
 function setupComedores(product) {
+  console.log("🚀 ~ setupComedores ~ methodPayProductWs:", methodPayProductWs)
+
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
   chairContainer.classList.remove("displayNone");
@@ -499,11 +501,13 @@ function setupComedores(product) {
     const selected = Number(select.value);
 
     if (selected === 4) {
+      console.log("🚀 ~ updateChairs ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}4${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}4${position}`);
       changeModalImage(product.chairs_4[position].img);
       renderColors(product.chairs_4[position].colors, colors);
     } else {
+      console.log("🚀 ~ updateChairs ~ methodPayProductWs:", methodPayProductWs)
       loadProductPrice(`${product.id}6${position}`, porcentajesPagoMethod[methodPayProductWs]);
       idProductSelected = Number(`${product.id}6${position}`);
       changeModalImage(product.chairs_6[position].img);
