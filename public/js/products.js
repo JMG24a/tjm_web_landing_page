@@ -661,8 +661,7 @@ function renderSuggestions(product, category) {
 }
 
 function openProductModal(product, category) {
-  console.log("🚀 ~ openProductModal ~ category:", category)
-  console.log("🚀 ~ openProductModal ~ product:", product)
+  modalIsOpen = true
   showTopBarModal()
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
@@ -816,7 +815,6 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
-  modalIsOpen = true
   showTopBarProduct()
   document.getElementById("closeModal")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);
