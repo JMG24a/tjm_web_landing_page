@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="/image/logo_tjm_page.png">
     <link rel="stylesheet" href="/css/list2.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/bar.css">
+    <!-- <link rel="stylesheet" href="/css/bar.css"> -->
     <link rel="stylesheet" href="/css/slogan.css">
     <link rel="stylesheet" href="/css/welcome.css">
     <link rel="stylesheet" href="/css/modal_ws.css">
@@ -21,13 +21,53 @@
     <link rel="stylesheet" href="/css/tag_price.css">
     <link rel="stylesheet" href="/css/modal_pay.css">
     <link rel="stylesheet" href="/css/edit_modal_price.css">
+    <link rel="stylesheet" href="/css/navbar.css">
   </head>
   <body>
-    <a href="/" class="top-gradient-bar_products">
+    <!-- <a href="/" class="top-gradient-bar_products">
       <p class="logo_go_back" onclick="goToCategory('/')">
         <img width="25px" height="25px" src="/image/back_btn_white.png" alt="volver">
       </p>
-    </a>
+    </a> -->
+
+  <header class="top-navbar">
+    <div class="nav-left">
+      <img src="/image/back_icon.svg" alt="volver" class="nav-back" onclick="history.back()">
+    </div>
+
+    <div class="nav-center">
+      <img src="/image/logo_tjm.png" alt="logo" class="nav-logo">
+    </div>
+
+    <div class="nav-right">
+      <button id="navToggle" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay + Sidebar -->
+  <div id="navOverlay" class="nav-overlay"></div>
+
+  <aside id="navSidebar" class="nav-sidebar">
+    <div class="sidebar-header">
+      <img src="/image/logo_tjm.png" alt="logo" class="sidebar-logo">
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="/camas">Camas</a>
+      <a href="/muebles">Muebles</a>
+      <a href="/comedor">Comedor</a>
+      <a href="/colchones">Colchones</a>
+      <a href="/multimuebles">Multimuebles</a>
+      <a href="/accesorios">Accesorios</a>
+      <a href="/ubicaciones">Ubicaciones</a>
+      <a href="tel:04120521922">Contacto de ayuda (04120521922)</a>
+      <a href="/quejas">Buzón de quejas</a>
+    </nav>
+  </aside>
 
     <section class="welcome-slider">
       <div class="sliders">
@@ -298,5 +338,6 @@
     <script src="/js/home.js"></script>
     <script src="/js/products.js"></script>
     <script src="/js/selectModal.js"></script>
+    <script src="/js/nav.js"></script>
   </body>
 </html>
