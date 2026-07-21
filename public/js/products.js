@@ -433,8 +433,8 @@ function setupMultimuebles(product) {
   // 🔥 Estado inicial
   newToggle.classList.add("active");
   thumb.textContent = "Abrir";
-  leftLabel.textContent = "";
-  rightLabel.textContent = "Abrir";
+  leftLabel.textContent = "Cerrar";
+  rightLabel.textContent = "";
 
   // 🔥 Listener limpio
   newToggle.addEventListener("click", () => {
@@ -632,11 +632,11 @@ priceElement.addEventListener("click", async () => {
 function renderSuggestions(product, category) {
   const suggestContainer = document.getElementById("suggest");
   const suggestTitle = document.getElementById("suggestTitle");
-  suggestContainer.innerHTML = ""; // limpiar
+  suggestTitle.innerHTML= "También te puede interesar"
 
   if (!product.suggest || product.suggest.length === 0) return;
   suggestTitle.classList.remove("displayNoneSuggest");
-  suggestTitle.innerHTML= "También te puede interesar"
+
   product.suggest.forEach(id => {
     const related = PRODUCTS[category].find(p => p.id === id);
     if (!related) return;
@@ -651,8 +651,7 @@ function renderSuggestions(product, category) {
 
     // abrir modal del producto sugerido
     card.onclick = () => {
-      suggestContainer.innerHTML = ""; // limpiar
-      openProductModal(related, related.category)
+      openProductModal(product, related.category)
     };
 
     suggestContainer.appendChild(card);
