@@ -506,7 +506,7 @@ const PRODUCTS = {
         {
           img: "sofa_hielo_gray.jpg",
           color: "gray",
-          type: "cuero",
+          type: "tela",
           name: "Gris",
         },
         {
@@ -534,7 +534,7 @@ const PRODUCTS = {
         {
           img: "sofa_juego_nube_gray.jpg",
           color: "#3e3e3e",
-          type: "cuero",
+          type: "tela",
           name: "Gris",
         },
         {
@@ -674,7 +674,7 @@ const PRODUCTS = {
         {
           img: "sofa_richard_gray_black.jpeg",
           color: "#393939",
-          type: "cuero",
+          type: "tela",
           name: "Gris Oscuro",
         },
         {
@@ -1065,7 +1065,7 @@ const PRODUCTS = {
         {
           img: "sofa_sofa_cama_beige.jpeg",
           color: "beige",
-          type: "cuero",
+          type: "tela",
           name: "Beige"
         },
         {
@@ -1089,7 +1089,7 @@ const PRODUCTS = {
         {
           img: "sofa_sofa_cama_beige_down.jpeg",
           color: "beige",
-          type: "cuero",
+          type: "tela",
           name: "Beige"
         },
       ]
@@ -1105,7 +1105,7 @@ const PRODUCTS = {
         {
           img: "sofa_lineal.png",
           color: "red",
-          type: "cuero",
+          type: "tela",
           name: "Rojo"
         },
         {
