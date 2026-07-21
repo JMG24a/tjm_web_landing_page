@@ -660,6 +660,8 @@ function renderSuggestions(product, category) {
 }
 
 function openProductModal(product, category) {
+  console.log("🚀 ~ openProductModal ~ category:", category)
+  console.log("🚀 ~ openProductModal ~ product:", product)
   showTopBarModal()
   const modal = document.getElementById("product-modal")
   setupBaseModal(product);
