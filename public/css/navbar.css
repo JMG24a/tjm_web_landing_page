@@ -47,20 +47,6 @@
   border-radius: 2px;
 }
 
-/* OVERLAY OSCURO */
-/* .nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.55);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .3s ease;
-  z-index: 999;
-} */
-
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -73,24 +59,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s ease;
-  z-index: 999;
+  z-index: 1000;
 }
-
-
-/* SIDEBAR */
-/* .nav-sidebar {
-  position: fixed;
-  top: 0;
-  right: -75%;
-  width: 75%;
-  height: 100%;
-  background: #fff;
-  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
-  transition: right .3s ease;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-} */
 
 .nav-sidebar {
   position: fixed;
