@@ -634,13 +634,13 @@ function renderSuggestions(product, category) {
   const suggestContainer = document.getElementById("suggest");
   const suggestTitle = document.getElementById("suggestTitle");
   suggestTitle.innerHTML= "También te puede interesar"
+  suggestContainer.innerHTML = ""
 
   if (!product.suggest || product.suggest.length === 0) return;
   suggestTitle.classList.remove("displayNoneSuggest");
 
   product.suggest.forEach(id => {
     const related = PRODUCTS[category].find(p => p.id === id);
-    console.log("🚀 ~ renderSuggestions ~ related:", related)
     if (!related) return;
 
     const card = document.createElement("div");
