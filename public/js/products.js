@@ -639,6 +639,7 @@ function renderSuggestions(product, category) {
 
   product.suggest.forEach(id => {
     const related = PRODUCTS[category].find(p => p.id === id);
+    console.log("🚀 ~ renderSuggestions ~ related:", related)
     if (!related) return;
 
     const card = document.createElement("div");
@@ -651,7 +652,7 @@ function renderSuggestions(product, category) {
 
     // abrir modal del producto sugerido
     card.onclick = () => {
-      openProductModal(product, related.category)
+      openProductModal(related, related.category)
     };
 
     suggestContainer.appendChild(card);
