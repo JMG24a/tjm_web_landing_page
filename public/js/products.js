@@ -652,7 +652,7 @@ function renderSuggestions(product, category) {
 
     // abrir modal del producto sugerido
     card.onclick = () => {
-      openProductModal(related, related.category)
+      openProductModal(related, category)
     };
 
     suggestContainer.appendChild(card);
