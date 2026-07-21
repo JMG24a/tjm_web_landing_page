@@ -48,7 +48,7 @@
 }
 
 /* OVERLAY OSCURO */
-.nav-overlay {
+/* .nav-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -59,10 +59,26 @@
   pointer-events: none;
   transition: opacity .3s ease;
   z-index: 999;
+} */
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 20, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 999;
 }
 
+
 /* SIDEBAR */
-.nav-sidebar {
+/* .nav-sidebar {
   position: fixed;
   top: 0;
   right: -75%;
@@ -74,7 +90,25 @@
   z-index: 1001;
   display: flex;
   flex-direction: column;
+} */
+
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  right: -75%;
+  width: 75%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.18);        /* vidrio */
+  backdrop-filter: blur(18px);                  /* blur */
+  -webkit-backdrop-filter: blur(18px);          /* soporte Safari */
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.35); /* profundidad */
+  transition: right .3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .sidebar-header {
   padding: 20px;
