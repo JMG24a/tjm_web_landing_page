@@ -444,13 +444,13 @@ function setupMultimuebles(product) {
 
     if (isOpen) {
       thumb.textContent = "Abrir";
-      leftLabel.textContent = "";
-      rightLabel.textContent = "Abrir";
+      rightLabel.textContent = "";
+      leftLabel.textContent = "Cerrar";
       changeModalImage(product.img);
     } else {
       thumb.textContent = "Cerrar";
-      leftLabel.textContent = "Cerrar";
-      rightLabel.textContent = "";
+      leftLabel.textContent = "";
+      rightLabel.textContent = "Abrir";
       changeModalImage(product.open);
     }
   });
