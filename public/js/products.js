@@ -433,15 +433,16 @@ function setupMultimuebles(product) {
     const isOpen = openToggle.classList.contains("active");
 
     if (isOpen) {
-      thumb.textContent = "Abrir";
-      rightLabel.textContent = "Abrir";
-      leftLabel.textContent = "";
-      changeModalImage(product.img);
-    } else {
       thumb.textContent = "Cerrar";
       leftLabel.textContent = "Cerrar";
       rightLabel.textContent = "";
       changeModalImage(product.open);
+    } else {
+      thumb.textContent = "Abrir";
+      rightLabel.textContent = "Abrir";
+      leftLabel.textContent = "";
+      changeModalImage(product.img);
+
     }
   });
 }
