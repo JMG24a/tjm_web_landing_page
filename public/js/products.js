@@ -396,8 +396,6 @@ function setupMultimuebles(product) {
 
   const colors = document.getElementById("modal-colors_rope");
   const openContainer = document.getElementById("color_open_container");
-  const openToggle = document.getElementById("materialToggleOpen");
-  const thumb = openToggle.querySelector(".toggle-thumb");
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
 
@@ -419,25 +417,26 @@ function setupMultimuebles(product) {
   price.classList.remove("displayNone");
   price.innerHTML = '<span class="loader"></span>';
   loadProductPrice(product.id, porcentajesPagoMethod.cashea);
-  // Estado inicial del toggle
-  openToggle.classList.add("active");
-  thumb.textContent = "Abrir";
+
   renderColors(product.colors, colors);
 
-  // Evento del toggle (limpio)
-  const newToggle = openToggle.cloneNode(true);
-  openToggle.replaceWith(newToggle);
+  // 🔥 LIMPIAR LISTENERS ANTERIORES
+  const oldToggle = document.getElementById("materialToggleOpen");
+  const newToggle = oldToggle.cloneNode(true);
+  oldToggle.replaceWith(newToggle);
 
+  // 🔥 REFERENCIAS CORRECTAS DESPUÉS DEL CLONE
   const thumb = newToggle.querySelector(".toggle-thumb");
-  const leftLabel = document.querySelector(".toggle-left");
-  const rightLabel = document.querySelector(".toggle-right");
+  const leftLabel = newToggle.querySelector(".toggle-left");
+  const rightLabel = newToggle.querySelector(".toggle-right");
 
-  // Estado inicial
+  // 🔥 Estado inicial
   newToggle.classList.add("active");
   thumb.textContent = "Abrir";
   leftLabel.textContent = "";
   rightLabel.textContent = "Abrir";
 
+  // 🔥 Listener limpio
   newToggle.addEventListener("click", () => {
     newToggle.classList.toggle("active");
 
@@ -456,6 +455,7 @@ function setupMultimuebles(product) {
     }
   });
 }
+
 
 function setupComedores(product) {
   const colors = document.getElementById("modal-colors");
