@@ -6,6 +6,7 @@ let sedesW = {
   "Barquisimeto": "584120213946",
   "San Felipe": "584121539695"
 }
+let modalIsOpen = false
 let extra = 8
 let camcolselected = 0
 let priceBaseDiscount = 0
@@ -750,6 +751,7 @@ function resetPaymentSelect() {
 
 
 function closeModal() {
+  modalIsOpen = false
   const modal = document.getElementById("product-modal");
   modal.classList.remove("show");
 
@@ -814,9 +816,9 @@ function loadProductsByCategory(category) {
 }
 
 function initProducts() {
+  modalIsOpen = true
   showTopBarProduct()
-
-  document.querySelector(".modal-close")?.addEventListener("click", closeModal);
+  document.getElementById("closeModal")?.addEventListener("click", closeModal);
   document.querySelector(".modal-backdrop")?.addEventListener("click", closeModal);
 
   const params = new URLSearchParams(window.location.search);

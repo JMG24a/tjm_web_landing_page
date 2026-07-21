@@ -14,3 +14,14 @@ function closeSidebar() {
 
 navToggle.addEventListener("click", openSidebar);
 navOverlay.addEventListener("click", closeSidebar);
+
+
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+closeModalBtn.addEventListener("click", () => {
+  if (modalIsOpen === false) {
+    history.back();
+  } else {
+    closeModal();
+  }
+});
