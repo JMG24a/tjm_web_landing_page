@@ -424,22 +424,33 @@ function setupMultimuebles(product) {
   thumb.textContent = "Abrir";
   renderColors(product.colors, colors);
 
-  // Evento del toggle
-  openToggle.addEventListener("click", () => {
-    const leftLabel = document.querySelector(".toggle-left");
-    const rightLabel = document.querySelector(".toggle-right");
-    openToggle.classList.toggle("active");
+  // Evento del toggle (limpio)
+  const newToggle = openToggle.cloneNode(true);
+  openToggle.replaceWith(newToggle);
 
-    const isOpen = openToggle.classList.contains("active");
+  const thumb = newToggle.querySelector(".toggle-thumb");
+  const leftLabel = document.querySelector(".toggle-left");
+  const rightLabel = document.querySelector(".toggle-right");
+
+  // Estado inicial
+  newToggle.classList.add("active");
+  thumb.textContent = "Abrir";
+  leftLabel.textContent = "";
+  rightLabel.textContent = "Abrir";
+
+  newToggle.addEventListener("click", () => {
+    newToggle.classList.toggle("active");
+
+    const isOpen = newToggle.classList.contains("active");
 
     if (isOpen) {
       thumb.textContent = "Abrir";
-      leftLabel.textContent = "Abrir";
       leftLabel.textContent = "";
+      rightLabel.textContent = "Abrir";
       changeModalImage(product.img);
     } else {
       thumb.textContent = "Cerrar";
-      rightLabel.textContent = "Cerrar";
+      leftLabel.textContent = "Cerrar";
       rightLabel.textContent = "";
       changeModalImage(product.open);
     }
@@ -625,7 +636,7 @@ function renderSuggestions(product, category) {
 
   if (!product.suggest || product.suggest.length === 0) return;
   suggestTitle.classList.remove("displayNoneSuggest");
-
+  suggestTitle.innerHTML= "También te puede interesar"
   product.suggest.forEach(id => {
     const related = PRODUCTS[category].find(p => p.id === id);
     if (!related) return;
@@ -639,7 +650,10 @@ function renderSuggestions(product, category) {
     `;
 
     // abrir modal del producto sugerido
-    card.onclick = () => openProductModal(related, related.category);
+    card.onclick = () => {
+      suggestContainer.innerHTML = ""; // limpiar
+      openProductModal(related, related.category)
+    };
 
     suggestContainer.appendChild(card);
   });
@@ -739,7 +753,6 @@ function closeModal() {
 
   // 🔥 Resetear select de método de pago
   resetPaymentSelect();
-  // resetMultimuebles();
 
   setTimeout(() => {
     modal.classList.add("hidden");
