@@ -1940,59 +1940,59 @@ const PRODUCTS = {
       id: 3004,
       name: "Isabel V",
       desc: "...",
-      img: "comedor_isabel_v",
+      img: "comedor_isabel_v.jpg",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#3f0b0b"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#0a134a"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#520131"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ea13aa"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#c8c8c8"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#eb0d69"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ffffff"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ffffff"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ffffff"
             },
           ],
@@ -2001,54 +2001,54 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#333"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#333"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#333"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#09ff00"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ffd500"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#1d1dc4"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_isabel_v",
+          img: "comedor_isabel_v.jpg",
           colors: [
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#fdf906"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#0037ff"
             },
             {
-              img: "comedor_isabel_v",
+              img: "comedor_isabel_v.jpg",
               color:"#ff0000"
             },
           ],
