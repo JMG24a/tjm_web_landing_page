@@ -398,31 +398,25 @@ const PRODUCTS = {
       name: "Zultan Cuadrado",
       size: "240cm - 240cm",
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_zultan_cuadrado_black.jpg",
+      img: "sofa_zultan_cuadrado_gray.jpg",
       suggest: [1000, 1001],
       colors: [
         {
-          img: "sofa_zultan_cuadrado_black.jpg",
-          color: "black",
-          type: "tela",
-          name: "Negro",
-        },
-        {
-          img: "sofa_zultan_cuadrado_gray.jpeg",
+          img: "sofa_zultan_cuadrado_gray.jpg",
           color: "gray",
           type: "tela",
           name: "Gris",
         },
         {
-          img: "sofa_zultan_cuadrado_gray_black.jpeg",
-          color: "#595959",
-          type: "tela",
-          name: "Gris Oscuro",
+          img: "sofa_zultan_cuadrado_white.jpg",
+          color: "white",
+          type: "cuero",
+          name: "Blanco",
         },
         {
-          img: "sofa_zultan_cuadrado_gray_black.jpeg",
-          color: "#595959",
-          type: "cuero",
+          img: "sofa_zultan_cuadrado_black.jpg",
+          color: "black",
+          type: "tela",
           name: "Gris Oscuro",
         }
       ]
