@@ -6,8 +6,8 @@ btnLogin.addEventListener("click", () => {
   const pass = document.getElementById("pass").value.trim();
 
   // Usuario y contraseña "falsos" (hardcodeados)
-  const USER_OK = "admin";
-  const PASS_OK = "1234";
+  const USER_OK = "tjm.admin";
+  const PASS_OK = "tjm.admin123";
 
   if (user === USER_OK && pass === PASS_OK) {
     // Guardar sesión
