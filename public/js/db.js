@@ -460,9 +460,15 @@ const PRODUCTS = {
       name: "Sofa Osman",
       size: "160cm - 240cm",
       desc: "El sofá Osman destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_osman_white_d.jpg",
+      img: "sofa_osman_brown_d.jpg",
       suggest: [1003, 1007],
       colors: [
+        {
+          img: "sofa_osman_brown_d.jpg",
+          color: "#6a3d2c",
+          type: "tela",
+          name: "Marron",
+        },
         {
           img: "sofa_osman_white_d.jpg",
           color: "#ffffff",
@@ -474,12 +480,6 @@ const PRODUCTS = {
           color: "#000000",
           type: "tela",
           name: "Negro",
-        },
-        {
-          img: "sofa_osman_brown_d.jpg",
-          color: "#6a3d2c",
-          type: "tela",
-          name: "Marron",
         },
         {
           img: "sofa_osman_gray_d.jpg",
