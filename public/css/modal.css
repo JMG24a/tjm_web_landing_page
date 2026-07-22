@@ -34,9 +34,23 @@
   color: gray;
 } */
 
+.spamPrice {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
 .offPrice {
   position: relative;
   display: inline-block;
+}
+
+.spamPrice spam {
+    color: gray;
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
 }
 
 .offPrice::after {
@@ -44,7 +58,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 35%;
+  top: 25%;
   height: 1px;
   background-color: #000000cc; /* dorado */
   transform: translateY(-50%);
