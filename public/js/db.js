@@ -1024,10 +1024,16 @@ const PRODUCTS = {
       id: 1021,
       name: "Sofa Barco",
       desc: "El sofá barco 2 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_barco_white.png",
+      img: "sofa_barco_black.jpg",
       size: "120cm x 140cm",
       suggest: [1019, 1018],
       colors: [
+        {
+          img: "sofa_barco_black.jpg",
+          color: "black",
+          type: "tela",
+          name: "Negro"
+        },
         {
           img: "sofa_barco_white.png",
           color: "white",
@@ -1039,12 +1045,6 @@ const PRODUCTS = {
           color: "gray",
           type: "tela",
           name: "Gris"
-        },
-        {
-          img: "sofa_barco_black.jpeg",
-          color: "black",
-          type: "tela",
-          name: "Negro"
         },
         {
           img: "sofa_barco_beige.jpeg",
