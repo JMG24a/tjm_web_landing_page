@@ -26,7 +26,6 @@ video::-webkit-media-controls {
 /* SLIDER */
 .welcome-slider {
   width: 100%;
-
   overflow: hidden; /* oculta lo que se salga */
   position: relative;
 }

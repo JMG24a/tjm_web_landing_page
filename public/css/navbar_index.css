@@ -36,15 +36,21 @@
   margin: 0;
   flex-direction: column;
   justify-content: space-between;
-  background: none;
+  /* background: transparent; */
+  background-color: rgba(0,0,0,0.01); /* tiny hack para Safari */
   border: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
 }
 
 .nav-toggle span {
-  height: 4px;
+  width: 100%;
+  height: 3px;
   background: #ffffff;
   border-radius: 2px;
+  display: block;
 }
 
 .nav-overlay {
