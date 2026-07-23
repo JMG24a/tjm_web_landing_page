@@ -5,6 +5,7 @@ async function loadCarousel() {
   try {
     const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUs");
     const data = await res.json();
+    console.log("🚀 ~ loadCarousel ~ data:", data)
 
     container.innerHTML = ""; // limpiar contenido
 
