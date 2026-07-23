@@ -3,7 +3,7 @@ async function loadCarousel() {
   console.log("🚀 ~ loadCarousel ~ container:", container)
 
   try {
-    const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUs");
+    const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUS");
     const data = await res.json();
     console.log("🚀 ~ loadCarousel ~ data:", data)
 
