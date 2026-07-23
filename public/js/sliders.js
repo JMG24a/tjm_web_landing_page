@@ -9,20 +9,42 @@ async function loadCarousel() {
 
     container.innerHTML = ""; // limpiar contenido
 
-    data.forEach(item => {
+    // data.forEach(item => {
+    //   const picture = document.createElement("picture");
+
+    //   // mobile
+    //   const sourceMobile = document.createElement("source");
+    //   sourceMobile.media = "(max-width: 768px)";
+    //   sourceMobile.srcset = item.mobile;
+
+    //   // tablet
+    //   const sourceTablet = document.createElement("source");
+    //   sourceTablet.media = "(max-width: 1200px)";
+    //   sourceTablet.srcset = item.tablet;
+
+    //   // desktop fallback
+    //   const img = document.createElement("img");
+    //   img.src = item.desktop;
+    //   img.alt = item.alt || "Imagen carrusel";
+
+    //   picture.appendChild(sourceMobile);
+    //   picture.appendChild(sourceTablet);
+    //   picture.appendChild(img);
+
+    //   container.appendChild(picture);
+    // });
+
+    data.forEach((item, index) => {
       const picture = document.createElement("picture");
 
-      // mobile
       const sourceMobile = document.createElement("source");
       sourceMobile.media = "(max-width: 768px)";
       sourceMobile.srcset = item.mobile;
 
-      // tablet
       const sourceTablet = document.createElement("source");
       sourceTablet.media = "(max-width: 1200px)";
       sourceTablet.srcset = item.tablet;
 
-      // desktop fallback
       const img = document.createElement("img");
       img.src = item.desktop;
       img.alt = item.alt || "Imagen carrusel";
@@ -30,6 +52,11 @@ async function loadCarousel() {
       picture.appendChild(sourceMobile);
       picture.appendChild(sourceTablet);
       picture.appendChild(img);
+
+      // 🔥 FIX: mostrar la primera imagen
+      if (index === 0) {
+        picture.classList.add("active");
+      }
 
       container.appendChild(picture);
     });
