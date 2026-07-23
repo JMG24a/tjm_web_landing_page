@@ -1,5 +1,6 @@
 async function loadCarousel() {
   const container = document.getElementById("slidesAbout");
+  console.log("🚀 ~ loadCarousel ~ container:", container)
 
   try {
     const res = await fetch("https://tjm-web-back.onrender.com/carrusel/1");
