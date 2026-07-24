@@ -128,7 +128,3 @@ function startAutoSlide(container, intervalTime) {
 
 loadCarousel("slidesPromotions", "promotions");
 loadCarousel("slidesAbout", "aboutUs");
-
-document.getElementById("closeModal").addEventListener("click", () => {
-  modalSlider.classList.add("hidden");
-});
