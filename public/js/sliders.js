@@ -1,8 +1,8 @@
-async function loadCarousel() {
-  const container = document.getElementById("slidesPromotions");
+async function loadCarousel(container, group) {
+  const container = document.getElementById(container);
 
   try {
-    const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUS");
+    const res = await fetch(`https://tjm-web-back.onrender.com/carrusel/${group}`);
     const data = await res.json();
 
     container.innerHTML = ""; // limpiar contenido
@@ -60,4 +60,4 @@ function startAutoSlide(container, intervalTime) {
   }, intervalTime);
 }
 
-loadCarousel();
+loadCarousel("slidesPromotions", "promotions");
