@@ -1,5 +1,5 @@
-async function loadCarousel(container, group) {
-  const container = document.getElementById(container);
+async function loadCarousel(containerSlider, group) {
+  const container = document.getElementById(containerSlider);
 
   try {
     const res = await fetch(`https://tjm-web-back.onrender.com/carrusel/${group}`);
