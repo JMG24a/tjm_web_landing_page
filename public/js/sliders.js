@@ -35,7 +35,7 @@ async function loadCarousel(containerSlider, group) {
     });
 
     // ⏱️ Lógica para rotar las imágenes cada 15 segundos
-    startAutoSlide(container, 15000);
+    startAutoSlide(container, 10000);
 
   } catch (error) {
     console.error("Error cargando carrusel:", error);
@@ -61,3 +61,4 @@ function startAutoSlide(container, intervalTime) {
 }
 
 loadCarousel("slidesPromotions", "promotions");
+loadCarousel("slidesAbout", "aboutUs");
