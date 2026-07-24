@@ -1,11 +1,9 @@
 async function loadCarousel() {
-  const container = document.getElementById("slidesAbout");
-  console.log("🚀 ~ loadCarousel ~ container:", container);
+  const container = document.getElementById("slidesPromotions");
 
   try {
     const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUS");
     const data = await res.json();
-    console.log("🚀 ~ loadCarousel ~ data:", data);
 
     container.innerHTML = ""; // limpiar contenido
 
@@ -63,74 +61,3 @@ function startAutoSlide(container, intervalTime) {
 }
 
 loadCarousel();
-
-/*async function loadCarousel() {
-  const container = document.getElementById("slidesAbout");
-  console.log("🚀 ~ loadCarousel ~ container:", container)
-
-  try {
-    const res = await fetch("https://tjm-web-back.onrender.com/carrusel/aboutUS");
-    const data = await res.json();
-    console.log("🚀 ~ loadCarousel ~ data:", data)
-
-    container.innerHTML = ""; // limpiar contenido
-
-    // data.forEach(item => {
-    //   const picture = document.createElement("picture");
-
-    //   // mobile
-    //   const sourceMobile = document.createElement("source");
-    //   sourceMobile.media = "(max-width: 768px)";
-    //   sourceMobile.srcset = item.mobile;
-
-    //   // tablet
-    //   const sourceTablet = document.createElement("source");
-    //   sourceTablet.media = "(max-width: 1200px)";
-    //   sourceTablet.srcset = item.tablet;
-
-    //   // desktop fallback
-    //   const img = document.createElement("img");
-    //   img.src = item.desktop;
-    //   img.alt = item.alt || "Imagen carrusel";
-
-    //   picture.appendChild(sourceMobile);
-    //   picture.appendChild(sourceTablet);
-    //   picture.appendChild(img);
-
-    //   container.appendChild(picture);
-    // });
-
-    data.forEach((item, index) => {
-      const picture = document.createElement("picture");
-
-      const sourceMobile = document.createElement("source");
-      sourceMobile.media = "(max-width: 768px)";
-      sourceMobile.srcset = item.mobile;
-
-      const sourceTablet = document.createElement("source");
-      sourceTablet.media = "(max-width: 1200px)";
-      sourceTablet.srcset = item.tablet;
-
-      const img = document.createElement("img");
-      img.src = item.desktop;
-      img.alt = item.alt || "Imagen carrusel";
-
-      picture.appendChild(sourceMobile);
-      picture.appendChild(sourceTablet);
-      picture.appendChild(img);
-
-      // 🔥 FIX: mostrar la primera imagen
-      if (index === 0) {
-        picture.classList.add("active");
-      }
-
-      container.appendChild(picture);
-    });
-
-  } catch (error) {
-    console.error("Error cargando carrusel:", error);
-  }
-}
-
-loadCarousel();
-*/ 
