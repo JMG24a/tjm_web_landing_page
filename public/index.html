@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/css/welcome.css">
   <link rel="stylesheet" href="/css/modal_ws.css">
   <link rel="stylesheet" href="/css/navbar_index.css">
+  <link rel="stylesheet" href="/css/modalSlidersEdit.css">
 
 </head>
 <body>
@@ -218,7 +219,8 @@
     </div>
   </section> -->
 
-  <section class="slider-about about-slider">
+  <section class="slider-about about-slider" data-group="aboutUs">
+    <button class="edit-carousel-btn">Editar slider</button>
     <div class="slides-about" id="slidesAbout"></div>
   </section >
 
@@ -286,6 +288,29 @@
       </a>
     </div>
   </footer>
+
+  <!-- MODAL SLIDERS -->
+  <div id="carouselModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Editar slider</h2>
+
+      <label>Selecciona imagen del slider:</label>
+      <select id="carouselId"></select>
+
+      <label>Versión a actualizar:</label>
+      <select id="version">
+        <option value="mobile">Mobile</option>
+        <option value="tablet">Tablet</option>
+        <option value="desktop">Desktop</option>
+      </select>
+
+      <label>Selecciona archivo:</label>
+      <input type="file" id="fileInput">
+
+      <button id="updateBtn">Actualizar imagen</button>
+      <button id="closeModal">Cerrar</button>
+    </div>
+  </div>
 
   <script src="/js/db.js"></script>
   <script src="/js/home.js"></script>
