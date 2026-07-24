@@ -1,3 +1,32 @@
+// 🚀 JS: abrir modal con el grupo correcto
+const modal = document.getElementById("carouselModal");
+const selectId = document.getElementById("carouselId");
+const updateBtn = document.getElementById("updateBtn");
+
+let currentGroup = null;
+
+document.querySelectorAll(".edit-carousel-btn").forEach(btn => {
+  btn.addEventListener("click", async (e) => {
+    const section = e.target.closest("section");
+    currentGroup = section.dataset.group;
+
+    // 1. Obtener los registros del grupo
+    const res = await fetch(`https://tjm-web-back.onrender.com/carrusel/${currentGroup}`);
+    const data = await res.json();
+
+    // 2. Llenar el select con los IDs
+    selectId.innerHTML = "";
+    data.forEach(item => {
+      const opt = document.createElement("option");
+      opt.value = item.id;
+      opt.textContent = `Imagen ${item.id}`;
+      selectId.appendChild(opt);
+    });
+
+    modal.classList.remove("hidden");
+  });
+});
+
 // ☁️ JS: subir imagen a Cloudinary + actualizar backend
 updateBtn.addEventListener("click", async () => {
   const id = document.getElementById("carouselId").value;
@@ -32,35 +61,6 @@ updateBtn.addEventListener("click", async () => {
 
   alert("Imagen actualizada correctamente");
   modal.classList.add("hidden");
-});
-
-// 🚀 JS: abrir modal con el grupo correcto
-const modal = document.getElementById("carouselModal");
-const selectId = document.getElementById("carouselId");
-const updateBtn = document.getElementById("updateBtn");
-
-let currentGroup = null;
-
-document.querySelectorAll(".edit-carousel-btn").forEach(btn => {
-  btn.addEventListener("click", async (e) => {
-    const section = e.target.closest("section");
-    currentGroup = section.dataset.group;
-
-    // 1. Obtener los registros del grupo
-    const res = await fetch(`https://tjm-web-back.onrender.com/carrusel/${currentGroup}`);
-    const data = await res.json();
-
-    // 2. Llenar el select con los IDs
-    selectId.innerHTML = "";
-    data.forEach(item => {
-      const opt = document.createElement("option");
-      opt.value = item.id;
-      opt.textContent = `Imagen ${item.id}`;
-      selectId.appendChild(opt);
-    });
-
-    modal.classList.remove("hidden");
-  });
 });
 
 // CARGAR SLIDERS
