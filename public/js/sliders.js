@@ -1,5 +1,5 @@
 // JS: abrir modal con el grupo correcto
-const modal = document.getElementById("carouselModal");
+const modalSlider = document.getElementById("carouselModal");
 const selectId = document.getElementById("carouselId");
 const updateBtn = document.getElementById("updateBtn");
 
@@ -23,7 +23,7 @@ document.querySelectorAll(".edit-carousel-btn").forEach(btn => {
       selectId.appendChild(opt);
     });
 
-    modal.classList.remove("hidden");
+    modalSlider.classList.remove("hidden");
   });
 });
 
@@ -60,7 +60,7 @@ updateBtn.addEventListener("click", async () => {
   console.log("Actualizado:", updated);
 
   alert("Imagen actualizada correctamente");
-  modal.classList.add("hidden");
+  modalSlider.classList.add("hidden");
 });
 
 // CARGAR SLIDERS
@@ -130,5 +130,5 @@ loadCarousel("slidesPromotions", "promotions");
 loadCarousel("slidesAbout", "aboutUs");
 
 document.getElementById("closeModal").addEventListener("click", () => {
-  modal.classList.add("hidden");
+  modalSlider.classList.add("hidden");
 });
