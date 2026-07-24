@@ -206,6 +206,8 @@ ${colorLine ? "  " + colorLine + "\n" : ""}
 ${materialLine ? "  " + materialLine + "\n" : ""}
   📦 Cantidad: ${producto.cantidad}
   💵 Precio: $${priceProductWs * producto.cantidad}
+  💵 inicial: $${((priceProductWs * producto.cantidad)/100)*40}
+  💵 3 Cuotas: $${(priceProductWs-(((priceProductWs * producto.cantidad)/100)*40))/3}
 
 📍 *Sede de retiro:* ${locationWsSede}
 
