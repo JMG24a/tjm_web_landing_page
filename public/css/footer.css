@@ -1,6 +1,6 @@
 .footer {
-  background: #0f172a; /* azul oscuro elegante */
-  color: #e5e7eb;
+  background: #013565; /* azul oscuro elegante */
+  color: #fdb604;
   padding: 60px 20px 20px;
 }
 
@@ -21,7 +21,7 @@
 .footer-section h4 {
   margin-bottom: 20px;
   font-size: 1.1rem;
-  color: white;
+  color: #fdb604;
 }
 
 .footer-section-contact {

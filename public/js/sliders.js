@@ -1,4 +1,4 @@
-// 🚀 JS: abrir modal con el grupo correcto
+// JS: abrir modal con el grupo correcto
 const modal = document.getElementById("carouselModal");
 const selectId = document.getElementById("carouselId");
 const updateBtn = document.getElementById("updateBtn");
@@ -27,7 +27,7 @@ document.querySelectorAll(".edit-carousel-btn").forEach(btn => {
   });
 });
 
-// ☁️ JS: subir imagen a Cloudinary + actualizar backend
+// JS: subir imagen a Cloudinary + actualizar backend
 updateBtn.addEventListener("click", async () => {
   const id = document.getElementById("carouselId").value;
   const version = document.getElementById("version").value;
