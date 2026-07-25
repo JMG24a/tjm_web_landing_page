@@ -14,7 +14,7 @@ btnLogin.addEventListener("click", () => {
     localStorage.setItem("session_tjm", "123tjmadmin");
 
     // Redirigir al home
-    window.location.href = "/config";
+    window.location.href = "/config.html";
   } else {
     errorMsg.textContent = "Usuario o contraseña incorrectos";
   }
