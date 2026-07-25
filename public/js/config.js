@@ -1,5 +1,6 @@
 const categoriasContainer = document.getElementById("categorias-container");
-const productosContainer = document.getElementById("productos-container");
+const productosTable = document.getElementById("productos-table");
+const productosBody = document.getElementById("productos-body");
 
 const categorias = Object.keys(PRODUCTS);
 
@@ -11,46 +12,39 @@ categorias.forEach(cat => {
   categoriasContainer.appendChild(card);
 });
 
-// Render productos por categoría
-  // Render productos por categoría
 async function mostrarProductos(categoria) {
   categoriasContainer.classList.add("hidden");
-  productosContainer.classList.remove("hidden");
-  productosContainer.innerHTML = "";
+  productosTable.classList.remove("hidden");
+  productosBody.innerHTML = "";
 
   const productos = PRODUCTS[categoria];
 
   for (const prod of productos) {
-    const card = document.createElement("div");
-    card.className = "product-card";
-
-    // loader mientras llega el precio
-    card.innerHTML = `
-      <img src="image/${prod.img}" alt="${prod.name}">
-      <div>
-        <h3>${prod.name}</h3>
-        <p id="price-${prod.id}">Cargando precio...</p>
-      </div>
-    `;
-
-    productosContainer.appendChild(card);
-
     // Obtener precio desde tu backend
+    let precio = "Cargando...";
     try {
       const response = await fetch(`https://tjm-web-back.onrender.com/${prod.id}`);
       const data = await response.json();
-
-      const priceElement = document.getElementById(`price-${prod.id}`);
-      priceElement.textContent = `${data.precio}$`;
-    } catch (error) {
-      console.error("Error cargando precio:", error);
-      const priceElement = document.getElementById(`price-${prod.id}`);
-      priceElement.textContent = "Precio no disponible";
+      precio = `${data.precio}$`;
+    } catch (err) {
+      precio = "No disponible";
     }
 
-    // Click para abrir modal
-    card.addEventListener("click", () => {
+    // Crear fila de tabla
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td><img src="image/${prod.img}" alt="${prod.name}"></td>
+      <td>${prod.name}</td>
+      <td>${precio}</td>
+    `;
+
+    // Click → abrir modal
+    row.addEventListener("click", () => {
       openProductModal(prod, categoria);
     });
+
+    productosBody.appendChild(row);
   }
 }
+
