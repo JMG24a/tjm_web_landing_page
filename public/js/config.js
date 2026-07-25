@@ -83,7 +83,7 @@ const methodTable = document.getElementById("method-table");
 const methodBody = document.getElementById("method-body");
 
 const METHODS = [
-  { id: 1, name: "CashEa" },
+  { id: 1, name: "Cashea" },
   { id: 2, name: "Decontado" },
   { id: 3, name: "Zelle" },
   { id: 4, name: "Cash - Binance" }
