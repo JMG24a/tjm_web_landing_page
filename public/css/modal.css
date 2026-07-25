@@ -70,7 +70,7 @@
   font-weight: 600;
   /* background: #1a428a; */
   /* color: #f2e088; */
-  color: #1a428a;
+  color: #013565;
   /* padding: 10px 14px; */
   border-radius: 8px;
   width: fit-content;
@@ -187,7 +187,7 @@
 .toggle-thumb {
   width: 50%;
   height: 100%;
-  background: #1562c2;
+  background: #013565;
   border-radius: 20px;
   position: absolute;
   left: 0;
@@ -196,7 +196,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f2e088;
+  color: #fdb604;
   font-weight: bold;
 }
 
@@ -430,8 +430,8 @@
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
-  background: #1562c2;
-  color: #f2e088;
+  background: #013565;
+  color: #fdb604;
   padding: 10px 10px;
   border-radius: 8px;
   width: fit-content;
