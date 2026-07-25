@@ -8,32 +8,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/image/logo_tjm.png">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/admin.css">
-  <link rel="stylesheet" href="/css/bar.css">
-  <link rel="stylesheet" href="/css/slogan_welcome.css">
-  <link rel="stylesheet" href="/css/welcome.css">
+  <link rel="stylesheet" href="/css/config.css">
+  <link rel="stylesheet" href="/css/navbar_index.css">
 </head>
 <body>
+  <header class="top-navbar">
+    <div class="nav-right">
+      <button id="navToggle" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-center">
+      <img src="/image/logo_tjm.png" alt="logo" class="nav-logo">
+    </div>
+
+  </header>
+
+  <!-- Overlay + Sidebar -->
+  <div id="navOverlay" class="nav-overlay"></div>
+
+  <aside id="navSidebar" class="nav-sidebar">
+    <div class="sidebar-header">
+      <img src="/image/logo_tjm.png" alt="logo" class="sidebar-logo">
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="/products.html?category=sofas">Muebles</a>
+      <a href="/products.html?category=dormitorios">Dormitorios</a>
+      <a href="/products.html?category=comedores">Comedores</a>
+      <a href="/products.html?category=multimuebles">Multimuebles</a>
+      <a href="/products.html?category=colchones">Colchones</a>
+      <a href="/products.html?category=accesorios">Accesorios</a>
+      <a href="https://wa.me/584120521922">Contacto de ayuda</a>
+      <a href="https://wa.me/584120521922">Buzón de quejas</a>
+    </nav>
+  </aside>
+
   <section class="methods_pay">
     <h3>Metodos de Pago</h3>
-    <div></div>
+    <div>
+      <p>Cashea</p>
+      <p>Decontado</p>
+      <p>Zelle</p>
+      <p>Cash</p>
+    </div>
   </section>
 
-  <section class="category_muebles">
-    <h3>Muebles</h3>
-    <div></div>
-  </section>
+  <div id="categorias-container"></div>
+  <div id="productos-container" class="hidden"></div>
 
-  <section class="category_dormitorios">
-    <h3>Dormitorios</h3>
-    <div></div>
-  </section>  
-  
-  <section class="category_comedores">
-    <h3>Comedores</h3>
-    <div></div>
-  </section>
-  <script src="/js/admin.js"></script>
+  <script>
+    if (!localStorage.getItem("session_tjm")) {
+      window.location.href = "/";
+    }
+  </script>
+  <script src="/js/db.js"></script>
+  <script src="/js/config.js"></script>
 </body>
 </html>
