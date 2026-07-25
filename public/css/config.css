@@ -1,18 +1,18 @@
 #categorias-container {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
   overflow: scroll;
 }
 
 .categoria-card {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   background: #013565;
   color: #fdb604;
   border-radius: 10px;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
   transition: .2s;
@@ -80,6 +80,40 @@
   height: 100%;
   object-fit: cover;
 }
+
+#method-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#method-table th, #method-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#method-table input {
+  width: 120px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#method-table button {
+  padding: 8px 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#method-table button:hover {
+  background: #005fcc;
+}
+
 
 #productos-table {
   width: 100%;
