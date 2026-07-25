@@ -68,7 +68,21 @@
     </div>
   </section>
 
-  <div id="productos-container" class="hidden"></div>
+  <!-- <div id="productos-container" class="hidden"></div> -->
+
+  <table id="productos-table" class="hidden">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody id="productos-body"></tbody>
+  </table>
+
+
 
   <script>
     if (!localStorage.getItem("session_tjm")) {

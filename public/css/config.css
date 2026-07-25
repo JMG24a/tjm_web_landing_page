@@ -84,3 +84,42 @@
   height: 100%;
   object-fit: cover;
 }
+
+#productos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#productos-table th, #productos-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#productos-table img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+#productos-table input {
+  width: 120px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#productos-table button {
+  padding: 8px 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#productos-table button:hover {
+  background: #005fcc;
+}
+
