@@ -53,3 +53,34 @@
   font-weight: bold;
   color: #333;
 }
+
+.promotion-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.promotion-slider .slides-promotion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.promotion-slider picture {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.promotion-slider picture.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.promotion-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
