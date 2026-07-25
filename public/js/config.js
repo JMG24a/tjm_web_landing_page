@@ -26,7 +26,7 @@ async function mostrarProductos(categoria) {
 
     // loader mientras llega el precio
     card.innerHTML = `
-      <img src="img/${prod.img}" alt="${prod.name}">
+      <img src="image/${prod.img}" alt="${prod.name}">
       <div>
         <h3>${prod.name}</h3>
         <p id="price-${prod.id}">Cargando precio...</p>
