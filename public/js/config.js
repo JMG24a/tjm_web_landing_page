@@ -165,10 +165,10 @@ async function mostrarProductos(categoria) {
     }
 
     // CALCULOS AUTOMÁTICOS
-    const precioCashBinance = precioBase + METHOD_VALUES[4];
-    const precioZelle       = precioBase + METHOD_VALUES[3];
-    const precioDecontado   = precioBase + METHOD_VALUES[2];
-    const precioCashea      = precioBase + METHOD_VALUES[1];
+    const precioCashBinance = precioBase + (precioBase * METHOD_VALUES[4] / 100);
+    const precioZelle       = precioBase + (precioBase * METHOD_VALUES[3] / 100);
+    const precioDecontado   = precioBase + (precioBase * METHOD_VALUES[2] / 100);
+    const precioCashea      = precioBase + (precioBase * METHOD_VALUES[1] / 100);
 
     const row = document.createElement("tr");
 
@@ -180,10 +180,10 @@ async function mostrarProductos(categoria) {
         <input type="number" id="input-${prod.id}" placeholder="${precioBase}">
       </td>
 
-      <td>${precioCashBinance}$</td>
-      <td>${precioZelle}$</td>
-      <td>${precioDecontado}$</td>
-      <td>${precioCashea}$</td>
+      <td>${precioCashBinance.toFixed(2)}$</td>
+      <td>${precioZelle.toFixed(2)}$</td>
+      <td>${precioDecontado.toFixed(2)}$</td>
+      <td>${precioCashea.toFixed(2)}$</td>
 
       <td>
         <button id="save-${prod.id}">Guardar</button>
