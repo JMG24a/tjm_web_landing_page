@@ -668,19 +668,19 @@ function renderPreSets(product, category) {
   if (!product.pre_sets || product.pre_sets.length === 0) return;
   console.log("🚀 ~ renderPreSets 2:", product)
 
-  product.pre_sets.forEach(id => {
+  product.pre_sets.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("suggest-card");
 
     card.innerHTML = `
-      <img src="/image/${related.img}" alt="${related.name}">
-      <p>${related.name}</p>
+      <img src="/image/${item.img}" alt="${item.name}">
+      <p>${item.name}</p>
     `;
 
     // abrir modal del producto sugerido
-    // card.onclick = () => {
-    //   renderColors(related, category)
-    // };
+    card.onclick = () => {
+      changeModalImage(item.img)
+    };
 
     suggestContainer.appendChild(card);
   });
