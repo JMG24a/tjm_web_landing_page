@@ -30,7 +30,7 @@ const porcentajesPago = {
 };
 const porcentajesPagoMethod = {
   "decontado": 20.35,
-  "cashea": 28.78,
+  "cashea": 29.78,
   "zelle": 3,
   "cash - binance": 0,
 };
@@ -660,6 +660,33 @@ function renderSuggestions(product, category) {
   });
 }
 
+function renderPreSets(product, category) {
+  const suggestContainer = document.getElementById("presets");
+  suggestContainer.innerHTML = ""
+
+  if (!product.pre_sets || product.pre_sets.length === 0) return;
+
+  product.pre_sets.forEach(id => {
+    const related = PRODUCTS[category].find(p => p.id === id);
+    if (!related) return;
+
+    const card = document.createElement("div");
+    card.classList.add("suggest-card");
+
+    card.innerHTML = `
+      <img src="/image/${related.img}" alt="${related.name}">
+      <p>${related.name}</p>
+    `;
+
+    // abrir modal del producto sugerido
+    // card.onclick = () => {
+    //   renderColors(related, category)
+    // };
+
+    suggestContainer.appendChild(card);
+  });
+}
+
 function openProductModal(product, category) {
   modalIsOpen = true
   showTopBarModal()
@@ -690,6 +717,8 @@ function openProductModal(product, category) {
       setupSofas(product);
   }
 
+
+
   modal.classList.remove("hidden");
   // reset animación
   modal.classList.remove("show");
@@ -697,6 +726,7 @@ function openProductModal(product, category) {
   modal.classList.add("show");
 
   renderSuggestions(product, category);
+  renderPreSets(product, category)
 }
 
 // function resetMultimuebles() {

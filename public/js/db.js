@@ -1055,6 +1055,20 @@ const PRODUCTS = {
       img: "sofa_sofa_cama_beige.jpeg",
       size: "180cm x 160cm",
       suggest: [1020, 1021],
+      pre_sets: [
+        {
+          img: "sofa_sofa_cama_beige_down.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_sofa_cama_black_gray.jpeg",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+      ],
       colors: [
         {
           img: "sofa_sofa_cama_beige.jpeg",
