@@ -663,13 +663,12 @@ function renderSuggestions(product, category) {
 function renderPreSets(product, category) {
   const suggestContainer = document.getElementById("presets");
   suggestContainer.innerHTML = ""
+  console.log("🚀 ~ renderPreSets 1:", product)
 
   if (!product.pre_sets || product.pre_sets.length === 0) return;
+  console.log("🚀 ~ renderPreSets 2:", product)
 
   product.pre_sets.forEach(id => {
-    const related = PRODUCTS[category].find(p => p.id === id);
-    if (!related) return;
-
     const card = document.createElement("div");
     card.classList.add("suggest-card");
 
