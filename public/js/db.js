@@ -866,30 +866,30 @@ const PRODUCTS = {
       id: 1026,
       name: "Mueble Paris",
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
-      img: "sofa_mueble_paris_beige.jpeg",
+      img: "sofa_mueble_paris_beige.jpg",
       suggest: [1011, 1008],
       size: "180cm x 180cm",
       colors: [
         {
-          img: "sofa_mueble_paris_beige.jpeg",
+          img: "sofa_mueble_paris_beige.jpg",
           color: "beige",
           type: "tela",
           name: "Beige"
         },
         {
-          img: "sofa_mueble_paris_black.jpeg",
+          img: "sofa_mueble_paris_negro.jpg",
           color: "black",
           type: "tela",
           name: "Negro"
         },
         {
-          img: "sofa_mueble_paris_white.jpeg",
+          img: "sofa_mueble_paris_gris_oscuro.jpg",
           color: "white",
           type: "tela",
           name: "Blanco"
         },
         {
-          img: "sofa_mueble_paris_gray.jpeg",
+          img: "sofa_mueble_paris_gris.jpg",
           color: "gray",
           type: "cuero",
           name: "Gris"
