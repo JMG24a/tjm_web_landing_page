@@ -862,6 +862,40 @@ const PRODUCTS = {
         },
       ]
     },
+      {
+      id: 1022,
+      name: "Mueble Paris",
+      desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_nigeria_beige.jpeg",
+      suggest: [1011, 1008],
+      size: "180cm x 180cm",
+      colors: [
+        {
+          img: "sofa_nigeria_beige.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_nigeria_black.jpeg",
+          color: "black",
+          type: "tela",
+          name: "Negro"
+        },
+        {
+          img: "sofa_nigeria_white.jpeg",
+          color: "white",
+          type: "tela",
+          name: "Blanco"
+        },
+        {
+          img: "sofa_nigeria_gray.jpeg",
+          color: "gray",
+          type: "cuero",
+          name: "Gris"
+        },
+      ]
+    },
     // {
     //   id: 1016,
     //   name: "Sofa Zultan 3 puestos",
