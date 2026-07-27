@@ -884,15 +884,15 @@ const PRODUCTS = {
         },
         {
           img: "sofa_mueble_paris_gris_oscuro.jpg",
-          color: "white",
+          color: "gray",
           type: "tela",
-          name: "Blanco"
+          name: "Gris Oscuro"
         },
         {
           img: "sofa_mueble_paris_gris.jpg",
           color: "gray",
           type: "cuero",
-          name: "Gris"
+          name: "Gris Claro"
         },
       ]
     },
