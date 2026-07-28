@@ -182,7 +182,7 @@ async function getDollarRate() {
 }
 
 function isFabricCategory(){
-  if (categoryProductWs != "colchones" && categoryProductWs != "multimuebles" && categoryProductWs != 'comedores') {
+  if (categoryProductWs != "colchones" && categoryProductWs != "multimuebles") {
     const fabricColor = document.getElementById("color_fabric_container");
     fabricColor.classList.remove("displayNone");
   }
