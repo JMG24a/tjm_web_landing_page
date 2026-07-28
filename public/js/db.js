@@ -1510,7 +1510,7 @@ const PRODUCTS = {
   comedores: [
     {
       id: 3008,
-      name: "Galileo V",
+      name: "Galileo",
       desc: "...",
       img: "comedor_galileo_v.jpg",
       size: "Largo: 190cm - Ancho: 90cm",
@@ -1870,7 +1870,7 @@ const PRODUCTS = {
     },
  {
       id: 3008,
-      name: "Saturno V",
+      name: "Saturno",
       desc: "...",
       img: "comedor_saturno.jpg",
       size: "Largo: 190cm - Ancho: 90cm",
@@ -1989,7 +1989,7 @@ const PRODUCTS = {
     },
     {
       id: 3004,
-      name: "Isabel V",
+      name: "Isabel",
       desc: "...",
       img: "comedor_isabel_4_sillas_gray.png",
       size: "Largo: 190cm - Ancho: 90cm",
