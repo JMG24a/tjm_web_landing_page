@@ -459,6 +459,7 @@ function setupMultimuebles(product) {
 
 
 function setupComedores(product) {
+  isFabricCategory()
   const colors = document.getElementById("modal-colors");
   const chairContainer = document.getElementById("modal-chairs");
   chairContainer.classList.remove("displayNone");
