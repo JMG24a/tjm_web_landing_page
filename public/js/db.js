@@ -1988,7 +1988,7 @@ const PRODUCTS = {
       id: 3004,
       name: "Isabel V",
       desc: "...",
-      img: "comedor_isabel_v.jpg",
+      img: "comedor_isabel_4_sillas_gray.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
@@ -2049,7 +2049,7 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v.jpg",
+          img: "comedor_isabel_4_sillas_gray.png",
           colors: [
             {
               img: "comedor_isabel_v.jpg",
