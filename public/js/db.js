@@ -2107,7 +2107,7 @@ const PRODUCTS = {
       id: 3003,
       name: "Luna Torre",
       desc: "...",
-      img: "comedor_luna.png",
+      img: "comedor_luna_4_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
@@ -2130,7 +2130,7 @@ const PRODUCTS = {
         },
         {
           top: "pintado",
-          img: "comedor_luna.png",
+          img: "comedor_luna_4_sillas_beige.png",
           colors: [
             {
               img: "comedor_luna.png",
