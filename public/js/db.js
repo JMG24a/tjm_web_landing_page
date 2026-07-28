@@ -1750,12 +1750,12 @@ const PRODUCTS = {
       id: 3002,
       name: "Media Luna",
       desc: "...",
-      img: "comedor_media_luna.jpg",
+      img: "comedor_media_luna_6_sillas.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_media_luna.jpg",
+          img: "comedor_media_luna_6_sillas.png",
           colors: [
             {
               img: "comedor_media_luna.jpg",
