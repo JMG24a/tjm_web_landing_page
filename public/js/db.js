@@ -1758,16 +1758,19 @@ const PRODUCTS = {
           img: "comedor_media_luna_6_sillas.png",
           colors: [
             {
-              img: "comedor_media_luna.jpg",
-              color:"#3f0b0b"
+              img: "comedor_media_luna_6_sillas.png",
+              color:"gray",
+              name: "gris"
             },
             {
-              img: "comedor_media_luna.jpg",
-              color:"#0a134a"
+              img: "comedor_media_luna_blue.png",
+              color:"#0a134a",
+              name: "Azul"
             },
             {
-              img: "comedor_media_luna.jpg",
-              color:"#520131"
+              img: "comedor_media_luna_white.png",
+              color:"#ffffff",
+              name: "Blanco"
             },
           ],
         },
@@ -2052,16 +2055,16 @@ const PRODUCTS = {
           img: "comedor_isabel_4_sillas_gray.png",
           colors: [
             {
-              img: "comedor_isabel_v.jpg",
+              img: "comedor_isabel_4_sillas_gray.png",
               color:"#333"
             },
             {
-              img: "comedor_isabel_v.jpg",
-              color:"#333"
+              img: "comedor_isabel_4_sillas_black.png",
+              color:"black"
             },
             {
-              img: "comedor_isabel_v.jpg",
-              color:"#333"
+              img: "comedor_isabel_4_sillas_beige.png",
+              color:"beige"
             },
           ],
         },
