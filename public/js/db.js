@@ -1996,19 +1996,22 @@ const PRODUCTS = {
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_isabel_v.jpg",
+          img: "comedor_isabel_6_sillas_gray.png",
           colors: [
             {
-              img: "comedor_isabel_v.jpg",
-              color:"#3f0b0b"
+              img: "comedor_isabel_6_sillas_gray.png",
+              color:"#666565",
+              name: "Gris"
             },
             {
-              img: "comedor_isabel_v.jpg",
-              color:"#0a134a"
+              img: "comedor_isabel_6_sillas_blue.png",
+              color:"#0a134a",
+              name: "Azul"
             },
             {
-              img: "comedor_isabel_v.jpg",
-              color:"#520131"
+              img: "comedor_isabel_6_sillas_white.png",
+              color:"white",
+              name: "Blanco"
             },
           ],
         },
