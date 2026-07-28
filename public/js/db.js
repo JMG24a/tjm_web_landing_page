@@ -2111,7 +2111,7 @@ const PRODUCTS = {
     },
     {
       id: 3003,
-      name: "Luna Torre",
+      name: "Luna",
       desc: "...",
       img: "comedor_luna_4_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
