@@ -2118,19 +2118,19 @@ const PRODUCTS = {
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_luna.png",
+          img: "comedor_luna_6_sillas_gris_oscuro.png",
           colors: [
             {
-              img: "comedor_luna.png",
-              color:"#3f0b0b"
+              img: "comedor_luna_6_sillas_gris_oscuro.png",
+              color:"#c4c4c4"
             },
             {
-              img: "comedor_luna.png",
-              color:"#0a134a"
+              img: "comedor_luna_6_sillas_gris.png",
+              color:"gray"
             },
             {
-              img: "comedor_luna.png",
-              color:"#520131"
+              img: "comedor_luna_6_sillas_negro.png",
+              color:"#000"
             },
           ],
         },
@@ -2183,11 +2183,7 @@ const PRODUCTS = {
             {
               img: "comedor_luna_4_sillas_black.png",
               color:"black"
-            },
-            {
-              img: "comedor_luna.png",
-              color:"#333"
-            },
+            }
           ],
         },
         {
