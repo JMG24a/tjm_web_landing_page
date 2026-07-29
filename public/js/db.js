@@ -1770,6 +1770,20 @@ const PRODUCTS = {
       desc: "...",
       img: "comedor_media_luna_6_sillas.png",
       size: "Largo: 190cm - Ancho: 90cm",
+      pre_sets: [
+        {
+          img: "comedor_pre_media_luna_6_sillas.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "comedor_pre_media_luna_6_sillas.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+      ],
       chairs_6:[
         {
           top: "vidrio",
