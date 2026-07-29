@@ -116,6 +116,7 @@ async function mostrarProductos(categoria) {
         const finalId = `${prod.id}${size.suffix}`;
         const precioBase = await fetchPrice(finalId);
 
+        // Calcular porcentajes
         const precioCashea      = precioBase + (precioBase * METHOD_VALUES[1] / 100);
         const precioDecontado   = precioBase + (precioBase * METHOD_VALUES[2] / 100);
         const precioZelle       = precioBase + (precioBase * METHOD_VALUES[3] / 100);
@@ -131,10 +132,10 @@ async function mostrarProductos(categoria) {
             <input type="number" id="input-${finalId}" placeholder="${precioBase}">
           </td>
 
-          <td id="binance-${finalId}">${precioBinance.toFixed(2)}$</td>
-          <td id="zelle-${finalId}">${precioZelle.toFixed(2)}$</td>
-          <td id="decontado-${finalId}">${precioDecontado.toFixed(2)}$</td>
-          <td id="cashea-${finalId}">${precioCashea.toFixed(2)}$</td>
+          <td>${precioBinance.toFixed(2)}$</td>
+          <td>${precioZelle.toFixed(2)}$</td>
+          <td>${precioDecontado.toFixed(2)}$</td>
+          <td>${precioCashea.toFixed(2)}$</td>
 
           <td>
             <button id="save-${finalId}">Guardar</button>
@@ -143,34 +144,19 @@ async function mostrarProductos(categoria) {
 
         productosBody.appendChild(row);
 
-        // 🔥 ACTUALIZACIÓN EN VIVO
-        const input = document.getElementById(`input-${finalId}`);
-
-        input.addEventListener("input", () => {
-          const nuevoBase = Number(input.value);
-          if (!nuevoBase) return;
-
-          const binance   = nuevoBase + (nuevoBase * METHOD_VALUES[4] / 100);
-          const zelle     = nuevoBase + (nuevoBase * METHOD_VALUES[3] / 100);
-          const decontado = nuevoBase + (nuevoBase * METHOD_VALUES[2] / 100);
-          const cashea    = nuevoBase + (nuevoBase * METHOD_VALUES[1] / 100);
-
-          document.getElementById(`binance-${finalId}`).textContent   = `${binance.toFixed(2)}$`;
-          document.getElementById(`zelle-${finalId}`).textContent     = `${zelle.toFixed(2)}$`;
-          document.getElementById(`decontado-${finalId}`).textContent = `${decontado.toFixed(2)}$`;
-          document.getElementById(`cashea-${finalId}`).textContent    = `${cashea.toFixed(2)}$`;
-        });
-
         // Guardar precio base
         document.getElementById(`save-${finalId}`).addEventListener("click", async () => {
-          const nuevoPrecio = Number(input.value);
+          const nuevoPrecio = document.getElementById(`input-${finalId}`).value;
 
           if (!nuevoPrecio) {
             alert("Debes ingresar un precio");
             return;
           }
 
-          const body = { id: Number(finalId), precio: nuevoPrecio };
+          const body = {
+            id: Number(finalId),
+            precio: Number(nuevoPrecio)
+          };
 
           try {
             await fetch("https://tjm-web-back.onrender.com", {
@@ -185,65 +171,6 @@ async function mostrarProductos(categoria) {
           }
         });
       }
-      // for (const size of BED_SIZES) {
-      //   const finalId = `${prod.id}${size.suffix}`;
-      //   const precioBase = await fetchPrice(finalId);
-
-      //   // Calcular porcentajes
-      //   const precioCashea      = precioBase + (precioBase * METHOD_VALUES[1] / 100);
-      //   const precioDecontado   = precioBase + (precioBase * METHOD_VALUES[2] / 100);
-      //   const precioZelle       = precioBase + (precioBase * METHOD_VALUES[3] / 100);
-      //   const precioBinance     = precioBase + (precioBase * METHOD_VALUES[4] / 100);
-
-      //   const row = document.createElement("tr");
-
-      //   row.innerHTML = `
-      //     <td><img src="image/${prod.img}" alt="${prod.name}"></td>
-      //     <td>${prod.name} ${size.label}</td>
-
-      //     <td>
-      //       <input type="number" id="input-${finalId}" placeholder="${precioBase}">
-      //     </td>
-
-      //     <td>${precioBinance.toFixed(2)}$</td>
-      //     <td>${precioZelle.toFixed(2)}$</td>
-      //     <td>${precioDecontado.toFixed(2)}$</td>
-      //     <td>${precioCashea.toFixed(2)}$</td>
-
-      //     <td>
-      //       <button id="save-${finalId}">Guardar</button>
-      //     </td>
-      //   `;
-
-      //   productosBody.appendChild(row);
-
-      //   // Guardar precio base
-      //   document.getElementById(`save-${finalId}`).addEventListener("click", async () => {
-      //     const nuevoPrecio = document.getElementById(`input-${finalId}`).value;
-
-      //     if (!nuevoPrecio) {
-      //       alert("Debes ingresar un precio");
-      //       return;
-      //     }
-
-      //     const body = {
-      //       id: Number(finalId),
-      //       precio: Number(nuevoPrecio)
-      //     };
-
-      //     try {
-      //       await fetch("https://tjm-web-back.onrender.com", {
-      //         method: "PATCH",
-      //         headers: { "Content-Type": "application/json" },
-      //         body: JSON.stringify(body)
-      //       });
-
-      //       alert("Precio actualizado correctamente");
-      //     } catch {
-      //       alert("Error al guardar el precio");
-      //     }
-      //   });
-      // }
 
     } else {
       // Producto normal

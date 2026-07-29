@@ -199,11 +199,12 @@ function renderColors(colors, container) {
   container.innerHTML = "";
   let colorsOfMaterial = []
   if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios" || categoryProductWs == "comedores"){
+    console.log("🚀 ~ renderColors ~ colors:", colors)
     colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
   }else{
     colorsOfMaterial = colors
   }
-  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios" || categoryProductWs == "comedores"){
+  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios"){
     changeModalImage(colorsOfMaterial[0].img);
   }
   colorsOfMaterial.forEach((item, index) => {
