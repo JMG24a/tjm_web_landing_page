@@ -1872,24 +1872,42 @@ const PRODUCTS = {
       id: 3008,
       name: "Saturno",
       desc: "...",
-      img: "comedor_saturno.jpg",
+      img: "comedor_saturno_6_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_saturno.jpg",
+          img: "comedor_saturno_6_sillas_beige.png",
           colors: [
             {
-              img: "comedor_saturno.jpg",
-              color:"#3f0b0b"
+              img: "comedor_saturno_6_sillas_beige.png",
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_saturno.jpg",
-              color:"#0a134a"
+              img: "comedor_saturno_6_sillas_azul.png",
+              color:"#0a134a",
+              type: "cuero",
+              name: "Azul"
             },
             {
-              img: "comedor_saturno.jpg",
-              color:"#520131"
+              img: "comedor_saturno_6_sillas_gris_oscuro.png",
+              color:"#4a4747",
+              type: "tela",
+              name: "Gris Oscuro"
+            },
+            {
+              img: "comedor_saturno_6_sillas_blanco.png",
+              color:"#fff",
+              type: "cuero",
+              name: "Blanco"
+            },
+            {
+              img: "comedor_saturno_6_sillas_gray.png",
+              color:"#c4c4c4",
+              type: "tela",
+              name: "Gris"
             },
           ],
         },
