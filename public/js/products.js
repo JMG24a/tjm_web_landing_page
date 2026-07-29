@@ -203,7 +203,7 @@ function renderColors(colors, container) {
   }else{
     colorsOfMaterial = colors
   }
-  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios"){
+  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios" || categoryProductWs == "comedores"){
     changeModalImage(colorsOfMaterial[0].img);
   }
   colorsOfMaterial.forEach((item, index) => {
