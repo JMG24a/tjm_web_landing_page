@@ -198,7 +198,7 @@ function isOpenRopeCategory(){
 function renderColors(colors, container) {
   container.innerHTML = "";
   let colorsOfMaterial = []
-  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios"){
+  if(categoryProductWs == "sofas" || categoryProductWs == "dormitorios" || categoryProductWs == "comedores"){
     colorsOfMaterial = colors.filter((item)=>(item.type == materialProductWs))
   }else{
     colorsOfMaterial = colors

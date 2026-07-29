@@ -1512,24 +1512,42 @@ const PRODUCTS = {
       id: 3008,
       name: "Galileo",
       desc: "...",
-      img: "comedor_galileo_v.jpg",
+      img: "comedor_galileo_6_sillas_gris.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_galileo_v.jpg",
+          img: "comedor_galileo_6_sillas_gris.png",
           colors: [
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#3f0b0b"
+              img: "comedor_galileo_6_sillas_gris.png",
+              color:"gray",
+              type: "tela",
+              name: "Gris"
             },
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#0a134a"
+              img: "comedor_galileo_6_sillas_beige.png",
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#520131"
+              img: "comedor_galileo_6_sillas_blanco.png",
+              color:"white",
+              type: "cuero",
+              name: "Blanco"
+            },
+            {
+              img: "comedor_galileo_6_sillas_gris_oscuro.png",
+              color:"gray",
+              type: "tela",
+              name: "Gris"
+            },
+            {
+              img: "comedor_galileo_6_sillas_azul.png",
+              color:"blue",
+              type: "cuero",
+              name: "Azul"
             },
           ],
         },
