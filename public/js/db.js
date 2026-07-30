@@ -696,7 +696,7 @@ const PRODUCTS = {
       name: "Mueble Richard",
       atributte: {
         size: "180cm - 230cm",
-        resortes: true
+        resortes: false
       },
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_black.jpeg",
@@ -1089,7 +1089,7 @@ const PRODUCTS = {
       name: "Sofa Fenix",
       atributte: {
         size: "210cm - 210cm",
-        resortes: true
+        resortes: false
       },
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
