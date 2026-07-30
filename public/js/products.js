@@ -272,7 +272,7 @@ function setupSofas(product) {
 
   container_size.innerHTML = `
       <p>🪓 Madera Seca al Horno.</p>
-      ${product.atributte.resorte ? "<p>🛌 Resortes Pocket.</p>" : ""}
+      ${product.atributte.resortes ? "<p>🛌 Resortes Pocket.</p>" : ""}
       <p>📄 Garantía de 1 año.</p>
       <p>🕓 30 días hábiles.</p>
       <p>📦 Embalaje sin cargo.</p>
