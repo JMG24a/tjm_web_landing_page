@@ -1045,7 +1045,7 @@ const PRODUCTS = {
       id: 1019,
       name: "Sofa Suiza",
       atributte: {
-        size: "220cm",
+        size: "220cm | 180cm",
         resortes: false
       },
       desc: "El sofá Suiza destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
