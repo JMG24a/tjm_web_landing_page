@@ -615,7 +615,7 @@ const PRODUCTS = {
       name: "Sofa Cairo",
       size: "160cm - 240cm",
       atributte: {
-        size: "210cm - 210cm",
+        size: "180cm - 230cm",
         resortes: false
       },
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
@@ -695,7 +695,7 @@ const PRODUCTS = {
       id: 1009,
       name: "Mueble Richard",
       atributte: {
-        size: "160cm - 200cm",
+        size: "180cm - 230cm",
         resortes: true
       },
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
