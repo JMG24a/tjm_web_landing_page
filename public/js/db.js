@@ -794,7 +794,7 @@ const PRODUCTS = {
       id: 1012,
       name: "Sofa Berlin",
       atributte: {
-        size: "210cm - 210cm",
+        size: "210cm | 100cm",
         resortes: false
       },
       desc: "El sofá Berlin destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
