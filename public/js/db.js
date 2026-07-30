@@ -334,7 +334,10 @@ const PRODUCTS = {
     {
       id: 1000,
       name: "Zultan 2 Barrigas",
-      size: "240cm - 240cm",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_2_barrigas_beige.png",
       suggest: [1001, 1002],
@@ -362,7 +365,10 @@ const PRODUCTS = {
     {
       id: 1001,
       name: "Zultan Chapa",
-      size: "240cm - 240cm",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_chapa_gray.png ",
       suggest: [1000, 1002],
@@ -396,7 +402,10 @@ const PRODUCTS = {
     {
       id: 1002,
       name: "Zultan Cuadrado",
-      size: "240cm - 240cm",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_zultan_cuadrado_gray.jpg",
       suggest: [1000, 1001],
@@ -424,7 +433,10 @@ const PRODUCTS = {
     {
       id: 1003,
       name: "Mueble L",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "160cm - 200cm",
+        resortes: true
+      },
       desc: "El sofá Mueble L destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_muebleL_red.png",
       suggest: [1004, 1007],
@@ -452,7 +464,10 @@ const PRODUCTS = {
     {
       id: 1004,
       name: "Sofa Osman",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "240cm - 220cm",
+        resortes: true
+      },
       desc: "El sofá Osman destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_osman_brown_d.jpg",
       suggest: [1003, 1007],
@@ -491,8 +506,11 @@ const PRODUCTS = {
     },
     {
       id: 1005,
-      name: "Sofa Hielo",
-      size: "160cm - 240cm",
+      name: "Mueble Hielo",
+      atributte: {
+        size: "280cm",
+        resortes: true
+      },
       desc: "El sofá Hielo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_hielo_gray.jpg",
       suggest: [1017, 1023],
@@ -520,7 +538,10 @@ const PRODUCTS = {
     {
       id: 1006,
       name: "Sofa Nube",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "210cm | 100cm",
+        resortes: true
+      },
       desc: "El sofá Nube destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_juego_nube_gray.jpg",
       suggest: [1012, 1019],
@@ -559,7 +580,11 @@ const PRODUCTS = {
     },
     {
       id: 1007,
-      name: "Sofa Labros",
+      name: "Mueble Labros",
+      atributte: {
+        size: "250cm",
+        resortes: true
+      },
       desc: "El sofá Labros destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_labros_beige.jpg",
       suggest: [1004, 1003],
@@ -589,6 +614,10 @@ const PRODUCTS = {
       id: 1008,
       name: "Sofa Cairo",
       size: "160cm - 240cm",
+      atributte: {
+        size: "210cm - 210cm",
+        resortes: false
+      },
       desc: "El sofá Cairo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_cairo_beige_d.jpg",
       suggest: [1011, 1009],
@@ -616,6 +645,10 @@ const PRODUCTS = {
     {
       id: 1025,
       name: "Sofas Dormus",
+      atributte: {
+        size: "220cm | 180cm",
+        resortes: true
+      },
       desc: "El sofá Dormus destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_dormus_beige.jpeg",
       suggest: [1020, 1011],
@@ -661,6 +694,10 @@ const PRODUCTS = {
     {
       id: 1009,
       name: "Mueble Richard",
+      atributte: {
+        size: "160cm - 200cm",
+        resortes: true
+      },
       desc: "El sofá Richard destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_richard_gray_black.jpeg",
       suggest: [1020, 1011],
@@ -700,7 +737,10 @@ const PRODUCTS = {
     {
       id: 1010,
       name: "Sofa Toty",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "210cm - 210",
+        resortes: false
+      },
       desc: "El sofá Toty destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_toty_black_d.jpg",
       suggest: [1013, 1011],
@@ -722,7 +762,10 @@ const PRODUCTS = {
     {
       id: 1011,
       name: "Sofa Palermo",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "210cm - 210cm",
+        resortes: false
+      },
       desc: "El sofá Palermo destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_palermo_gray_black.jpg",
       suggest: [1013, 1010],
@@ -750,7 +793,10 @@ const PRODUCTS = {
     {
       id: 1012,
       name: "Sofa Berlin",
-      size: "160cm - 240cm",
+      atributte: {
+        size: "210cm - 210cm",
+        resortes: false
+      },
       desc: "El sofá Berlin destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_berlin_black.jpeg",
       suggest: [1019, 1018],
@@ -784,6 +830,10 @@ const PRODUCTS = {
     {
       id: 1013,
       name: "Sofa Enmaly",
+      atributte: {
+        size: "210cm - 210cm",
+        resortes: false
+      },
       desc: "El sofá Enmaly destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_enmaly_white.jpg",
       suggest: [1011, 1010],
@@ -811,6 +861,10 @@ const PRODUCTS = {
     {
       id: 1014,
       name: "Sofa Damasco",
+      atributte: {
+        size: "310cm - 240cm",
+        resortes: true
+      },
       desc: "El sofá Damasco destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_damasco_black.jpeg",
       suggest: [1015],
@@ -832,6 +886,10 @@ const PRODUCTS = {
     {
       id: 1015,
       name: "Sofa Roma",
+      atributte: {
+        size: "310cm - 240cm",
+        resortes: true
+      },
       desc: "El sofá Roma destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_roma_black.jpg",
       suggest: [1014],
@@ -865,6 +923,10 @@ const PRODUCTS = {
       {
       id: 1026,
       name: "Mueble Paris",
+      atributte: {
+        size: "220cm - 220cm",
+        resortes: true
+      },
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_mueble_paris_beige.jpg",
       suggest: [1011, 1008],
@@ -924,6 +986,10 @@ const PRODUCTS = {
     {
       id: 1017,
       name: "Sofa Normandy",
+      atributte: {
+        size: "240cm",
+        resortes: true
+      },
       desc: "El sofá Normandy 3 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_normandy_beige.jpeg",
       suggest: [1007, 1005],
@@ -978,6 +1044,10 @@ const PRODUCTS = {
     {
       id: 1019,
       name: "Sofa Suiza",
+      atributte: {
+        size: "220cm",
+        resortes: false
+      },
       desc: "El sofá Suiza destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_suiza_beige.jpeg",
       suggest: [1021, 1018],
@@ -1017,6 +1087,10 @@ const PRODUCTS = {
     {
       id: 1020,
       name: "Sofa Fenix",
+      atributte: {
+        size: "210cm - 210cm",
+        resortes: true
+      },
       desc: "El sofá Nigeria destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_nigeria_beige.jpeg",
       suggest: [1011, 1008],
@@ -1053,7 +1127,10 @@ const PRODUCTS = {
       name: "Sofa Barco",
       desc: "El sofá barco 2 puestos destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
       img: "sofa_barco_black.jpg",
-      size: "120cm x 140cm",
+      atributte: {
+        size: "140cm | 140cm",
+        resortes: true
+      },
       suggest: [1019, 1018],
       colors: [
         {
@@ -1087,7 +1164,10 @@ const PRODUCTS = {
       name: "Sofa Cama",
       desc: "El sofá cama de 3 plazas destaca como una pieza excepcional que combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para la versatilidad y comodidad de los invitados inesperados.",
       img: "sofa_sofa_cama_beige.jpeg",
-      size: "180cm x 160cm",
+      atributte: {
+        size: "180cm - 160cm",
+        resortes: true
+      },
       suggest: [1020, 1021],
       pre_sets: [
         {
@@ -1141,7 +1221,10 @@ const PRODUCTS = {
       name: "Sofa Lineal",
       desc: "Diseñado para integrarse con sofisticación en entornos corporativos y áreas de gran escala, nuestro sofá lineal modular es la máxima expresión de la funcionalidad arquitectónica. Gracias a su innovador sistema de comercialización por metro lineal, este modelo ofrece una libertad creativa total, permitiendo configurar piezas continuas que se adaptan con precisión milimétrica a la geometría de su proyecto. Una solución que combina estética de vanguardia con un soporte ergonómico excepcional.",
       img: "sofa_lineal.png",
-      size: "120cm x 140cm",
+      atributte: {
+        size: "120cm - 140cm",
+        resortes: true
+      },
       suggest: [1014, 1015],
       colors: [
         {
