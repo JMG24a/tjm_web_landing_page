@@ -286,7 +286,7 @@ function setupSofas(product) {
     </p>
   `
   const size = document.getElementById("size");
-  size.textContent = product.size || "";
+  size.textContent = product.atributte.size || "";
 
   const price = document.getElementById("product-price");
   price.classList.remove("displayNone")
