@@ -296,7 +296,98 @@ async function getProductPrices(prod, categoria) {
   };
 }
 
-
-
 // Llamar al cargar la página
 loadMethods();
+
+// Sliders Admin
+// ===============================
+// 1. Cargar sliders desde backend
+// ===============================
+async function loadCarousel() {
+  const res = await fetch("https://tjm-web-back.onrender.com/carrusel");
+  const sliders = await res.json();
+
+  const tbody = document.getElementById("carousel-body");
+  tbody.innerHTML = "";
+
+  sliders.forEach(slider => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${slider.group}</td>
+
+      <td>
+        <img src="${slider.mobile}" alt="mobile">
+        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'mobile')">Subir imagen</button>
+      </td>
+
+      <td>
+        <img src="${slider.tablet}" alt="tablet">
+        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'tablet')">Subir imagen</button>
+      </td>
+
+      <td>
+        <img src="${slider.desktop}" alt="desktop">
+        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'desktop')">Subir imagen</button>
+      </td>
+    `;
+
+    tbody.appendChild(row);
+  });
+}
+
+// ===============================
+// 2. Abrir selector de archivos
+// ===============================
+let currentEdit = { id: null, field: null };
+
+function triggerUpload(id, field) {
+  currentEdit.id = id;
+  currentEdit.field = field;
+
+  document.getElementById("hiddenFileInput").click();
+}
+
+// ===============================
+// 3. Subir imagen a Cloudinary
+// ===============================
+document.getElementById("hiddenFileInput").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", "tjm_uploads"); // tu preset de Cloudinary
+
+  const cloudRes = await fetch("https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload", {
+    method: "POST",
+    body: formData
+  });
+
+  const cloudData = await cloudRes.json();
+  const imageUrl = cloudData.secure_url;
+
+  // ===============================
+  // 4. PATCH al backend
+  // ===============================
+  const body = {};
+  body[currentEdit.field] = imageUrl;
+
+  await fetch(`https://tjm-web-back.onrender.com/carrusel/${currentEdit.id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+
+  // ===============================
+  // 5. Recargar UI
+  // ===============================
+  loadCarousel();
+
+  // limpiar input
+  e.target.value = "";
+});
+
+// Inicializar
+loadCarousel();
+

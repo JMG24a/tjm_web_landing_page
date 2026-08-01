@@ -126,5 +126,7 @@ function startAutoSlide(container, intervalTime) {
   }, intervalTime);
 }
 
+loadCarousel("slidesWelcome", "welcome");
 loadCarousel("slidesPromotions", "promotions");
 loadCarousel("slidesAbout", "aboutUs");
+
