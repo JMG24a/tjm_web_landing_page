@@ -1,4 +1,4 @@
-#categorias-container {
+/* #categorias-container {
   display: flex;
   gap: 10px;
   padding: 10px;
@@ -152,4 +152,231 @@
 #productos-table button:hover {
   background: #005fcc;
 }
+ */
 
+
+
+
+
+
+
+
+
+ /* ============================
+   BASE GENERAL
+============================ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+/* ============================
+   NAVBAR SUPERIOR
+============================ */
+.top-navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+/* ============================
+   SIDEBAR
+============================ */
+.nav-sidebar {
+  width: 75%;
+}
+
+.sidebar-menu a {
+  font-size: 1rem;
+}
+
+/* ============================
+   SLIDER PROMOTION
+============================ */
+.slider-promotion img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+   TABLAS (Métodos y Productos)
+============================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+td img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+
+/* ======== MOBILE (0–600px) ======== */
+@media (max-width: 600px) {
+
+  .top-navbar {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav-sidebar {
+    width: 85%;
+  }
+
+  /* Slider */
+  .slider-promotion img {
+    height: auto;
+  }
+
+  /* Tablas → scroll horizontal */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  td img {
+    width: 80px;
+  }
+
+  input[type="number"] {
+    width: 90px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+}
+
+/* ======== TABLET (600–900px) ======== */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .top-navbar {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .nav-logo {
+    height: 38px;
+  }
+
+  .nav-sidebar {
+    width: 60%;
+  }
+
+  th, td {
+    font-size: 1rem;
+  }
+
+  td img {
+    width: 110px;
+  }
+
+  input[type="number"] {
+    width: 110px;
+  }
+
+  button {
+    padding: 8px 14px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ======== LAPTOP / DESKTOP (900px+) ======== */
+@media (min-width: 900px) {
+
+  .top-navbar {
+    height: 70px;
+    padding: 0 30px;
+  }
+
+  .nav-logo {
+    height: 45px;
+  }
+
+  .nav-sidebar {
+    width: 40%;
+  }
+
+  th, td {
+    font-size: 1.05rem;
+  }
+
+  td img {
+    width: 130px;
+  }
+
+  input[type="number"] {
+    width: 130px;
+  }
+
+  button {
+    padding: 10px 16px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
