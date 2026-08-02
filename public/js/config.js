@@ -314,7 +314,7 @@ async function loadCarousel() {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td>${slider.group}</td>
+      <td class="sliderTd">${slider.group}</td>
 
       <td>
         <img src="${slider.mobile}" alt="mobile">

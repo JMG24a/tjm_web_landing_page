@@ -397,3 +397,9 @@ button:hover {
   cursor: pointer;
   border-radius: 10px;
 }
+
+
+.sliderTd{
+  display: flex;
+  flex-direction: column;
+}
