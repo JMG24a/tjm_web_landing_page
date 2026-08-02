@@ -371,6 +371,7 @@ document.getElementById("hiddenFileInput").addEventListener("change", async (e) 
   });
 
   const cloudData = await cloudRes.json();
+  console.log("🚀 ~ cloudData:", cloudData)
   const imageUrl = cloudData.secure_url;
 
   // ===============================
