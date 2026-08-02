@@ -365,7 +365,7 @@ document.getElementById("hiddenFileInput").addEventListener("change", async (e) 
   formData.append("file", file);
   formData.append("upload_preset", "tjm_uploads"); // tu preset de Cloudinary
 
-  const cloudRes = await fetch("https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload", {
+  const cloudRes = await fetch("https://api.cloudinary.com/v1_1/dmajdkimk/image/upload", {
     method: "POST",
     body: formData
   });
