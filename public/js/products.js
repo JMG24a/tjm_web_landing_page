@@ -718,7 +718,7 @@ async function fetchProductCardPrice(id, isBed) {
     const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
     const data = await res.json();
 
-    priceElement.textContent = `${data.precio}$`;
+    priceElement.textContent = `${data.precio}$ - ${(data.precio + (data.precio * porcentajesPagoMethod.cashea /100)).toFixed(2)}$`;
   } catch (err) {
     priceElement.textContent = "Precio no disponible";
   }
@@ -741,7 +741,7 @@ async function loadProductsByCategory(category) {
     card.innerHTML = `
       <img src="/image/${product.img}" alt="${product.name}">
       <h4>${product.name}</h4>
-      <p id="${priceId}" class="product-price">Cargando precio...</p>
+      <p id="${priceId}" class="product-prices">Cargando precio...</p>
     `;
 
     card.addEventListener("click", () => {
