@@ -718,9 +718,9 @@ async function fetchProductCardPrice(id, isBed) {
     const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
     const data = await res.json();
 
-    console.log("🚀 ~ fetchProductCardPrice ~ (data.precio * porcentajesPagoMethod.cashea / 100)).toFixed(2)}:", (data.precio * porcentajesPagoMethod.cashea / 100))
+    console.log("🚀 ~ fetchProductCardPrice ~ (data.precio * porcentajesPagoMethod.cashea / 100)).toFixed(2)}:", data.precio + (data.precio * porcentajesPagoMethod.cashea / 100))
     const priceMax = data.precio + (data.precio * porcentajesPagoMethod.cashea / 100)
-    priceElement.textContent = `${data.precio}$ - ${priceMax.toFixed(2)}$`;
+    priceElement.textContent = `${data.precio}$ - ${priceMax}$`;
   } catch (err) {
     priceElement.textContent = "Precio no disponible";
   }
