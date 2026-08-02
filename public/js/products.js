@@ -711,20 +711,22 @@ function loadSliderByCategory(category) {
 
 async function fetchProductCardPrice(id, isBed) {
   const priceElement = document.getElementById(`price-${id}`);
-  // Si es cama/colchón → usar ID derivado (individual)
+
   const finalId = isBed ? `${id}1` : id;
 
   try {
     const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
     const data = await res.json();
 
-    console.log("🚀 ~ fetchProductCardPrice ~ (data.precio * porcentajesPagoMethod.cashea / 100)).toFixed(2)}:", data.precio + (data.precio * porcentajesPagoMethod.cashea / 100))
-    const priceMax = data.precio + (data.precio * porcentajesPagoMethod.cashea / 100)
-    priceElement.textContent = `${data.precio}$ - ${priceMax}$`;
+    const base = Number(data.precio);
+    const priceMax = base + (base * porcentajesPagoMethod.cashea / 100);
+
+    priceElement.textContent = `${base}$ - ${priceMax.toFixed(2)}$`;
   } catch (err) {
     priceElement.textContent = "Precio no disponible";
   }
 }
+
 
 
 async function loadProductsByCategory(category) {

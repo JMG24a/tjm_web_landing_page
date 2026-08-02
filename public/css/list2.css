@@ -67,7 +67,7 @@ section {
 }
 
 .furniture-card h4 {
-  padding: 15px;
+  padding: 5px 0px 5px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -425,7 +425,7 @@ button:hover {
 
 .product-prices{
   background: #1562c2;
-  margin: 0px 19px;
+  margin: 0px 10px 5px;;
   border-radius: 10px;
   color: #f2e088;
   text-align: center;
