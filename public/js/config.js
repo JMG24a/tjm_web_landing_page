@@ -314,19 +314,19 @@ async function loadCarousel() {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td class="sliderTd">${slider.group}</td>
+      <td>${slider.group}</td>
 
-      <td>
+      <td class="sliderTd">
         <img src="${slider.mobile}" alt="mobile">
         <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'mobile')">Subir imagen</button>
       </td>
 
-      <td>
+      <td class="sliderTd">
         <img src="${slider.tablet}" alt="tablet">
         <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'tablet')">Subir imagen</button>
       </td>
 
-      <td>
+      <td class="sliderTd">
         <img src="${slider.desktop}" alt="desktop">
         <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'desktop')">Subir imagen</button>
       </td>
