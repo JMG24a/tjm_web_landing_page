@@ -316,19 +316,25 @@ async function loadCarousel() {
     row.innerHTML = `
       <td>${slider.group}</td>
 
-      <td class="sliderTd">
-        <img src="${slider.mobile}" alt="mobile">
-        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'mobile')">Subir imagen</button>
+      <td>
+        <div class="sliderTd">
+          <img src="${slider.mobile}" alt="mobile">
+          <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'mobile')">Subir imagen</button>
+        </div>
       </td>
 
-      <td class="sliderTd">
-        <img src="${slider.tablet}" alt="tablet">
-        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'tablet')">Subir imagen</button>
+      <td>
+        <div class="sliderTd">
+          <img src="${slider.tablet}" alt="tablet">
+          <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'tablet')">Subir imagen</button>
+        </div>
       </td>
 
-      <td class="sliderTd">
-        <img src="${slider.desktop}" alt="desktop">
-        <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'desktop')">Subir imagen</button>
+      <td>
+        <div class="sliderTd">
+          <img src="${slider.desktop}" alt="desktop">
+          <button class="upload-btn" onclick="triggerUpload(${slider.id}, 'desktop')">Subir imagen</button>
+        </div>
       </td>
     `;
 
