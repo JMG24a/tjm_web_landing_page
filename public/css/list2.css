@@ -421,3 +421,12 @@ button:hover {
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.5); /* Le da un borde fino blanco muy limpio */
 }
+
+
+.product-prices{
+  background: #1562c2;
+  margin: 0px 19px;
+  border-radius: 10px;
+  color: #f2e088;
+  text-align: center;
+}

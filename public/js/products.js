@@ -709,36 +709,41 @@ function loadSliderByCategory(category) {
   slogan2.innerHTML = select.slogan_2;
 }
 
-async function fetchProductPrice(id) {
+async function fetchProductCardPrice(id, isBed) {
   const priceElement = document.getElementById(`price-${id}`);
+  // Si es cama/colchón → usar ID derivado (individual)
+  const finalId = isBed ? `${id}1` : id;
+
   try {
-    const res = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+    const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
     const data = await res.json();
 
-    priceElement.textContent = `${data.precio}$ - ${data.precio + ((data.precio * porcentajesPagoMethod.cashea) / 100)}$`;
+    priceElement.textContent = `${data.precio}$`;
   } catch (err) {
     priceElement.textContent = "Precio no disponible";
   }
 }
+
 
 async function loadProductsByCategory(category) {
   const grid = document.querySelector(".furniture-grid");
   grid.innerHTML = "";
 
   const products = PRODUCTS[category] || [];
+  const isBed = category === "dormitorios" || category === "colchones";
 
-  products.forEach((product) => {
+  for (const product of products) {
     const card = document.createElement("article");
     card.className = "furniture-card";
 
-    // Card base sin precio todavía
+    const priceId = `price-${product.id}`;
+
     card.innerHTML = `
       <img src="/image/${product.img}" alt="${product.name}">
       <h4>${product.name}</h4>
-      <p id="price-${product.id}" class="product-price">Cargando precio...</p>
+      <p id="${priceId}" class="product-price">Cargando precio...</p>
     `;
 
-    // Click → abrir modal
     card.addEventListener("click", () => {
       openProductModal(product, category);
     });
@@ -746,11 +751,12 @@ async function loadProductsByCategory(category) {
     grid.appendChild(card);
 
     // Cargar precio dinámico
-    fetchProductPrice(product.id);
-  });
+    fetchProductCardPrice(product.id, isBed);
+  }
 
   initProductsObserver();
 }
+
 
 // function loadProductsByCategory(category) {
 //   const grid = document.querySelector(".furniture-grid");
