@@ -3804,12 +3804,30 @@ const PRODUCTS = {
       size: "Alto: 65cm - Ancho: 48cm",
       desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_chifonier_001.jpg",
-      suggest: [4010],
+      suggest: [4010, 4016],
       colors: [
         {
           img: "multimueble_chifonier_001.jpg",
           color: "#f6f6f6",
         }
+      ]
+    },
+    {
+      id: 4016,
+      name: "Mesa Inteligente",
+      size: "Alto: 65cm - Ancho: 48cm",
+      desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_inteligente_white.jpg",
+      suggest: [4010, 4009],
+      colors: [
+        {
+          img: "multimueble_inteligente_white.jpg",
+          color: "#f6f6f6",
+        },
+        {
+          img: "multimueble_inteligente_black.avif",
+          color: "#000",
+        },
       ]
     },
     {
@@ -3819,7 +3837,7 @@ const PRODUCTS = {
       desc: "La comoda Madrid es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_chifonier_002.jpg",
       open: "multimueble_chifonier_002_open.jpg",
-      suggest: [4009],
+      suggest: [4009, 4016],
       colors: [
         {
           img: "multimueble_chifonier_002.jpg",
