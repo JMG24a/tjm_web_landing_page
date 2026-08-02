@@ -715,7 +715,7 @@ async function fetchProductPrice(id) {
     const res = await fetch(`https://tjm-web-back.onrender.com/${id}`);
     const data = await res.json();
 
-    priceElement.textContent = `${data.precio}$`;
+    priceElement.textContent = `${data.precio}$ - ${data.precio + ((data.precio * porcentajesPagoMethod.cashea) / 100)}$`;
   } catch (err) {
     priceElement.textContent = "Precio no disponible";
   }
