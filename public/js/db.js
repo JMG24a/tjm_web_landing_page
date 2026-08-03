@@ -3798,20 +3798,20 @@ const PRODUCTS = {
         }
       ]
     },
-    {
-      id: 4009,
-      name: "Campeche",
-      size: "Alto: 65cm - Ancho: 48cm",
-      desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "multimueble_chifonier_001.jpg",
-      suggest: [4010, 4016],
-      colors: [
-        {
-          img: "multimueble_chifonier_001.jpg",
-          color: "#f6f6f6",
-        }
-      ]
-    },
+    // {
+    //   id: 4009,
+    //   name: "Campeche",
+    //   size: "Alto: 65cm - Ancho: 48cm",
+    //   desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+    //   img: "multimueble_chifonier_001.jpg",
+    //   suggest: [4010, 4016],
+    //   colors: [
+    //     {
+    //       img: "multimueble_chifonier_001.jpg",
+    //       color: "#f6f6f6",
+    //     }
+    //   ]
+    // },
     {
       id: 4016,
       name: "Mesa Inteligente",
