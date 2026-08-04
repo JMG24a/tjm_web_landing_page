@@ -3798,23 +3798,23 @@ const PRODUCTS = {
         }
       ]
     },
-    // {
-    //   id: 4009,
-    //   name: "Campeche",
-    //   size: "Alto: 65cm - Ancho: 48cm",
-    //   desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-    //   img: "multimueble_chifonier_001.jpg",
-    //   suggest: [4010, 4016],
-    //   colors: [
-    //     {
-    //       img: "multimueble_chifonier_001.jpg",
-    //       color: "#f6f6f6",
-    //     }
-    //   ]
-    // },
+    {
+      id: 4009,
+      name: "Mesa Inteligente 2 cajones",
+      size: "Alto: 65cm - Ancho: 48cm",
+      desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_inteligente_2_cajones_white.jpg",
+      suggest: [4010, 4016],
+      colors: [
+        {
+          img: "multimueble_inteligente_2_cajones_white.jpg",
+          color: "#f6f6f6",
+        }
+      ]
+    },
     {
       id: 4016,
-      name: "Mesa Inteligente",
+      name: "Mesa Inteligente 3 cajones",
       size: "Alto: 65cm - Ancho: 48cm",
       desc: "El Campeche elaborado en mdf laqueado, es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_inteligente_white.jpg",
@@ -3920,6 +3920,51 @@ const PRODUCTS = {
     //     }
     //   ]
     // },
+    {
+      id: 4017,
+      name: "Barra Flotante",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_barra_flotante.jpg",
+      suggest: [4001, 4006],
+      colors: [
+        {
+          img: "multimueble_barra_flotante.jpg",
+          color: "#080808",
+          name: "Negro"
+        },
+      ]
+    },
+    {
+      id: 4018,
+      name: "Mesas de noche",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_mesas_de_noche_black.png",
+      suggest: [4001, 4006],
+      colors: [
+        {
+          img: "multimueble_mesas_de_noche_black.png",
+          color: "#080808",
+          name: "Negro"
+        },
+      ]
+    },
+    {
+      id: 4019,
+      name: "Vanity Princesa",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_princesa.png",
+      suggest: [4001, 4006],
+      colors: [
+        {
+          img: "multimueble_princesa.png",
+          color: "#080808",
+          name: "Negro"
+        },
+      ]
+    },
   ],
   accesorios: [
     {
