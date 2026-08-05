@@ -294,6 +294,21 @@ const PRODUCTS = {
       ]
     },
     {
+      id: 7012,
+      name: "Cama Aurora",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Triangular ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
+      img: "dormitorio_cama_aurora.jpg",
+      suggest: [7000, 7001],
+      colors: [
+        {
+          img: "dormitorio_cama_aurora.jpg",
+          color: "beige",
+          type: "tela",
+          name: "Beige",
+        },
+      ]
+    },
+    {
       id: 7011,
       name: "Cama Trendy",
       desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Triangular ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
