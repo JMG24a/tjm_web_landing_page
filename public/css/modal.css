@@ -296,14 +296,7 @@
   box-shadow: 0 0 0 2px #000;
 }
 
-/* .toggle_desc {
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: pointer;
-  color: #000000a1;
-  font-style: italic;
-  line-height: 1;
-} */
+
 .toggle_desc {
   font-size: 0.85rem;
   color: #335f82;
