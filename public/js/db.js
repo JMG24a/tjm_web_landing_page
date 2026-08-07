@@ -3838,10 +3838,17 @@ const PRODUCTS = {
         {
           img: "multimueble_inteligente_white.jpg",
           color: "#f6f6f6",
+          name: "Blanco"
         },
         {
-          img: "multimueble_inteligente_black.avif",
+          img: "multimueble_inteligente_white.png",
           color: "#000",
+          name: "Negro"
+        },
+        {
+          img: "multimueble_inteligente_white.png",
+          color: "#c4c4c4",
+          name: "Gris"
         },
       ]
     },
@@ -3963,6 +3970,11 @@ const PRODUCTS = {
           color: "#080808",
           name: "Negro"
         },
+        {
+          img: "multimueble_mesas_de_noche_white.png",
+          color: "#fff",
+          name: "Blanco"
+        },
       ]
     },
     {
@@ -3975,6 +3987,11 @@ const PRODUCTS = {
       colors: [
         {
           img: "multimueble_princesa.png",
+          color: "#fff",
+          name: "Blanco"
+        },
+        {
+          img: "multimueble_princesa_black.png",
           color: "#080808",
           name: "Negro"
         },
