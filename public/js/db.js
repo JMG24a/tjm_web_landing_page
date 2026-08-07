@@ -3841,12 +3841,12 @@ const PRODUCTS = {
           name: "Blanco"
         },
         {
-          img: "multimueble_inteligente_white.jpg",
+          img: "multimueble_inteligente_black.png",
           color: "#000",
           name: "Negro"
         },
         {
-          img: "multimueble_inteligente_white.jpg",
+          img: "multimueble_inteligente_gray.png",
           color: "#c4c4c4",
           name: "Gris"
         },
