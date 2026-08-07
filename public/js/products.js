@@ -727,14 +727,40 @@ async function fetchProductCardPrice(id, isBed) {
   }
 }
 
+async function fetchProductCardPrice(id, category) {
+  const priceElement = document.getElementById(`price-${id}`);
 
+  // Detectar categoría especial
+  const isBed = category === "dormitorios" || category === "colchones";
+  const isComedor = category === "comedores";
+
+  // Construir ID final según categoría
+  let finalId = id;
+
+  if (isBed) {
+    finalId = `${id}1`; // camas/colchones → individual
+  } else if (isComedor) {
+    finalId = `${id}40`; // comedores → agregar 40
+  }
+
+  try {
+    const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
+    const data = await res.json();
+
+    const base = Number(data.precio);
+    const priceMax = base + (base * porcentajesPagoMethod.cashea / 100);
+
+    priceElement.textContent = `${base}$ - ${priceMax.toFixed(2)}$`;
+  } catch (err) {
+    priceElement.textContent = "Precio no disponible";
+  }
+}
 
 async function loadProductsByCategory(category) {
   const grid = document.querySelector(".furniture-grid");
   grid.innerHTML = "";
 
   const products = PRODUCTS[category] || [];
-  const isBed = category === "dormitorios" || category === "colchones";
 
   for (const product of products) {
     const card = document.createElement("article");
@@ -754,8 +780,8 @@ async function loadProductsByCategory(category) {
 
     grid.appendChild(card);
 
-    // Cargar precio dinámico
-    fetchProductCardPrice(product.id, isBed);
+    // Ahora enviamos la categoría para decidir el ID final
+    fetchProductCardPrice(product.id, category);
   }
 
   initProductsObserver();
