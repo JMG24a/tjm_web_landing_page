@@ -3997,6 +3997,51 @@ const PRODUCTS = {
         },
       ]
     },
+    {
+      id: 4020,
+      name: "Vanity Elio",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_vanity_elio_white.jpeg",
+      suggest: [4001, 4006],
+      colors: [
+        {
+          img: "multimueble_vanity_elio_white.jpeg",
+          color: "#fff",
+          name: "Blanco"
+        },
+      ]
+    },
+    {
+      id: 4021,
+      name: "Vanity Russo",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_vanity_russo_white.jpeg",
+      suggest: [4001, 4006],
+      colors: [
+        {
+          img: "multimueble_vanity_russo_white.jpeg",
+          color: "#fff",
+          name: "Blanco"
+        },
+      ]
+    },
+    {
+      id: 4022,
+      name: "Vanity Paris",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_vanity_paris_white.jpeg",
+      suggest: [4020, 4021],
+      colors: [
+        {
+          img: "multimueble_vanity_paris_white.jpeg",
+          color: "#fff",
+          name: "Blanco"
+        },
+      ]
+    },
   ],
   accesorios: [
     {
