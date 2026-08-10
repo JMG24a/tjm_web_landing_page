@@ -4014,7 +4014,7 @@ const PRODUCTS = {
     },
     {
       id: 4021,
-      name: "Vanity Russo",
+      name: "Vanity Roraima",
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_vanity_russo_white.jpeg",
@@ -4029,7 +4029,7 @@ const PRODUCTS = {
     },
     {
       id: 4022,
-      name: "Vanity Paris",
+      name: "Vanity Inglaterra",
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_vanity_paris_white.jpeg",
