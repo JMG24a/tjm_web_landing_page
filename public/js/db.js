@@ -147,6 +147,21 @@ const PRODUCTS = {
         },
       ]
     },
+  {
+      id: 7013,
+      name: "Cama Avif",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Coco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
+      img: "dormitorio_cama_avif.png",
+      suggest: [7004, 7007],
+      colors: [
+        {
+          img: "dormitorio_cama_avif.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris",
+        },
+      ]
+    },
     // {
     //   id: 7004,
     //   name: "Cama Princesa",
