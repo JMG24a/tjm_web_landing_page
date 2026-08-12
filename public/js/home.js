@@ -1,113 +1,113 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let cleanup = null;
+// document.addEventListener("DOMContentLoaded", () => {
+//     let cleanup = null;
 
-    // ============================
-    // TOP BARS (ANIMACIONES)
-    // ============================
-    function animateTopBar(selector) {
-        const bar = document.querySelector(selector);
-        if (!bar) return;
+//     // ============================
+//     // TOP BARS (ANIMACIONES)
+//     // ============================
+//     function animateTopBar(selector) {
+//         const bar = document.querySelector(selector);
+//         if (!bar) return;
 
-        bar.classList.remove("visible");
-        bar.offsetHeight; // fuerza reflow
-        setTimeout(() => bar.classList.add("visible"), 2000);
-    }
+//         bar.classList.remove("visible");
+//         bar.offsetHeight; // fuerza reflow
+//         setTimeout(() => bar.classList.add("visible"), 2000);
+//     }
 
-    function showTopBar() {
-        animateTopBar(".top-gradient-bar");
-    }
+//     function showTopBar() {
+//         animateTopBar(".top-gradient-bar");
+//     }
 
-    function showTopBarModal() {
-        animateTopBar(".top-gradient-bar_modal");
-    }
+//     function showTopBarModal() {
+//         animateTopBar(".top-gradient-bar_modal");
+//     }
 
-    function showTopBarProduct() {
-        animateTopBar(".top-gradient-bar_products");
-    }
+//     function showTopBarProduct() {
+//         animateTopBar(".top-gradient-bar_products");
+//     }
 
-    // ============================
-    // SLIDER: WELCOME
-    // ============================
-    function startWelcomeSlider() {
-        console.log("startWelcomeSlider ejecutado");
+//     // ============================
+//     // SLIDER: WELCOME
+//     // ============================
+//     function startWelcomeSlider() {
+//         console.log("startWelcomeSlider ejecutado");
 
-        const slides = document.querySelectorAll(".about-slider picture");
-        if (!slides.length) return;
+//         const slides = document.querySelectorAll(".about-slider picture");
+//         if (!slides.length) return;
 
-        let index = 0;
+//         let index = 0;
 
-        slides.forEach(s => s.classList.remove("active"));
-        slides[0].classList.add("active");
+//         slides.forEach(s => s.classList.remove("active"));
+//         slides[0].classList.add("active");
 
-        const interval = setInterval(() => {
-            slides[index].classList.remove("active");
-            index = (index + 1) % slides.length;
-            slides[index].classList.add("active");
-        }, 4000);
+//         const interval = setInterval(() => {
+//             slides[index].classList.remove("active");
+//             index = (index + 1) % slides.length;
+//             slides[index].classList.add("active");
+//         }, 4000);
 
-        cleanup = () => clearInterval(interval);
-    }
+//         cleanup = () => clearInterval(interval);
+//     }
 
-    // ============================
-    // MODAL WS
-    // ============================
-    const openBtn = document.getElementById("ws-modal");
-    const modal = document.getElementById("modal-container");
-    const closeBtn = document.getElementById("close-modal");
+//     // ============================
+//     // MODAL WS
+//     // ============================
+//     const openBtn = document.getElementById("ws-modal");
+//     const modal = document.getElementById("modal-container");
+//     const closeBtn = document.getElementById("close-modal");
 
-    if (openBtn && modal) {
-        openBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            modal.style.display = "flex";
-        });
-    }
+//     if (openBtn && modal) {
+//         openBtn.addEventListener("click", (e) => {
+//             e.preventDefault();
+//             modal.style.display = "flex";
+//         });
+//     }
 
-    if (closeBtn && modal) {
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-    }
+//     if (closeBtn && modal) {
+//         closeBtn.addEventListener("click", () => {
+//             modal.style.display = "none";
+//         });
+//     }
 
-    // ============================
-    // SLIDER: PROMOTION
-    // ============================
-    function startPromotionSlider() {
-        const slides = document.querySelectorAll(".promotion-slider picture");
-        if (!slides.length) return;
+//     // ============================
+//     // SLIDER: PROMOTION
+//     // ============================
+//     function startPromotionSlider() {
+//         const slides = document.querySelectorAll(".promotion-slider picture");
+//         if (!slides.length) return;
 
-        let index = 0;
+//         let index = 0;
 
-        slides.forEach(s => s.classList.remove("active"));
-        slides[0].classList.add("active");
+//         slides.forEach(s => s.classList.remove("active"));
+//         slides[0].classList.add("active");
 
-        const interval = setInterval(() => {
-            slides[index].classList.remove("active");
-            index = (index + 1) % slides.length;
-            slides[index].classList.add("active");
-        }, 4000);
+//         const interval = setInterval(() => {
+//             slides[index].classList.remove("active");
+//             index = (index + 1) % slides.length;
+//             slides[index].classList.add("active");
+//         }, 4000);
 
-        cleanup = () => clearInterval(interval);
-    }
+//         cleanup = () => clearInterval(interval);
+//     }
 
-    // ============================
-    // INICIALIZACIÓN HOME
-    // ============================
-    function initHome() {
-        console.log("initHome ejecutado");
+//     // ============================
+//     // INICIALIZACIÓN HOME
+//     // ============================
+//     function initHome() {
+//         console.log("initHome ejecutado");
 
-        if (typeof cleanup === "function") cleanup();
+//         if (typeof cleanup === "function") cleanup();
 
-        const video = document.getElementById("miVideo");
-        if (video) video.playbackRate = 0.4;
+//         const video = document.getElementById("miVideo");
+//         if (video) video.playbackRate = 0.4;
 
-        showTopBar();
-        showTopBarProduct();
-        startWelcomeSlider();
-        startPromotionSlider();
-    }
+//         showTopBar();
+//         showTopBarProduct();
+//         startWelcomeSlider();
+//         startPromotionSlider();
+//     }
 
-    initHome();
-});
+//     initHome();
+// });
 
 
 // let cleanup = null;
