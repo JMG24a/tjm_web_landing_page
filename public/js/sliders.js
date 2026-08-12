@@ -130,3 +130,133 @@ loadCarousel("slidesWelcome", "welcome");
 loadCarousel("slidesPromotions", "promotions");
 loadCarousel("slidesAbout", "aboutUs");
 
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     let cleanup = null;
+
+//     function showTopBar() {
+//         const bar = document.querySelector(".top-gradient-bar");
+//         if (!bar) return;
+
+//         bar.classList.remove("visible");
+//         bar.offsetHeight; // fuerza reflow
+//         setTimeout(() => bar.classList.add("visible"), 2000);
+//     }
+
+//     function showTopBarModal() {
+//         const bar = document.querySelector(".top-gradient-bar_modal");
+//         if (!bar) return;
+
+//         bar.classList.remove("visible");
+//         bar.offsetHeight;
+//         setTimeout(() => bar.classList.add("visible"), 2000);
+//     }
+
+//     function showTopBarProduct() {
+//         const bar = document.querySelector(".top-gradient-bar_products");
+//         if (!bar) return;
+
+//         bar.classList.remove("visible");
+//         bar.offsetHeight;
+//         setTimeout(() => bar.classList.add("visible"), 2000);
+//     }
+
+//     function startWelcomeSlider() {
+//         console.log("startWelcomeSlider ejecutado");
+
+//         const slides = document.querySelectorAll(".about-slider picture");
+//         if (!slides.length) return;
+
+//         let index = 0;
+
+//         slides.forEach(s => s.classList.remove("active"));
+//         slides[0].classList.add("active");
+
+//         const interval = setInterval(() => {
+//             slides[index].classList.remove("active");
+//             index = (index + 1) % slides.length;
+//             slides[index].classList.add("active");
+//         }, 4000);
+
+//         cleanup = () => clearInterval(interval);
+//     }
+
+//     function startPromotionSlider() {
+//         const slides = document.querySelectorAll(".promotion-slider picture");
+//         if (!slides.length) return;
+
+//         let index = 0;
+
+//         slides.forEach(s => s.classList.remove("active"));
+//         slides[0].classList.add("active");
+
+//         const interval = setInterval(() => {
+//             slides[index].classList.remove("active");
+//             index = (index + 1) % slides.length;
+//             slides[index].classList.add("active");
+//         }, 4000);
+
+//         cleanup = () => clearInterval(interval);
+//     }
+
+//     function initHome() {
+//         console.log("initHome ejecutado");
+
+//         if (typeof cleanup === "function") cleanup();
+
+//         const video = document.getElementById("miVideo");
+//         if (video) video.playbackRate = 0.4;
+
+//         showTopBar();
+//         showTopBarProduct();
+//         startWelcomeSlider();
+//         startPromotionSlider();
+//     }
+
+//     const openBtn = document.getElementById("ws-modal");
+//     const modal = document.getElementById("modal-container");
+//     const closeBtn = document.getElementById("close-modal");
+
+//     if (openBtn && modal) {
+//         openBtn.addEventListener("click", (e) => {
+//             e.preventDefault();
+//             modal.style.display = "flex";
+//         });
+//     }
+
+//     if (closeBtn && modal) {
+//         closeBtn.addEventListener("click", () => {
+//             modal.style.display = "none";
+//         });
+//     }
+//     const navToggle = document.getElementById("navToggle");
+//     const navOverlay = document.getElementById("navOverlay");
+//     const navSidebar = document.getElementById("navSidebar");
+
+//     function openSidebar() {
+//         if (navOverlay) navOverlay.classList.add("active");
+//         if (navSidebar) navSidebar.classList.add("active");
+//     }
+
+//     function closeSidebar() {
+//         if (navOverlay) navOverlay.classList.remove("active");
+//         if (navSidebar) navSidebar.classList.remove("active");
+//     }
+
+//     if (navToggle) navToggle.addEventListener("click", openSidebar);
+//     if (navOverlay) navOverlay.addEventListener("click", closeSidebar);
+
+//     const closeModalBtn = document.getElementById("closeModalBtn");
+
+//     if (
+//         closeModalBtn &&
+//         typeof modalIsOpen !== "undefined" &&
+//         typeof closeModal === "function"
+//     ) {
+//         closeModalBtn.addEventListener("click", () => {
+//             modalIsOpen === false ? history.back() : closeModal();
+//         });
+//     }
+//     initHome();
+// });
