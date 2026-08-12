@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (video) video.playbackRate = 0.4;
 
         showTopBar();
-        showTopBarProduct();
+        // showTopBarProduct();
         startWelcomeSlider();
         startPromotionSlider();
     }
