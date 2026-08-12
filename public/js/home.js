@@ -1,114 +1,226 @@
-let cleanup = null;
+document.addEventListener("DOMContentLoaded", () => {
+    let cleanup = null;
 
-function showTopBar() {
-  const bar = document.querySelector('.top-gradient-bar');
-  if (!bar) return;
+    // ============================
+    // TOP BARS (ANIMACIONES)
+    // ============================
+    function animateTopBar(selector) {
+        const bar = document.querySelector(selector);
+        if (!bar) return;
 
-  // reset
-  bar.classList.remove('visible');
+        bar.classList.remove("visible");
+        bar.offsetHeight; // fuerza reflow
+        setTimeout(() => bar.classList.add("visible"), 2000);
+    }
 
-  // fuerza reflow para reiniciar animación
-  bar.offsetHeight;
+    function showTopBar() {
+        animateTopBar(".top-gradient-bar");
+    }
 
-  setTimeout(() => {
-    bar.classList.add('visible');
-  }, 2000);
-}
+    function showTopBarModal() {
+        animateTopBar(".top-gradient-bar_modal");
+    }
 
-function showTopBarModal() {
-  const bar = document.querySelector('.top-gradient-bar_modal');
-  if (!bar) return;
+    function showTopBarProduct() {
+        animateTopBar(".top-gradient-bar_products");
+    }
 
-  // reset
-  bar.classList.remove('visible');
+    // ============================
+    // SLIDER: WELCOME
+    // ============================
+    function startWelcomeSlider() {
+        console.log("startWelcomeSlider ejecutado");
 
-  // fuerza reflow para reiniciar animación
-  bar.offsetHeight;
+        const slides = document.querySelectorAll(".about-slider picture");
+        if (!slides.length) return;
 
-  setTimeout(() => {
-    bar.classList.add('visible');
-  }, 2000);
-}
+        let index = 0;
 
-function showTopBarProduct() {
-  const bar = document.querySelector('.top-gradient-bar_products');
-  if (!bar) return;
+        slides.forEach(s => s.classList.remove("active"));
+        slides[0].classList.add("active");
 
-  // reset
-  bar.classList.remove('visible');
+        const interval = setInterval(() => {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }, 4000);
 
-  // fuerza reflow para reiniciar animación
-  bar.offsetHeight;
+        cleanup = () => clearInterval(interval);
+    }
 
-  setTimeout(() => {
-    bar.classList.add('visible');
-  }, 2000);
-}
+    // ============================
+    // MODAL WS
+    // ============================
+    const openBtn = document.getElementById("ws-modal");
+    const modal = document.getElementById("modal-container");
+    const closeBtn = document.getElementById("close-modal");
 
-function startWelcomeSlider() {
-  console.log("startWelcomeSlider ejecutado");
-  const slides = document.querySelectorAll('.about-slider picture');
-  if (!slides.length) return;
+    if (openBtn && modal) {
+        openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "flex";
+        });
+    }
 
-  let index = 0;
+    if (closeBtn && modal) {
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    }
 
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[0].classList.add('active');
+    // ============================
+    // SLIDER: PROMOTION
+    // ============================
+    function startPromotionSlider() {
+        const slides = document.querySelectorAll(".promotion-slider picture");
+        if (!slides.length) return;
 
-  const interval = setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 4000);
+        let index = 0;
 
-  cleanup = () => clearInterval(interval);
-}
+        slides.forEach(s => s.classList.remove("active"));
+        slides[0].classList.add("active");
 
-const openBtn = document.getElementById('ws-modal');
-const modal = document.getElementById('modal-container');
-const closeBtn = document.getElementById('close-modal');
+        const interval = setInterval(() => {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }, 4000);
 
-// Abrir modal
-openBtn.addEventListener('click', (e) => {
-  e.preventDefault(); // Evita que el '#' recargue o mueva la página
-  modal.style.display = 'flex';
+        cleanup = () => clearInterval(interval);
+    }
+
+    // ============================
+    // INICIALIZACIÓN HOME
+    // ============================
+    function initHome() {
+        console.log("initHome ejecutado");
+
+        if (typeof cleanup === "function") cleanup();
+
+        const video = document.getElementById("miVideo");
+        if (video) video.playbackRate = 0.4;
+
+        showTopBar();
+        showTopBarProduct();
+        startWelcomeSlider();
+        startPromotionSlider();
+    }
+
+    initHome();
 });
 
-// Cerrar modal
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
 
-function startPromotionSlider() {
-  const slides = document.querySelectorAll('.promotion-slider picture');
-  if (!slides.length) return;
+// let cleanup = null;
 
-  let index = 0;
+// function showTopBar() {
+//   const bar = document.querySelector('.top-gradient-bar');
+//   if (!bar) return;
 
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[0].classList.add('active');
+//   // reset
+//   bar.classList.remove('visible');
 
-  const interval = setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 4000);
+//   // fuerza reflow para reiniciar animación
+//   bar.offsetHeight;
 
-  cleanup = () => clearInterval(interval);
-}
+//   setTimeout(() => {
+//     bar.classList.add('visible');
+//   }, 2000);
+// }
 
-function initHome() {
-  console.log("initHome ejecutado");
+// function showTopBarModal() {
+//   const bar = document.querySelector('.top-gradient-bar_modal');
+//   if (!bar) return;
 
-  if (typeof cleanup === "function") cleanup();
+//   // reset
+//   bar.classList.remove('visible');
 
-  const video = document.getElementById("miVideo");
-  video.playbackRate = 0.4; // 0.5 = más lento, 1 = normal, 2 = rápido
+//   // fuerza reflow para reiniciar animación
+//   bar.offsetHeight;
 
-  showTopBar();
-  showTopBarProduct();
-  startWelcomeSlider();
-  startPromotionSlider();
-}
+//   setTimeout(() => {
+//     bar.classList.add('visible');
+//   }, 2000);
+// }
 
-initHome()
+// function showTopBarProduct() {
+//   const bar = document.querySelector('.top-gradient-bar_products');
+//   if (!bar) return;
+
+//   // reset
+//   bar.classList.remove('visible');
+
+//   // fuerza reflow para reiniciar animación
+//   bar.offsetHeight;
+
+//   setTimeout(() => {
+//     bar.classList.add('visible');
+//   }, 2000);
+// }
+
+// function startWelcomeSlider() {
+//   console.log("startWelcomeSlider ejecutado");
+//   const slides = document.querySelectorAll('.about-slider picture');
+//   if (!slides.length) return;
+
+//   let index = 0;
+
+//   slides.forEach(slide => slide.classList.remove('active'));
+//   slides[0].classList.add('active');
+
+//   const interval = setInterval(() => {
+//     slides[index].classList.remove('active');
+//     index = (index + 1) % slides.length;
+//     slides[index].classList.add('active');
+//   }, 4000);
+
+//   cleanup = () => clearInterval(interval);
+// }
+
+// const openBtn = document.getElementById('ws-modal');
+// const modal = document.getElementById('modal-container');
+// const closeBtn = document.getElementById('close-modal');
+
+// // Abrir modal
+// openBtn.addEventListener('click', (e) => {
+//   e.preventDefault(); // Evita que el '#' recargue o mueva la página
+//   modal.style.display = 'flex';
+// });
+
+// // Cerrar modal
+// closeBtn.addEventListener('click', () => {
+//   modal.style.display = 'none';
+// });
+
+// function startPromotionSlider() {
+//   const slides = document.querySelectorAll('.promotion-slider picture');
+//   if (!slides.length) return;
+
+//   let index = 0;
+
+//   slides.forEach(slide => slide.classList.remove('active'));
+//   slides[0].classList.add('active');
+
+//   const interval = setInterval(() => {
+//     slides[index].classList.remove('active');
+//     index = (index + 1) % slides.length;
+//     slides[index].classList.add('active');
+//   }, 4000);
+
+//   cleanup = () => clearInterval(interval);
+// }
+
+// function initHome() {
+//   console.log("initHome ejecutado");
+
+//   if (typeof cleanup === "function") cleanup();
+
+//   const video = document.getElementById("miVideo");
+//   video.playbackRate = 0.4; // 0.5 = más lento, 1 = normal, 2 = rápido
+
+//   showTopBar();
+//   showTopBarProduct();
+//   startWelcomeSlider();
+//   startPromotionSlider();
+// }
+
+// initHome()
