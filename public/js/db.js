@@ -53,11 +53,11 @@ const WELCOME = {
     slogan_2: "descansa en tu hogar soñado."
   },
   ofertas:{
-    image4_5: "/image/4_5_dormitorio_slider.jpg",
-    image16_9: "/image/16_9_dormitorio_slider.jpg",
-    image21_9: "/image/21_9_dormitorio_slider.jpg",
+    image4_5: "/image/promos.jpeg",
+    image16_9: "/image/promos.jpeg",
+    image21_9: "/image/promos.jpeg",
     slogan_1: "Crea tu espacio",
-    slogan_2: "descansa en tu hogar soñado."
+    slogan_2: "Con los mejores precios"
   }
 }
 
