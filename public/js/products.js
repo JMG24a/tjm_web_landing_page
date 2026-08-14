@@ -528,8 +528,8 @@ function setupComedores(product) {
   updateChairs(0);
 }
 
-function setupOfertas(){
- isFabricCategory()
+function setupOfertas(product){
+  isFabricCategory()
   const colors = document.getElementById("modal-colors");
   const container_size = document.getElementById("container_size");
   container_size.classList.remove("displayNone");
