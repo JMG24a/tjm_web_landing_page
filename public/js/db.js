@@ -4144,7 +4144,7 @@ const PRODUCTS = {
           name: "Gris"
         },
         {
-          img: "oferta_toty_puff_puff.jpeg",
+          img: "oferta_dormitorio_sabana.jpeg",
           color: "gray",
           type: "tela",
           name: "Gris"
