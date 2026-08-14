@@ -4177,6 +4177,12 @@ const PRODUCTS = {
       suggest: [1001, 1002],
       pre_sets: [
         {
+          img: "sofa_zultan_2_barrigas_gris.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
+        },
+        {
           img: "oferta_toty_puff_almohadas.jpeg",
           color: "gray",
           type: "tela",
