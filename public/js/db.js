@@ -4079,14 +4079,17 @@ const PRODUCTS = {
         }
       ]
     }
-  ],  
+  ],
   ofertas: [
     {
       id: 6000,
       name: "Juego de Dormitorio",
-      size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "oferta_toty_puff_beige.jpeg",
+      atributte: {
+        size: "180cm - 160cm",
+        resortes: true
+      },
       pre_sets: [
         {
           img: "oferta_toty_puff_beige.jpeg",
