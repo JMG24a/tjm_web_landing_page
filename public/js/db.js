@@ -4083,7 +4083,7 @@ const PRODUCTS = {
   ofertas: [
     {
       id: 6000,
-      name: "Juego de Dormitorio",
+      name: "Juego Toty",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "oferta_toty_puff_beige.jpeg",
       atributte: {
@@ -4120,6 +4120,89 @@ const PRODUCTS = {
           color: "gray",
         },
       ]
-    }
+    },
+    {
+      id: 6001,
+      name: "Juego de Dormitorio",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "dormitorio_cama_coco_black.png",
+      atributte: {
+        size: "180cm - 160cm",
+        resortes: true
+      },
+      pre_sets: [
+        {
+          img: "dormitorio_cama_coco_pink.png",
+          color: "pink",
+          type: "tela",
+          name: "Rosa"
+        },
+        {
+          img: "oferta_almohada_serenity.webp",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
+        },
+        {
+          img: "oferta_toty_puff_puff.jpeg",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
+        },
+      ],
+      colors: [
+        {
+          img: "dormitorio_cama_coco_black.png",
+          color: "beige",
+          type: "tela",
+          name: "Negro"
+        },
+        {
+          img: "dormitorio_cama_coco_beige.png",
+          color: "gray",
+          type: "tela",
+          name: "Beige"
+        },
+      ]
+    },
+    {
+      id: 6002,
+      name: "Zultan 2 Barrigas",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
+      desc: "El sofá Zultan destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_zultan_2_barrigas_beige.png",
+      suggest: [1001, 1002],
+      pre_sets: [
+        {
+          img: "oferta_toty_puff_almohadas.jpeg",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
+        },
+      ],
+      colors: [
+        {
+          img: "sofa_zultan_2_barrigas_gris.png",
+          color: "gray",
+          type: "cuero",
+          name: "Gris"
+        },
+        {
+          img: "sofa_zultan_2_barrigas_black.png",
+          color: "black",
+          type: "cuero",
+          name: "Negro"
+        },
+        {
+          img: "sofa_zultan_2_barrigas_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+      ]
+    },
   ]
 };
