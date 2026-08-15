@@ -29,7 +29,7 @@ const porcentajesPago = {
   sofas: 28.78
 };
 const porcentajesPagoMethod = {
-  "decontado": 23.35,
+  "decontado": 25.35,
   "cashea": 32.78,
   "zelle": 3,
   "cash - binance": 0,
