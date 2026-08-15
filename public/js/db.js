@@ -4067,17 +4067,43 @@ const PRODUCTS = {
   accesorios: [
     {
       id: 5000,
-      name: "Ropero Francia",
-      size: "Alto: 191cm - Ancho: 171cm",
+      name: "Centro De Mesa Towel",
+      size: "Alto: 60cm - Ancho: 60cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
-      img: "multimueble_closet_caju_plus.jpg",
+      img: "accesorio_arteco_mesa_towel.jpeg",
       colors: [
         {
-          img: "multimueble_closet_caju_plus.jpg",
+          img: "accesorio_arteco_mesa_towel.jpeg",
           color: "#ffffff",
         }
       ]
-    }
+    },
+    {
+      id: 5001,
+      name: "Centro De Mesa Superbowl",
+      size: "Alto: 120cm - Ancho: 120cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "accesorio_arteco_mesa_superbowl.jpeg",
+      colors: [
+        {
+          img: "accesorio_arteco_mesa_superbowl.jpeg",
+          color: "#ffffff",
+        }
+      ]
+    },
+    {
+      id: 5002,
+      name: "Espejos Gemini",
+      size: "Alto: 80cm - Ancho: 60cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "accesorio_arteco_espejos_gemini.jpeg",
+      colors: [
+        {
+          img: "accesorio_arteco_espejos_gemini.jpeg",
+          color: "#ffffff",
+        }
+      ]
+    },
   ],
   ofertas: [
     {
@@ -4086,7 +4112,7 @@ const PRODUCTS = {
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "oferta_toty_puff_beige.jpeg",
       atributte: {
-        size: "210cm - e10cm",
+        size: "210cm - 210cm",
         resortes: false
       },
       pre_sets: [
@@ -4126,8 +4152,8 @@ const PRODUCTS = {
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "dormitorio_cama_coco_black.png",
       atributte: {
-        size: "180cm - 160cm",
-        resortes: true
+        size: "190cm - 140cm",
+        resortes: false
       },
       pre_sets: [
         {
@@ -4135,6 +4161,12 @@ const PRODUCTS = {
           color: "pink",
           type: "tela",
           name: "Rosa"
+        },
+        {
+          img: "colchon_colflex_syco.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
         },
         {
           img: "oferta_almohada_serenity.webp",
