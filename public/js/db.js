@@ -2459,14 +2459,14 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_aurora_beige_4_sillas_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_aurora_beige_4_sillas_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"beige"
             },
             {
-              img: "comedor_aurora_beige_4_sillas_black.png",
+              img: "comedor_aurora_beige.png",
               color:"black"
             }
           ],
@@ -2513,59 +2513,59 @@ const PRODUCTS = {
       id: 3018,
       name: "Rog",
       desc: "...",
-      img: "comedor_rog_beige.png",
+      img: "comedor_aurora_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_rog_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#c4c4c4"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"gray"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#000"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_rog_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ea13aa"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#c8c8c8"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#eb0d69"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_rog_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ffffff"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ffffff"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ffffff"
             },
           ],
@@ -2574,50 +2574,50 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_rog_beige_4_sillas_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige_4_sillas_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"beige"
             },
             {
-              img: "comedor_rog_beige_4_sillas_black.png",
+              img: "comedor_aurora_beige.png",
               color:"black"
             }
           ],
         },
         {
           top: "pintado",
-          img: "comedor_rog_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#09ff00"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ffd500"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#1d1dc4"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_rog_beige.png",
+          img: "comedor_aurora_beige.png",
           colors: [
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#fdf906"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#0037ff"
             },
             {
-              img: "comedor_rog_beige.png",
+              img: "comedor_aurora_beige.png",
               color:"#ff0000"
             },
           ],
