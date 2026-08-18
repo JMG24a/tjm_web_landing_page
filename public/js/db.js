@@ -4301,6 +4301,10 @@ const PRODUCTS = {
       size: "Alto: 60cm - Ancho: 60cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "accesorio_arteco_mesa_towel.jpeg",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       colors: [
         {
           img: "accesorio_arteco_mesa_towel.jpeg",
@@ -4314,6 +4318,10 @@ const PRODUCTS = {
       size: "Alto: 120cm - Ancho: 120cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "accesorio_arteco_mesa_superbowl.jpeg",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       colors: [
         {
           img: "accesorio_arteco_mesa_superbowl.jpeg",
@@ -4327,6 +4335,10 @@ const PRODUCTS = {
       size: "Alto: 80cm - Ancho: 60cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "accesorio_arteco_espejos_gemini.jpeg",
+      atributte: {
+        size: "240cm - 240cm",
+        resortes: true
+      },
       colors: [
         {
           img: "accesorio_arteco_espejos_gemini.jpeg",
