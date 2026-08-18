@@ -659,6 +659,12 @@ const PRODUCTS = {
       suggest: [1004, 1003],
       pre_sets: [
         {
+          img: "sofa_santorini_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
           img: "sofa_santorini_beige_1.png",
           color: "beige",
           type: "tela",
