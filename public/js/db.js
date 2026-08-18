@@ -648,6 +648,46 @@ const PRODUCTS = {
       ]
     },
     {
+      id: 1027,
+      name: "Mueble Santorini",
+      atributte: {
+        size: "250cm",
+        resortes: true
+      },
+      desc: "El sofá Labros destaca como una pieza excepcional combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para elevar cualquier espacio con estilo y sofisticación.",
+      img: "sofa_santorini_beige.png",
+      suggest: [1004, 1003],
+      pre_sets: [
+        {
+          img: "sofa_santorini_beige_1.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_santorini_beige_2.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_santorini_beige_3.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+      ],
+      colors: [
+        {
+          img: "sofa_santorini_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige",
+
+        },
+      ]
+    },
+    {
       id: 1008,
       name: "Sofa Cairo",
       size: "160cm - 240cm",
