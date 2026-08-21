@@ -2592,16 +2592,16 @@ const PRODUCTS = {
           colors: [
             {
               img: "comedor_rog_beige.png",
-              color:"#c4c4c4"
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_rog_beige.png",
-              color:"gray"
-            },
-            {
-              img: "comedor_rog_beige.png",
-              color:"#000"
-            },
+              img: "comedor_rog_4_sillas_black.jpg",
+              color:"black",
+              type: "tela",
+              name: "Negro"
+            }
           ],
         },
         {
@@ -2648,11 +2648,15 @@ const PRODUCTS = {
           colors: [
             {
               img: "comedor_rog_beige.png",
-              color:"beige"
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_rog_beige.png",
-              color:"black"
+              img: "comedor_rog_4_sillas_black.jpg",
+              color:"black",
+              type: "tela",
+              name: "Negro"
             }
           ],
         },
