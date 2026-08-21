@@ -1678,7 +1678,7 @@ const PRODUCTS = {
       id: 3008,
       name: "Galileo",
       desc: "...",
-      img: "comedor_galileo_6_sillas_gris.png",
+      img: "comedor_galileo_4_sillas_white.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
@@ -1757,19 +1757,37 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_galileo_v.jpg",
+          img: "comedor_galileo_4_sillas_white.png",
           colors: [
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#333"
+              img: "comedor_galileo_4_sillas_white.png",
+              color:"#fff",
+              type: "tela",
+              name: "Blanco"
             },
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#333"
+              img: "comedor_galileo_4_sillas_gray.png",
+              color:"#acacac",
+              type: "tela",
+              name: "Gris"
             },
             {
-              img: "comedor_galileo_v.jpg",
-              color:"#333"
+              img: "comedor_galileo_4_sillas_beige.png",
+              color:"beige",
+              type: "tela",
+              name: "Beige"
+            },
+            {
+              img: "comedor_galileo_4_sillas_black.png",
+              color:"black",
+              type: "tela",
+              name: "Negro"
+            },
+            {
+              img: "comedor_galileo_4_sillas_blue.png",
+              color:"#211082",
+              type: "tela",
+              name: "Azul Oscuro"
             },
           ],
         },
@@ -1934,11 +1952,11 @@ const PRODUCTS = {
       id: 3002,
       name: "Media Luna",
       desc: "...",
-      img: "comedor_media_luna_6_sillas.png",
+      img: "comedor_media_luna_4_sillas.png",
       size: "Largo: 190cm - Ancho: 90cm",
       pre_sets: [
         {
-          img: "comedor_pre_media_luna_6_sillas_white.png",
+          img: "comedor_media_luna_4_sillas.png",
           color: "beige",
           type: "tela",
           name: "Beige"
@@ -2012,54 +2030,60 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_media_luna.jpg",
+          img: "comedor_media_luna_4_sillas.png",
           colors: [
             {
-              img: "comedor_media_luna.jpg",
-              color:"#333"
+              img: "comedor_media_luna_4_sillas.png",
+              color:"#333",
+              type: "tela",
+              name: "Gris"
             },
             {
-              img: "comedor_media_luna.jpg",
-              color:"#333"
+              img: "comedor_media_luna_4_sillas_beige.png",
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_media_luna.jpg",
-              color:"#333"
+              img: "comedor_media_luna_4_sillas_white.png",
+              color:"#fff",
+              type: "tela",
+              name: "Blanco"
             },
           ],
         },
         {
           top: "pintado",
-          img: "comedor_media_luna.jpg",
+          img: "comedor_media_luna_4_sillas.png",
           colors: [
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#09ff00"
             },
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#ffd500"
             },
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#1d1dc4"
             },
           ],
         },
         {
           top: "pvc",
-          img: "comedor_media_luna.jpg",
+          img: "comedor_media_luna_4_sillas.png",
           colors: [
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#fdf906"
             },
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#0037ff"
             },
             {
-              img: "comedor_media_luna.jpg",
+              img: "comedor_media_luna_4_sillas.png",
               color:"#ff0000"
             },
           ],
