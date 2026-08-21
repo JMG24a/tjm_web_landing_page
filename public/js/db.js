@@ -1249,7 +1249,7 @@ const PRODUCTS = {
       img: "sofa_sofa_cama_beige.jpeg",
       atributte: {
         size: "180cm - 160cm",
-        resortes: true
+        resortes: false
       },
       suggest: [1020, 1021],
       pre_sets: [
@@ -1303,53 +1303,35 @@ const PRODUCTS = {
       id: 1028,
       name: "Sofa Cama",
       desc: "El sofá cama de 3 plazas destaca como una pieza excepcional que combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para la versatilidad y comodidad de los invitados inesperados.",
-      img: "sofa_sofa_cama_beige.jpeg",
+      img: "sofa_sofa_cama_gray.png",
       atributte: {
-        size: "180cm - 160cm",
-        resortes: true
+        size: "100cm - 180cm",
+        resortes: false
       },
-      suggest: [1020, 1021],
+      suggest: [1023, 1021],
       pre_sets: [
         {
-          img: "sofa_sofa_cama_beige_down.jpeg",
-          color: "beige",
-          type: "tela",
-          name: "Beige"
-        },
-        {
-          img: "sofa_sofa_cama_black_gray.jpeg",
+          img: "sofa_sofa_cama_gray.png",
           color: "gray",
           type: "tela",
-          name: "Gris Oscuro"
+          name: "Gris"
+        },
+        {
+          img: "sofa_sofa_cama_1_gray.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris"
         },
       ],
       colors: [
         {
-          img: "sofa_sofa_cama_beige.jpeg",
-          color: "beige",
-          type: "tela",
-          name: "Beige"
-        },
-        {
-          img: "sofa_sofa_cama_gray.jpeg",
+          img: "sofa_sofa_cama_gray.png",
           color: "gray",
-          type: "cuero",
+          type: "tela",
           name: "Gris"
         },
         {
-          img: "sofa_sofa_cama_gray_black.jpeg",
-          color: "#525252",
-          type: "cuero",
-          name: "Gris/Oscuro"
-        },
-        {
-          img: "sofa_sofa_cama_black_gray.jpeg",
-          color: "#424242",
-          type: "cuero",
-          name: "Negro/Gris"
-        },
-        {
-          img: "sofa_sofa_cama_beige_down.jpeg",
+          img: "sofa_sofa_cama_beige.png",
           color: "beige",
           type: "tela",
           name: "Beige"
