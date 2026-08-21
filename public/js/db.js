@@ -1244,6 +1244,63 @@ const PRODUCTS = {
     },
     {
       id: 1023,
+      name: "Sofa Cama Con Mecanismo",
+      desc: "El sofá cama de 3 plazas destaca como una pieza excepcional que combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para la versatilidad y comodidad de los invitados inesperados.",
+      img: "sofa_sofa_cama_beige.jpeg",
+      atributte: {
+        size: "180cm - 160cm",
+        resortes: true
+      },
+      suggest: [1020, 1021],
+      pre_sets: [
+        {
+          img: "sofa_sofa_cama_beige_down.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_sofa_cama_black_gray.jpeg",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+      ],
+      colors: [
+        {
+          img: "sofa_sofa_cama_beige.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "sofa_sofa_cama_gray.jpeg",
+          color: "gray",
+          type: "cuero",
+          name: "Gris"
+        },
+        {
+          img: "sofa_sofa_cama_gray_black.jpeg",
+          color: "#525252",
+          type: "cuero",
+          name: "Gris/Oscuro"
+        },
+        {
+          img: "sofa_sofa_cama_black_gray.jpeg",
+          color: "#424242",
+          type: "cuero",
+          name: "Negro/Gris"
+        },
+        {
+          img: "sofa_sofa_cama_beige_down.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+      ]
+    },
+    {
+      id: 1028,
       name: "Sofa Cama",
       desc: "El sofá cama de 3 plazas destaca como una pieza excepcional que combina una calidad superior con un diseño moderno y elegante que irradia un lujo discreto. Es el mueble perfecto para la versatilidad y comodidad de los invitados inesperados.",
       img: "sofa_sofa_cama_beige.jpeg",
