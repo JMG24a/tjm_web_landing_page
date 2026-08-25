@@ -366,6 +366,60 @@ const PRODUCTS = {
         }
       ]
     },
+    {
+      id: 7014,
+      name: "Juego de Sabana Trevo",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Coco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
+      img: "dormitorio_juego_de_sabana_trevo_beige.jpeg",
+      suggest: [7015],
+      colors: [
+        {
+          img: "dormitorio_juego_de_sabana_trevo_purple.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Baige Floreado",
+        },
+        {
+          img: "dormitorio_juego_de_sabana_trevo_beige.jpeg",
+          color: "purple",
+          type: "tela",
+          name: "Morado a Rayas",
+        },
+      ]
+    },
+    {
+      id: 7015,
+      name: "Juego de Sabana Casa CLub",
+      desc: "Descubra el equilibrio perfecto entre diseño y resistencia. La cama Coco ha sido fabricada cuidadosamente en madera de pino de primera calidad, destacando por una estética refinada y acabados artesanales de alta gama. Su estructura de ingeniería reforzada integra 10 vigas transversales y una base sólida de MDF, garantizando una estabilidad inigualable y una vida útil prolongada. La cabecera, protagonista de esta pieza, presenta un diseño detallado que aporta un toque de distinción y confort a su dormitorio.",
+      img: "dormitorio_juego_de_sabana_casa_club_beige.jpeg",
+      suggest: [7014],
+      colors: [
+        {
+          img: "dormitorio_juego_de_sabana_casa_club_beige.jpeg",
+          color: "beige",
+          type: "tela",
+          name: "Baige Floreado",
+        },
+        {
+          img: "dormitorio_juego_de_sabana_casa_club_white.jpeg",
+          color: "white",
+          type: "tela",
+          name: "Blanco",
+        },
+        {
+          img: "dormitorio_juego_de_sabana_casa_club.jpeg",
+          color: "white",
+          type: "tela",
+          name: "Blanco",
+        },
+        {
+          img: "dormitorio_juego_de_sabana_casa_club_brown.jpeg",
+          color: "brown",
+          type: "tela",
+          name: "Marron",
+        },
+      ]
+    },
   ],
   sofas: [
     {
