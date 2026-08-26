@@ -2561,24 +2561,36 @@ const PRODUCTS = {
       id: 3017,
       name: "Aurora",
       desc: "...",
-      img: "comedor_aurora_beige.png",
+      img: "comedor_aurora_4_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_aurora_beige.png",
+          img: "comedor_aurora_6_sillas_beige.png",
           colors: [
             {
-              img: "comedor_aurora_beige.png",
-              color:"#c4c4c4"
+              img: "comedor_aurora_6_sillas_beige.png",
+              color:"beige",
+              type: "piel",
+              name: "Beige"
             },
             {
-              img: "comedor_aurora_beige.png",
-              color:"gray"
+              img: "comedor_aurora_6_sillas_gray.png",
+              color:"gray",
+              type: "piel",
+              name: "Gris"
             },
             {
-              img: "comedor_aurora_beige.png",
-              color:"#000"
+              img: "comedor_aurora_6_sillas_black.png",
+              color:"#000",
+              type: "tela",
+              name: "Negro"
+            },
+            {
+              img: "comedor_aurora_6_sillas_blue.png",
+              color:"#0a047d",
+              type: "tela",
+              name: "Azul Oscuro"
             },
           ],
         },
@@ -2622,15 +2634,31 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_aurora_beige.png",
+          img: "comedor_aurora_4_sillas_beige.png",
           colors: [
             {
-              img: "comedor_aurora_beige.png",
-              color:"beige"
+              img: "comedor_aurora_4_sillas_beige.png",
+              color:"beige",
+              type: "tela",
+              name: "Beige"
             },
             {
-              img: "comedor_aurora_beige.png",
-              color:"black"
+              img: "comedor_aurora_4_sillas_black.png",
+              color:"black",
+              type: "cuero",
+              name: "Negro"
+            },
+            {
+              img: "comedor_aurora_4_sillas_blue.png",
+              color:"beige",
+              type: "tela",
+              name: "Azul Oscuro"
+            },
+            {
+              img: "comedor_aurora_4_sillas_gray.png",
+              color:"gray",
+              type: "cuero",
+              name: "Gris"
             }
           ],
         },
