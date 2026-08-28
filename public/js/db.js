@@ -2938,17 +2938,17 @@ const PRODUCTS = {
       id: 3019,
       name: "Saman",
       desc: "...",
-      img: "comedor_saman_4_sillas_barnis.jpg",
+      img: "comedor_saman_4_sillas_barnis.jpeg",
       size: "Largo: 190cm - Ancho: 90cm",
       pre_sets: [
         {
-          img: "comedor_saman_4_sillas_barnis.jpg",
+          img: "comedor_saman_4_sillas_barnis.jpeg",
           color: "beige",
           type: "tela",
           name: "Beige"
         },
         {
-          img: "comedor_saman_6_sillas_barnis.jpg",
+          img: "comedor_saman_6_sillas_barnis.jpeg",
           color: "gray",
           type: "tela",
           name: "Gris Oscuro"
@@ -2957,10 +2957,10 @@ const PRODUCTS = {
       chairs_6:[
         {
           top: "vidrio",
-          img: "comedor_saman_6_sillas_barnis.jpg",
+          img: "comedor_saman_6_sillas_barnis.jpeg",
           colors: [
             {
-              img: "comedor_saman_6_sillas_barnis.jpg",
+              img: "comedor_saman_6_sillas_barnis.jpeg",
               color:"beige",
               type: "tela",
               name: "Beige"
@@ -3007,10 +3007,10 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_saman_4_sillas_barnis.jpg",
+          img: "comedor_saman_4_sillas_barnis.jpeg",
           colors: [
             {
-              img: "comedor_saman_4_sillas_barnis.jpg",
+              img: "comedor_saman_4_sillas_barnis.jpeg",
               color:"beige",
               type: "tela",
               name: "Beige"
