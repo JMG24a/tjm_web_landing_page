@@ -2814,7 +2814,7 @@ const PRODUCTS = {
           name: "Beige"
         },
         {
-          img: "comedor_rog_4_sillas_black.png",
+          img: "comedor_rog_4_sillas_black.jpg",
           color: "gray",
           type: "tela",
           name: "Gris Oscuro"
@@ -2938,17 +2938,17 @@ const PRODUCTS = {
       id: 3019,
       name: "Saman",
       desc: "...",
-      img: "comedor_saman_4_sillas_barnis.png",
+      img: "comedor_saman_4_sillas_barnis.jpg",
       size: "Largo: 190cm - Ancho: 90cm",
       pre_sets: [
         {
-          img: "comedor_saman_4_sillas_barnis.png",
+          img: "comedor_saman_4_sillas_barnis.jpg",
           color: "beige",
           type: "tela",
           name: "Beige"
         },
         {
-          img: "comedor_saman_6_sillas_barnis.png",
+          img: "comedor_saman_6_sillas_barnis.jpg",
           color: "gray",
           type: "tela",
           name: "Gris Oscuro"
@@ -2960,7 +2960,7 @@ const PRODUCTS = {
           img: "comedor_saman_6_sillas_barnis.jpg",
           colors: [
             {
-              img: "comedor_saman_6_sillas_barnis.png",
+              img: "comedor_saman_6_sillas_barnis.jpg",
               color:"beige",
               type: "tela",
               name: "Beige"
@@ -3007,10 +3007,10 @@ const PRODUCTS = {
       chairs_4:[
         {
           top: "vidrio",
-          img: "comedor_saman_4_sillas_barnis.png",
+          img: "comedor_saman_4_sillas_barnis.jpg",
           colors: [
             {
-              img: "comedor_saman_4_sillas_barnis.png",
+              img: "comedor_saman_4_sillas_barnis.jpg",
               color:"beige",
               type: "tela",
               name: "Beige"
