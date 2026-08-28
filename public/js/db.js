@@ -1773,6 +1773,26 @@ const PRODUCTS = {
       desc: "...",
       img: "comedor_galileo_4_sillas_white.png",
       size: "Largo: 190cm - Ancho: 90cm",
+      pre_sets: [
+        {
+          img: "comedor_galileo_4_sillas_gray.png",
+          color: "gris",
+          type: "tela",
+          name: "Gris"
+        },
+        {
+          img: "comedor_galileo_4_sillas_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "comedor_galileo_4_sillas_blue.png",
+          color: "blue",
+          type: "tela",
+          name: "Azul"
+        },
+      ],
       chairs_6:[
         {
           top: "vidrio",
@@ -2060,6 +2080,12 @@ const PRODUCTS = {
           type: "tela",
           name: "Gris Oscuro"
         },
+        {
+          img: "comedor_media_luna_4_sillas_white.png",
+          color: "white",
+          type: "tela",
+          name: "Blanco"
+        },
       ],
       chairs_6:[
         {
@@ -2189,6 +2215,26 @@ const PRODUCTS = {
       desc: "...",
       img: "comedor_saturno_6_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
+      pre_sets: [
+        {
+          img: "comedor_saturno_6_sillas_gris_oscuro.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "comedor_saturno_6_sillas_azul.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+        {
+          img: "comedor_saturno_6_sillas_gray.png",
+          color: "white",
+          type: "tela",
+          name: "Blanco"
+        },
+      ],
       chairs_6:[
         {
           top: "vidrio",
@@ -2326,6 +2372,26 @@ const PRODUCTS = {
       desc: "...",
       img: "comedor_isabel_4_sillas_gray.png",
       size: "Largo: 190cm - Ancho: 90cm",
+      pre_sets: [
+        {
+          img: "comedor_isabel_4_sillas_gray.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "comedor_isabel_4_sillas_black.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        },
+        {
+          img: "comedor_isabel_4_sillas_beige.png",
+          color: "white",
+          type: "tela",
+          name: "Blanco"
+        },
+      ],
       chairs_6:[
         {
           top: "vidrio",
@@ -2448,6 +2514,20 @@ const PRODUCTS = {
       desc: "...",
       img: "comedor_luna_4_sillas_beige.png",
       size: "Largo: 190cm - Ancho: 90cm",
+      pre_sets: [
+        {
+          img: "comedor_luna_4_sillas_beige.png",
+          color: "beige",
+          type: "tela",
+          name: "Beige"
+        },
+        {
+          img: "comedor_luna_4_sillas_black.png",
+          color: "gray",
+          type: "tela",
+          name: "Gris Oscuro"
+        }
+      ],
       chairs_6:[
         {
           top: "vidrio",
