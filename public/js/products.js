@@ -30,7 +30,7 @@ const porcentajesPago = {
 };
 const porcentajesPagoMethod = {
   "decontado": 26.75,
-  "cashea": 39.5,
+  "cashea": 41,
   "zelle": 3.5,
   "cash - binance": 0,
 };
