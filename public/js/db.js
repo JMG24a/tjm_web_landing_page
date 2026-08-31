@@ -3373,7 +3373,7 @@ const PRODUCTS = {
     },
     {
       id: 4020,
-      name: "Vanity Elio",
+      name: "Vanity Cotino",
       size: "Alto: 191cm - Ancho: 171cm",
       desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
       img: "multimueble_vanity_elio_white.jpeg",
