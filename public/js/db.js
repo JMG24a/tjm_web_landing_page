@@ -3416,6 +3416,26 @@ const PRODUCTS = {
         },
       ]
     },
+    {
+      id: 4023,
+      name: "Vanity Eliot",
+      size: "Alto: 191cm - Ancho: 171cm",
+      desc: "El ropero Francia es la solución perfecta para quienes buscan practicidad y estilo. Su diseño intuitivo permite un armado rápido y sin complicaciones, ideal para cualquier espacio. Fácil de trasladar y ofrece una organización eficiente que se adapta a tu espacio. Funcional, moderno y conveniente",
+      img: "multimueble_peinadora_eliots_blanco.jpeg",
+      suggest: [4020, 4021],
+      colors: [
+        {
+          img: "multimueble_peinadora_eliots_blanco.jpeg",
+          color: "#fff",
+          name: "Blanco",
+        },
+        {
+          img: "multimueble_peinadora_eliots_morado.jpeg",
+          color: "#783be8",
+          name: "Morado",
+        },
+      ]
+    },
   ],
   accesorios: [
     {
