@@ -7,7 +7,7 @@ async function updateCarouselImage() {
   const formData = new FormData();
   formData.append("file", file);
 
-  const uploadRes = await fetch("https://tjm-web-back.onrender.com/upload", {
+  const uploadRes = await fetch("https://tjm-web-back.onrender.com/core/upload", {
     method: "POST",
     body: formData
   });
@@ -15,7 +15,7 @@ async function updateCarouselImage() {
   const { url } = await uploadRes.json();
 
   // 2. Actualizar el registro en tu backend
-  const patchRes = await fetch(`https://tjm-web-back.onrender.com/carrusel/${id}`, {
+  const patchRes = await fetch(`https://tjm-web-back.onrender.com/core/carrusel/${id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ [version]: url })

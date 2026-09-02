@@ -41,7 +41,7 @@ async function verificarSesion(id) {
 
   if (localStorage.getItem("session_tjm")) {
     form.classList.remove("displayNoneSuggestPrice");
-    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+    const response = await fetch(`https://tjm-web-back.onrender.com/core/${id}`);
     // const response = await fetch(`https://tjmwebback-production.up.railway.app/${id}`);
     const data = await response.json();
     price.placeholder = data.precio;
@@ -89,7 +89,7 @@ if (goHomeBtn) {
 async function loadProductPrice(id, extras) {
   try {
     const off = document.getElementById("off");
-    const response = await fetch(`https://tjm-web-back.onrender.com/${id}`);
+    const response = await fetch(`https://tjm-web-back.onrender.com/core/${id}`);
     const data = await response.json();
     const priceUSD = calcularAumento(data.precio, extras);
     //precioGlobal
@@ -112,7 +112,7 @@ async function loadProductPrices(ids = []) {
   try {
     const requests = ids.map(id =>
       // fetch(`https://tjmwebback-production.up.railway.app/${id}`)
-      fetch(`https://tjm-web-back.onrender.com/${id}`)
+      fetch(`https://tjm-web-back.onrender.com/core/${id}`)
       .then(res => res.json())
     );
     const results = await Promise.all(requests);
@@ -250,7 +250,7 @@ async function guardarPrecio() {
   };
 
   // const response = await fetch("https://tjmwebback-production.up.railway.app", {
-  const response = await fetch("https://tjm-web-back.onrender.com", {
+  const response = await fetch("https://tjm-web-back.onrender.com/core", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
@@ -780,7 +780,7 @@ async function fetchProductCardPrice(id, isBed) {
   const finalId = isBed ? `${id}1` : id;
 
   try {
-    const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
+    const res = await fetch(`https://tjm-web-back.onrender.com/core/${finalId}`);
     const data = await res.json();
 
     const base = Number(data.precio);
@@ -809,7 +809,7 @@ async function fetchProductCardPrice(id, category) {
   }
 
   try {
-    const res = await fetch(`https://tjm-web-back.onrender.com/${finalId}`);
+    const res = await fetch(`https://tjm-web-back.onrender.com/core/${finalId}`);
     const data = await res.json();
 
     const base = Number(data.precio);
